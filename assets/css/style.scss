@@ -1,0 +1,11 @@
+---
+---
+@import "{{ site.theme }}";
+
+:root { --di-primary: #6750a4; --di-surface: #fffbfe; --di-container: #f3edf7; }
+body { background: var(--di-surface); }
+.page-header { background: linear-gradient(135deg, #4f378b, #6750a4 55%, #7f67be); }
+.main-content h1, .main-content h2, .main-content h3 { color: #3f2e68; }
+.main-content blockquote { background: var(--di-container); border-left-color: var(--di-primary); color: #3f3748; padding: 1rem 1.25rem; }
+.main-content table { display: table; width: 100%; }
+.main-content a { color: #5b3f96; }
