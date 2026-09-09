@@ -258,3 +258,17 @@ No se asignan porcentajes ni reglas de recuperación. Se registran los logros y 
 La solución usa roles de color, jerarquía y diferenciación de acciones siguiendo la referencia M3. Emplea controles HTML con una adaptación didáctica; el selector conserva su comportamiento nativo y no se presenta como reproducción exhaustiva de todos los componentes M3. Antes de usarla como ejemplo visual definitivo se revisarán foco, estados, contraste, tipografía, tamaños y distribución en navegador. No se ha declarado una auditoría completa de M3/WCAG.
 
 No se necesita Android Studio. No hay servicios externos ni persistencia. Los scripts son ejemplos completos de salida de IA para el docente; el alumno dirige, identifica y verifica.
+
+---
+
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_13_escuchadores.md">← RA1-13</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card unit-next-card--index" href="index.md#itinerario-completo-del-ra1">
+    <span class="unit-next-card__eyebrow">Has completado el RA1</span>
+    <strong>Volver al índice del resultado de aprendizaje</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">↗</span>
+  </a>
+</nav>

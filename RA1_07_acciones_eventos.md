@@ -9,7 +9,17 @@ title: RA1-07 · Asociación de acciones a eventos
 
 ---
 
-[← Unidad anterior](RA1_06_enlace_datos.md) · [Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_08_edicion_codigo_generado.md)
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_06_enlace_datos.md">← RA1-06</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_08_edicion_codigo_generado.md">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-08 · Edición del código generado</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
 
 ## Qué aprenderá el alumnado
 
@@ -90,4 +100,14 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 
 ---
 
-[← Unidad anterior](RA1_06_enlace_datos.md) · [Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_08_edicion_codigo_generado.md)
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_06_enlace_datos.md">← RA1-06</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_08_edicion_codigo_generado.md">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-08 · Edición del código generado</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>

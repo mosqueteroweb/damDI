@@ -9,7 +9,17 @@ title: RA1-06 · Enlace de componentes a orígenes de datos
 
 ---
 
-[← Unidad anterior](RA1_05_componentes.md) · [Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_07_acciones_eventos.md)
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_05_componentes.md">← RA1-05</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_07_acciones_eventos.md">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-07 · Acciones y eventos</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
 
 ## Qué aprenderá el alumnado
 
@@ -92,4 +102,14 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 
 ---
 
-[← Unidad anterior](RA1_05_componentes.md) · [Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_07_acciones_eventos.md)
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_05_componentes.md">← RA1-05</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_07_acciones_eventos.md">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-07 · Acciones y eventos</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>

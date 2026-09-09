@@ -9,7 +9,17 @@ title: RA1-10 · Propiedades de los componentes
 
 ---
 
-[← Unidad anterior](RA1_09_clases.md) · [Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_11_metodos.md)
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_09_clases.md">← RA1-09</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_11_metodos.md">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-11 · Métodos</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
 
 ## Qué aprenderá el alumnado
 
@@ -90,4 +100,14 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 
 ---
 
-[← Unidad anterior](RA1_09_clases.md) · [Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_11_metodos.md)
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="RA1_09_clases.md">← RA1-09</a>
+    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_11_metodos.md">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-11 · Métodos</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
