@@ -332,3 +332,6 @@ Se verifican los identificadores y las transiciones de estado de ambos ejemplos 
 - [MDN: addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener): asociación entre evento y respuesta.
 - [Currículo de referencia](https://mosqueteroweb.github.io/ismie01/DAM/dam_di_relaciones.html): contenidos y CE.
 - [Ampliación Android opcional](RA1_anexo_android_arquitectura.md): equivalencias con XML y Java; no es evaluable ni necesaria para completar el itinerario web.
+---
+
+[Índice del RA1](index.md#itinerario-completo-del-ra1) · [Unidad siguiente →](RA1_02_librerias_componentes.md)

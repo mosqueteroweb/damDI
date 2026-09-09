@@ -39,3 +39,25 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
 - [Integrador](RA1_integrador.md)
 - [Demo ejecutable](tareas.html)
 - [Ampliación Android](RA1_anexo_android_arquitectura.md)
+
+## Itinerario completo del RA1
+
+Recorre las unidades en orden o entra directamente en el concepto que necesites. Todas incluyen navegación anterior/siguiente.
+
+| Unidad | Contenido | CE principal |
+|---:|---|---|
+| 01 | [Patrones de arquitectura](RA1_01_patrones_arquitectura.md) | RA1.e |
+| 02 | [Librerías de componentes nativas y multiplataforma](RA1_02_librerias_componentes.md) | RA1.a |
+| 03 | [Herramientas propietarias y libres de edición de interfaces](RA1_03_herramientas_edicion.md) | RA1.a, RA1.b, RA1.c |
+| 04 | [Lenguajes descriptivos para definir interfaces](RA1_04_lenguajes_descriptivos.md) | RA1.e |
+| 05 | [Componentes: características y campo de aplicación](RA1_05_componentes.md) | RA1.b, RA1.d |
+| 06 | [Enlace de componentes a orígenes de datos](RA1_06_enlace_datos.md) | RA1.e, RA1.f |
+| 07 | [Asociación de acciones a eventos](RA1_07_acciones_eventos.md) | RA1.g |
+| 08 | [Edición del código generado por la herramienta de diseño](RA1_08_edicion_codigo_generado.md) | RA1.e, RA1.f |
+| 09 | [Clases e instancias en una interfaz](RA1_09_clases.md) | RA1.e |
+| 10 | [Propiedades de los componentes](RA1_10_propiedades.md) | RA1.d |
+| 11 | [Métodos de la interfaz](RA1_11_metodos.md) | RA1.e |
+| 12 | [Eventos de la interfaz](RA1_12_eventos.md) | RA1.g |
+| 13 | [Escuchadores de eventos](RA1_13_escuchadores.md) | RA1.e, RA1.f, RA1.g |
+
+**Cierre:** [RA1-INT01 · Gestor de tareas del aula](RA1_integrador.md) · [Aplicación de referencia](tareas.html)
