@@ -11,10 +11,10 @@ title: RA1-04 · Lenguajes descriptivos para definir interfaces
 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
-    <a href="RA1_03_herramientas_edicion.md">← RA1-03</a>
-    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_03_herramientas_edicion.html">← RA1-03</a>
+    <a href="index.html#itinerario-completo-del-ra1">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="RA1_05_componentes.md">
+  <a class="unit-next-card" href="RA1_05_componentes.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-05 · Componentes</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>
@@ -105,10 +105,10 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
-    <a href="RA1_03_herramientas_edicion.md">← RA1-03</a>
-    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_03_herramientas_edicion.html">← RA1-03</a>
+    <a href="index.html#itinerario-completo-del-ra1">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="RA1_05_componentes.md">
+  <a class="unit-next-card" href="RA1_05_componentes.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-05 · Componentes</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>

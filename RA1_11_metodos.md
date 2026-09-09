@@ -11,10 +11,10 @@ title: RA1-11 · Métodos de la interfaz
 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
-    <a href="RA1_10_propiedades.md">← RA1-10</a>
-    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_10_propiedades.html">← RA1-10</a>
+    <a href="index.html#itinerario-completo-del-ra1">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="RA1_12_eventos.md">
+  <a class="unit-next-card" href="RA1_12_eventos.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-12 · Eventos</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>
@@ -103,10 +103,10 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
-    <a href="RA1_10_propiedades.md">← RA1-10</a>
-    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_10_propiedades.html">← RA1-10</a>
+    <a href="index.html#itinerario-completo-del-ra1">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="RA1_12_eventos.md">
+  <a class="unit-next-card" href="RA1_12_eventos.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-12 · Eventos</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>

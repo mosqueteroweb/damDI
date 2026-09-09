@@ -11,10 +11,10 @@ title: RA1-06 · Enlace de componentes a orígenes de datos
 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
-    <a href="RA1_05_componentes.md">← RA1-05</a>
-    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_05_componentes.html">← RA1-05</a>
+    <a href="index.html#itinerario-completo-del-ra1">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="RA1_07_acciones_eventos.md">
+  <a class="unit-next-card" href="RA1_07_acciones_eventos.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-07 · Acciones y eventos</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>
@@ -104,10 +104,10 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
-    <a href="RA1_05_componentes.md">← RA1-05</a>
-    <a href="index.md#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_05_componentes.html">← RA1-05</a>
+    <a href="index.html#itinerario-completo-del-ra1">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="RA1_07_acciones_eventos.md">
+  <a class="unit-next-card" href="RA1_07_acciones_eventos.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-07 · Acciones y eventos</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>
