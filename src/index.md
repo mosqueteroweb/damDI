@@ -47,13 +47,13 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Datos, filtros, totales, gráficos e integración.</span>
     <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
   </a>
-  <article class="ra-card ra-card--ra8" aria-label="RA8, próximamente">
+  <a class="ra-card ra-card--ra8 ra-card--available" href="RA8_00_guia_docente.html">
     <span class="ra-card__order">Bloque 6</span>
     <span class="ra-card__number">RA8</span>
     <strong>Pruebas de interfaces</strong>
     <span class="ra-card__description">Pruebas funcionales, de integración y regresión.</span>
-    <span class="ra-card__meta"><span>Próximamente</span></span>
-  </article>
+    <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
+  </a>
   <article class="ra-card ra-card--ra6" aria-label="RA6, próximamente">
     <span class="ra-card__order">Bloque 7</span>
     <span class="ra-card__number">RA6</span>
@@ -191,3 +191,19 @@ El RA5 convierte los datos del gestor en informes incrustados y exportables. El 
 - [RA5-07 · Librerías y código generado](RA5_07_librerias_codigo.md)
 - [RA5-08 · Fuentes de datos y consultas](RA5_08_fuentes_consultas.md)
 - [RA5-INT01 · Informe de seguimiento del aula](RA5_integrador.md)
+
+## RA8 · Evaluación y pruebas de aplicaciones
+
+**Duración propuesta:** 12 horas · **7 criterios de evaluación** · **6 prácticas básicas** · **1 integrador**
+
+El RA8 aplica una estrategia reproducible al gestor y sus informes: integración, regresión, sistema, volumen, estrés, seguridad y recursos. La IA genera borradores de casos y scripts; el alumnado los comprende, ejecuta y documenta.
+
+- [Guía docente y temporalización](RA8_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA8_matriz_contenidos_evaluacion.md)
+- [RA8-01 · Objetivo, límites y estrategia](RA8_01_estrategia.md)
+- [RA8-02 · Pruebas de integración](RA8_02_integracion.md)
+- [RA8-03 · Sistema, volumen y estrés](RA8_03_sistema_volumen_estres.md)
+- [RA8-04 · Uso de recursos](RA8_04_recursos.md)
+- [RA8-05 · Pruebas de seguridad](RA8_05_seguridad.md)
+- [RA8-06 · Pruebas manuales, automáticas y regresión](RA8_06_manual_automatica_regresion.md)
+- [RA8-INT01 · Certificación interna del gestor](RA8_integrador.md)

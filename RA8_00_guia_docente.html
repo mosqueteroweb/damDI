@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#745b00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA8 · Guía docente · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra8">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA8 · Guía docente</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra8--evaluación-y-pruebas-de-aplicaciones">RA8 · Evaluación y pruebas de aplicaciones</h1>
+<blockquote>
+<p><strong>Duración propuesta: 12 horas · Ruta web · Objetivo WCAG 2.2 AA</strong></p>
+</blockquote>
+<h2 id="resultado-de-aprendizaje">Resultado de aprendizaje</h2>
+<p>Evalúa el funcionamiento de aplicaciones diseñando y ejecutando pruebas.</p>
+<h2 id="producto-del-ra">Producto del RA</h2>
+<p>El alumnado somete el gestor de tareas y sus informes a una estrategia de pruebas reproducible. La IA ayuda a proponer casos y generar scripts; el alumnado identifica preparación, acción y resultado esperado, ejecuta, conserva evidencias, diagnostica fallos y comprueba la corrección. No escribe suites desde cero.</p>
+<h2 id="secuencia-docente">Secuencia docente</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sesión</th>
+<th>Unidades</th>
+<th style="text-align: right;">Horas</th>
+<th>Evidencia principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Estrategia de pruebas</td>
+<td style="text-align: right;">2</td>
+<td>Plan priorizado y trazable</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Integración ascendente y descendente</td>
+<td style="text-align: right;">2</td>
+<td>Pruebas de conexión entre elementos</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Sistema, configuración, recuperación, volumen y estrés</td>
+<td style="text-align: right;">2</td>
+<td>Límites y recuperación observados</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Uso de recursos</td>
+<td style="text-align: right;">2</td>
+<td>Medición con presupuesto verificable</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Seguridad, regresión y automatización</td>
+<td style="text-align: right;">2</td>
+<td>Hallazgos contrastados y suite mínima</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Integrador y defensa</td>
+<td style="text-align: right;">2</td>
+<td>Informe completo antes/después</td>
+</tr>
+</tbody>
+</table>
+<p>Las seis unidades corresponden a los seis contenidos básicos; seguridad y herramientas comparten la quinta sesión.</p>
+<h2 id="flujo-de-cada-clase">Flujo de cada clase</h2>
+<ol type="1">
+<li>Partir de riesgo y requisito, no de la herramienta.</li>
+<li>Definir precondición, datos, acción y oráculo antes de ejecutar.</li>
+<li>Pedir a Gemini/AI Studio un caso o script pequeño y explicado.</li>
+<li>Localizar selectores, datos, aserciones, métricas y umbrales.</li>
+<li>Ejecutar y conservar salida real.</li>
+<li>Provocar o aislar un fallo, corregir y repetir.</li>
+<li>Documentar límites: una prueba superada reduce incertidumbre, no demuestra ausencia de defectos.</li>
+</ol>
+<h2 id="herramientas">Herramientas</h2>
+<ul>
+<li><strong>Stitch:</strong> estados que deben probarse y mapa visual de flujos.</li>
+<li><strong>Gemini / Google AI Studio:</strong> generación y explicación de casos, datos y scripts delimitados.</li>
+<li><strong>Playwright:</strong> integración y regresión de flujos web; complemento justificado por ejecución real en navegador.</li>
+<li><strong>Chrome DevTools y Lighthouse:</strong> red, rendimiento, memoria, accesibilidad y uso de recursos.</li>
+<li><strong>k6:</strong> volumen y estrés sobre un entorno autorizado; scripts generados y cargas pequeñas en clase.</li>
+<li><strong>OWASP ZAP Baseline:</strong> revisión pasiva inicial de seguridad; nunca sustituye la comprobación manual.</li>
+<li><strong>Material Design 3 y WCAG 2.2 AA:</strong> referencia de estados y calidad de interacción.</li>
+</ul>
+<h2 id="evaluación">Evaluación</h2>
+<p>Las prácticas básicas producen evidencias parciales y el integrador cubre los siete criterios. Un listado de casos no demuestra ejecución: cada evidencia incluye versión, entorno, datos, resultado esperado, resultado real, prueba conservada y conclusión.</p>
+<h2 id="preparación-del-profesor">Preparación del profesor</h2>
+<ul>
+<li>Crear una copia autorizada del gestor con defectos controlados.</li>
+<li>Preparar datos pequeños, grandes y corruptos sin información personal.</li>
+<li>Prohibir pruebas de carga o seguridad sobre servicios de terceros.</li>
+<li>Guardar una versión base para regresión.</li>
+<li>Mantener Android/Java como ampliación voluntaria.</li>
+</ul>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz RA8</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA8_01_estrategia.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA8-01 · Objetivo, límites y estrategia</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

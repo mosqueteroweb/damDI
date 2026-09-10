@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#745b00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA8-02 · Pruebas de integración · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra8">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA8-02 · Pruebas de integración</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra8-02--integración-ascendente-y-descendente">RA8-02 · Integración ascendente y descendente</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Comprobar contratos entre componentes, almacenamiento, informes y aplicación mediante integración ascendente y descendente.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La integración <strong>ascendente</strong> empieza por piezas inferiores y sustituye temporalmente consumidores con drivers. La <strong>descendente</strong> empieza por el flujo superior y sustituye dependencias inferiores con stubs. Ambas aíslan fronteras: evento, parámetro, formato de datos o respuesta.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">&#39;una tarea creada aparece en el informe&#39;</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">&#39;/tareas.html&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">getByLabel</span>(<span class="st">&#39;Título&#39;</span>)<span class="op">.</span><span class="fu">fill</span>(<span class="st">&#39;Preparar RA8&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">getByRole</span>(<span class="st">&#39;button&#39;</span><span class="op">,</span> { <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Guardar tarea&#39;</span> })<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">getByRole</span>(<span class="st">&#39;link&#39;</span><span class="op">,</span> { <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Informes&#39;</span> })<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(page<span class="op">.</span><span class="fu">getByText</span>(<span class="st">&#39;Preparar RA8&#39;</span>))<span class="op">.</span><span class="fu">toBeVisible</span>()<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>La IA ha generado un flujo entre formulario, persistencia e informe. El alumnado reconoce preparación, acción y aserción; los selectores se apoyan en nombres accesibles.</p>
+<h2 id="ra8-pb02--dos-direcciones-de-integración">RA8-PB02 · Dos direcciones de integración</h2>
+<p>Prueba el contrato <code>task-card → lista</code> de abajo arriba con un contenedor de prueba y <code>aplicación → fuente</code> de arriba abajo interceptando una respuesta JSON. Provoca un nombre de campo incorrecto y observa dónde falla.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La prueba ascendente crea una tarjeta, dispara <code>task-toggle</code> y comprueba el detalle recibido. La descendente simula <code>/data/tareas.json</code> y recorre la interfaz hasta el total. Cambiar <code>status</code> por <code>state</code> deja el contrato incumplido; la evidencia identifica la frontera y no atribuye el fallo al gráfico.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Dibuja los elementos reales y sustituidos en cada dirección y explica qué contrato verificaste.</p>
+<p>Referencia: <a href="https://playwright.dev/docs/writing-tests">pruebas de navegador con Playwright</a>.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_01_estrategia.html">← RA8-01</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA8_03_sistema_volumen_estres.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-03 · Sistema, volumen y estrés</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

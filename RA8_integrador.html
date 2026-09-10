@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#745b00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA8-INT01 · Certificación interna del gestor · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra8">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA8-INT01 · Certificación interna del gestor</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra8-int01--certificación-interna-del-gestor">RA8-INT01 · Certificación interna del gestor</h1>
+<h2 id="situación">Situación</h2>
+<p>Antes de distribuir el gestor, el centro necesita una decisión razonada sobre su preparación. No busca «cero fallos», sino riesgos conocidos, resultados reproducibles y límites explícitos.</p>
+<h2 id="encargo">Encargo</h2>
+<p>Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estrategia completa sobre una versión identificada. Parte de plantillas y scripts generados; comprende, adapta y verifica cada prueba.</p>
+<h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
+<ol type="1">
+<li>Estrategia con alcance, riesgos, entornos, datos, responsabilidades y criterios de salida.</li>
+<li>Integración ascendente y descendente sobre dos fronteras distintas.</li>
+<li>Suite de regresión automática con cinco flujos críticos y revisión manual complementaria.</li>
+<li>Pruebas de volumen y estrés local con carga progresiva, límite y recuperación.</li>
+<li>Cinco comprobaciones de seguridad y contraste manual de dos avisos de herramienta.</li>
+<li>Presupuesto de recursos con al menos cuatro métricas y tres ejecuciones.</li>
+<li>Informe que vincule requisito, caso, resultado, evidencia, defecto, corrección y repetición.</li>
+</ol>
+<h2 id="entregables">Entregables</h2>
+<ul>
+<li>Plan y matriz de trazabilidad.</li>
+<li>Versión/commit y descripción del entorno.</li>
+<li>Datos de prueba ficticios y procedimiento de reinicio.</li>
+<li>Casos manuales y scripts generados anotados.</li>
+<li>Salidas de Playwright, Lighthouse, k6 y ZAP sobre entorno autorizado.</li>
+<li>Registro de defectos antes/después.</li>
+<li>Conclusión: apto, apto con condiciones o no apto.</li>
+<li>Defensa individual de cinco minutos.</li>
+</ul>
+<h2 id="casos-mínimos">Casos mínimos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Familia</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Integración</td>
+<td>Contratos componente–lista y aplicación–fuente</td>
+</tr>
+<tr class="even">
+<td>Regresión</td>
+<td>Cinco flujos, incluido un defecto corregido</td>
+</tr>
+<tr class="odd">
+<td>Volumen/estrés</td>
+<td>Escalones, presupuesto y recuperación</td>
+</tr>
+<tr class="even">
+<td>Seguridad</td>
+<td>Entrada/salida, secretos, almacenamiento, dependencia, cabecera</td>
+</tr>
+<tr class="odd">
+<td>Recursos</td>
+<td>Transferencia, peticiones, respuesta y memoria</td>
+</tr>
+<tr class="even">
+<td>Sistema</td>
+<td>Configuración, fuente caída y datos corruptos</td>
+</tr>
+</tbody>
+</table>
+<h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
+<table>
+<thead>
+<tr class="header">
+<th>CE</th>
+<th>Satisfactorio</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>Estrategia priorizada, acotada y trazable</td>
+<td>Lista de herramientas sin estrategia</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Dos integraciones con frontera y sustitutos claros</td>
+<td>Solo prueba piezas aisladas</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>Suite reproduce un defecto antes/después</td>
+<td>Automatiza sin demostrar regresión</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>Volumen y estrés miden degradación y recuperación</td>
+<td>Carga sin umbral o sobre terceros</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>Hallazgos de seguridad reproducidos y contrastados</td>
+<td>Copia avisos automáticos</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>Métricas repetidas contra presupuesto</td>
+<td>Solo presenta puntuación global</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>Informe permite repetir y decidir</td>
+<td>Capturas sin entorno ni conclusión</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solución-docente-orientativa">Solución docente orientativa</h2>
+<details><summary>Mostrar estructura de una solución válida</summary>
+
+<p>La estrategia prioriza pérdida de datos, borrado y discrepancias del informe. Playwright prueba integración y cinco regresiones sobre estado reiniciado. El volumen crece hasta 1.000 tareas y la carga k6 permanece local; se documenta el primer límite y la recuperación. Lighthouse y DevTools comparan tres ejecuciones. ZAP se usa pasivamente y los avisos se verifican. Cada defecto tiene pasos, esperado/real, severidad, corrección y repetición. La conclusión «apto con condiciones» enumera riesgos residuales y fecha de revisión.</p>
+</details>
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_06_manual_automatica_regresion.html">← RA8-06</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz RA8</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/"><span class="unit-next-card__eyebrow">Volver al curso</span><strong>Índice general del módulo</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

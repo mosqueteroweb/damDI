@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#745b00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA8-05 · Pruebas de seguridad · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra8">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA8-05 · Pruebas de seguridad</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra8-05--pruebas-de-seguridad">RA8-05 · Pruebas de seguridad</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Comprobar riesgos básicos de entrada, salida, almacenamiento, dependencias y configuración sin atacar sistemas ajenos.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Las pruebas se realizan solo sobre la copia local autorizada. Se revisan validación, codificación de salida, secretos, permisos, almacenamiento, cabeceras y dependencias. Un escáner ofrece indicios; cada hallazgo se reproduce, clasifica y verifica manualmente antes de concluir.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Dato de prueba: <code>&lt;img src=x onerror=alert(1)&gt;</code>. Si se asigna con <code>textContent</code>, aparece como texto; con <code>innerHTML</code> puede interpretarse. La corrección generada debe cambiar el punto de salida, no «limpiar» caracteres al azar.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>titleNode<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> task<span class="op">.</span><span class="at">title</span><span class="op">;</span></span></code></pre></div>
+<p>El alumnado explica que <code>textContent</code> trata el valor como texto y vuelve a ejecutar el caso.</p>
+<h2 id="ra8-pb05--cinco-controles-seguros">RA8-PB05 · Cinco controles seguros</h2>
+<p>Prueba entrada maliciosa como texto, secreto simulado en archivos, almacenamiento de datos sensibles, dependencia desactualizada y cabeceras en servidor local. Ejecuta ZAP Baseline de forma pasiva y contrasta dos avisos.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La aplicación muestra literalmente la cadena, no incluye claves, almacena solo datos ficticios y documenta dependencias. ZAP señala una cabecera ausente; el alumno confirma la respuesta HTTP y propone configuración. Un aviso no aplicable se marca con evidencia. Tras corregir la salida, la prueba de regresión de seguridad pasa.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Entrega alcance autorizado, evidencia reproducible, severidad, corrección y repetición. No incluyas cargas contra GitHub Pages ni servicios externos.</p>
+<p>Referencia: <a href="https://www.zaproxy.org/docs/docker/baseline-scan/">ZAP Baseline Scan</a>.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_04_recursos.html">← RA8-04</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA8_06_manual_automatica_regresion.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-06 · Pruebas manuales, automáticas y regresión</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

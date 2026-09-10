@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#745b00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA8-03 · Sistema, volumen y estrés · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra8">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA8-03 · Sistema, volumen y estrés</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra8-03--sistema-configuración-recuperación-volumen-y-estrés">RA8-03 · Sistema, configuración, recuperación, volumen y estrés</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Evaluar la aplicación completa bajo configuraciones, fallos, conjuntos grandes y carga creciente, siempre en un entorno autorizado.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Las pruebas de sistema observan comportamiento completo. <strong>Configuración</strong> cambia navegador, ancho o almacenamiento; <strong>recuperación</strong> introduce fallos y comprueba retorno seguro; <strong>volumen</strong> aumenta datos; <strong>estrés</strong> aumenta carga hasta superar el objetivo para conocer degradación y recuperación.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Prueba</th>
+<th>Entrada</th>
+<th>Oráculo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Volumen</td>
+<td>10, 100, 1.000 tareas</td>
+<td>búsqueda usable y total correcto</td>
+</tr>
+<tr class="even">
+<td>Recuperación</td>
+<td>JSON corrupto</td>
+<td>mensaje, datos seguros y reintento</td>
+</tr>
+<tr class="odd">
+<td>Estrés</td>
+<td>1→10 usuarios virtuales</td>
+<td>sin errores y p95 bajo presupuesto</td>
+</tr>
+</tbody>
+</table>
+<p>Script k6 generado para una copia local:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> options <span class="op">=</span> { <span class="dt">stages</span><span class="op">:</span> [{ <span class="dt">duration</span><span class="op">:</span> <span class="st">&#39;20s&#39;</span><span class="op">,</span> <span class="dt">target</span><span class="op">:</span> <span class="dv">5</span> }<span class="op">,</span> { <span class="dt">duration</span><span class="op">:</span> <span class="st">&#39;10s&#39;</span><span class="op">,</span> <span class="dt">target</span><span class="op">:</span> <span class="dv">0</span> }] }<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> <span class="kw">function</span> () { http<span class="op">.</span><span class="fu">get</span>(<span class="st">&#39;http://localhost:8000/&#39;</span>)<span class="op">;</span> <span class="fu">sleep</span>(<span class="dv">1</span>)<span class="op">;</span> }</span></code></pre></div>
+<p><code>stages</code> sube y baja la carga; <code>target</code> es concurrencia; la URL nunca apunta a un tercero.</p>
+<h2 id="ra8-pb03--escalón-fallo-y-recuperación">RA8-PB03 · Escalón, fallo y recuperación</h2>
+<p>Carga 10, 100 y 1.000 tareas, simula fallo de fuente y ejecuta una carga pequeña contra el servidor local. Registra tiempo, errores, comportamiento visible y recuperación.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La tabla separa tamaño de datos y usuarios concurrentes. Con JSON corrupto aparece error recuperable; tras restaurarlo, Reintentar carga sin recargar toda la página. La prueba k6 se limita al entorno local, define presupuesto y confirma que vuelve a cero usuarios. Si 1.000 filas degradan la vista, se propone paginación y se repite.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Indica el primer límite observado y demuestra que la aplicación se recupera cuando cesa la condición.</p>
+<p>Referencia: <a href="https://grafana.com/docs/k6/latest/">documentación oficial de k6</a>.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_02_integracion.html">← RA8-02</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA8_04_recursos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-04 · Uso de recursos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>
