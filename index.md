@@ -9,6 +9,69 @@ title: Desarrollo de Interfaces — DAM
 
 Este sitio organiza el curso alrededor de **aplicaciones web generadas y modificadas con IA**. El alumnado no parte de escribir código desde cero: dirige la generación, usa editores visuales, localiza los fragmentos relevantes, adapta cambios acotados y verifica el resultado. **Material Design 3** es la guía visual común.
 
+## Mapa del módulo · 100 horas
+
+<section class="ra-grid" aria-label="Resultados de aprendizaje del módulo">
+  <a class="ra-card ra-card--available" href="RA1_01_patrones_arquitectura.html">
+    <span class="ra-card__order">Bloque 1</span>
+    <span class="ra-card__number">RA1</span>
+    <strong>Generación de interfaces</strong>
+    <span class="ra-card__description">Editores visuales, componentes y código generado por IA.</span>
+    <span class="ra-card__meta"><span>18 horas</span><span>Disponible</span></span>
+  </a>
+  <a class="ra-card ra-card--available" href="RA4_00_guia_docente.html">
+    <span class="ra-card__order">Bloque 2</span>
+    <span class="ra-card__number">RA4</span>
+    <strong>Usabilidad y accesibilidad</strong>
+    <span class="ra-card__description">Auditoría, wireframes, Material Design 3 y pruebas.</span>
+    <span class="ra-card__meta"><span>16 horas</span><span>Disponible</span></span>
+  </a>
+  <article class="ra-card" aria-label="RA3, próximamente">
+    <span class="ra-card__order">Bloque 3</span>
+    <span class="ra-card__number">RA3</span>
+    <strong>Componentes visuales</strong>
+    <span class="ra-card__description">Creación, propiedades, eventos, pruebas y reutilización.</span>
+    <span class="ra-card__meta"><span>Próximamente</span></span>
+  </article>
+  <article class="ra-card" aria-label="RA2, próximamente">
+    <span class="ra-card__order">Bloque 4</span>
+    <span class="ra-card__number">RA2</span>
+    <strong>Interfaces naturales</strong>
+    <span class="ra-card__description">Voz, gestos, visión artificial y realidad aumentada.</span>
+    <span class="ra-card__meta"><span>Próximamente</span></span>
+  </article>
+  <article class="ra-card" aria-label="RA5, próximamente">
+    <span class="ra-card__order">Bloque 5</span>
+    <span class="ra-card__number">RA5</span>
+    <strong>Informes</strong>
+    <span class="ra-card__description">Datos, filtros, totales, gráficos e integración.</span>
+    <span class="ra-card__meta"><span>Próximamente</span></span>
+  </article>
+  <article class="ra-card" aria-label="RA8, próximamente">
+    <span class="ra-card__order">Bloque 6</span>
+    <span class="ra-card__number">RA8</span>
+    <strong>Pruebas de interfaces</strong>
+    <span class="ra-card__description">Pruebas funcionales, de integración y regresión.</span>
+    <span class="ra-card__meta"><span>Próximamente</span></span>
+  </article>
+  <article class="ra-card" aria-label="RA6, próximamente">
+    <span class="ra-card__order">Bloque 7</span>
+    <span class="ra-card__number">RA6</span>
+    <strong>Documentación</strong>
+    <span class="ra-card__description">Ayudas, manuales, referencias y tutoriales.</span>
+    <span class="ra-card__meta"><span>Próximamente</span></span>
+  </article>
+  <article class="ra-card" aria-label="RA7, próximamente">
+    <span class="ra-card__order">Bloque 8</span>
+    <span class="ra-card__number">RA7</span>
+    <strong>Distribución</strong>
+    <span class="ra-card__description">Empaquetado, instalación, firma y publicación.</span>
+    <span class="ra-card__meta"><span>Próximamente</span></span>
+  </article>
+</section>
+
+> Las tarjetas siguen el **orden de impartición**, por eso la numeración de los RA no es consecutiva.
+
 ## RA1 · Generación de interfaces
 
 **Duración propuesta:** 18 horas · **8 criterios de evaluación** · **13 ejemplos** · **13 prácticas básicas** · **1 integrador**
@@ -61,3 +124,20 @@ Recorre las unidades en orden o entra directamente en el concepto que necesites.
 | 13 | [Escuchadores de eventos](RA1_13_escuchadores.md) | RA1.e, RA1.f, RA1.g |
 
 **Cierre:** [RA1-INT01 · Gestor de tareas del aula](RA1_integrador.md) · [Aplicación de referencia](tareas.html)
+
+## RA4 · Diseño, usabilidad y accesibilidad
+
+**Duración propuesta:** 16 horas · **9 criterios de evaluación** · **7 prácticas básicas** · **1 integrador**
+
+El RA4 audita y rediseña la aplicación obtenida en RA1. El alumnado aplica estándares, genera wireframes y mockups, reorganiza controles y acciones, revisa la legibilidad y demuestra el resultado mediante pruebas.
+
+- [Guía docente y temporalización](RA4_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA4_matriz_contenidos_evaluacion.md)
+- [RA4-01 · Usabilidad, accesibilidad y estándares](RA4_01_usabilidad_accesibilidad.md)
+- [RA4-02 · Medidas y herramientas](RA4_02_medicion_herramientas.md)
+- [RA4-03 · Wireframes y mockups](RA4_03_wireframes_mockups.md)
+- [RA4-04 · Estructura y navegación](RA4_04_estructura_navegacion.md)
+- [RA4-05 · Aspecto visual y legibilidad](RA4_05_aspecto_visual.md)
+- [RA4-06 · Elementos interactivos](RA4_06_elementos_interactivos.md)
+- [RA4-07 · Secuencia de control y mensajes](RA4_07_secuencia_control.md)
+- [RA4-INT01 · Rediseño accesible del gestor](RA4_integrador.md)
