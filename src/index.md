@@ -33,13 +33,13 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Creación, propiedades, eventos, pruebas y reutilización.</span>
     <span class="ra-card__meta"><span>16 horas</span><span>Disponible</span></span>
   </a>
-  <article class="ra-card ra-card--ra2" aria-label="RA2, próximamente">
+  <a class="ra-card ra-card--ra2 ra-card--available" href="RA2_00_guia_docente.html">
     <span class="ra-card__order">Bloque 4</span>
     <span class="ra-card__number">RA2</span>
     <strong>Interfaces naturales</strong>
     <span class="ra-card__description">Voz, gestos, visión artificial y realidad aumentada.</span>
-    <span class="ra-card__meta"><span>Próximamente</span></span>
-  </article>
+    <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
+  </a>
   <article class="ra-card ra-card--ra5" aria-label="RA5, próximamente">
     <span class="ra-card__order">Bloque 5</span>
     <span class="ra-card__number">RA5</span>
@@ -158,3 +158,18 @@ El RA3 transforma partes repetidas del gestor en Web Components reutilizables. E
 - [RA3-06 · Pruebas de componentes](RA3_06_pruebas.md)
 - [RA3-07 · Documentación y empaquetado](RA3_07_documentacion_empaquetado.md)
 - [RA3-INT01 · Kit visual del gestor de tareas](RA3_integrador.md)
+
+## RA2 · Interfaces naturales de usuario
+
+**Duración propuesta:** 12 horas · **6 criterios de evaluación** · **5 prácticas básicas** · **1 integrador**
+
+El RA2 añade voz, movimiento corporal, detección de manos y realidad aumentada al gestor. Todas las modalidades muestran su estado, solicitan permiso y conservan una alternativa convencional para poder aprender y evaluar sin depender del dispositivo.
+
+- [Guía docente y temporalización](RA2_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA2_matriz_contenidos_evaluacion.md)
+- [RA2-01 · Aprendizaje automático y entrenamiento](RA2_01_aprendizaje_automatico.md)
+- [RA2-02 · Interfaces naturales y tipos](RA2_02_interfaces_naturales.md)
+- [RA2-03 · Voz, habla y reconocimiento](RA2_03_voz_habla.md)
+- [RA2-04 · Partes y movimientos del cuerpo](RA2_04_cuerpo_movimiento.md)
+- [RA2-05 · Realidad aumentada](RA2_05_realidad_aumentada.md)
+- [RA2-INT01 · Asistente natural del aula](RA2_integrador.md)

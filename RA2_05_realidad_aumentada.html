@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006a6a">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA2-05 · Realidad aumentada · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra2">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA2-05 · Realidad aumentada</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra2-05--realidad-aumentada">RA2-05 · Realidad aumentada</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Integrar un objeto digital en el entorno real, conservar una alternativa 3D y explicar activación, compatibilidad, escala y utilidad contextual.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La realidad aumentada combina la escena real con contenido digital situado en el espacio. Para una primera ruta web, <code>&lt;model-viewer&gt;</code> muestra un modelo 3D y ofrece un botón de RA cuando el dispositivo dispone de un modo compatible. El mismo contenido debe seguir siendo consultable en 3D si la RA no está disponible.</p>
+<p>Una integración útil relaciona objeto, tarea y contexto; no añade RA como adorno. Se comprueban tamaño, orientación, iluminación, espacio seguro y salida clara.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Código solicitado a IA a partir del ejemplo oficial:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">model-viewer</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;models/router.glb&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Router con sus conexiones señaladas&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  ar</span> <span class="er">ar-modes</span><span class="ot">=</span><span class="st">&quot;webxr scene-viewer quick-look&quot;</span> <span class="er">camera-controls</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot">  poster=</span><span class="st">&quot;images/router-poster.webp&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span> <span class="er">slot</span><span class="ot">=</span><span class="st">&quot;ar-button&quot;</span><span class="dt">&gt;</span>Ver el router en mi espacio<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">model-viewer</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><code>src</code> aporta el modelo; <code>alt</code> describe su propósito; <code>ar</code> habilita la opción; <code>ar-modes</code> enumera rutas compatibles; <code>camera-controls</code> conserva exploración 3D; el botón comunica la acción.</p>
+<h2 id="ra2-pb05--ayuda-contextual-en-ra">RA2-PB05 · Ayuda contextual en RA</h2>
+<p>Elige una tarea de montaje o identificación, prepara en Stitch la ficha M3 y solicita a Gemini la integración de un modelo con tres puntos informativos. Debe incluir instrucciones previas, botón de salida y alternativa 3D con la misma información.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La ficha «Conectar el router» muestra modelo, propósito, requisitos y acción «Ver en mi espacio». Tres puntos explican alimentación, WAN y LAN. En un dispositivo compatible se abre RA; en escritorio se rota y amplía el mismo modelo. Si falta el recurso aparece una ilustración y una lista textual. La prueba comprueba escala aproximada, lectura, orientación, cancelación y alternativa.</p>
+</details>
+
+<h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
+<p>Justifica qué información mejora al verla situada y qué riesgo aparece al caminar mirando la pantalla. No se obliga a instalar una aplicación ni a publicar imágenes del entorno.</p>
+<p>Referencia: <a href="https://modelviewer.dev/examples/augmentedreality/">ejemplos de realidad aumentada de <code>&lt;model-viewer&gt;</code></a>.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA2_04_cuerpo_movimiento.html">← RA2-04</a><a href="https://mosqueteroweb.github.io/damDI/RA2_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA2_integrador.html"><span class="unit-next-card__eyebrow">Ejercicio integrador</span><strong>RA2-INT01 · Asistente natural del aula</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

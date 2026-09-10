@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006a6a">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA2-02 · Interfaces naturales y tipos · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra2">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA2-02 · Interfaces naturales y tipos</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra2-02--interfaces-naturales-y-tipos">RA2-02 · Interfaces naturales y tipos</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Diseñar una interacción natural completa y elegir entre voz, gesto, mirada, tacto o combinación multimodal según el contexto.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>El ciclo es <strong>entrada → interpretación → intención → acción → respuesta</strong>. La interfaz debe mostrar cuándo capta datos, qué ha entendido y cómo cancelar o corregir. La modalidad adecuada depende del ruido, iluminación, movilidad, privacidad, precisión, fatiga y capacidades de la persona.</p>
+<p>Una interfaz multimodal permite combinar canales o sustituir uno por otro. «Natural» no significa invisible: la persona necesita saber si el sistema escucha o mira.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Tarea</th>
+<th>Entrada</th>
+<th>Intención</th>
+<th>Acción</th>
+<th>Respuesta</th>
+<th>Alternativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ver tareas pendientes</td>
+<td>«Mostrar pendientes»</td>
+<td>Filtrar</td>
+<td>Aplicar filtro</td>
+<td>Chip y anuncio de resultado</td>
+<td>Botón «Pendientes»</td>
+</tr>
+<tr class="even">
+<td>Completar tarea</td>
+<td>Mano abierta 1 s</td>
+<td>Confirmar</td>
+<td>Cambiar estado</td>
+<td>Animación y texto</td>
+<td>Casilla etiquetada</td>
+</tr>
+</tbody>
+</table>
+<p>Stitch genera los estados reposo, solicitando permiso, activo, no entendido y detenido. Gemini revisa que cada estado tenga texto y no dependa solo del color.</p>
+<h2 id="ra2-pb02--diseñar-un-flujo-natural">RA2-PB02 · Diseñar un flujo natural</h2>
+<p>Elige dos tareas del gestor y crea su mapa completo. Incluye contexto favorable, contexto problemático, señal de activación, corrección, cancelación y alternativa convencional. Genera con Stitch los cinco estados del sistema.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>Para «crear tarea», la voz es útil con manos ocupadas, pero problemática en un aula ruidosa. Se activa con un botón explícito, transcribe antes de guardar y permite editar o cancelar. Para «avanzar tarjeta», un gesto puede servir a distancia; se exige mantenerlo 600 ms y existe un botón «Siguiente». Los mockups distinguen permiso, captación, interpretación, confirmación y error.</p>
+</details>
+
+<h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
+<p>Explica por qué la modalidad elegida mejora una tarea concreta y en qué situación la empeora. Demuestra que detener el sensor no bloquea la aplicación.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA2_01_aprendizaje_automatico.html">← RA2-01</a><a href="https://mosqueteroweb.github.io/damDI/RA2_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA2_03_voz_habla.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA2-03 · Voz, habla y reconocimiento</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

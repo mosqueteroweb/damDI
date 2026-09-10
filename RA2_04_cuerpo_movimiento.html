@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006a6a">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA2-04 · Partes y movimientos del cuerpo · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra2">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA2-04 · Partes y movimientos del cuerpo</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra2-04--detección-de-partes-y-movimientos-del-cuerpo">RA2-04 · Detección de partes y movimientos del cuerpo</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Convertir puntos corporales detectados en gestos estables que activen acciones, con umbral, tiempo de permanencia y alternativa manual.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>MediaPipe Pose Landmarker devuelve puntos de referencia del cuerpo; Hand Landmarker devuelve puntos de la mano. Una aplicación no debe reaccionar a un fotograma aislado: necesita confianza mínima, varias observaciones coherentes o permanencia, zona segura y tiempo de espera para impedir repeticiones.</p>
+<p>La cámara se inicia mediante una acción clara y puede detenerse. Las imágenes de evaluación pueden sustituirse por vídeos autorizados o material sintético.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Regla generada para «mano derecha levantada»:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> wrist <span class="op">=</span> landmarks[<span class="dv">16</span>]<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> shoulder <span class="op">=</span> landmarks[<span class="dv">12</span>]<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> raised <span class="op">=</span> wrist<span class="op">.</span><span class="at">visibility</span> <span class="op">&gt;</span> <span class="fl">0.7</span> <span class="op">&amp;&amp;</span> wrist<span class="op">.</span><span class="at">y</span> <span class="op">&lt;</span> shoulder<span class="op">.</span><span class="at">y</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (raised) dwell<span class="op">.</span><span class="fu">start</span>(<span class="st">&#39;next&#39;</span>)<span class="op">;</span> <span class="cf">else</span> dwell<span class="op">.</span><span class="fu">cancel</span>(<span class="st">&#39;next&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<p><code>y</code> crece hacia abajo en la imagen, por eso muñeca menor que hombro significa más alta. La visibilidad evita decidir con un punto dudoso; <code>dwell</code> exige mantener el gesto antes de avanzar.</p>
+<h2 id="ra2-pb04--gesto-corporal-y-gesto-de-mano">RA2-PB04 · Gesto corporal y gesto de mano</h2>
+<p>Desde el ejemplo web oficial, pide a Gemini que añada: mano levantada durante 800 ms para mostrar la tarea siguiente y pulgar arriba durante 800 ms para completarla. Añade indicador, espera de dos segundos y botones equivalentes.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>El prototipo solo actúa con confianza suficiente y permanencia cumplida. Tras la acción entra en espera, muestra «Tarea siguiente» o «Marcada como completada» y no repite mientras se mantiene el gesto. Incluye Iniciar/Detener cámara y botones Siguiente/Completar. La tabla de prueba usa tres distancias, dos iluminaciones y un caso sin detección.</p>
+</details>
+
+<h2 id="rendimiento-y-cierre">Rendimiento y cierre</h2>
+<p>La inferencia de vídeo puede bloquear el hilo principal; se limita la frecuencia y se documenta el uso de un worker como ampliación. El alumno señala qué puntos usa, cómo calcula el gesto y qué evita repeticiones.</p>
+<p>Referencias: <a href="https://developers.google.com/edge/mediapipe/solutions/vision/pose_landmarker/web_js">Pose Landmarker para web</a> y <a href="https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker/web_js">Hand Landmarker para web</a>.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA2_03_voz_habla.html">← RA2-03</a><a href="https://mosqueteroweb.github.io/damDI/RA2_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA2_05_realidad_aumentada.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA2-05 · Realidad aumentada</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#006a6a">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA2 · Guía docente · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra2">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA2 · Guía docente</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra2--interfaces-naturales-de-usuario">RA2 · Interfaces naturales de usuario</h1>
+<blockquote>
+<p><strong>Duración propuesta: 12 horas · Ruta web · Material Design 3 como referencia visual</strong></p>
+</blockquote>
+<h2 id="resultado-de-aprendizaje">Resultado de aprendizaje</h2>
+<p>Genera interfaces naturales de usuario utilizando herramientas visuales.</p>
+<h2 id="producto-del-ra">Producto del RA</h2>
+<p>El alumnado añade al gestor de tareas una capa de interacción por voz, gesto corporal y realidad aumentada. No programa desde cero: parte de ejemplos oficiales y salidas de IA, identifica entrada, interpretación, acción y respuesta, modifica decisiones acotadas y demuestra el resultado con pruebas.</p>
+<h2 id="principio-didáctico">Principio didáctico</h2>
+<p>Una interfaz natural aprovecha capacidades habituales —hablar, mirar, señalar o moverse—, pero no es automáticamente intuitiva ni accesible. Toda interacción por cámara o micrófono tendrá consentimiento previo, estado visible, parada clara y alternativa mediante controles convencionales.</p>
+<h2 id="secuencia-docente">Secuencia docente</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sesión</th>
+<th>Unidad</th>
+<th style="text-align: right;">Horas</th>
+<th>Evidencia principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Aprendizaje automático y entrenamiento</td>
+<td style="text-align: right;">2</td>
+<td>Modelo visual probado y ficha de datos</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Interfaces naturales y tipos</td>
+<td style="text-align: right;">2</td>
+<td>Mapa entrada–intención–respuesta</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Voz y habla</td>
+<td style="text-align: right;">2</td>
+<td>Dos acciones por voz con alternativa escrita</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Partes y movimientos del cuerpo</td>
+<td style="text-align: right;">2</td>
+<td>Dos gestos estables y comprobables</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Realidad aumentada</td>
+<td style="text-align: right;">2</td>
+<td>Objeto contextual colocado y alternativa 3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Integrador y defensa</td>
+<td style="text-align: right;">2</td>
+<td>Asistente multimodal verificado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flujo-de-cada-clase">Flujo de cada clase</h2>
+<ol type="1">
+<li>Presentar la tarea y el contexto de uso.</li>
+<li>Probar un ejemplo ya generado u oficial.</li>
+<li>Identificar sensor, datos, interpretación, umbral, acción y respuesta.</li>
+<li>Formular un prompt de modificación con límites de privacidad y accesibilidad.</li>
+<li>Ejecutar la práctica básica y contrastarla con la solución.</li>
+<li>Registrar falsos positivos, falsos negativos y alternativa disponible.</li>
+<li>Cerrar explicando qué fragmento generado controla la decisión.</li>
+</ol>
+<h2 id="herramientas">Herramientas</h2>
+<ul>
+<li><strong>Stitch:</strong> diseño de estados de escucha, detección, permiso, error y alternativa manual.</li>
+<li><strong>Gemini / Google AI Studio:</strong> generación y explicación de prototipos web, reglas de decisión y casos de prueba.</li>
+<li><strong>Teachable Machine:</strong> entrenamiento visual introductorio sin partir de código.</li>
+<li><strong>Web Speech API:</strong> reconocimiento de voz en navegadores compatibles.</li>
+<li><strong>MediaPipe Tasks Vision:</strong> detección de manos y postura; complemento justificado por sus modelos y ejemplos web.</li>
+<li><strong><code>&lt;model-viewer&gt;</code>:</strong> visualización 3D y lanzamiento de RA compatible, con modo 3D de respaldo.</li>
+<li><strong>Material Design 3:</strong> estados, permisos, controles y respuesta visual coherente.</li>
+</ul>
+<h2 id="evaluación">Evaluación</h2>
+<p>Las cinco prácticas generan evidencias parciales y el integrador cubre los seis criterios. Se evalúan decisiones, funcionamiento, límites conocidos y explicación del código generado. No se penaliza que un dispositivo carezca de una API si el alumno aporta simulación reproducible y alternativa funcional.</p>
+<h2 id="preparación-del-profesor">Preparación del profesor</h2>
+<ul>
+<li>Comprobar HTTPS, permisos y compatibilidad de cámara/micrófono.</li>
+<li>Preparar vídeos o imágenes de prueba para quien no pueda usar cámara.</li>
+<li>Evitar que se suban grabaciones o imágenes personales innecesarias.</li>
+<li>Facilitar un prototipo inicial y fragmentos oficiales para modificar.</li>
+<li>Recordar que Android Studio, XML y Java son solo ampliación voluntaria.</li>
+</ul>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA2_matriz_contenidos_evaluacion.html">Matriz RA2</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA2_01_aprendizaje_automatico.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA2-01 · Aprendizaje automático y entrenamiento</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>
