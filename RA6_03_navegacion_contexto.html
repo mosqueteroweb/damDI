@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3f5f90">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA6-03 · Navegación, búsqueda y ayuda contextual · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra6">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA6-03 · Navegación, búsqueda y ayuda contextual</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra6-03--tablas-de-contenidos-índices-búsqueda-y-ayuda-contextual">RA6-03 · Tablas de contenidos, índices, búsqueda y ayuda contextual</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Construir un centro de ayuda localizable y enlazar cada pantalla con la respuesta pertinente.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La tabla de contenidos refleja jerarquía; el índice ofrece términos del usuario; la búsqueda encuentra texto y sinónimos; la ayuda contextual abre el tema exacto sin perder la tarea. Los enlaces necesitan títulos claros, foco visible y retorno.</p>
+<h2 id="ra6-ej03--ejemplo-resuelto">RA6-EJ03 · Ejemplo resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;ayuda.html#crear-tarea&quot;</span> <span class="er">aria-describedby</span><span class="ot">=</span><span class="st">&quot;help-context&quot;</span><span class="dt">&gt;</span>Ayuda<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;help-context&quot;</span> <span class="er">hidden</span><span class="dt">&gt;</span>sobre el formulario Crear tarea<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>El fragmento enlaza al ancla específica y aporta contexto al nombre. La página de destino empieza por la respuesta, no por una portada genérica.</p>
+<h2 id="ra6-pb03--encontrar-ayuda-en-dos-pasos">RA6-PB03 · Encontrar ayuda en dos pasos</h2>
+<p>Diseña con Stitch una portada con contenidos, índice A–Z y búsqueda. Añade ayuda contextual a crear, filtrar y borrar. Prueba cinco consultas, incluidos sinónimos y cero resultados.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>«Nueva», «alta» y «crear» llevan a la misma tarea. Desde Borrar se abre directamente «Eliminar o deshacer». Cero resultados propone términos y contenidos principales. Teclado y botón Atrás conservan foco y contexto. Ningún recorrido supera dos decisiones desde la portada.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Entrega mapa de navegación y tabla consulta–resultado esperado–real.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA6_02_herramientas.html">← RA6-02</a><a href="https://mosqueteroweb.github.io/damDI/RA6_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA6_04_manuales_datos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA6-04 · Manuales y datos persistentes</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

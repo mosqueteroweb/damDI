@@ -54,13 +54,13 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Pruebas funcionales, de integración y regresión.</span>
     <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
   </a>
-  <article class="ra-card ra-card--ra6" aria-label="RA6, próximamente">
+  <a class="ra-card ra-card--ra6 ra-card--available" href="RA6_00_guia_docente.html">
     <span class="ra-card__order">Bloque 7</span>
     <span class="ra-card__number">RA6</span>
     <strong>Documentación</strong>
     <span class="ra-card__description">Ayudas, manuales, referencias y tutoriales.</span>
-    <span class="ra-card__meta"><span>Próximamente</span></span>
-  </article>
+    <span class="ra-card__meta"><span>7 horas</span><span>Disponible</span></span>
+  </a>
   <article class="ra-card ra-card--ra7" aria-label="RA7, próximamente">
     <span class="ra-card__order">Bloque 8</span>
     <span class="ra-card__number">RA7</span>
@@ -207,3 +207,18 @@ El RA8 aplica una estrategia reproducible al gestor y sus informes: integración
 - [RA8-05 · Pruebas de seguridad](RA8_05_seguridad.md)
 - [RA8-06 · Pruebas manuales, automáticas y regresión](RA8_06_manual_automatica_regresion.md)
 - [RA8-INT01 · Certificación interna del gestor](RA8_integrador.md)
+
+## RA6 · Documentación de aplicaciones
+
+**Duración propuesta:** 7 horas · **7 criterios de evaluación** · **5 prácticas básicas** · **1 integrador**
+
+El RA6 crea el centro de ayuda del gestor: formatos, generación, navegación, búsqueda, ayuda contextual, datos persistentes, manuales y tutoriales verificados frente a la aplicación.
+
+- [Guía docente y temporalización](RA6_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA6_matriz_contenidos_evaluacion.md)
+- [RA6-01 · Ficheros de ayuda y formatos](RA6_01_formatos_ayuda.md)
+- [RA6-02 · Herramientas de generación](RA6_02_herramientas.md)
+- [RA6-03 · Navegación, búsqueda y ayuda contextual](RA6_03_navegacion_contexto.md)
+- [RA6-04 · Manuales y datos persistentes](RA6_04_manuales_datos.md)
+- [RA6-05 · Elaboración de tutoriales](RA6_05_tutoriales.md)
+- [RA6-INT01 · Centro de ayuda del gestor](RA6_integrador.md)
