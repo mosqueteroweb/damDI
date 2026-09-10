@@ -9,15 +9,15 @@ title: RA4 · Matriz de contenidos y evaluación
 
 | CE | Evidencia exigida |
 |---|---|
-| RA4.a | Identifica estándares principales de usabilidad y accesibilidad. |
-| RA4.b | Justifica por qué deben aplicarse. |
-| RA4.c | Crea distintos menús con estructura y contenido adecuados. |
-| RA4.d | Distribuye acciones coherentemente entre menús, barras y botones. |
-| RA4.e | Distribuye adecuadamente los controles. |
-| RA4.f | Selecciona el control apropiado para cada caso. |
-| RA4.g | Diseña color, tipografía y aspecto atendiendo a la legibilidad. |
-| RA4.h | Verifica extensión y claridad de los mensajes. |
-| RA4.i | Realiza pruebas de usabilidad y accesibilidad. |
+| RA4.a | Se han identificado los principales estándares de usabilidad y accesibilidad. |
+| RA4.b | Se ha valorado la importancia del uso de estándares para la creación de interfaces. |
+| RA4.c | Se han creado diferentes tipos de menús cuya estructura y contenido siguen los estándares establecidos. |
+| RA4.d | Se han distribuido las acciones en menús, barras de herramientas, botones de comando, entre otros, siguiendo un criterio coherente. |
+| RA4.e | Se han distribuido adecuadamente los controles en la interfaz de usuario. |
+| RA4.f | Se ha utilizado el tipo de control más apropiado en cada caso. |
+| RA4.g | Se ha diseñado el aspecto de la interfaz de usuario (colores y fuentes entre otros) atendiendo a su legibilidad. |
+| RA4.h | Se ha verificado que los mensajes generados por la aplicación son adecuados en extensión y claridad. |
+| RA4.i | Se han realizado pruebas para evaluar la usabilidad y accesibilidad de la aplicación. |
 
 ## Trazabilidad
 
@@ -30,7 +30,7 @@ title: RA4 · Matriz de contenidos y evaluación
 | PB05 Sistema visual legible | Color, fuentes, iconos y distribución | e, g | Tokens y comprobaciones de legibilidad |
 | PB06 Control adecuado | Elementos interactivos | e, f | Sustituciones justificadas y estados visibles |
 | PB07 Flujo recuperable | Secuencia de control | h, i | Diagrama, mensajes revisados y pruebas |
-| INT04 Rediseño accesible | Todos los contenidos | a–i | Aplicación, dossier de evidencias y defensa |
+| INT01 Rediseño accesible | Todos los contenidos | a–i | Aplicación, dossier de evidencias y defensa |
 
 ## Regla de suficiencia
 

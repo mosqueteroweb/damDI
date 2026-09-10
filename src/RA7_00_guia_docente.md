@@ -20,11 +20,11 @@ El alumnado convierte el gestor web probado y documentado en una entrega identif
 | Sesión | Unidad | Horas | Evidencia |
 |---:|---|---:|---|
 | 1 | Componentes y empaquetado | 1 | Inventario y ZIP versionado |
-| 2 | Instaladores y paquetes autoinstalables | 1 | PWA instalable y comprobada |
+| 2 | Instaladores y paquetes autoinstalables | 1 | Comparación y PWA comprobada |
 | 3 | Herramientas de creación | 1 | Paquetes por dos rutas |
 | 4 | Personalización | 1 | Asistente coherente con M3 |
-| 5 | Instalación, modo desatendido y desinstalación | 1 | Ciclo limpio reproducible |
-| 6 | Firma y canales | 1 | Artefacto verificado y plan multicanal |
+| 5 | Instalación desatendida y desinstalación | 1 | Ciclo limpio reproducible |
+| 6 | Firma y canales | 1 | Verificación y decisión de canal |
 | 7 | Integrador y defensa | 2 | Release candidata completa |
 
 ## Flujo de clase
@@ -48,7 +48,7 @@ El alumnado convierte el gestor web probado y documentado en una entrega identif
 
 ## Evaluación
 
-Las nueve prácticas básicas aportan al menos una evidencia por cada contenido; el integrador reúne los ocho criterios. No basta entregar un ZIP: se exige procedencia, versión, hash o firma, instalación limpia, modo desatendido, desinstalación, canales y evidencia de verificación.
+Las seis prácticas son breves y agrupan conceptos relacionados; el integrador reúne los ocho criterios sin repetir nueve entregas independientes. No basta entregar un ZIP: se exige procedencia, versión, firma, instalación limpia, modo desatendido, desinstalación, canales y evidencia de verificación.
 
 ## Preparación del profesor
 

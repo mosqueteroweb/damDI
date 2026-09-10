@@ -27,7 +27,7 @@ El IDE puede exponer una tarea de compilación; la herramienta externa ejecuta l
 
 El código es salida de IA. El alumnado localiza orden, operador que detiene la cadena, carpeta de salida y dependencia externa; después contrasta el resultado con la tarea equivalente del IDE.
 
-## RA7-PB04 · Dos rutas, un artefacto
+## RA7-PB03 · Dos rutas, un artefacto
 
 Genera el paquete una vez desde una tarea del IDE y otra desde terminal o GitHub Actions. Compara listado, tamaño y hash. Explica cualquier diferencia.
 

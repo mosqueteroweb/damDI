@@ -17,7 +17,7 @@ Logotipo, fondo, diálogos, botones, idioma, permisos y mensajes forman parte de
 
 Stitch propone cuatro estados: disponible, confirmación, progreso y final. Gemini redacta «Necesitamos todos los permisos para continuar». El alumnado lo rechaza y lo sustituye por permisos concretos, finalidad, alternativa y momento de solicitud.
 
-## RA7-PB05 · Asistente honesto y accesible
+## RA7-PB04 · Asistente honesto y accesible
 
 Crea en Stitch el flujo de instalación PWA con identidad RA7, español, botones coherentes, cancelación, error recuperable y final con acción. Anota los cambios realizados al borrador de IA.
 

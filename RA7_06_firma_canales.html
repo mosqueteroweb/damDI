@@ -24,20 +24,12 @@
 <pre class="text"><code>artefacto → SHA-256 → firma separada → canal
 receptor → descarga → verifica firma → instala</code></pre>
 <p>La explicación de IA se corrige: HTTPS protege el transporte, pero no sustituye la comprobación del artefacto descargado fuera del sitio.</p>
-<h2 id="ra7-pb08--firma-que-detecta-cambios">RA7-PB08 · Firma que detecta cambios</h2>
-<p>Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Explica qué demuestra cada comprobación.</p>
+<h2 id="ra7-pb06--firmar-y-elegir-canal">RA7-PB06 · Firmar y elegir canal</h2>
+<p>Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Después elige entre Pages, Release, store/ad-hoc y correo, indicando destinatario, actualización y retirada.</p>
 <h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>La entrega separa paquete, suma y firma; publica instrucciones de verificación y solo la clave pública necesaria. El original verifica y la copia alterada falla. La clave privada no aparece en archivos, historial, prompts ni capturas.</p>
-</details>
-
-<h2 id="ra7-pb09--plan-multicanal">RA7-PB09 · Plan multicanal</h2>
-<p>Diseña una tabla para Pages, Release, store/ad-hoc y correo con destinatario, formato, actualización, retirada y riesgo. Selecciona un canal principal y justifica los complementarios.</p>
-<h3 id="solución-orientativa-1">Solución orientativa</h3>
-<details><summary>Mostrar ejemplo de solución</summary>
-
-<p>Pages es el canal principal de la PWA, Release conserva la versión descargable, ad-hoc se reserva al piloto y el correo comparte el enlace, no un binario sin procedencia. Cada canal identifica la versión vigente y cómo retirar una versión defectuosa.</p>
+<p>La entrega separa paquete, suma y firma; el original verifica y la copia alterada falla. La clave privada no se publica. Pages es el canal principal de la PWA, Release conserva la versión descargable, ad-hoc se reserva al piloto y el correo comparte el enlace. Cada canal identifica cómo actualizar y retirar.</p>
 </details>
 
 <h2 id="cierre">Cierre</h2>

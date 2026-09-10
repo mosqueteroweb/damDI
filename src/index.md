@@ -12,7 +12,7 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
 ## Mapa del módulo · 100 horas
 
 <section class="ra-grid" aria-label="Resultados de aprendizaje del módulo">
-  <a class="ra-card ra-card--ra1 ra-card--available" href="RA1_01_patrones_arquitectura.html">
+  <a class="ra-card ra-card--ra1 ra-card--available" href="RA1_00_guia_docente.html">
     <span class="ra-card__order">Bloque 1</span>
     <span class="ra-card__number">RA1</span>
     <strong>Generación de interfaces</strong>
@@ -33,18 +33,18 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Creación, propiedades, eventos, pruebas y reutilización.</span>
     <span class="ra-card__meta"><span>16 horas</span><span>Disponible</span></span>
   </a>
-  <a class="ra-card ra-card--ra2 ra-card--available" href="RA2_00_guia_docente.html">
-    <span class="ra-card__order">Bloque 4</span>
-    <span class="ra-card__number">RA2</span>
-    <strong>Interfaces naturales</strong>
-    <span class="ra-card__description">Voz, gestos, visión artificial y realidad aumentada.</span>
-    <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
-  </a>
   <a class="ra-card ra-card--ra5 ra-card--available" href="RA5_00_guia_docente.html">
-    <span class="ra-card__order">Bloque 5</span>
+    <span class="ra-card__order">Bloque 4</span>
     <span class="ra-card__number">RA5</span>
     <strong>Informes</strong>
     <span class="ra-card__description">Datos, filtros, totales, gráficos e integración.</span>
+    <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
+  </a>
+  <a class="ra-card ra-card--ra2 ra-card--available" href="RA2_00_guia_docente.html">
+    <span class="ra-card__order">Bloque 5</span>
+    <span class="ra-card__number">RA2</span>
+    <strong>Interfaces naturales</strong>
+    <span class="ra-card__description">Voz, gestos, visión artificial y realidad aumentada.</span>
     <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
   </a>
   <a class="ra-card ra-card--ra8 ra-card--available" href="RA8_00_guia_docente.html">
@@ -78,11 +78,12 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
 
 ### Flujo para el profesor
 
-1. Empieza por [RA1-01 · Patrones de arquitectura](RA1_01_patrones_arquitectura.md).
-2. Consulta la [matriz completa de contenidos, prácticas y criterios](RA1_matriz_contenidos_evaluacion.md).
-3. Cierra el resultado con el [integrador · Gestor de tareas del aula](RA1_integrador.md).
-4. Abre la [aplicación de referencia](tareas.html) para demostrar y comprobar el comportamiento.
-5. Ofrece el [anexo Android](RA1_anexo_android_arquitectura.md) solo a quien quiera ampliar.
+1. Abre la [guía docente y temporalización](RA1_00_guia_docente.md).
+2. Empieza por [RA1-01 · Patrones de arquitectura](RA1_01_patrones_arquitectura.md).
+3. Consulta la [matriz completa de contenidos, prácticas y criterios](RA1_matriz_contenidos_evaluacion.md).
+4. Cierra el resultado con el [integrador · Gestor de tareas del aula](RA1_integrador.md).
+5. Abre la [aplicación de referencia](tareas.html) para demostrar y comprobar el comportamiento.
+6. Ofrece el [anexo Android](RA1_anexo_android_arquitectura.md) solo a quien quiera ampliar.
 
 ## Enfoque del curso
 
@@ -97,6 +98,7 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
 
 ## Accesos rápidos
 
+- [Guía docente RA1](RA1_00_guia_docente.md)
 - [Matriz RA1](RA1_matriz_contenidos_evaluacion.md)
 - [Primera unidad](RA1_01_patrones_arquitectura.md)
 - [Integrador](RA1_integrador.md)
@@ -159,21 +161,6 @@ El RA3 transforma partes repetidas del gestor en Web Components reutilizables. E
 - [RA3-07 · Documentación y empaquetado](RA3_07_documentacion_empaquetado.md)
 - [RA3-INT01 · Kit visual del gestor de tareas](RA3_integrador.md)
 
-## RA2 · Interfaces naturales de usuario
-
-**Duración propuesta:** 12 horas · **6 criterios de evaluación** · **5 prácticas básicas** · **1 integrador**
-
-El RA2 añade voz, movimiento corporal, detección de manos y realidad aumentada al gestor. Todas las modalidades muestran su estado, solicitan permiso y conservan una alternativa convencional para poder aprender y evaluar sin depender del dispositivo.
-
-- [Guía docente y temporalización](RA2_00_guia_docente.md)
-- [Matriz de contenidos, prácticas y criterios](RA2_matriz_contenidos_evaluacion.md)
-- [RA2-01 · Aprendizaje automático y entrenamiento](RA2_01_aprendizaje_automatico.md)
-- [RA2-02 · Interfaces naturales y tipos](RA2_02_interfaces_naturales.md)
-- [RA2-03 · Voz, habla y reconocimiento](RA2_03_voz_habla.md)
-- [RA2-04 · Partes y movimientos del cuerpo](RA2_04_cuerpo_movimiento.md)
-- [RA2-05 · Realidad aumentada](RA2_05_realidad_aumentada.md)
-- [RA2-INT01 · Asistente natural del aula](RA2_integrador.md)
-
 ## RA5 · Creación de informes
 
 **Duración propuesta:** 12 horas · **8 criterios de evaluación** · **8 prácticas básicas** · **1 integrador**
@@ -191,6 +178,21 @@ El RA5 convierte los datos del gestor en informes incrustados y exportables. El 
 - [RA5-07 · Librerías y código generado](RA5_07_librerias_codigo.md)
 - [RA5-08 · Fuentes de datos y consultas](RA5_08_fuentes_consultas.md)
 - [RA5-INT01 · Informe de seguimiento del aula](RA5_integrador.md)
+
+## RA2 · Interfaces naturales de usuario
+
+**Duración propuesta:** 12 horas · **6 criterios de evaluación** · **5 prácticas básicas** · **1 integrador**
+
+El RA2 añade voz, movimiento corporal, detección de manos y realidad aumentada al gestor. Se imparte después de informes, cuando el alumnado ya domina la interfaz y sus datos. Todas las modalidades muestran su estado, solicitan permiso y conservan una alternativa convencional para poder aprender y evaluar sin depender del dispositivo.
+
+- [Guía docente y temporalización](RA2_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA2_matriz_contenidos_evaluacion.md)
+- [RA2-01 · Aprendizaje automático y entrenamiento](RA2_01_aprendizaje_automatico.md)
+- [RA2-02 · Interfaces naturales y tipos](RA2_02_interfaces_naturales.md)
+- [RA2-03 · Voz, habla y reconocimiento](RA2_03_voz_habla.md)
+- [RA2-04 · Partes y movimientos del cuerpo](RA2_04_cuerpo_movimiento.md)
+- [RA2-05 · Realidad aumentada](RA2_05_realidad_aumentada.md)
+- [RA2-INT01 · Asistente natural del aula](RA2_integrador.md)
 
 ## RA8 · Evaluación y pruebas de aplicaciones
 
@@ -225,7 +227,7 @@ El RA6 crea el centro de ayuda del gestor: formatos, generación, navegación, b
 
 ## RA7 · Distribución de aplicaciones
 
-**Duración propuesta:** 8 horas · **8 criterios de evaluación** · **9 prácticas básicas** · **1 integrador**
+**Duración propuesta:** 8 horas · **8 criterios de evaluación** · **6 prácticas básicas** · **1 integrador**
 
 El RA7 completa el curso preparando una release instalable y verificable del gestor: componentes, paquetes, herramientas, personalización, firma, automatización, desinstalación y canales.
 

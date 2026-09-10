@@ -23,14 +23,11 @@ title: RA7 · Matriz de contenidos y evaluación
 | Práctica | Contenido básico íntegro | CE | Evidencia |
 |---|---|---|---|
 | PB01 | Componentes de una aplicación. Empaquetado. | a | Inventario y paquete mínimo |
-| PB02 | Instaladores. | b | Comparativa razonada |
-| PB03 | Paquetes autoinstalables. | b | PWA instalada |
-| PB04 | Herramientas para crear paquetes de instalación. | c, d | Salida IDE y externa |
-| PB05 | Personalización de la instalación: Logotipos, fondos, diálogos, botones, idioma, entre otros. | b | Flujo Stitch accesible |
-| PB06 | Asistentes de instalación y desinstalación. | f | Cadena no interactiva |
-| PB07 | Asistentes de instalación y desinstalación. | g | Retirada y datos comprobados |
-| PB08 | Firma digital de aplicaciones. | e | Firma y prueba de alteración |
-| PB09 | Canales de distribución: repositorios (stores), ad-hoc, sitios web, correo electrónico, entre otros. | h | Estrategia multicanal |
+| PB02 | Instaladores. / Paquetes autoinstalables. | b | Comparación y PWA instalada |
+| PB03 | Herramientas para crear paquetes de instalación. | c, d | Salida IDE y externa |
+| PB04 | Personalización de la instalación: Logotipos, fondos, diálogos, botones, idioma, entre otros. | b | Flujo Stitch accesible |
+| PB05 | Asistentes de instalación y desinstalación. | f, g | Cadena no interactiva y retirada comprobada |
+| PB06 | Firma digital de aplicaciones. / Canales de distribución: repositorios (stores), ad-hoc, sitios web, correo electrónico, entre otros. | e, h | Firma y decisión de canal |
 | INT01 | Todos los contenidos | a–h | Release candidata defendida |
 
 ## Cobertura de criterios
@@ -38,13 +35,11 @@ title: RA7 · Matriz de contenidos y evaluación
 | Actividad | a | b | c | d | e | f | g | h |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | PB01 | ✓ |  |  |  |  |  |  |  |
-| PB02–03 |  | ✓ |  |  |  |  |  |  |
-| PB04 |  |  | ✓ | ✓ |  |  |  |  |
-| PB05 |  | ✓ |  |  |  |  |  |  |
-| PB06 |  |  |  |  |  | ✓ |  |  |
-| PB07 |  |  |  |  |  |  | ✓ |  |
-| PB08 |  |  |  |  | ✓ |  |  |  |
-| PB09 |  |  |  |  |  |  |  | ✓ |
+| PB02 |  | ✓ |  |  |  |  |  |  |
+| PB03 |  |  | ✓ | ✓ |  |  |  |  |
+| PB04 |  | ✓ |  |  |  |  |  |  |
+| PB05 |  |  |  |  |  | ✓ | ✓ |  |
+| PB06 |  |  |  |  | ✓ |  |  | ✓ |
 | INT01 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## Regla de suficiencia

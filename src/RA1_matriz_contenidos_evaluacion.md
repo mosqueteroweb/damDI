@@ -1,10 +1,13 @@
-# RA1 — Correspondencia entre contenidos, prácticas y criterios de evaluación
+---
+layout: default
+title: RA1 · Matriz de contenidos y evaluación
+---
+
+# RA1 · Matriz de contenidos, prácticas y criterios
 
 **Módulo:** 0488 — Desarrollo de Interfaces (DAM).  
 **Destinatario:** profesorado.  
-**Versión:** 1.1, 8 de septiembre de 2026.  
 **Duración propuesta:** 18 horas de las 100 del módulo.  
-**Estado:** diseño curricular de las actividades; no constituye todavía el capítulo de contenidos ni un conjunto de soluciones técnicas ejecutadas.  
 **Fuente:** [Relación RA–CE–contenidos proporcionada por el profesor](https://mosqueteroweb.github.io/ismie01/DAM/dam_di_relaciones.html), consultada para esta matriz.
 
 ## 1. Reglas de elaboración
@@ -20,32 +23,30 @@ El alumnado conoce Java y no conoce interfaces visuales. Dispone de ordenador in
 - Los ejemplos resueltos sirven para enseñar: **no acreditan por sí solos cobertura de evaluación**.
 - Cada CE debe contar con una tarea y una evidencia en las prácticas básicas o en el integrador.
 - Los pesos y reglas de calificación y recuperación permanecen aplazados.
-- Las actividades del alumnado dispondrán de archivos iniciales independientes. Reutilizar el contexto no obligará a terminar una práctica para comenzar la siguiente.
+- Las actividades pueden disponer de archivos iniciales independientes. Reutilizar el contexto no obliga a terminar una práctica para comenzar la siguiente.
 
 ## 2. Resultado de aprendizaje y criterios de referencia
 
 **RA1:** Genera interfaces gráficos de usuario mediante editores visuales utilizando las funcionalidades del editor y adaptando el código generado.
 
-La tabla resume los criterios para facilitar su uso; su redacción de referencia se encuentra en la fuente curricular enlazada.
-
-| Identificador | Síntesis del CE |
+| CE | Evidencia exigida |
 |---|---|
-| RA1.a | Analizar herramientas y librerías disponibles para generar interfaces gráficas. |
-| RA1.b | Crear una interfaz mediante herramientas de un editor visual. |
-| RA1.c | Utilizar las funciones del editor para ubicar componentes. |
-| RA1.d | Modificar propiedades de los componentes según las necesidades de la aplicación. |
-| RA1.e | Analizar el código generado por el editor visual. |
-| RA1.f | Modificar el código generado por el editor visual. |
-| RA1.g | Asociar acciones a eventos. |
-| RA1.h | Desarrollar una aplicación que incluya la interfaz obtenida. |
+| RA1.a | Se han analizado las herramientas y librerías disponibles para la generación de interfaces gráficos. |
+| RA1.b | Se ha creado un interfaz gráfico utilizando las herramientas de un editor visual. |
+| RA1.c | Se han utilizado las funciones del editor para ubicar los componentes del interfaz. |
+| RA1.d | Se han modificado las propiedades de los componentes para adecuarlas a las necesidades de la aplicación. |
+| RA1.e | Se ha analizado el código generado por el editor visual. |
+| RA1.f | Se ha modificado el código generado por el editor visual. |
+| RA1.g | Se han asociado a los eventos las acciones correspondientes. |
+| RA1.h | Se ha desarrollado una aplicación que incluye el interfaz gráfico obtenido. |
 
-## 3. Índice curricular y actividades previstas
+## 3. Índice curricular y actividades
 
 Los títulos de la segunda columna conservan los diez apartados de contenidos básicos de la fuente. Se delimitan trece conceptos didácticos: el apartado 9 se divide en clases, propiedades y métodos; el 10, en eventos y escuchadores. Los restantes se trabajan como conceptos conjuntos con una práctica cada uno. MVC y MVVM, por ejemplo, serán alternativas comparadas dentro del concepto de arquitectura, no unidades adicionales con proyectos completos.
 
 `EJ` identifica un ejemplo resuelto dentro de los contenidos; `PB`, una práctica básica de evaluación. Todos los identificadores llevan el prefijo `RA1-`.
 
-| Nº | Contenido básico: título del índice | Concepto y ejemplo resuelto previsto | Práctica de evaluación | CE que aporta a evaluar |
+| Nº | Contenido básico: título del índice | Concepto y ejemplo resuelto | Práctica de evaluación | CE que aporta a evaluar |
 |---:|---|---|---|---|
 | 1 | Patrones de arquitectura de las aplicaciones gráficas. | Arquitectura: localizar vista, datos y coordinación en una pantalla de tareas; comparación introductoria MVC/MVVM. EJ01. | PB01. Mapa de responsabilidades. | e |
 | 2 | Librerías de componentes nativas y multiplataforma. Características. | Librerías: comparar dos alternativas de componentes para un mismo formulario. EJ02. | PB02. Elegir una librería. | a |
@@ -65,7 +66,7 @@ Las letras de la última columna se refieren a RA1. Son aportaciones de las prá
 
 ## 4. Fichas de las prácticas básicas
 
-Cada ficha es una especificación para redactar posteriormente el enunciado completo y su solución reproducible. Los resultados esperados de este documento no sustituyen los archivos ni las pruebas de una solución técnica.
+Cada ficha resume el enunciado, la evidencia y el resultado esperado que se desarrollan en la unidad correspondiente. La publicación está destinada al profesorado.
 
 ### RA1-PB01 — Mapa de responsabilidades
 
@@ -226,11 +227,11 @@ Una aplicación web de una pantalla con título de tarea, selector de prioridad,
 4. Limpiar restablece el formulario sin borrar las tareas de la lista.
 5. La modificación de T6 conserva los eventos y el funcionamiento anterior.
 
-### 5.4 Lectura guiada y solución docente futura
+### 5.4 Lectura guiada y solución docente
 
 El alumno debe señalar dónde se describe la pantalla, qué representa el dato de una tarea, cómo llega a la lista, dónde se asocian los eventos y qué cambió en T6. No necesita explicar todas las dependencias del proyecto.
 
-El solucionario incluirá proyecto completo, versión inicial y modificada, prompts orientativos, capturas, fragmentos explicados, respuestas a las preguntas y resultados de las cinco comprobaciones. Se admitirán nombres y estructuras diferentes cuando cumplan los requisitos y el alumno pueda justificarlos.
+La solución docente incluye proyecto completo, versión inicial y modificada, prompt orientativo, fragmentos explicados y comprobaciones. Se admiten nombres y estructuras diferentes cuando cumplan los requisitos y el alumno pueda justificarlos.
 
 ## 6. Matriz de cobertura de evaluación
 
@@ -245,7 +246,7 @@ El solucionario incluirá proyecto completo, versión inicial y modificada, prom
 | RA1.g | PB07, PB12, PB13 | T7 | Asociación concreta entre evento y acción, identificada y probada. |
 | RA1.h | Se reserva al integrador | T8 | Aplicación ejecutable que incorpora y utiliza la interfaz obtenida. |
 
-**Resultado de la planificación:** los ocho CE tienen evidencia prevista en evaluación. La cobertura efectiva se verificará al redactar y ejecutar las soluciones. La presencia de una etiqueta CE no sustituye la tarea requerida.
+**Resultado:** los ocho CE tienen tareas y evidencias previstas. La presencia de una etiqueta CE no sustituye la ejecución y explicación requeridas.
 
 ## 7. Distribución de las 18 horas
 
@@ -282,7 +283,7 @@ Los proyectos iniciales y fichas preparados son necesarios para que las activida
 
 No es obligatorio usar todas las herramientas en todas las prácticas. Se evitará que el alumno mantenga varias implementaciones equivalentes para un mismo ejercicio. El boceto de Stitch podrá servir de referencia visual: no se presupone una importación automática ni compatibilidad de exportación sin comprobarla.
 
-### Prueba técnica previa a la redacción de soluciones
+### Comprobaciones docentes de la ruta técnica
 
 1. Crear una pantalla en el editor elegido y ubicar sus controles con funciones visuales.
 2. Identificar el archivo generado, modificarlo mediante IA y comprobar su coherencia con el editor.
@@ -292,25 +293,26 @@ No es obligatorio usar todas las herramientas en todas las prácticas. Se evitar
 
 Si una herramienta únicamente genera una imagen o código a partir de prompts, no se utilizará como única evidencia de RA1.b y RA1.c. La selección técnica es responsabilidad de la preparación docente y no requiere volver a pedir al profesor que elija un lenguaje.
 
-## 9. Criterios de redacción de los materiales siguientes
+## 9. Criterios aplicados en los materiales
 
-- Redactar los contenidos siguiendo los diez títulos curriculares de la sección 3.
-- Incluir los trece ejemplos y las trece prácticas previstos; si surge un concepto nuevo independiente, asignarle práctica y reajustar el tiempo antes de ampliar el alcance.
-- Separar enunciados de soluciones de evaluación, aunque la publicación prevista esté destinada al profesorado.
-- Explicar la sintaxis necesaria y relacionarla con lo conocido de Java.
-- Mostrar fragmentos breves del proyecto real y su localización, evitando pseudocódigo presentado como código ejecutado.
-- Etiquetar cada práctica con CE, tarea y evidencia.
-- No declarar probadas las soluciones hasta ejecutar la ruta técnica y registrar los resultados.
-- Mantener Markdown como fuente, compatible con una futura web estática en GitHub Pages.
+- Los contenidos siguen los diez títulos curriculares de la sección 3.
+- Las trece unidades contienen ejemplo y práctica básica con orientación de corrección.
+- Los enunciados se distinguen de las soluciones, aunque el sitio esté destinado al profesorado.
+- La sintaxis necesaria se relaciona con los conocimientos previos de Java.
+- Los fragmentos relevantes se localizan y explican sin exigir programación desde cero.
+- Cada práctica identifica tarea, evidencia y CE.
+- Markdown se conserva como fuente de la publicación estática.
 
 ## 10. Comprobación de esta matriz
 
 - [x] Se conservan los diez apartados de contenidos básicos de RA1.
 - [x] Se delimitan trece conceptos con un ejemplo y una práctica por concepto.
-- [x] Se proyecta un integrador autónomo.
+- [x] Se incluye un integrador autónomo con solución docente.
 - [x] Los ocho CE tienen tareas y evidencias de evaluación previstas.
 - [x] Los ejemplos docentes no se contabilizan como evaluación.
 - [x] Todas las prácticas incluyen lectura del código relevante.
 - [x] La propuesta suma 18 horas.
-- [ ] Validar la ruta técnica y las soluciones ejecutables.
-- [ ] Redactar los contenidos, enunciados y solucionarios completos.
+- [x] Se han redactado contenidos, enunciados y orientaciones de corrección.
+- [x] La aplicación de referencia y la navegación forman parte de la publicación estática.
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA1_00_guia_docente.html">← Guía RA1</a><a href="https://mosqueteroweb.github.io/damDI/">Inicio</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_01_patrones_arquitectura.html"><span class="unit-next-card__eyebrow">Comenzar contenidos</span><strong>RA1-01 · Patrones de arquitectura</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

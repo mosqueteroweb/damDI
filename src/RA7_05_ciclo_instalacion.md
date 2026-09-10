@@ -23,27 +23,15 @@ Un asistente guía decisiones; el modo desatendido recibe configuración previa,
 
 La IA generó estos pasos. El alumnado identifica orden, condición de parada y salida, y detecta que aún faltan versión, artefacto y despliegue autorizado.
 
-## RA7-PB06 · Instalación desatendida
+## RA7-PB05 · Ciclo desatendido y retirada
 
-Completa y ejecuta una cadena no interactiva sobre un entorno limpio. Debe terminar con éxito sin preguntas o detenerse con error no nulo, conservar registro y producir el artefacto esperado.
-
-### Solución orientativa
-
-<details><summary>Mostrar ejemplo de solución</summary>
-
-La cadena fija versión de ejecución, usa `npm ci`, prueba antes de compilar, nombra el artefacto con versión y no contiene secretos. Una dependencia rota provoca fallo visible; no se publica una salida parcial.
-
-</details>
-
-## RA7-PB07 · Desinstalación y limpieza verificadas
-
-Instala la PWA, crea dos datos, actualiza y desinstala. Comprueba iconos, ventanas, caché y almacenamiento antes/después. Documenta qué se conserva y ofrece borrado voluntario separado.
+Completa y ejecuta una cadena no interactiva sobre un entorno limpio. Después instala la PWA, crea dos datos, actualiza y desinstala. Registra el código de salida y comprueba iconos, caché y almacenamiento antes/después.
 
 ### Solución orientativa
 
 <details><summary>Mostrar ejemplo de solución</summary>
 
-La aplicación desaparece del lanzador y deja de abrirse como ventana independiente. DevTools confirma el estado de service worker, cachés e IndexedDB. Si el navegador conserva datos, el manual lo dice y explica cómo eliminarlos; la evidencia no confunde desinstalación con borrado total.
+La cadena fija versión, usa `npm ci`, prueba antes de compilar y no contiene secretos. Una dependencia rota provoca fallo visible. Tras desinstalar, la aplicación desaparece del lanzador; DevTools confirma cachés e IndexedDB. Si quedan datos, el manual lo declara y explica su borrado voluntario.
 
 </details>
 

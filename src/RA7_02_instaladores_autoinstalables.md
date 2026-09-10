@@ -29,27 +29,15 @@ Un ZIP se extrae; un instalador guía y modifica el sistema; una PWA se instala 
 
 La IA generó el borrador. El alumnado debe detectar que `icons` vacío impide una entrega completa, añadir tamaños adecuados y explicar `start_url`, `display` y colores.
 
-## RA7-PB02 · Comparar instaladores
+## RA7-PB02 · Elegir e instalar
 
-Compara PWA, instalador nativo y paquete portable según permisos, actualización, desinstalación, firma, tamaño y canal. Selecciona la PWA para el gestor y razona dos límites.
-
-### Solución orientativa
-
-<details><summary>Mostrar ejemplo de solución</summary>
-
-La PWA reduce fricción y mantiene la ruta web, pero depende de capacidades del navegador y su integración varía por plataforma. El instalador nativo ofrece más integración y riesgo; el portable no registra instalación. La decisión se vincula al destinatario, no a preferencias personales.
-
-</details>
-
-## RA7-PB03 · PWA autoinstalable
-
-Completa el manifiesto generado por IA, enlázalo, valida sus iconos y registra la instalación desde un perfil limpio. Incluye captura del estado instalado y comprobación de apertura independiente.
+Compara brevemente PWA, instalador nativo y paquete portable. Selecciona la PWA para el gestor, completa el manifiesto generado por IA y comprueba su instalación desde un perfil limpio.
 
 ### Solución orientativa
 
 <details><summary>Mostrar ejemplo de solución</summary>
 
-El informe identifica URL, navegador y versión; confirma nombre, icono, `start_url`, `scope`, modo `standalone` y ausencia de errores de manifiesto. La instalación se repite desde cero y no se afirma soporte offline sin probarlo.
+La PWA reduce fricción y mantiene la ruta web, pero depende del navegador; el instalador nativo ofrece más integración y permisos; el portable no registra instalación. El informe confirma nombre, iconos, `start_url`, `scope`, modo `standalone` y apertura independiente. No afirma soporte offline sin probarlo.
 
 </details>
 

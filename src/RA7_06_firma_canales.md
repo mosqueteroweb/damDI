@@ -22,27 +22,15 @@ receptor → descarga → verifica firma → instala
 
 La explicación de IA se corrige: HTTPS protege el transporte, pero no sustituye la comprobación del artefacto descargado fuera del sitio.
 
-## RA7-PB08 · Firma que detecta cambios
+## RA7-PB06 · Firmar y elegir canal
 
-Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Explica qué demuestra cada comprobación.
-
-### Solución orientativa
-
-<details><summary>Mostrar ejemplo de solución</summary>
-
-La entrega separa paquete, suma y firma; publica instrucciones de verificación y solo la clave pública necesaria. El original verifica y la copia alterada falla. La clave privada no aparece en archivos, historial, prompts ni capturas.
-
-</details>
-
-## RA7-PB09 · Plan multicanal
-
-Diseña una tabla para Pages, Release, store/ad-hoc y correo con destinatario, formato, actualización, retirada y riesgo. Selecciona un canal principal y justifica los complementarios.
+Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Después elige entre Pages, Release, store/ad-hoc y correo, indicando destinatario, actualización y retirada.
 
 ### Solución orientativa
 
 <details><summary>Mostrar ejemplo de solución</summary>
 
-Pages es el canal principal de la PWA, Release conserva la versión descargable, ad-hoc se reserva al piloto y el correo comparte el enlace, no un binario sin procedencia. Cada canal identifica la versión vigente y cómo retirar una versión defectuosa.
+La entrega separa paquete, suma y firma; el original verifica y la copia alterada falla. La clave privada no se publica. Pages es el canal principal de la PWA, Release conserva la versión descargable, ad-hoc se reserva al piloto y el correo comparte el enlace. Cada canal identifica cómo actualizar y retirar.
 
 </details>
 

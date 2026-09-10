@@ -45,7 +45,7 @@ El alumnado crea el centro de ayuda del gestor: ayuda contextual, navegación, b
 
 ## Evaluación
 
-Las cinco prácticas básicas aportan evidencias parciales; el integrador cubre los siete criterios. Un texto fluido pero falso no es documentación válida: cada procedimiento debe indicar precondiciones, pasos, resultado y recuperación, y haberse ejecutado.
+Las cinco prácticas son microactividades guiadas, una por unidad; el integrador concentra la evidencia evaluable de los siete criterios. Un texto fluido pero falso no es documentación válida: cada procedimiento debe indicar precondiciones, pasos, resultado y recuperación, y haberse ejecutado.
 
 ## Preparación del profesor
 

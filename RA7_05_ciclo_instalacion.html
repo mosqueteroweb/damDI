@@ -25,20 +25,12 @@
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm test</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm run build</span></span></code></pre></div>
 <p>La IA generó estos pasos. El alumnado identifica orden, condición de parada y salida, y detecta que aún faltan versión, artefacto y despliegue autorizado.</p>
-<h2 id="ra7-pb06--instalación-desatendida">RA7-PB06 · Instalación desatendida</h2>
-<p>Completa y ejecuta una cadena no interactiva sobre un entorno limpio. Debe terminar con éxito sin preguntas o detenerse con error no nulo, conservar registro y producir el artefacto esperado.</p>
+<h2 id="ra7-pb05--ciclo-desatendido-y-retirada">RA7-PB05 · Ciclo desatendido y retirada</h2>
+<p>Completa y ejecuta una cadena no interactiva sobre un entorno limpio. Después instala la PWA, crea dos datos, actualiza y desinstala. Registra el código de salida y comprueba iconos, caché y almacenamiento antes/después.</p>
 <h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>La cadena fija versión de ejecución, usa <code>npm ci</code>, prueba antes de compilar, nombra el artefacto con versión y no contiene secretos. Una dependencia rota provoca fallo visible; no se publica una salida parcial.</p>
-</details>
-
-<h2 id="ra7-pb07--desinstalación-y-limpieza-verificadas">RA7-PB07 · Desinstalación y limpieza verificadas</h2>
-<p>Instala la PWA, crea dos datos, actualiza y desinstala. Comprueba iconos, ventanas, caché y almacenamiento antes/después. Documenta qué se conserva y ofrece borrado voluntario separado.</p>
-<h3 id="solución-orientativa-1">Solución orientativa</h3>
-<details><summary>Mostrar ejemplo de solución</summary>
-
-<p>La aplicación desaparece del lanzador y deja de abrirse como ventana independiente. DevTools confirma el estado de service worker, cachés e IndexedDB. Si el navegador conserva datos, el manual lo dice y explica cómo eliminarlos; la evidencia no confunde desinstalación con borrado total.</p>
+<p>La cadena fija versión, usa <code>npm ci</code>, prueba antes de compilar y no contiene secretos. Una dependencia rota provoca fallo visible. Tras desinstalar, la aplicación desaparece del lanzador; DevTools confirma cachés e IndexedDB. Si quedan datos, el manual lo declara y explica su borrado voluntario.</p>
 </details>
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_04_personalizacion.html">← RA7-04</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA7_06_firma_canales.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA7-06 · Firma y canales</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
