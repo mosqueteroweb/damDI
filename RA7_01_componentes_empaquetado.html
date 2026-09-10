@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b5f00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA7-01 · Componentes y empaquetado · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra7">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA7-01 · Componentes y empaquetado</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra7-01--componentes-de-una-aplicación-y-empaquetado">RA7-01 · Componentes de una aplicación y empaquetado</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Reconocer qué necesita la aplicación en ejecución y construir un paquete mínimo, versionado y sin residuos.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Un paquete distribuye código compilado, recursos, manifiesto, licencia e instrucciones; excluye fuentes innecesarias, pruebas, cachés, secretos y datos personales. La versión del paquete, del código y de la documentación debe coincidir. <code>package-lock.json</code> fija el árbol de dependencias y <code>npm ci</code> instala desde él sin reescribirlo.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Gemini propone este inventario, que el alumnado contrasta con la salida real:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th style="text-align: center;">Se entrega</th>
+<th>Razón</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>dist/</code></td>
+<td style="text-align: center;">✓</td>
+<td>Aplicación compilada</td>
+</tr>
+<tr class="even">
+<td><code>manifest.webmanifest</code></td>
+<td style="text-align: center;">✓</td>
+<td>Metadatos de instalación</td>
+</tr>
+<tr class="odd">
+<td><code>.env</code></td>
+<td style="text-align: center;">No</td>
+<td>Puede contener secretos</td>
+</tr>
+<tr class="even">
+<td><code>node_modules/</code></td>
+<td style="text-align: center;">No</td>
+<td>Se reconstruye desde el bloqueo</td>
+</tr>
+<tr class="odd">
+<td><code>README-instalacion.md</code></td>
+<td style="text-align: center;">✓</td>
+<td>Requisitos y verificación</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ra7-pb01--paquete-mínimo-auditable">RA7-PB01 · Paquete mínimo auditable</h2>
+<p>Obtén con IA un script que limpie, compile y comprima <code>dist/</code>. Identifica sus entradas, salida y código de error. Crea <code>gestor-1.0.0.zip</code>, lista su contenido y justifica cada exclusión.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La evidencia contiene commit, versión, <code>npm ci</code>, <code>npm run build</code>, listado del ZIP y ausencia de <code>.env</code>, fuentes y dependencias de desarrollo. El alumnado señala dónde se detiene el script ante un fallo y comprueba que <code>index.html</code>, recursos, manifiesto y licencia están presentes.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Explica por qué «funciona en mi carpeta» no demuestra que el paquete sea distribuible.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_00_guia_docente.html">← Guía RA7</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA7_02_instaladores_autoinstalables.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA7-02 · Instaladores y paquetes autoinstalables</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

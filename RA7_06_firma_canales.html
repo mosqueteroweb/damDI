@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b5f00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA7-06 · Firma digital y canales · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra7">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA7-06 · Firma digital y canales</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra7-06--firma-digital-y-canales-de-distribución">RA7-06 · Firma digital y canales de distribución</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Demostrar origen e integridad del artefacto y seleccionar canales según audiencia, actualización y riesgo.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Un hash detecta cambios, pero no identifica por sí solo al autor. La firma vincula artefacto e identidad mediante una clave o identidad verificable. La clave privada nunca se copia a prompts ni al repositorio. La verificación debe fallar al alterar el paquete. Pages sirve la web; Releases distribuye versiones; una store añade revisión y actualización; ad-hoc limita destinatarios; correo es frágil para binarios y versiones.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<pre class="text"><code>artefacto → SHA-256 → firma separada → canal
+receptor → descarga → verifica firma → instala</code></pre>
+<p>La explicación de IA se corrige: HTTPS protege el transporte, pero no sustituye la comprobación del artefacto descargado fuera del sitio.</p>
+<h2 id="ra7-pb08--firma-que-detecta-cambios">RA7-PB08 · Firma que detecta cambios</h2>
+<p>Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Explica qué demuestra cada comprobación.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La entrega separa paquete, suma y firma; publica instrucciones de verificación y solo la clave pública necesaria. El original verifica y la copia alterada falla. La clave privada no aparece en archivos, historial, prompts ni capturas.</p>
+</details>
+
+<h2 id="ra7-pb09--plan-multicanal">RA7-PB09 · Plan multicanal</h2>
+<p>Diseña una tabla para Pages, Release, store/ad-hoc y correo con destinatario, formato, actualización, retirada y riesgo. Selecciona un canal principal y justifica los complementarios.</p>
+<h3 id="solución-orientativa-1">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>Pages es el canal principal de la PWA, Release conserva la versión descargable, ad-hoc se reserva al piloto y el correo comparte el enlace, no un binario sin procedencia. Cada canal identifica la versión vigente y cómo retirar una versión defectuosa.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Explica la diferencia entre cifrar, calcular un hash y firmar.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_05_ciclo_instalacion.html">← RA7-05</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA7_integrador.html"><span class="unit-next-card__eyebrow">Ejercicio integrador</span><strong>RA7-INT01 · Release candidata del gestor</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

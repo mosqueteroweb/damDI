@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b5f00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA7-05 · Instalación y desinstalación · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra7">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA7-05 · Instalación y desinstalación</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra7-05--instalación-modo-desatendido-y-desinstalación">RA7-05 · Instalación, modo desatendido y desinstalación</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Probar el ciclo completo de alta, actualización, automatización y retirada sin dejar una instalación inconsistente.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Un asistente guía decisiones; el modo desatendido recibe configuración previa, no pregunta y devuelve un código fiable. En web, la cadena automatizada instala dependencias, prueba, compila y despliega. Desinstalar una PWA retira la aplicación, pero los datos del sitio pueden requerir una acción separada; la documentación debe explicarlo sin prometer borrados que no se han verificado.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm ci</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm test</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm run build</span></span></code></pre></div>
+<p>La IA generó estos pasos. El alumnado identifica orden, condición de parada y salida, y detecta que aún faltan versión, artefacto y despliegue autorizado.</p>
+<h2 id="ra7-pb06--instalación-desatendida">RA7-PB06 · Instalación desatendida</h2>
+<p>Completa y ejecuta una cadena no interactiva sobre un entorno limpio. Debe terminar con éxito sin preguntas o detenerse con error no nulo, conservar registro y producir el artefacto esperado.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La cadena fija versión de ejecución, usa <code>npm ci</code>, prueba antes de compilar, nombra el artefacto con versión y no contiene secretos. Una dependencia rota provoca fallo visible; no se publica una salida parcial.</p>
+</details>
+
+<h2 id="ra7-pb07--desinstalación-y-limpieza-verificadas">RA7-PB07 · Desinstalación y limpieza verificadas</h2>
+<p>Instala la PWA, crea dos datos, actualiza y desinstala. Comprueba iconos, ventanas, caché y almacenamiento antes/después. Documenta qué se conserva y ofrece borrado voluntario separado.</p>
+<h3 id="solución-orientativa-1">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La aplicación desaparece del lanzador y deja de abrirse como ventana independiente. DevTools confirma el estado de service worker, cachés e IndexedDB. Si el navegador conserva datos, el manual lo dice y explica cómo eliminarlos; la evidencia no confunde desinstalación con borrado total.</p>
+</details>
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_04_personalizacion.html">← RA7-04</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA7_06_firma_canales.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA7-06 · Firma y canales</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

@@ -61,13 +61,13 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Ayudas, manuales, referencias y tutoriales.</span>
     <span class="ra-card__meta"><span>7 horas</span><span>Disponible</span></span>
   </a>
-  <article class="ra-card ra-card--ra7" aria-label="RA7, próximamente">
+  <a class="ra-card ra-card--ra7 ra-card--available" href="RA7_00_guia_docente.html">
     <span class="ra-card__order">Bloque 8</span>
     <span class="ra-card__number">RA7</span>
     <strong>Distribución</strong>
     <span class="ra-card__description">Empaquetado, instalación, firma y publicación.</span>
-    <span class="ra-card__meta"><span>Próximamente</span></span>
-  </article>
+    <span class="ra-card__meta"><span>8 horas</span><span>Disponible</span></span>
+  </a>
 </section>
 
 > Las tarjetas siguen el **orden de impartición**, por eso la numeración de los RA no es consecutiva.
@@ -222,3 +222,19 @@ El RA6 crea el centro de ayuda del gestor: formatos, generación, navegación, b
 - [RA6-04 · Manuales y datos persistentes](RA6_04_manuales_datos.md)
 - [RA6-05 · Elaboración de tutoriales](RA6_05_tutoriales.md)
 - [RA6-INT01 · Centro de ayuda del gestor](RA6_integrador.md)
+
+## RA7 · Distribución de aplicaciones
+
+**Duración propuesta:** 8 horas · **8 criterios de evaluación** · **9 prácticas básicas** · **1 integrador**
+
+El RA7 completa el curso preparando una release instalable y verificable del gestor: componentes, paquetes, herramientas, personalización, firma, automatización, desinstalación y canales.
+
+- [Guía docente y temporalización](RA7_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA7_matriz_contenidos_evaluacion.md)
+- [RA7-01 · Componentes y empaquetado](RA7_01_componentes_empaquetado.md)
+- [RA7-02 · Instaladores y paquetes autoinstalables](RA7_02_instaladores_autoinstalables.md)
+- [RA7-03 · Herramientas para crear paquetes](RA7_03_herramientas_paquetes.md)
+- [RA7-04 · Personalización de la instalación](RA7_04_personalizacion.md)
+- [RA7-05 · Instalación y desinstalación](RA7_05_ciclo_instalacion.md)
+- [RA7-06 · Firma digital y canales](RA7_06_firma_canales.md)
+- [RA7-INT01 · Release candidata del gestor](RA7_integrador.md)

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5b5f00">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA7 · Guía docente · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra7">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA7 · Guía docente</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra7--distribución-de-aplicaciones">RA7 · Distribución de aplicaciones</h1>
+<blockquote>
+<p><strong>Duración propuesta: 8 horas · Ruta web/PWA · Material Design 3</strong></p>
+</blockquote>
+<h2 id="resultado-de-aprendizaje">Resultado de aprendizaje</h2>
+<p>Prepara aplicaciones para su distribución evaluando y utilizando herramientas específicas.</p>
+<h2 id="producto-del-ra">Producto del RA</h2>
+<p>El alumnado convierte el gestor web probado y documentado en una entrega identificable, instalable y verificable: inventario de componentes, paquete reproducible, experiencia de instalación, firma, desinstalación y publicación por varios canales. Stitch define la experiencia; Gemini/Google AI Studio generan borradores de configuración y comandos; el alumnado localiza, entiende, ejecuta y explica cada parte relevante, sin programarla desde cero.</p>
+<h2 id="secuencia-docente">Secuencia docente</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sesión</th>
+<th>Unidad</th>
+<th style="text-align: right;">Horas</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Componentes y empaquetado</td>
+<td style="text-align: right;">1</td>
+<td>Inventario y ZIP versionado</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Instaladores y paquetes autoinstalables</td>
+<td style="text-align: right;">1</td>
+<td>PWA instalable y comprobada</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Herramientas de creación</td>
+<td style="text-align: right;">1</td>
+<td>Paquetes por dos rutas</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Personalización</td>
+<td style="text-align: right;">1</td>
+<td>Asistente coherente con M3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Instalación, modo desatendido y desinstalación</td>
+<td style="text-align: right;">1</td>
+<td>Ciclo limpio reproducible</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Firma y canales</td>
+<td style="text-align: right;">1</td>
+<td>Artefacto verificado y plan multicanal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Integrador y defensa</td>
+<td style="text-align: right;">2</td>
+<td>Release candidata completa</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flujo-de-clase">Flujo de clase</h2>
+<ol type="1">
+<li>Partir de una versión probada e identificar sus componentes.</li>
+<li>Pedir a la IA un fragmento pequeño de configuración, nunca credenciales.</li>
+<li>Localizar entradas, salidas, versión, permisos y comandos.</li>
+<li>Ejecutar en un entorno limpio y conservar la salida real.</li>
+<li>Verificar integridad, instalación, actualización y retirada.</li>
+<li>Explicar qué generó la IA, qué se corrigió y por qué.</li>
+</ol>
+<h2 id="herramientas">Herramientas</h2>
+<ul>
+<li><strong>Stitch:</strong> pantallas y estados de instalación, actualización y retirada.</li>
+<li><strong>Gemini / Google AI Studio:</strong> borradores explicados de manifiestos, scripts y listas de comprobación.</li>
+<li><strong>Navegador y DevTools:</strong> instalación PWA, almacenamiento, caché y responsive.</li>
+<li><strong>npm y Vite:</strong> dependencias bloqueadas y compilación web; complemento justificado por su salida reproducible.</li>
+<li><strong>GitHub Actions, Releases y Pages:</strong> automatización, artefactos y canales diferenciados.</li>
+<li><strong>GPG o Sigstore Cosign:</strong> firma/verificación sin publicar claves privadas.</li>
+<li><strong>Material Design 3:</strong> identidad, textos, estados y accesibilidad del flujo.</li>
+</ul>
+<h2 id="evaluación">Evaluación</h2>
+<p>Las nueve prácticas básicas aportan al menos una evidencia por cada contenido; el integrador reúne los ocho criterios. No basta entregar un ZIP: se exige procedencia, versión, hash o firma, instalación limpia, modo desatendido, desinstalación, canales y evidencia de verificación.</p>
+<h2 id="preparación-del-profesor">Preparación del profesor</h2>
+<ul>
+<li>Proporcionar una versión estable del gestor y datos ficticios.</li>
+<li>Preparar un perfil de navegador limpio y una release con un fallo intencionado.</li>
+<li>No introducir secretos reales en prompts, repositorios ni capturas.</li>
+<li>Usar firmas didácticas o identidades efímeras controladas.</li>
+<li>Mantener Android Studio, XML, Java y empaquetado nativo como ampliación voluntaria.</li>
+</ul>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz RA7</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA7_01_componentes_empaquetado.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA7-01 · Componentes y empaquetado</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>
