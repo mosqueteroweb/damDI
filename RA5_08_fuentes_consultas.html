@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#984061">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA5-08 · Fuentes de datos y consultas · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra5">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA5-08 · Fuentes de datos y consultas</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra5-08--conexión-con-fuentes-y-ejecución-de-consultas">RA5-08 · Conexión con fuentes y ejecución de consultas</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Conectar un informe a JSON, CSV u hoja tabular, validar el esquema y ejecutar una consulta reproducible antes de representar resultados.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La fuente aporta registros; la consulta selecciona, filtra, agrupa u ordena; la transformación adapta tipos; la vista presenta. Separar estas fases permite cambiar el gráfico sin alterar la pregunta. Deben documentarse origen, campos, tipos, actualización y tratamiento de errores.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">loadTasks</span>() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">&#39;./data/tareas.json&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>response<span class="op">.</span><span class="at">ok</span>) <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="vs">`HTTP </span><span class="sc">${</span>response<span class="op">.</span><span class="at">status</span><span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rows <span class="op">=</span> <span class="cf">await</span> response<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> rows<span class="op">.</span><span class="fu">filter</span>(row <span class="kw">=&gt;</span> row<span class="op">.</span><span class="at">module</span> <span class="op">&amp;&amp;</span> row<span class="op">.</span><span class="at">status</span>)<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><code>fetch</code> conecta; <code>ok</code> valida la respuesta; <code>json</code> interpreta; <code>filter</code> aplica una consulta mínima de calidad. Carga, error y vacío se muestran como estados distintos.</p>
+<h2 id="ra5-pb08--dos-fuentes-un-resultado">RA5-PB08 · Dos fuentes, un resultado</h2>
+<p>Genera el mismo recuento por estado desde <code>tareas.json</code> y una hoja exportada a CSV. Crea un diccionario de campos y verifica que ambas fuentes producen el mismo resultado conocido.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>El adaptador JSON y el adaptador CSV devuelven objetos con <code>{id, title, module, status, hours, dueDate}</code>. La consulta agrupa por <code>status</code> después de normalizar espacios y valores. Con 12 registros, ambos resultados coinciden. Un registro sin <code>status</code> se aparta y se comunica como incidencia, no desaparece silenciosamente.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Dibuja la ruta fuente → validación → consulta → cálculo → vista y explica qué etapa cambiarías para conectar otra hoja.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA5_07_librerias_codigo.html">← RA5-07</a><a href="https://mosqueteroweb.github.io/damDI/RA5_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA5_integrador.html"><span class="unit-next-card__eyebrow">Ejercicio integrador</span><strong>RA5-INT01 · Informe de seguimiento del aula</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

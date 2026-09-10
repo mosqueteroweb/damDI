@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#984061">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA5-07 · Librerías y código generado · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra5">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA5-07 · Librerías y código generado</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra5-07--librerías-clases-métodos-y-atributos">RA5-07 · Librerías, clases, métodos y atributos</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Reconocer en el código generado cómo se carga, configura y ejecuta una librería de informes, y modificar un requisito localizado.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Una librería ofrece clases u objetos, métodos y opciones. En Google Charts, el alumnado localiza carga de paquetes, construcción de datos, clase de gráfico, método <code>draw</code> y objeto de opciones. No necesita reproducirlos de memoria: debe relacionar cada parte con el resultado visible y consultar la documentación.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>google<span class="op">.</span><span class="at">charts</span><span class="op">.</span><span class="fu">load</span>(<span class="st">&#39;current&#39;</span><span class="op">,</span> { <span class="dt">packages</span><span class="op">:</span> [<span class="st">&#39;corechart&#39;</span>] })<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>google<span class="op">.</span><span class="at">charts</span><span class="op">.</span><span class="fu">setOnLoadCallback</span>(drawReport)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">drawReport</span>() {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> chart <span class="op">=</span> <span class="kw">new</span> google<span class="op">.</span><span class="at">visualization</span><span class="op">.</span><span class="fu">ColumnChart</span>(chartNode)<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  chart<span class="op">.</span><span class="fu">draw</span>(data<span class="op">,</span> { <span class="dt">title</span><span class="op">:</span> <span class="st">&#39;Tareas terminadas por semana&#39;</span> })<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><code>load</code> solicita la biblioteca; el callback espera; <code>ColumnChart</code> elige la clase; <code>draw</code> ejecuta; el objeto final contiene atributos de configuración.</p>
+<h2 id="ra5-pb07--modificación-explicada">RA5-PB07 · Modificación explicada</h2>
+<p>Entrega a Gemini una salida que usa columnas y pide convertirla en barras horizontales, conservar datos y añadir título de eje. Presenta diff, prueba antes/después y explicación de cinco líneas relevantes.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La modificación cambia <code>ColumnChart</code> por <code>BarChart</code> y añade <code>hAxis: {title: 'Número de tareas', minValue: 0}</code> sin tocar la consulta. El alumno rechaza una propuesta que cambia simultáneamente colores, datos y estructura porque impide atribuir el resultado. La prueba confirma iguales categorías y valores.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Señala qué parte procede de la librería, cuál pertenece a la aplicación y qué cambio mínimo satisface el requisito.</p>
+<p>Referencia: <a href="https://developers.google.com/chart/interactive/docs">uso de Google Charts</a>.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA5_06_graficos.html">← RA5-06</a><a href="https://mosqueteroweb.github.io/damDI/RA5_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA5_08_fuentes_consultas.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA5-08 · Fuentes de datos y consultas</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

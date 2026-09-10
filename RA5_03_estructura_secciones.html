@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#984061">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA5-03 · Estructura y secciones · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra5">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA5-03 · Estructura y secciones</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra5-03--estructura-general-y-secciones">RA5-03 · Estructura general y secciones</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Organizar un informe para que responda una pregunta, muestre contexto y permita pasar del resumen al detalle.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Un informe básico incluye encabezado, contexto y fecha de corte, filtros, indicadores clave, visualización, detalle tabular, notas metodológicas y estados de carga, vacío o error. La jerarquía M3 evita que todas las tarjetas compitan con igual peso.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Seguimiento de tareas<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Actualizado: 15/09/2026<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">form</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">&quot;Filtros del informe&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">section</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;summary-title&quot;</span><span class="dt">&gt;&lt;</span><span class="kw">h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;summary-title&quot;</span><span class="dt">&gt;</span>Resumen<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">section</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;detail-title&quot;</span><span class="dt">&gt;&lt;</span><span class="kw">h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;detail-title&quot;</span><span class="dt">&gt;</span>Detalle<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">aside</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;method-title&quot;</span><span class="dt">&gt;&lt;</span><span class="kw">h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;method-title&quot;</span><span class="dt">&gt;</span>Cómo se calcula<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;&lt;/</span><span class="kw">aside</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>La estructura generada usa regiones y encabezados; el orden responde primero qué ocurre, después dónde ocurre y finalmente cómo se calculó.</p>
+<h2 id="ra5-pb03--esqueleto-de-informe">RA5-PB03 · Esqueleto de informe</h2>
+<p>Solicita a Stitch un informe responsive con los estados carga, sin datos y error. Pide a Gemini el HTML semántico correspondiente. Anota propósito, entrada y salida de cada sección.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>El encabezado muestra título, periodo y actualización; los filtros preceden a cuatro indicadores; después aparecen gráfico y tabla; metodología cierra el informe. El estado vacío conserva filtros y explica cómo ampliar resultados. El error distingue «no se pudo cargar» de «no hay datos». En móvil se mantiene el mismo orden lógico.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Comprueba el esquema de encabezados y responde: ¿qué pregunta contesta cada sección y cuál puede eliminarse sin perder la decisión principal?</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA5_02_herramientas_graficas.html">← RA5-02</a><a href="https://mosqueteroweb.github.io/damDI/RA5_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA5_04_filtrado_datos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA5-04 · Filtrado de datos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

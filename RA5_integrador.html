@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#984061">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA5-INT01 · Informe de seguimiento del aula · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra5">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA5-INT01 · Informe de seguimiento del aula</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra5-int01--informe-de-seguimiento-del-aula">RA5-INT01 · Informe de seguimiento del aula</h1>
+<h2 id="situación">Situación</h2>
+<p>El equipo docente necesita conocer carga, avance y distribución de tareas sin revisar cada registro del gestor. También requiere una versión imprimible para reuniones.</p>
+<h2 id="encargo">Encargo</h2>
+<p>Con Stitch, Gemini y Google AI Studio, crea un informe web incrustado en el gestor y una versión independiente. Parte de datos y código facilitados o generados; identifica, verifica y explica los cambios, sin programar desde cero.</p>
+<h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
+<ol type="1">
+<li>Definir encabezado, contexto, filtros, indicadores, gráficos, detalle y metodología.</li>
+<li>Generar el informe desde JSON y una segunda fuente CSV u hoja mediante un asistente.</li>
+<li>Filtrar por módulo, estado y rango de fecha; mostrar filtros activos y restablecerlos.</li>
+<li>Incluir numeración, recuento total, completadas, porcentaje y suma de horas.</li>
+<li>Añadir al menos dos gráficos adecuados con tabla equivalente.</li>
+<li>Usar una librería de informes o gráficos y localizar sus clases/objetos, métodos y atributos.</li>
+<li>Modificar una salida generada por IA mediante un cambio delimitado y documentar el antes/después.</li>
+<li>Integrar el informe en la aplicación y proporcionar una versión imprimible no incrustada.</li>
+</ol>
+<h2 id="entregables">Entregables</h2>
+<ul>
+<li>Informe incrustado y versión independiente.</li>
+<li>Fuentes ficticias, diccionario de datos y fecha de corte.</li>
+<li>Diseño Stitch con estados carga, vacío y error.</li>
+<li>Prompts, decisiones y diff de una modificación.</li>
+<li>Tabla de fórmulas y comprobación manual.</li>
+<li>Casos de prueba de filtros, fuentes y gráficos.</li>
+<li>Fragmentos anotados de conexión, consulta, cálculo y dibujo.</li>
+<li>Defensa individual de cinco minutos.</li>
+</ul>
+<h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fuente JSON conocida</td>
+<td>Totales coinciden con cálculo manual</td>
+</tr>
+<tr class="even">
+<td>Segunda fuente</td>
+<td>Produce el mismo esquema y resultado</td>
+</tr>
+<tr class="odd">
+<td>Módulo + estado</td>
+<td>Tabla, indicadores y gráficos se sincronizan</td>
+</tr>
+<tr class="even">
+<td>Rango sin resultados</td>
+<td>Estado vacío, no error ni gráfico antiguo</td>
+</tr>
+<tr class="odd">
+<td>Registro incompleto</td>
+<td>Se comunica y aplica la regla documentada</td>
+</tr>
+<tr class="even">
+<td>Gráfico</td>
+<td>Título, unidad, escala y tabla equivalentes</td>
+</tr>
+<tr class="odd">
+<td>Fallo de red</td>
+<td>Estado de error y opción de reintento</td>
+</tr>
+<tr class="even">
+<td>Impresión</td>
+<td>Conserva título, fecha, filtros y datos esenciales</td>
+</tr>
+</tbody>
+</table>
+<h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
+<table>
+<thead>
+<tr class="header">
+<th>CE</th>
+<th>Satisfactorio</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>Estructura completa y orientada a una pregunta</td>
+<td>Secciones decorativas o sin contexto</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Informes básicos correctos desde dos fuentes y asistente</td>
+<td>Datos pegados o una sola fuente sin generación</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>Tres filtros sincronizan todas las salidas</td>
+<td>Solo ocultan filas visualmente</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>Cálculos definidos y comprobados</td>
+<td>Totales sin fórmula o conjunto ambiguo</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>Gráficos adecuados, etiquetados y verificables</td>
+<td>Tipo engañoso o sin alternativa tabular</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>Identifica y usa la herramienta que genera la integración</td>
+<td>No puede explicar de dónde procede el código</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>Cambio acotado con diff y prueba</td>
+<td>Reemplazo completo sin trazabilidad</td>
+</tr>
+<tr class="even">
+<td>h</td>
+<td>Aplicación funcional con informe incrustado</td>
+<td>Informe aislado sin integración</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solución-docente-orientativa">Solución docente orientativa</h2>
+<details><summary>Mostrar estructura de una solución válida</summary>
+
+<p>El gestor incorpora «Informes» en su navegación. Una única colección filtrada alimenta cuatro indicadores, barras por módulo, línea semanal y tabla numerada. Dos adaptadores normalizan JSON y CSV. La interfaz indica actualización, fuente y filtros; distingue carga, vacío y error. Google Charts dibuja desde agregados comprobados y cada gráfico tiene tabla. La versión imprimible conserva contexto y metodología. El dossier muestra el cambio de columnas a barras sin alterar datos y explica <code>fetch</code>, filtro, <code>reduce</code>, clase de gráfico y <code>draw</code>.</p>
+</details>
+
+<h2 id="preguntas-de-defensa">Preguntas de defensa</h2>
+<ol type="1">
+<li>¿Qué pregunta responde el informe y qué elemento aporta la respuesta principal?</li>
+<li>¿Cómo sabes que el total es correcto después de filtrar?</li>
+<li>¿Qué parte cambiarías para conectar otra fuente?</li>
+<li>¿Qué decisión de la IA rechazaste y por qué?</li>
+<li>¿Por qué elegiste cada gráfico?</li>
+</ol>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA5_08_fuentes_consultas.html">← RA5-08</a><a href="https://mosqueteroweb.github.io/damDI/RA5_matriz_contenidos_evaluacion.html">Matriz RA5</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/"><span class="unit-next-card__eyebrow">Volver al curso</span><strong>Índice general del módulo</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

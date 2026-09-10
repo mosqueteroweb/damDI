@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#984061">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA5-01 · Informes incrustados y no incrustados · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra5">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA5-01 · Informes incrustados y no incrustados</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra5-01--informes-incrustados-y-no-incrustados">RA5-01 · Informes incrustados y no incrustados</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Distinguir un informe integrado en la aplicación de un documento o panel externo y elegir según uso, actualización y distribución.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Un informe <strong>incrustado</strong> forma parte del flujo de la aplicación: comparte navegación y puede reaccionar a su estado. Uno <strong>no incrustado</strong> se abre o distribuye como recurso independiente —por ejemplo, PDF, hoja o panel— y resulta útil para archivo, impresión o destinatarios sin acceso a la aplicación.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Necesidad</th>
+<th>Modalidad</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Consultar pendientes mientras se gestionan tareas</td>
+<td>Incrustada</td>
+<td>Conserva contexto y filtros</td>
+</tr>
+<tr class="even">
+<td>Acta mensual firmable</td>
+<td>No incrustada</td>
+<td>Versión cerrada, fechada e imprimible</td>
+</tr>
+</tbody>
+</table>
+<p>Salida de IA que el alumno debe reconocer:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;report-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;report-title&quot;</span><span class="dt">&gt;</span>Resumen de tareas<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;report-content&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;informe-mensual.pdf&quot;</span><span class="dt">&gt;</span>Descargar informe mensual<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><code>section</code> integra el resumen y el enlace ofrece la versión independiente. No son dos informes distintos si comparten pregunta, fuente y fecha de corte.</p>
+<h2 id="ra5-pb01--dos-modos-una-decisión">RA5-PB01 · Dos modos, una decisión</h2>
+<p>Diseña en Stitch el resumen incrustado y la portada del informe exportado. Entrega una tabla comparando actualización, interacción, acceso, impresión y mantenimiento, y genera ambos accesos en una página.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>El panel incrustado muestra tres indicadores y enlace «Ver detalle». La versión externa incluye título, periodo, fuente y fecha de generación. La decisión explica que el panel cambia con los filtros y el PDF conserva una instantánea. Ambos tienen nombre accesible y la descarga indica formato.</p>
+</details>
+
+<h2 id="cierre">Cierre</h2>
+<p>Explica qué modalidad usarías para seguimiento diario y cuál para una reunión trimestral. Identifica dónde la salida generada incrusta y dónde enlaza.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA5_00_guia_docente.html">← Guía RA5</a><a href="https://mosqueteroweb.github.io/damDI/RA5_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA5_02_herramientas_graficas.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA5-02 · Herramientas gráficas</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

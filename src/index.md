@@ -40,13 +40,13 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Voz, gestos, visión artificial y realidad aumentada.</span>
     <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
   </a>
-  <article class="ra-card ra-card--ra5" aria-label="RA5, próximamente">
+  <a class="ra-card ra-card--ra5 ra-card--available" href="RA5_00_guia_docente.html">
     <span class="ra-card__order">Bloque 5</span>
     <span class="ra-card__number">RA5</span>
     <strong>Informes</strong>
     <span class="ra-card__description">Datos, filtros, totales, gráficos e integración.</span>
-    <span class="ra-card__meta"><span>Próximamente</span></span>
-  </article>
+    <span class="ra-card__meta"><span>12 horas</span><span>Disponible</span></span>
+  </a>
   <article class="ra-card ra-card--ra8" aria-label="RA8, próximamente">
     <span class="ra-card__order">Bloque 6</span>
     <span class="ra-card__number">RA8</span>
@@ -173,3 +173,21 @@ El RA2 añade voz, movimiento corporal, detección de manos y realidad aumentada
 - [RA2-04 · Partes y movimientos del cuerpo](RA2_04_cuerpo_movimiento.md)
 - [RA2-05 · Realidad aumentada](RA2_05_realidad_aumentada.md)
 - [RA2-INT01 · Asistente natural del aula](RA2_integrador.md)
+
+## RA5 · Creación de informes
+
+**Duración propuesta:** 12 horas · **8 criterios de evaluación** · **8 prácticas básicas** · **1 integrador**
+
+El RA5 convierte los datos del gestor en informes incrustados y exportables. El alumnado estructura, conecta, filtra, calcula y representa información mediante asistentes y código generado por IA, que debe identificar, modificar y verificar.
+
+- [Guía docente y temporalización](RA5_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA5_matriz_contenidos_evaluacion.md)
+- [RA5-01 · Informes incrustados y no incrustados](RA5_01_informes_incrustados.md)
+- [RA5-02 · Herramientas gráficas](RA5_02_herramientas_graficas.md)
+- [RA5-03 · Estructura y secciones](RA5_03_estructura_secciones.md)
+- [RA5-04 · Filtrado de datos](RA5_04_filtrado_datos.md)
+- [RA5-05 · Numeración, recuentos y totales](RA5_05_recuentos_totales.md)
+- [RA5-06 · Gráficos](RA5_06_graficos.md)
+- [RA5-07 · Librerías y código generado](RA5_07_librerias_codigo.md)
+- [RA5-08 · Fuentes de datos y consultas](RA5_08_fuentes_consultas.md)
+- [RA5-INT01 · Informe de seguimiento del aula](RA5_integrador.md)
