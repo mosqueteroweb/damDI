@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA1-INT01 — Gestor de tareas del aula · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra1">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA1-INT01 — Gestor de tareas del aula</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra1-int01--gestor-de-tareas-del-aula">RA1-INT01 — Gestor de tareas del aula</h1>
+<p><strong>Evaluación integradora · 150 minutos · CE RA1.a–h.</strong><br />
+<strong>Itinerario web generado con IA. Diseño de referencia: <a href="https://m3.material.io/">M3</a>.</strong></p>
+<h2 id="1-enunciado-para-entregar-al-alumnado">1. Enunciado para entregar al alumnado</h2>
+<p>El centro necesita una pantalla para anotar tareas durante una sesión. Debe permitir introducir título, elegir prioridad Normal/Alta, añadir a una lista y limpiar el formulario. Los datos se conservan mientras la página permanezca abierta; no se exige persistencia, servidor ni autenticación.</p>
+<p>Utiliza las herramientas de Google para especificar, generar, explicar y refinar. Realiza operaciones de creación y ubicación en el editor visual web trabajado. No es necesario escribir código desde cero, pero debes identificar los fragmentos relevantes y explicar tus decisiones.</p>
+<h3 id="requisitos-mínimos">Requisitos mínimos</h3>
+<ul>
+<li>Una pantalla titulada «Tareas del aula».</li>
+<li>Título obligatorio: rechazar vacío y solo espacios; máximo 80 caracteres.</li>
+<li>Prioridad restringida a Normal o Alta, inicialmente Normal.</li>
+<li>Añadir conserva las tareas previas y muestra título y prioridad.</li>
+<li>Limpiar restaura el formulario sin eliminar las tareas.</li>
+<li>Mensajes claros y etiquetas visibles; funcionamiento con teclado.</li>
+<li>Estructura y estilos revisados contra M3. No se acepta como justificación únicamente «la IA dice que es Material».</li>
+<li>Una modificación posterior del código exportado por el editor que cambie la ayuda y su posición sin romper acciones.</li>
+</ul>
+<h3 id="trabajo-y-entregables">Trabajo y entregables</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Tarea</th>
+<th>Entrega</th>
+<th>CE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1. Comparar dos herramientas y dos alternativas de componentes</td>
+<td>Tabla con destino, encaje, limitación y elección; referencias</td>
+<td>a</td>
+</tr>
+<tr class="even">
+<td>T2. Crear la interfaz en editor visual, desde bloques o estructura IA</td>
+<td>Proyecto editable o registro de sesión y exportación</td>
+<td>b</td>
+</tr>
+<tr class="odd">
+<td>T3. Reubicar visualmente un bloque de etiqueta/control</td>
+<td>Capturas antes/después o demostración; explicación de operación</td>
+<td>c</td>
+</tr>
+<tr class="even">
+<td>T4. Configurar etiquetas, opciones, límite y valores iniciales</td>
+<td>Tabla propiedad–requisito y resultado</td>
+<td>d</td>
+</tr>
+<tr class="odd">
+<td>T5. Leer estructura y relación con lógica</td>
+<td>Cinco fragmentos anotados: contenedor, control, enlace, evento y actualización</td>
+<td>e</td>
+</tr>
+<tr class="even">
+<td>T6. Pedir modificación de ayuda en la exportación</td>
+<td>Antes/después, prompt, diferencias y prueba</td>
+<td>f</td>
+</tr>
+<tr class="odd">
+<td>T7. Asociar añadir y limpiar mediante IA</td>
+<td>Manejadores identificados y pruebas</td>
+<td>g</td>
+</tr>
+<tr class="even">
+<td>T8. Integrar y ejecutar</td>
+<td>Archivo ejecutable o proyecto web e informe de pruebas</td>
+<td>h</td>
+</tr>
+</tbody>
+</table>
+<p>No incluyas conversaciones completas: entrega los prompts y diferencias pertinentes. Si la herramienta produce nombres distintos, indica sus equivalencias.</p>
+<h3 id="organización-de-los-150-minutos">Organización de los 150 minutos</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Trabajo</th>
+<th style="text-align: right;">Minutos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comparación y especificación</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td>Creación, ubicación y propiedades en editor</td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr class="odd">
+<td>Generación e integración de comportamiento</td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr class="even">
+<td>Lectura y cambio de exportación</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="odd">
+<td>Pruebas y entrega</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>150</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Se parte de un entorno disponible y una estructura vacía; los accesos y preparación se realizan antes de la evaluación. Si una generación se bloquea, el docente puede facilitar una base parcial registrando la ayuda, sin dar por demostrados los criterios que resuelve esa base.</p>
+<h2 id="2-solución-docente-proceso-y-decisiones">2. Solución docente: proceso y decisiones</h2>
+<p>La solución siguiente es una referencia generada, no el resultado de una sesión grabada del editor. Sirve para corregir comportamiento, lectura y diseño; T2/T3 necesitan además las evidencias del alumno. Se admite otra implementación si satisface los requisitos.</p>
+<h3 id="t1-decisión-de-referencia">T1: decisión de referencia</h3>
+<p>Stitch ayuda a explorar el diseño y Gemini/AI Studio a generar y refinar. GrapesJS aporta edición visual web y exportación. La comparación distingue herramienta y librería usando el capítulo 02. Para esta referencia pequeña se emplean controles nativos HTML y CSS con roles inspirados en el sistema M3; no hay librería externa. La comparación puede considerar Material Web como alternativa, incluyendo su mantenimiento. HTML no se describe como una librería externa.</p>
+<p>La ausencia de dependencias facilita leer esta muestra; el coste es que hay que revisar explícitamente todos los estilos y estados. No se proclama una certificación M3 completa por usar los nombres de tokens.</p>
+<h3 id="t2t4-estructura-visual">T2–T4: estructura visual</h3>
+<p>Orden final: encabezado, entrada, selector, ayuda, acciones, mensaje y lista. El editor puede generar clases adicionales; los identificadores de lógica deben mantenerse o actualizarse consistentemente. Los controles tendrán asociación <code>for/id</code>, límite 80 y valores de prioridad coherentes.</p>
+<h3 id="t5t7-especificación-de-generación">T5–T7: especificación de generación</h3>
+<pre class="text"><code>Genera la lógica para mi HTML exportado sin sustituir su estructura.
+Respeta estos ids: formulario, titulo, prioridad, ayuda, limpiar, mensaje, lista.
+Usa una colección en memoria. Rechaza vacío, espacios y más de 80 caracteres.
+Añade título y prioridad con textContent, conservando las tareas previas.
+Limpiar no borra la lista. Usa submit para añadir y click para limpiar.
+Explica datos, función de representación y asociaciones. Mantén el tema M3.
+Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.</code></pre>
+<p>Cambio T6 de referencia: en la versión inicial la ayuda dice «Completa los datos» después de las acciones. Pedir «mueve ayuda antes de las acciones y cambia su texto a “Título de 1 a 80 caracteres. Los datos se conservan durante esta sesión”. Conserva todos los ids». La solución final ya incorpora ese cambio. El antes/después real debe conservar la exportación del alumno, no reconstruirse a posteriori desde la solución.</p>
+<h2 id="3-archivo-de-referencia-completo">3. Archivo de referencia completo</h2>
+<p>El profesor puede guardar el contenido de este bloque como <code>tareas.html</code> y abrirlo en un navegador. Es un recurso docente reproducible, no un ejercicio de transcripción para el alumno. No realiza peticiones externas. Al recargar pierde los datos, tal como exige el alcance.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;es&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&quot;utf-8&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Tareas del aula<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color-scheme</span>: <span class="dv">light</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-primary</span>: <span class="cn">#6750a4</span><span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-primary</span>: <span class="cn">#ffffff</span><span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-surface</span>: <span class="cn">#fffbfe</span><span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-surface</span>: <span class="cn">#1c1b1f</span><span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-surface-container</span>: <span class="cn">#f3edf7</span><span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-outline</span>: <span class="cn">#79747e</span><span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-error</span>: <span class="cn">#b3261e</span><span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> { <span class="kw">box-sizing</span>: <span class="dv">border-box</span><span class="op">;</span> }</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>body { <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">background</span>: <span class="fu">var(</span><span class="va">--md-sys-color-surface</span><span class="fu">)</span><span class="op">;</span> <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--md-sys-color-on-surface</span><span class="fu">)</span><span class="op">;</span> <span class="kw">font</span>: <span class="dv">400</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">1.5</span> Arial<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span> }</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>main { <span class="kw">max-width</span>: <span class="dv">680</span><span class="dt">px</span><span class="op">;</span> <span class="kw">margin</span>: <span class="dv">32</span><span class="dt">px</span> <span class="bu">auto</span><span class="op">;</span> <span class="kw">padding</span>: <span class="dv">24</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>h1 { <span class="kw">font-size</span>: <span class="dv">32</span><span class="dt">px</span><span class="op">;</span> <span class="kw">line-height</span>: <span class="dv">1.25</span><span class="op">;</span> <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span> <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">0</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>h2 { <span class="kw">font-size</span>: <span class="dv">24</span><span class="dt">px</span><span class="op">;</span> <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span> }</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">.intro</span><span class="op">,</span> <span class="fu">.ayuda</span> { <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">0</span> <span class="dv">24</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>form { <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span> <span class="kw">gap</span>: <span class="dv">16</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">.campo</span> { <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span> <span class="kw">gap</span>: <span class="dv">8</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>label { <span class="kw">font-size</span>: <span class="dv">14</span><span class="dt">px</span><span class="op">;</span> <span class="kw">font-weight</span>: <span class="dv">600</span><span class="op">;</span> }</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>input<span class="op">,</span> select { <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span> <span class="kw">min-height</span>: <span class="dv">56</span><span class="dt">px</span><span class="op">;</span> <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">var(</span><span class="va">--md-sys-color-outline</span><span class="fu">)</span><span class="op">;</span> <span class="kw">border-radius</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span> <span class="kw">padding</span>: <span class="dv">12</span><span class="dt">px</span> <span class="dv">16</span><span class="dt">px</span><span class="op">;</span> <span class="kw">background</span>: <span class="dv">transparent</span><span class="op">;</span> <span class="kw">color</span>: <span class="bu">inherit</span><span class="op">;</span> <span class="kw">font</span>: <span class="bu">inherit</span><span class="op">;</span> }</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>input<span class="ex">[aria-invalid</span><span class="op">=</span><span class="st">&quot;true&quot;</span><span class="ex">]</span> { <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">var(</span><span class="va">--md-sys-color-error</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">.ayuda</span> { <span class="kw">font-size</span>: <span class="dv">14</span><span class="dt">px</span><span class="op">;</span> <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span> }</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">.acciones</span> { <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span> <span class="kw">flex-wrap</span>: wrap<span class="op">;</span> <span class="kw">gap</span>: <span class="dv">12</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>button { <span class="kw">min-height</span>: <span class="dv">48</span><span class="dt">px</span><span class="op">;</span> <span class="kw">padding</span>: <span class="dv">10</span><span class="dt">px</span> <span class="dv">24</span><span class="dt">px</span><span class="op">;</span> <span class="kw">border-radius</span>: <span class="dv">999</span><span class="dt">px</span><span class="op">;</span> <span class="kw">font</span>: <span class="dv">600</span> <span class="dv">14</span><span class="dt">px</span>/<span class="dv">20</span><span class="dt">px</span> Arial<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span> <span class="kw">cursor</span>: <span class="dv">pointer</span><span class="op">;</span> }</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">.primario</span> { <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="dv">transparent</span><span class="op">;</span> <span class="kw">background</span>: <span class="fu">var(</span><span class="va">--md-sys-color-primary</span><span class="fu">)</span><span class="op">;</span> <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--md-sys-color-on-primary</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">.secundario</span> { <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">var(</span><span class="va">--md-sys-color-outline</span><span class="fu">)</span><span class="op">;</span> <span class="kw">background</span>: <span class="dv">transparent</span><span class="op">;</span> <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--md-sys-color-primary</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>button<span class="in">:hover</span> { <span class="kw">box-shadow</span>: <span class="dv">inset</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">100</span><span class="dt">px</span> <span class="fu">rgb(</span><span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> / <span class="dv">8</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>button<span class="in">:active</span> { <span class="kw">box-shadow</span>: <span class="dv">inset</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> <span class="dv">100</span><span class="dt">px</span> <span class="fu">rgb(</span><span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span> / <span class="dv">12</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="in">:focus-visible</span> { <span class="kw">outline</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">var(</span><span class="va">--md-sys-color-primary</span><span class="fu">)</span><span class="op">;</span> <span class="kw">outline-offset</span>: <span class="dv">3</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">#mensaje</span> { <span class="kw">min-height</span>: <span class="dv">24</span><span class="dt">px</span><span class="op">;</span> <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span> }</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="pp">#mensaje</span><span class="fu">.error</span> { <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--md-sys-color-error</span><span class="fu">)</span><span class="op">;</span> }</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>ul { <span class="kw">list-style</span>: <span class="dv">none</span><span class="op">;</span> <span class="kw">padding</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span> <span class="kw">gap</span>: <span class="dv">12</span><span class="dt">px</span><span class="op">;</span> }</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>li { <span class="kw">background</span>: <span class="fu">var(</span><span class="va">--md-sys-color-surface-container</span><span class="fu">)</span><span class="op">;</span> <span class="kw">border-radius</span>: <span class="dv">12</span><span class="dt">px</span><span class="op">;</span> <span class="kw">padding</span>: <span class="dv">16</span><span class="dt">px</span><span class="op">;</span> <span class="kw">overflow-wrap</span>: anywhere<span class="op">;</span> }</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">max-width</span>: <span class="dv">480</span><span class="dt">px</span>) { main { <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">padding</span>: <span class="dv">16</span><span class="dt">px</span><span class="op">;</span> } }</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Tareas del aula<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;intro&quot;</span><span class="dt">&gt;</span>Anota las tareas de esta sesión.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">form</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;formulario&quot;</span> <span class="er">novalidate</span><span class="dt">&gt;</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;campo&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">label</span> <span class="er">for</span><span class="ot">=</span><span class="st">&quot;titulo&quot;</span><span class="dt">&gt;</span>Título<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;titulo&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;titulo&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">maxlength</span><span class="ot">=</span><span class="st">&quot;80&quot;</span> <span class="er">required</span> <span class="er">aria-describedby</span><span class="ot">=</span><span class="st">&quot;ayuda mensaje&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;campo&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">label</span> <span class="er">for</span><span class="ot">=</span><span class="st">&quot;prioridad&quot;</span><span class="dt">&gt;</span>Prioridad<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">select</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;prioridad&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;prioridad&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;normal&quot;</span> <span class="er">selected</span><span class="dt">&gt;</span>Normal<span class="dt">&lt;/</span><span class="kw">option</span><span class="dt">&gt;</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">option</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;alta&quot;</span><span class="dt">&gt;</span>Alta<span class="dt">&lt;/</span><span class="kw">option</span><span class="dt">&gt;</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">select</span><span class="dt">&gt;</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;ayuda&quot;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;ayuda&quot;</span><span class="dt">&gt;</span>Título de 1 a 80 caracteres. Los datos se conservan durante esta sesión.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;acciones&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;primario&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;submit&quot;</span><span class="dt">&gt;</span>Añadir tarea<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">button</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;secundario&quot;</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;limpiar&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Limpiar formulario<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;mensaje&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;status&quot;</span> <span class="er">aria-atomic</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;encabezado-lista&quot;</span><span class="dt">&gt;</span>Tareas añadidas<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;vacio&quot;</span><span class="dt">&gt;</span>Todavía no hay tareas.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">ul</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;lista&quot;</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;encabezado-lista&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">main</span><span class="dt">&gt;</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tareas <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> formulario <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#formulario&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> titulo <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#titulo&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> prioridad <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#prioridad&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> mensaje <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#mensaje&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> lista <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#lista&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> vacio <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#vacio&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> nombresPrioridad <span class="op">=</span> { <span class="dt">normal</span><span class="op">:</span> <span class="st">&#39;Normal&#39;</span><span class="op">,</span> <span class="dt">alta</span><span class="op">:</span> <span class="st">&#39;Alta&#39;</span> }<span class="op">;</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">informar</span>(texto<span class="op">,</span> error <span class="op">=</span> <span class="kw">false</span>) {</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  mensaje<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> texto<span class="op">;</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  mensaje<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">toggle</span>(<span class="st">&#39;error&#39;</span><span class="op">,</span> error)<span class="op">;</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">representarTareas</span>() {</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>  lista<span class="op">.</span><span class="fu">replaceChildren</span>()<span class="op">;</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> tarea <span class="kw">of</span> tareas) {</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> fila <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;li&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    fila<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span>tarea<span class="op">.</span><span class="at">titulo</span><span class="sc">}</span><span class="vs"> — Prioridad: </span><span class="sc">${</span>nombresPrioridad[tarea<span class="op">.</span><span class="at">prioridad</span>]<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    lista<span class="op">.</span><span class="fu">append</span>(fila)<span class="op">;</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>  vacio<span class="op">.</span><span class="at">hidden</span> <span class="op">=</span> tareas<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">limpiarFormulario</span>() {</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>  formulario<span class="op">.</span><span class="fu">reset</span>()<span class="op">;</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>  titulo<span class="op">.</span><span class="fu">removeAttribute</span>(<span class="st">&#39;aria-invalid&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">informar</span>(<span class="st">&#39;&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>  titulo<span class="op">.</span><span class="fu">focus</span>()<span class="op">;</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">agregarTarea</span>(evento) {</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>  evento<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> texto <span class="op">=</span> titulo<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>texto <span class="op">||</span> texto<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">80</span>) {</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>    titulo<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">&#39;aria-invalid&#39;</span><span class="op">,</span> <span class="st">&#39;true&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>    <span class="fu">informar</span>(<span class="st">&#39;Escribe un título de 1 a 80 caracteres.&#39;</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>    titulo<span class="op">.</span><span class="fu">focus</span>()<span class="op">;</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span><span class="bu">Object</span><span class="op">.</span><span class="fu">hasOwn</span>(nombresPrioridad<span class="op">,</span> prioridad<span class="op">.</span><span class="at">value</span>)) {</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>    <span class="fu">informar</span>(<span class="st">&#39;Selecciona una prioridad válida.&#39;</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>    prioridad<span class="op">.</span><span class="fu">focus</span>()<span class="op">;</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>  tareas<span class="op">.</span><span class="fu">push</span>({ <span class="dt">titulo</span><span class="op">:</span> texto<span class="op">,</span> <span class="dt">prioridad</span><span class="op">:</span> prioridad<span class="op">.</span><span class="at">value</span> })<span class="op">;</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">representarTareas</span>()<span class="op">;</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">limpiarFormulario</span>()<span class="op">;</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">informar</span>(<span class="vs">`Tarea añadida. Total: </span><span class="sc">${</span>tareas<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs">.`</span>)<span class="op">;</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>formulario<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;submit&#39;</span><span class="op">,</span> agregarTarea)<span class="op">;</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;#limpiar&#39;</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;click&#39;</span><span class="op">,</span> limpiarFormulario)<span class="op">;</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="fu">representarTareas</span>()<span class="op">;</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="4-lectura-guiada-resuelta">4. Lectura guiada resuelta</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Parte</th>
+<th>Función</th>
+<th>Qué debe explicar el alumno</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>:root</code></td>
+<td>Roles de tema</td>
+<td>Los colores tienen propósito; los nombres no certifican por sí solos M3.</td>
+</tr>
+<tr class="even">
+<td><code>label for</code> / <code>input id</code></td>
+<td>Asociación de campo</td>
+<td>La etiqueta identifica la entrada.</td>
+</tr>
+<tr class="odd">
+<td><code>tareas</code></td>
+<td>Origen en memoria</td>
+<td>Los datos no son los elementos <code>li</code>.</td>
+</tr>
+<tr class="even">
+<td><code>representarTareas</code></td>
+<td>Transformación y representación</td>
+<td>Limpia la representación, recorre los datos y crea texto seguro.</td>
+</tr>
+<tr class="odd">
+<td><code>agregarTarea</code></td>
+<td>Validación y alta</td>
+<td>Detiene envío, valida, añade, actualiza y comunica.</td>
+</tr>
+<tr class="even">
+<td><code>limpiarFormulario</code></td>
+<td>Restablecimiento</td>
+<td>No modifica el array; reset restaura prioridad Normal.</td>
+</tr>
+<tr class="odd">
+<td>Dos <code>addEventListener</code></td>
+<td>Asociaciones</td>
+<td>Cada acción se registra una vez.</td>
+</tr>
+</tbody>
+</table>
+<p>La estructura inicial del alumno puede variar. En lectura se pide localizar equivalencias, no recitar estos nombres.</p>
+<h2 id="5-pruebas-y-resultados-de-referencia">5. Pruebas y resultados de referencia</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Página recién abierta</td>
+<td>Lista vacía, prioridad Normal, aviso de ausencia de tareas.</td>
+</tr>
+<tr class="even">
+<td>Título vacío o espacios</td>
+<td>Aviso y foco; cero altas nuevas.</td>
+</tr>
+<tr class="odd">
+<td>«Leer», Normal</td>
+<td>Una fila correcta y total 1.</td>
+</tr>
+<tr class="even">
+<td>«Revisar equipo», Alta</td>
+<td>Segunda fila; se mantiene la primera.</td>
+</tr>
+<tr class="odd">
+<td>Limpiar con campos modificados</td>
+<td>Título vacío, prioridad Normal; filas intactas.</td>
+</tr>
+<tr class="even">
+<td>Título con marcado como <code>&lt;b&gt;Leer&lt;/b&gt;</code></td>
+<td>Se presenta literalmente; no crea elementos b.</td>
+</tr>
+<tr class="odd">
+<td>Llamar dos veces a representación</td>
+<td>No duplica la lista.</td>
+</tr>
+<tr class="even">
+<td>Título superior a 80 mediante asignación programática</td>
+<td>Rechazado también por la lógica.</td>
+</tr>
+<tr class="odd">
+<td>Recarga</td>
+<td>Se pierden los datos; es el alcance declarado.</td>
+</tr>
+<tr class="even">
+<td>Cambio T6</td>
+<td>Ayuda antes de acciones; identificadores y funcionalidad conservados.</td>
+</tr>
+</tbody>
+</table>
+<p>El informe de verificación del paquete distingue comprobación de lógica y revisión visual. Un test de JavaScript no demuestra foco visible, lector de pantalla ni conformidad M3 integral.</p>
+<h2 id="6-instrumento-de-corrección-por-ce-sin-pesos">6. Instrumento de corrección por CE, sin pesos</h2>
+<table>
+<thead>
+<tr class="header">
+<th>CE</th>
+<th>Evidencia satisfactoria</th>
+<th>Parcial</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>Compara herramientas y librerías y justifica encaje web</td>
+<td>Compara solo una categoría</td>
+<td>Enumera marcas sin análisis</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Crea documento con funciones de editor y lo entrega</td>
+<td>Documento incompleto</td>
+<td>Solo captura o solución copiada</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>Reubica componentes mediante editor y demuestra operación</td>
+<td>Explica sin evidencia suficiente</td>
+<td>Solo pide un diseño a IA</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>Propiedades responden a los requisitos</td>
+<td>Algunas mal configuradas</td>
+<td>No identifica cambios</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>Explica fragmentos de su exportación y relación funcional</td>
+<td>Identifica sin explicar</td>
+<td>Repite texto IA sin localizarlo</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>Modifica exportación, conserva versiones y verifica</td>
+<td>Cambio sin prueba o explicación</td>
+<td>Solo cambia mockup o código sin procedencia</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>Añadir y limpiar conectados y probados</td>
+<td>Solo una acción correcta</td>
+<td>Acciones sin asociación operativa</td>
+</tr>
+<tr class="even">
+<td>h</td>
+<td>Aplicación completa ejecutable con casos esenciales correctos</td>
+<td>Fallos delimitados</td>
+<td>Interfaz no integrada o no ejecutable</td>
+</tr>
+</tbody>
+</table>
+<p>No se asignan porcentajes ni reglas de recuperación. Se registran los logros y las ayudas recibidas. Una salida funcional de IA no sustituye la evidencia individual de comprensión.</p>
+<h2 id="7-diseño-y-límites">7. Diseño y límites</h2>
+<p>La solución usa roles de color, jerarquía y diferenciación de acciones siguiendo la referencia M3. Emplea controles HTML con una adaptación didáctica; el selector conserva su comportamiento nativo y no se presenta como reproducción exhaustiva de todos los componentes M3. Antes de usarla como ejemplo visual definitivo se revisarán foco, estados, contraste, tipografía, tamaños y distribución en navegador. No se ha declarado una auditoría completa de M3/WCAG.</p>
+<p>No se necesita Android Studio. No hay servicios externos ni persistencia. Los scripts son ejemplos completos de salida de IA para el docente; el alumno dirige, identifica y verifica.</p>
+<hr />
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="https://mosqueteroweb.github.io/damDI/RA1_13_escuchadores.html">← RA1-13</a>
+    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card unit-next-card--index" href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">
+    <span class="unit-next-card__eyebrow">Has completado el RA1</span>
+    <strong>Volver al índice del resultado de aprendizaje</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">↗</span>
+  </a>
+</nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

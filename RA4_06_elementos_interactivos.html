@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA4-06 · Elementos interactivos · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra4">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA4-06 · Elementos interactivos</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra4-06--selección-de-elementos-interactivos">RA4-06 · Selección de elementos interactivos</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Elegir controles según el tipo de decisión y reconocer sus estados y semántica en el código generado.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<ul>
+<li>Botón: ejecuta una acción.</li>
+<li>Enlace: navega a otro recurso o ubicación.</li>
+<li>Casilla: activa opciones independientes.</li>
+<li>Radio: elige una opción de un conjunto pequeño.</li>
+<li>Selector: elige dentro de una lista cuando el espacio o número lo aconseja.</li>
+<li>Interruptor: cambia inmediatamente un estado persistente claramente etiquetado.</li>
+</ul>
+<p>La apariencia no cambia la semántica: un <code>div</code> con aspecto de botón sigue sin comportamiento nativo.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Para la prioridad —Baja, Media o Alta— se usan radios si conviene comparar las tres opciones; un selector si el formulario es estrecho. Para «Guardar» se usa botón; para «Ayuda», enlace. La decisión se basa en la tarea y el contexto.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">fieldset</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">legend</span><span class="dt">&gt;</span>Prioridad<span class="dt">&lt;/</span><span class="kw">legend</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">label</span><span class="dt">&gt;&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;radio&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;prioridad&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;alta&quot;</span><span class="dt">&gt;</span> Alta<span class="dt">&lt;/</span><span class="kw">label</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">fieldset</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>Partes relevantes: <code>fieldset</code> agrupa, <code>legend</code> nombra el grupo y el mismo <code>name</code> crea elección exclusiva.</p>
+<h2 id="ra4-pb06--control-adecuado">RA4-PB06 · Control adecuado</h2>
+<p>Recibe ocho controles incorrectos. Sustituye al menos cinco, explica la decisión y muestra estados normal, foco, deshabilitado y error cuando proceda.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>Un enlace que guarda pasa a botón; tres casillas exclusivas pasan a radios; un <code>div</code> pulsable pasa a <code>button</code>; una acción de navegación deja de ser botón; un selector sí/no inmediato puede ser interruptor con etiqueta clara. Cada cambio se prueba con teclado y nombre accesible.</p>
+</details>
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA4_05_aspecto_visual.html">← RA4-05</a><a href="https://mosqueteroweb.github.io/damDI/RA4_00_guia_docente.html">Índice RA4</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA4_07_secuencia_control.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA4-07 · Secuencia de control y mensajes</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

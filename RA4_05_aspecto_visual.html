@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA4-05 · Aspecto visual y legibilidad · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra4">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA4-05 · Aspecto visual y legibilidad</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra4-05--color-tipografía-iconos-y-distribución">RA4-05 · Color, tipografía, iconos y distribución</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Aplicar un sistema visual consistente y justificar legibilidad con evidencias, no con preferencias personales.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Material Design 3 organiza decisiones mediante roles y tokens. El color comunica jerarquía y estado, pero no debe ser el único canal. La tipografía necesita escala, contraste y espacio. Los iconos ambiguos requieren texto o nombre accesible. La distribución debe conservar agrupación y lectura al cambiar el ancho.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-primary</span>: <span class="cn">#6750a4</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-primary</span>: <span class="cn">#ffffff</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-error</span>: <span class="cn">#b3261e</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-error</span>: <span class="cn">#ffffff</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>El alumno identifica parejas superficie/contenido. No elige blanco «porque queda bien»: verifica contraste, uso y estado. Un error añade texto e icono además del color.</p>
+<h2 id="ra4-pb05--sistema-visual-legible">RA4-PB05 · Sistema visual legible</h2>
+<p>Pide a Gemini dos variantes M3 del gestor. Define seis tokens, una escala tipográfica corta y tres reglas de distribución. Comprueba contraste y zoom al 200 %.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La solución conserva una pareja principal/on-primary, superficie/on-surface y error/on-error; usa título, cuerpo y etiqueta; limita ancho de lectura; permite salto de línea; y no fija alturas que corten texto. Se documentan valores medidos y una comprobación visual a zoom.</p>
+</details>
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA4_04_estructura_navegacion.html">← RA4-04</a><a href="https://mosqueteroweb.github.io/damDI/RA4_00_guia_docente.html">Índice RA4</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA4_06_elementos_interactivos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA4-06 · Elementos interactivos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

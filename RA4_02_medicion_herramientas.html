@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA4-02 · Medidas y herramientas · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra4">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA4-02 · Medidas y herramientas</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra4-02--medidas-de-usabilidad-y-accesibilidad">RA4-02 · Medidas de usabilidad y accesibilidad</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Diseñar una prueba reproducible y combinar herramientas automáticas con comprobaciones humanas.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Una medida necesita tarea, participante o procedimiento, condición y resultado. En usabilidad pueden observarse finalización, tiempo, errores, retrocesos y satisfacción. En accesibilidad se combinan validadores, inspección del árbol accesible, teclado, ampliación y revisión manual.</p>
+<p>Una puntuación global no explica qué falla ni demuestra que una persona pueda completar la tarea.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Tarea: «Añade una tarea urgente y elimínala».</p>
+<table>
+<thead>
+<tr class="header">
+<th>Medida</th>
+<th style="text-align: right;">Resultado inicial</th>
+<th>Interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Finalización</td>
+<td style="text-align: right;">2/3</td>
+<td>Una persona no localizó prioridad</td>
+</tr>
+<tr class="even">
+<td>Errores</td>
+<td style="text-align: right;">4</td>
+<td>Dos borrados accidentales</td>
+</tr>
+<tr class="odd">
+<td>Pulsaciones Tab</td>
+<td style="text-align: right;">11</td>
+<td>El foco pasa por controles ocultos</td>
+</tr>
+<tr class="even">
+<td>Hallazgos automáticos</td>
+<td style="text-align: right;">3</td>
+<td>Falta confirmar manualmente impacto</td>
+</tr>
+</tbody>
+</table>
+<p>Decisión: arreglar primero el orden de foco y el borrado recuperable; después repetir exactamente el protocolo.</p>
+<h2 id="ra4-pb02--auditoría-reproducible">RA4-PB02 · Auditoría reproducible</h2>
+<p>Ejecuta Lighthouse o herramienta equivalente y tres pruebas manuales: teclado, zoom al 200 % y comprensión de mensajes. Corrige un problema y repite la prueba.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>Informe mínimo: versión y URL; herramienta; pasos; resultado inicial; cambio; resultado posterior; límite de la prueba. Ejemplo: al 200 % el botón se solapa; se sustituye ancho fijo por distribución flexible; se repite a igual tamaño; desaparece el solapamiento. No se concluye que toda la web sea accesible.</p>
+</details>
+
+<h2 id="fragmentos-relevantes">Fragmentos relevantes</h2>
+<p>El alumno localiza la regla CSS cambiada, el elemento afectado y la evidencia anterior/posterior. La IA puede explicar el cambio, pero la comprobación debe realizarse en navegador.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA4_01_usabilidad_accesibilidad.html">← RA4-01</a><a href="https://mosqueteroweb.github.io/damDI/RA4_00_guia_docente.html">Índice RA4</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA4_03_wireframes_mockups.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA4-03 · Wireframes y mockups</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

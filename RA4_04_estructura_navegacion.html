@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA4-04 · Estructura y navegación · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra4">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA4-04 · Estructura y navegación</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra4-04--estructura-menús-y-distribución-de-acciones">RA4-04 · Estructura, menús y distribución de acciones</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Construir menús coherentes, ubicar acciones por frecuencia y riesgo, y asegurar recorrido por teclado.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La estructura refleja el modelo mental de la tarea. Las acciones frecuentes y seguras deben ser fáciles de encontrar; las destructivas no deben competir visualmente con la principal. Un menú no es un almacén de botones. Diálogos y ventanas requieren propósito, título, salida y gestión de foco.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Distribución para el gestor:</p>
+<ul>
+<li>Barra superior: título, búsqueda y ayuda.</li>
+<li>Acción principal: «Nueva tarea».</li>
+<li>Menú de navegación: Todas, Pendientes y Completadas.</li>
+<li>Menú contextual de una tarea: editar, duplicar y eliminar.</li>
+<li>Atajos: <code>/</code> para búsqueda y <code>Escape</code> para cerrar diálogo, documentados y sin interferir con escritura.</li>
+</ul>
+<p>HTML relevante generado por IA:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">nav</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">&quot;Estados de tareas&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;#todas&quot;</span> <span class="er">aria-current</span><span class="ot">=</span><span class="st">&quot;page&quot;</span><span class="dt">&gt;</span>Todas<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;#pendientes&quot;</span><span class="dt">&gt;</span>Pendientes<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>Se reconoce <code>nav</code>, su nombre accesible y <code>aria-current</code>; no se pide memorizar el fragmento.</p>
+<h2 id="ra4-pb04--arquitectura-de-acciones">RA4-PB04 · Arquitectura de acciones</h2>
+<p>Reorganiza diez acciones dadas en navegación, acción principal, menú contextual y diálogo. Crea dos tipos de menú y describe el recorrido completo con teclado.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>«Nueva tarea» queda visible; filtros en navegación; «Editar/duplicar/eliminar» dependen de cada tarea; ajustes globales en menú secundario. Tab recorre controles operables en orden, Enter activa, Escape cierra el diálogo y devuelve el foco al disparador.</p>
+</details>
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA4_03_wireframes_mockups.html">← RA4-03</a><a href="https://mosqueteroweb.github.io/damDI/RA4_00_guia_docente.html">Índice RA4</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA4_05_aspecto_visual.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA4-05 · Aspecto visual y legibilidad</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

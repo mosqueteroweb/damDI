@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA1-05 · Componentes: características y campo de aplicación · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra1">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA1-05 · Componentes: características y campo de aplicación</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra1-05--componentes-características-y-campo-de-aplicación">RA1-05 — Componentes: características y campo de aplicación</h1>
+<p><strong>Ejemplo RA1-EJ05 · Práctica RA1-PB05 · RA1.b, RA1.d · Sesión orientativa: 60 min.</strong></p>
+<hr />
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="https://mosqueteroweb.github.io/damDI/RA1_04_lenguajes_descriptivos.html">← RA1-04</a>
+    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_06_enlace_datos.html">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-06 · Enlace de datos</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
+
+<h2 id="qué-aprenderá-el-alumnado">Qué aprenderá el alumnado</h2>
+<p>Al terminar, podrá <strong>elegir controles apropiados y configurar propiedades con un propósito verificable</strong>. El código se estudia como salida de herramientas de IA: el alumnado no tiene que memorizarlo ni escribirlo desde cero, pero sí localizar lo relevante, explicar el cambio y verificar su efecto.</p>
+<h2 id="idea-clave">Idea clave</h2>
+<p>El control se elige por el tipo de dato y la interacción: texto libre, selección cerrada, acción o estado comunicado.</p>
+<h2 id="secuencia-de-clase">Secuencia de clase</h2>
+<ol type="1">
+<li><strong>Activación (5 min):</strong> muestra la pantalla o comportamiento y pregunta dónde creen que se define.</li>
+<li><strong>Explicación guiada:</strong> presenta la idea clave y separa herramienta, interfaz, datos y comportamiento.</li>
+<li><strong>RA1-EJ05:</strong> recorre el ejemplo resuelto y señala las líneas relevantes.</li>
+<li><strong>Cambio con IA:</strong> formula una petición pequeña, conserva el original y revisa diferencias.</li>
+<li><strong>RA1-PB05:</strong> el alumnado trabaja desde una base independiente.</li>
+<li><strong>Cierre:</strong> cada alumno explica una decisión y una comprobación.</li>
+</ol>
+<h2 id="ra1-ej05--ejemplo-resuelto">RA1-EJ05 — Ejemplo resuelto</h2>
+<p>Para título se usa entrada de texto; para prioridad con dos valores, un selector; para confirmar, un botón de envío.</p>
+<pre class="text"><code>&lt;input id=&quot;titulo&quot; type=&quot;text&quot; maxlength=&quot;80&quot; required&gt;
+&lt;select id=&quot;prioridad&quot;&gt;
+  &lt;option&gt;Normal&lt;/option&gt;&lt;option&gt;Alta&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+<h3 id="lectura-guiada">Lectura guiada</h3>
+<ul>
+<li>¿Qué requisito resuelve cada fragmento?</li>
+<li>¿Qué parte procede de la descripción visual y cuál añade comportamiento?</li>
+<li>¿Qué cambiaría en pantalla al modificarlo?</li>
+<li>¿Qué debe conservarse para no romper las conexiones existentes?</li>
+</ul>
+<h3 id="prompt-docente-orientativo">Prompt docente orientativo</h3>
+<pre class="text"><code>Analiza este fragmento de una interfaz web generada con IA.
+Señala únicamente las líneas relacionadas con: elegir controles apropiados y configurar propiedades con un propósito verificable.
+Explica su efecto con lenguaje sencillo y propón un cambio mínimo.
+No regeneres el proyecto completo y conserva identificadores y eventos.
+Distingue lo que has razonado de lo que debe comprobarse en navegador.</code></pre>
+<h2 id="ra1-pb05--práctica-básica">RA1-PB05 — Práctica básica</h2>
+<p><strong>Punto de partida:</strong> proyecto web preparado por el profesor, ejecutable e independiente de prácticas anteriores.</p>
+<p><strong>Tarea:</strong> Completa un formulario incompleto en el editor y justifica cada control. Ajusta etiqueta, valor inicial, límite y estado requerido.</p>
+<p><strong>Entrega:</strong> Pantalla editable y tabla requisito–control–propiedad.</p>
+<p><strong>Comprobación mínima:</strong></p>
+<ul>
+<li>El resultado se abre y funciona en navegador.</li>
+<li>El alumno localiza el fragmento relevante.</li>
+<li>El cambio está delimitado y existe una comparación antes/después cuando corresponda.</li>
+<li>La explicación usa evidencias propias; una respuesta copiada de la IA no basta.</li>
+<li>Se conserva el enfoque visual de Material Design 3 y el funcionamiento con teclado.</li>
+</ul>
+<h2 id="corrección-rápida">Corrección rápida</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Evidencia observable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Satisfactorio</td>
+<td>Cumple la tarea, localiza el fragmento, explica la relación y aporta una prueba coherente.</td>
+</tr>
+<tr class="even">
+<td>En revisión</td>
+<td>El resultado funciona, pero falta justificar la elección o demostrar el proceso.</td>
+</tr>
+<tr class="odd">
+<td>Insuficiente</td>
+<td>Solo aporta una captura o texto de IA, no localiza el código o el comportamiento no corresponde al requisito.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="preguntas-de-cierre">Preguntas de cierre</h2>
+<ol type="1">
+<li>¿Qué elemento o fragmento fue decisivo?</li>
+<li>¿Qué pidió exactamente a la IA?</li>
+<li>¿Qué diferencia revisó?</li>
+<li>¿Cómo sabe que no se rompió otra parte?</li>
+</ol>
+<hr />
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="https://mosqueteroweb.github.io/damDI/RA1_04_lenguajes_descriptivos.html">← RA1-04</a>
+    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_06_enlace_datos.html">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-06 · Enlace de datos</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

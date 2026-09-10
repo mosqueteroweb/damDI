@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA1-12 · Eventos de la interfaz · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra1">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA1-12 · Eventos de la interfaz</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra1-12--eventos-de-la-interfaz">RA1-12 — Eventos de la interfaz</h1>
+<p><strong>Ejemplo RA1-EJ12 · Práctica RA1-PB12 · RA1.g · Sesión orientativa: 50 min.</strong></p>
+<hr />
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="https://mosqueteroweb.github.io/damDI/RA1_11_metodos.html">← RA1-11</a>
+    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_13_escuchadores.html">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-13 · Escuchadores</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
+
+<h2 id="qué-aprenderá-el-alumnado">Qué aprenderá el alumnado</h2>
+<p>Al terminar, podrá <strong>elegir el evento adecuado según el momento en que debe producirse una acción</strong>. El código se estudia como salida de herramientas de IA: el alumnado no tiene que memorizarlo ni escribirlo desde cero, pero sí localizar lo relevante, explicar el cambio y verificar su efecto.</p>
+<h2 id="idea-clave">Idea clave</h2>
+<p>click, input, change y submit describen interacciones distintas. La elección depende del requisito, no de cuál resulte más familiar.</p>
+<h2 id="secuencia-de-clase">Secuencia de clase</h2>
+<ol type="1">
+<li><strong>Activación (5 min):</strong> muestra la pantalla o comportamiento y pregunta dónde creen que se define.</li>
+<li><strong>Explicación guiada:</strong> presenta la idea clave y separa herramienta, interfaz, datos y comportamiento.</li>
+<li><strong>RA1-EJ12:</strong> recorre el ejemplo resuelto y señala las líneas relevantes.</li>
+<li><strong>Cambio con IA:</strong> formula una petición pequeña, conserva el original y revisa diferencias.</li>
+<li><strong>RA1-PB12:</strong> el alumnado trabaja desde una base independiente.</li>
+<li><strong>Cierre:</strong> cada alumno explica una decisión y una comprobación.</li>
+</ol>
+<h2 id="ra1-ej12--ejemplo-resuelto">RA1-EJ12 — Ejemplo resuelto</h2>
+<p>La vista previa cambia al seleccionar prioridad; el alta completa usa submit para funcionar también con teclado.</p>
+<pre class="text"><code>prioridad.addEventListener(&#39;change&#39;, () =&gt; {
+  vistaPrevia.textContent = prioridad.value;
+});</code></pre>
+<h3 id="lectura-guiada">Lectura guiada</h3>
+<ul>
+<li>¿Qué requisito resuelve cada fragmento?</li>
+<li>¿Qué parte procede de la descripción visual y cuál añade comportamiento?</li>
+<li>¿Qué cambiaría en pantalla al modificarlo?</li>
+<li>¿Qué debe conservarse para no romper las conexiones existentes?</li>
+</ul>
+<h3 id="prompt-docente-orientativo">Prompt docente orientativo</h3>
+<pre class="text"><code>Analiza este fragmento de una interfaz web generada con IA.
+Señala únicamente las líneas relacionadas con: elegir el evento adecuado según el momento en que debe producirse una acción.
+Explica su efecto con lenguaje sencillo y propón un cambio mínimo.
+No regeneres el proyecto completo y conserva identificadores y eventos.
+Distingue lo que has razonado de lo que debe comprobarse en navegador.</code></pre>
+<h2 id="ra1-pb12--práctica-básica">RA1-PB12 — Práctica básica</h2>
+<p><strong>Punto de partida:</strong> proyecto web preparado por el profesor, ejecutable e independiente de prácticas anteriores.</p>
+<p><strong>Tarea:</strong> Relaciona tres interacciones con sus eventos y cambia una actualización para que ocurra al seleccionar, sin botón adicional.</p>
+<p><strong>Entrega:</strong> Tabla interacción–evento–acción y prueba del momento de ejecución.</p>
+<p><strong>Comprobación mínima:</strong></p>
+<ul>
+<li>El resultado se abre y funciona en navegador.</li>
+<li>El alumno localiza el fragmento relevante.</li>
+<li>El cambio está delimitado y existe una comparación antes/después cuando corresponda.</li>
+<li>La explicación usa evidencias propias; una respuesta copiada de la IA no basta.</li>
+<li>Se conserva el enfoque visual de Material Design 3 y el funcionamiento con teclado.</li>
+</ul>
+<h2 id="corrección-rápida">Corrección rápida</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Evidencia observable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Satisfactorio</td>
+<td>Cumple la tarea, localiza el fragmento, explica la relación y aporta una prueba coherente.</td>
+</tr>
+<tr class="even">
+<td>En revisión</td>
+<td>El resultado funciona, pero falta justificar la elección o demostrar el proceso.</td>
+</tr>
+<tr class="odd">
+<td>Insuficiente</td>
+<td>Solo aporta una captura o texto de IA, no localiza el código o el comportamiento no corresponde al requisito.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="preguntas-de-cierre">Preguntas de cierre</h2>
+<ol type="1">
+<li>¿Qué elemento o fragmento fue decisivo?</li>
+<li>¿Qué pidió exactamente a la IA?</li>
+<li>¿Qué diferencia revisó?</li>
+<li>¿Cómo sabe que no se rompió otra parte?</li>
+</ol>
+<hr />
+<nav class="unit-nav" aria-label="Navegación entre unidades">
+  <div class="unit-nav__secondary">
+    <a href="https://mosqueteroweb.github.io/damDI/RA1_11_metodos.html">← RA1-11</a>
+    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+  </div>
+  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_13_escuchadores.html">
+    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
+    <strong>RA1-13 · Escuchadores</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

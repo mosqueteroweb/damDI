@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA4-07 · Secuencia de control y mensajes · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra4">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA4-07 · Secuencia de control y mensajes</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra4-07--secuencia-de-control-y-mensajes">RA4-07 · Secuencia de control y mensajes</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Diseñar recorridos comprensibles, prevenir errores y redactar mensajes claros, accionables y verificables.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La secuencia de control describe estados y transiciones: inicio, entrada, validación, confirmación, resultado y recuperación. La interfaz debe mantener informado al usuario, impedir pérdidas evitables y ofrecer salida. Un mensaje útil dice qué ocurrió, dónde y qué puede hacerse.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Mensaje inicial: «Error 17».</p>
+<p>Revisión: «No se guardó la tarea porque falta el título. Escríbelo y vuelve a pulsar Guardar».</p>
+<p>El segundo mensaje identifica resultado, causa y acción. Debe aparecer cerca del campo, asociarse programáticamente y conservar los datos ya escritos.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">input</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;titulo&quot;</span> <span class="er">aria-describedby</span><span class="ot">=</span><span class="st">&quot;error-titulo&quot;</span> <span class="er">aria-invalid</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;error-titulo&quot;</span><span class="dt">&gt;</span>Escribe un título para guardar la tarea.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="ra4-pb07--flujo-recuperable">RA4-PB07 · Flujo recuperable</h2>
+<p>Dibuja el flujo de alta y borrado. Reescribe seis mensajes, añade recuperación ante borrado y ejecuta cinco casos: correcto, vacío, dato inválido, cancelación y recuperación.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>Estados mínimos: formulario vacío → edición → validación → guardado o error; tarea visible → borrado → aviso con «Deshacer» → restaurada o eliminación confirmada. Las pruebas registran entrada, acción, resultado esperado, resultado observado y evidencia.</p>
+</details>
+
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA4_06_elementos_interactivos.html">← RA4-06</a><a href="https://mosqueteroweb.github.io/damDI/RA4_00_guia_docente.html">Índice RA4</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA4_integrador.html"><span class="unit-next-card__eyebrow">Evaluación integradora</span><strong>RA4-INT01 · Rediseño accesible del gestor</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>
