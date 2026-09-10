@@ -56,15 +56,28 @@ def ra_class(filename: str) -> str:
     return f"ra-ra{match.group(1)}" if match else "site-home"
 
 
+THEME_COLORS = {
+    "ra-ra1": "#6750a4",
+    "ra-ra2": "#006a6a",
+    "ra-ra3": "#8c5000",
+    "ra-ra4": "#006b5f",
+    "ra-ra5": "#984061",
+    "ra-ra6": "#3f5f90",
+    "ra-ra7": "#5b5f00",
+    "ra-ra8": "#745b00",
+}
+
+
 def document(title: str, body: str, css_class: str) -> str:
     safe_title = html.escape(title)
     safe_description = html.escape(SITE_DESCRIPTION)
+    theme_color = THEME_COLORS.get(css_class, "#6750a4")
     return f"""<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#6750a4">
+  <meta name="theme-color" content="{theme_color}">
   <meta name="description" content="{safe_description}">
   <title>{safe_title} · Desarrollo de Interfaces</title>
   <link rel="stylesheet" href="assets/css/style.css">
