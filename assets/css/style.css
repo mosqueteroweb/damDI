@@ -54,8 +54,8 @@ pre code { padding: 0; background: transparent; }
 .main-content tr:nth-child(even) td { background: rgba(243, 237, 247, .45); }
 .ra-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 1.5rem; }
 .ra-card { --ra-accent: #6750a4; --ra-container: #eee7f5; display: grid; grid-template-columns: auto 1fr; gap: .35rem .8rem; min-height: 10.5rem; padding: 1.15rem; border: 1px solid #d0c6dd; border-top: 5px solid var(--ra-accent); border-radius: 20px; background: #f7f2fa; color: #49454f; text-decoration: none; }
-.ra-card--available { border-color: #b9a8da; background: #f3edf7; box-shadow: 0 1px 3px rgba(40, 30, 55, .12); transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease; }
-.main-content .ra-card--available:hover { background: #ece4f3; box-shadow: 0 5px 14px rgba(40, 30, 55, .16); text-decoration: none; transform: translateY(-2px); }
+.ra-card--available { border-color: var(--ra-accent); background: color-mix(in srgb, var(--ra-container) 72%, white); box-shadow: 0 1px 3px rgba(40, 30, 55, .12); transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease; }
+.main-content .ra-card--available:hover { background: var(--ra-container); box-shadow: 0 5px 14px rgba(40, 30, 55, .16); text-decoration: none; transform: translateY(-2px); }
 .ra-card--available:focus-visible { outline: 3px solid var(--ra-accent); outline-offset: 3px; }
 .ra-card__order { align-self: center; color: var(--ra-accent); font-size: .875rem; font-weight: 700; }
 .ra-card__number { justify-self: end; padding: .2rem .65rem; border-radius: 999px; background: var(--ra-container); color: var(--ra-accent); font-size: .875rem; font-weight: 700; }

@@ -26,13 +26,13 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
     <span class="ra-card__description">Auditoría, wireframes, Material Design 3 y pruebas.</span>
     <span class="ra-card__meta"><span>16 horas</span><span>Disponible</span></span>
   </a>
-  <article class="ra-card ra-card--ra3" aria-label="RA3, próximamente">
+  <a class="ra-card ra-card--ra3 ra-card--available" href="RA3_00_guia_docente.html">
     <span class="ra-card__order">Bloque 3</span>
     <span class="ra-card__number">RA3</span>
     <strong>Componentes visuales</strong>
     <span class="ra-card__description">Creación, propiedades, eventos, pruebas y reutilización.</span>
-    <span class="ra-card__meta"><span>Próximamente</span></span>
-  </article>
+    <span class="ra-card__meta"><span>16 horas</span><span>Disponible</span></span>
+  </a>
   <article class="ra-card ra-card--ra2" aria-label="RA2, próximamente">
     <span class="ra-card__order">Bloque 4</span>
     <span class="ra-card__number">RA2</span>
@@ -141,3 +141,20 @@ El RA4 audita y rediseña la aplicación obtenida en RA1. El alumnado aplica est
 - [RA4-06 · Elementos interactivos](RA4_06_elementos_interactivos.md)
 - [RA4-07 · Secuencia de control y mensajes](RA4_07_secuencia_control.md)
 - [RA4-INT01 · Rediseño accesible del gestor](RA4_integrador.md)
+
+## RA3 · Creación de componentes visuales
+
+**Duración propuesta:** 16 horas · **8 criterios de evaluación** · **7 prácticas básicas** · **1 integrador**
+
+El RA3 transforma partes repetidas del gestor en Web Components reutilizables. El alumnado define contratos, eventos y persistencia; prueba, documenta y empaqueta las piezas generadas con IA antes de integrarlas en una aplicación.
+
+- [Guía docente y temporalización](RA3_00_guia_docente.md)
+- [Matriz de contenidos, prácticas y criterios](RA3_matriz_contenidos_evaluacion.md)
+- [RA3-01 · Concepto y características](RA3_01_concepto_componentes.md)
+- [RA3-02 · Propiedades, atributos y métodos](RA3_02_propiedades_metodos.md)
+- [RA3-03 · Eventos y acciones](RA3_03_eventos_acciones.md)
+- [RA3-04 · Persistencia](RA3_04_persistencia.md)
+- [RA3-05 · Herramientas de diseño y desarrollo](RA3_05_herramientas.md)
+- [RA3-06 · Pruebas de componentes](RA3_06_pruebas.md)
+- [RA3-07 · Documentación y empaquetado](RA3_07_documentacion_empaquetado.md)
+- [RA3-INT01 · Kit visual del gestor de tareas](RA3_integrador.md)

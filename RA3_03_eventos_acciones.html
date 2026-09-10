@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c5000">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA3-03 · Eventos y acciones · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra3">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA3-03 · Eventos y acciones</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra3-03--eventos-y-asociación-de-acciones">RA3-03 · Eventos y asociación de acciones</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Determinar los eventos del componente, asociar acciones internas y comunicar intenciones a la aplicación sin acoplarla.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>El componente atiende eventos internos como <code>click</code> o teclado, pero publica eventos de dominio como <code>task-toggle</code> o <code>task-delete-request</code>. Así, la aplicación decide si actualiza datos, confirma o muestra un mensaje. El evento debe tener nombre, momento, datos y reglas de propagación documentados.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>button<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;click&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">&#39;task-toggle&#39;</span><span class="op">,</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">detail</span><span class="op">:</span> { <span class="dt">id</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">taskId</span><span class="op">,</span> <span class="dt">completed</span><span class="op">:</span> <span class="op">!</span><span class="kw">this</span><span class="op">.</span><span class="at">completed</span> }<span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bubbles</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">composed</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }))<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>Partes relevantes: el clic es interno; <code>task-toggle</code> expresa intención; <code>detail</code> transporta solo los datos necesarios; <code>bubbles</code> permite escuchar desde la lista; <code>composed</code> permite atravesar el límite del Shadow DOM.</p>
+<h2 id="ra3-pb03--publicar-acciones-sin-acoplamiento">RA3-PB03 · Publicar acciones sin acoplamiento</h2>
+<p>Genera con IA dos eventos: <code>task-toggle</code> y <code>task-delete-request</code>. La tarjeta no puede modificar <code>localStorage</code> ni borrar su propia instancia. La aplicación anfitriona debe registrar ambos y mostrar en pantalla la acción recibida.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La tarjeta emite <code>{id, completed}</code> al alternar y <code>{id}</code> al solicitar borrado. Un único escuchador en el contenedor usa delegación:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>list<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;task-delete-request&#39;</span><span class="op">,</span> (<span class="bu">event</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  status<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="vs">`Solicitud de borrado: </span><span class="sc">${</span><span class="bu">event</span><span class="op">.</span><span class="at">detail</span><span class="op">.</span><span class="at">id</span><span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>La evidencia demuestra que dos instancias funcionan con el mismo escuchador. Si la tarjeta llama directamente a una función global de la aplicación, todavía existe acoplamiento.</p>
+</details>
+
+<h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
+<p>Registra temporalmente los eventos en consola, activa por ratón y teclado y explica qué acción corresponde al componente y cuál a la aplicación.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_02_propiedades_metodos.html">← RA3-02</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_04_persistencia.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-04 · Persistencia del componente</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

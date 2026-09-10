@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c5000">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA3-01 · Concepto y características · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra3">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA3-01 · Concepto y características</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra3-01--concepto-y-características-de-un-componente">RA3-01 · Concepto y características de un componente</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Distinguir componente, instancia y aplicación; reconocer encapsulación, reutilización, composición y contrato público.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Un componente visual reúne estructura, aspecto y comportamiento con un propósito concreto. Puede instanciarse varias veces, recibe datos por una interfaz pública y comunica cambios sin conocer toda la aplicación. Un buen componente tiene responsabilidad acotada, estados previsibles, accesibilidad y dependencias explícitas.</p>
+<p>En el gestor, <code>task-card</code> representa una tarea; la aplicación decide qué lista mostrar y qué hacer al recibir una acción. La tarjeta no debería guardar por sí sola toda la colección.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<p>Prompt para Gemini o AI Studio: «Genera un Web Component <code>task-card</code> sin dependencias. Debe mostrar título y estado, usar HTML semántico, admitir varias instancias y explicar las cinco líneas que forman su interfaz pública».</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Preparar exposición&quot;</span> <span class="er">completed</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Revisar contraste&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;./task-card.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>Partes relevantes: el nombre contiene guion porque lo exige la plataforma; cada etiqueta es una instancia; los atributos son entradas; el módulo registra la definición una sola vez.</p>
+<h2 id="ra3-pb01--extraer-una-tarjeta-reutilizable">RA3-PB01 · Extraer una tarjeta reutilizable</h2>
+<p>Pide a la IA que transforme dos tarjetas HTML duplicadas en un componente. Entrega: prompt, dos instancias con datos distintos, captura de ambos estados y anotación de estructura, estilo, comportamiento y contrato público.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>Una solución válida registra <code>customElements.define('task-card', TaskCard)</code>, crea su contenido desde la clase y conserva el título como entrada. Las dos instancias se renderizan sin copiar el HTML interno. La explicación identifica que la clase es la definición, las etiquetas son instancias y <code>title</code>/<code>completed</code> forman parte del contrato. No es válido sustituir la duplicación por dos bloques todavía idénticos.</p>
+</details>
+
+<h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
+<ul>
+<li>¿Se puede crear una tercera tarjeta solo cambiando datos?</li>
+<li>¿La tarjeta sigue teniendo un único propósito?</li>
+<li>¿Qué parte puede cambiar internamente sin romper a quien la usa?</li>
+</ul>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_00_guia_docente.html">← Guía RA3</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_02_propiedades_metodos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-02 · Propiedades, atributos y métodos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

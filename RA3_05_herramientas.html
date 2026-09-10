@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c5000">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA3-05 · Herramientas de diseño y desarrollo · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra3">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA3-05 · Herramientas de diseño y desarrollo</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra3-05--herramientas-para-componentes-visuales">RA3-05 · Herramientas para componentes visuales</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Identificar y elegir herramientas para diseñar, generar, inspeccionar y probar un componente.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>No hay una única herramienta que cubra bien todo el ciclo. Stitch facilita la propuesta visual; Material Design 3 aporta reglas; Gemini o AI Studio genera y explica una primera implementación; DevTools permite inspeccionar el resultado real; una herramienta de pruebas verifica el contrato. La elección se justifica por tarea, coste de entrada, exportación, accesibilidad y posibilidad de reproducir el resultado.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Necesidad</th>
+<th>Herramienta</th>
+<th>Decisión razonada</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Variantes normal/completada</td>
+<td>Stitch + M3</td>
+<td>Comparación visual rápida</td>
+</tr>
+<tr class="even">
+<td>Primera implementación</td>
+<td>Gemini / AI Studio</td>
+<td>Genera módulo explicado y acotado</td>
+</tr>
+<tr class="odd">
+<td>Inspección</td>
+<td>DevTools</td>
+<td>Observa DOM, estilos, eventos y accesibilidad reales</td>
+</tr>
+<tr class="even">
+<td>Prueba inicial</td>
+<td>Banco HTML + <code>console.assert</code></td>
+<td>Sin instalación y con resultado visible</td>
+</tr>
+<tr class="odd">
+<td>Escalado del proyecto</td>
+<td>Vitest/Web Test Runner</td>
+<td>Automatización repetible</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ra3-pb05--flujo-de-herramienta-a-evidencia">RA3-PB05 · Flujo de herramienta a evidencia</h2>
+<p>Diseña en Stitch tres estados de <code>status-chip</code>; solicita a la IA un Web Component conforme a esa anatomía; inspecciona sus atributos y árbol accesible; aplica una corrección localizada. Entrega enlaces o capturas, prompts y comparación antes/después.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>La propuesta define estados <code>pending</code>, <code>done</code> y <code>blocked</code>, usa roles de color M3 sin depender solo del color y mantiene texto visible. El prompt exige HTML semántico, valor <code>pending</code> por defecto y explicación. DevTools revela que la primera salida duplicaba el texto para lectores; el alumno solicita ocultar el icono decorativo y verifica de nuevo. La evidencia vincula cada herramienta con una decisión concreta.</p>
+</details>
+
+<h2 id="ampliación-voluntaria">Ampliación voluntaria</h2>
+<p>Comparar el mismo contrato con un componente Android personalizado en Java/XML. No forma parte de la evaluación obligatoria ni sustituye la ruta web.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_04_persistencia.html">← RA3-04</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_06_pruebas.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-06 · Pruebas de componentes</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

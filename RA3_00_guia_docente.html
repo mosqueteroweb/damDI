@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c5000">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA3 · Guía docente · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra3">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA3 · Guía docente</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra3--creación-de-componentes-visuales">RA3 · Creación de componentes visuales</h1>
+<blockquote>
+<p><strong>Duración propuesta: 16 horas · Ruta web · Material Design 3 como referencia visual</strong></p>
+</blockquote>
+<h2 id="resultado-de-aprendizaje">Resultado de aprendizaje</h2>
+<p>Crea componentes visuales valorando y empleando herramientas específicas.</p>
+<h2 id="producto-del-ra">Producto del RA</h2>
+<p>El alumnado convierte partes repetidas del gestor de tareas de RA1/RA4 en componentes web reutilizables. La IA genera el punto de partida; el alumnado identifica la interfaz pública, ajusta cambios localizados, prueba, documenta y empaqueta. No se exige escribir el componente desde cero.</p>
+<h2 id="decisión-tecnológica">Decisión tecnológica</h2>
+<p>Se emplean <strong>Web Components</strong> (<code>customElements</code>, plantillas HTML y módulos JavaScript) porque funcionan en el navegador sin instalar un framework, permiten observar con claridad propiedades, métodos y eventos, y se pueden empaquetar como módulos. Es un complemento justificado a Stitch, Gemini y Google AI Studio. Material Design 3 guía la anatomía, los estados y los tokens visuales; no se copia una librería completa.</p>
+<h2 id="secuencia-docente">Secuencia docente</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sesión</th>
+<th>Unidad</th>
+<th style="text-align: right;">Horas</th>
+<th>Evidencia principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td>Concepto y características</td>
+<td style="text-align: right;">2</td>
+<td>Anatomía y primer componente</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td>Propiedades, atributos y métodos</td>
+<td style="text-align: right;">2</td>
+<td>Contrato público con valores por defecto</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td>Eventos y acciones</td>
+<td style="text-align: right;">2</td>
+<td>Evento personalizado verificable</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td>Persistencia</td>
+<td style="text-align: right;">2</td>
+<td>Estado restaurado sin duplicar responsabilidades</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td>Herramientas de diseño y desarrollo</td>
+<td style="text-align: right;">2</td>
+<td>Flujo comparado y componente refinado</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td>Pruebas de componentes</td>
+<td style="text-align: right;">2</td>
+<td>Pruebas unitarias y registro de resultados</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td>Documentación y empaquetado</td>
+<td style="text-align: right;">2</td>
+<td>Paquete reutilizable documentado</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td>Integrador y defensa</td>
+<td style="text-align: right;">2</td>
+<td>Biblioteca mínima usada por una aplicación</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flujo-de-cada-clase">Flujo de cada clase</h2>
+<ol type="1">
+<li>Mostrar una repetición o un problema real de la interfaz.</li>
+<li>Explicar un concepto y resolver un ejemplo pequeño.</li>
+<li>Pedir a la IA un cambio acotado con criterios de aceptación.</li>
+<li>Localizar en el código generado la parte que define el contrato del componente.</li>
+<li>Ejecutar la práctica básica y su comprobación.</li>
+<li>Comparar la entrega con la solución orientativa.</li>
+<li>Cerrar con una explicación oral breve: qué entra, qué sale y qué se ha probado.</li>
+</ol>
+<h2 id="herramientas">Herramientas</h2>
+<ul>
+<li><strong>Stitch:</strong> diseño de anatomía, variantes y estados del componente.</li>
+<li><strong>Gemini / Google AI Studio:</strong> generación, explicación, refactorización delimitada y propuesta de pruebas.</li>
+<li><strong>DevTools del navegador:</strong> inspección de atributos, propiedades, eventos, almacenamiento y accesibilidad.</li>
+<li><strong>Web Test Runner, Vitest o un banco HTML con <code>console.assert</code>:</strong> pruebas; se empieza por la alternativa sin instalación.</li>
+<li><strong>Material Design 3:</strong> referencia para roles visuales, estados y comportamiento coherente.</li>
+</ul>
+<h2 id="evaluación">Evaluación</h2>
+<p>Las siete prácticas básicas producen evidencias parciales. El integrador cubre los ocho criterios de evaluación y exige una aplicación que use los componentes creados. Una captura o un código generado sin explicación ni prueba no demuestra el criterio.</p>
+<h2 id="preparación-del-profesor">Preparación del profesor</h2>
+<ul>
+<li>Conservar una versión del gestor de tareas con tarjetas y botones repetidos.</li>
+<li>Preparar un componente defectuoso: valores rígidos, evento global y ausencia de prueba.</li>
+<li>Probar el almacenamiento del navegador en modo normal y privado.</li>
+<li>Recordar que el objetivo es comprender y gobernar la salida de IA, no memorizar la API.</li>
+</ul>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz RA3</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_01_concepto_componentes.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA3-01 · Concepto y características</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

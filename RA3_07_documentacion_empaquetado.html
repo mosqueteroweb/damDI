@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c5000">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA3-07 · Documentación y empaquetado · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra3">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA3-07 · Documentación y empaquetado</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra3-07--documentación-y-empaquetado">RA3-07 · Documentación y empaquetado</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Documentar el contrato y preparar un paquete que otra aplicación pueda importar y utilizar sin conocer su implementación.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>La documentación útil contiene propósito, instalación o importación, ejemplo mínimo, atributos, propiedades, métodos, eventos, estados, accesibilidad y compatibilidad. Empaquetar significa separar fuentes públicas, estilos, pruebas y metadatos, evitando rutas absolutas y dependencias ocultas.</p>
+<p>Para esta iniciación basta un módulo ES descargable. <code>package.json</code> y npm se muestran como evolución opcional, no como requisito para empezar.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<pre class="text"><code>task-card/
+├── task-card.js
+├── task-card.css
+├── README.md
+├── demo.html
+└── tests/task-card.test.html</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;./task-card/task-card.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Probar paquete&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>El ejemplo mínimo debe funcionar desde una carpeta distinta. El README es parte del producto, no un añadido final.</p>
+<h2 id="ra3-pb07--paquete-intercambiable">RA3-PB07 · Paquete intercambiable</h2>
+<p>Entrega <code>status-chip</code> como carpeta comprimida o módulo versionado. Otra pareja debe abrir <code>demo.html</code>, crear una instancia, escuchar un evento y responder una lista de comprobación sin ayuda oral del autor.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<p>El paquete contiene solo rutas relativas, ejemplo mínimo operativo, tabla del atributo <code>status</code> con valor <code>pending</code>, evento <code>status-change</code>, estados y nota accesible. La prueba se ejecuta desde <code>tests/</code>. La pareja consumidora puede usar el componente siguiendo el README. Si necesita copiar código interno a su aplicación, el empaquetado no es suficiente.</p>
+</details>
+
+<h2 id="lista-de-salida">Lista de salida</h2>
+<ul>
+<li>Nombre y versión visibles.</li>
+<li>API pública y valores por defecto documentados.</li>
+<li>Demo y pruebas reproducibles.</li>
+<li>Licencia o condiciones de uso indicadas.</li>
+<li>Archivo sin secretos, rutas locales ni recursos rotos.</li>
+</ul>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_06_pruebas.html">← RA3-06</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_integrador.html"><span class="unit-next-card__eyebrow">Ejercicio integrador</span><strong>RA3-INT01 · Kit visual del gestor de tareas</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>

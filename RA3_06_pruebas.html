@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c5000">
+  <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
+  <title>RA3-06 · Pruebas de componentes · Desarrollo de Interfaces</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="ra-ra3">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">RA3-06 · Pruebas de componentes</h1>
+    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+  </header>
+  <main id="contenido" class="main-content" role="main">
+<h1 id="ra3-06--pruebas-unitarias-de-componentes">RA3-06 · Pruebas unitarias de componentes</h1>
+<h2 id="objetivo-docente">Objetivo docente</h2>
+<p>Diseñar y ejecutar pruebas unitarias sobre el contrato público, los estados, los eventos y la accesibilidad básica.</p>
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Una prueba unitaria comprueba un comportamiento pequeño en condiciones controladas. Se estructura como preparar, actuar y comprobar. Para un componente interesa probar valores por defecto, cambios de atributos/propiedades, métodos, eventos y contenido accesible. Una prueba no debe depender de detalles visuales irrelevantes.</p>
+<h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> card <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;task-card&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">append</span>(card)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">assert</span>(card<span class="op">.</span><span class="at">title</span> <span class="op">===</span> <span class="st">&#39;Tarea sin título&#39;</span><span class="op">,</span> <span class="st">&#39;título por defecto&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> received<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>card<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;task-toggle&#39;</span><span class="op">,</span> <span class="bu">event</span> <span class="kw">=&gt;</span> received <span class="op">=</span> <span class="bu">event</span><span class="op">.</span><span class="at">detail</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>card<span class="op">.</span><span class="at">shadowRoot</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;[data-action=&quot;toggle&quot;]&#39;</span>)<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">assert</span>(received<span class="op">.</span><span class="at">completed</span> <span class="op">===</span> <span class="kw">true</span><span class="op">,</span> <span class="st">&#39;publica el nuevo estado&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>card<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span></code></pre></div>
+<p>La prueba observa el contrato: valor inicial y evento publicado. La consulta interna solo simula la acción; no valida colores exactos.</p>
+<h2 id="ra3-pb06--banco-de-seis-pruebas">RA3-PB06 · Banco de seis pruebas</h2>
+<p>Solicita a la IA seis pruebas y revisa que cubran: valor por defecto, atributo válido, atributo inesperado, método, evento y nombre accesible. Ejecuta cada una, provoca deliberadamente un fallo y registra diagnóstico y corrección.</p>
+<h3 id="solución-orientativa">Solución orientativa</h3>
+<details><summary>Mostrar ejemplo de solución</summary>
+
+<table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sin <code>title</code></td>
+<td>Usa «Tarea sin título»</td>
+</tr>
+<tr class="even">
+<td><code>priority="high"</code></td>
+<td>Expone prioridad alta</td>
+</tr>
+<tr class="odd">
+<td>Prioridad desconocida</td>
+<td>Normaliza a <code>normal</code></td>
+</tr>
+<tr class="even">
+<td><code>toggle()</code></td>
+<td>Cambia <code>completed</code></td>
+</tr>
+<tr class="odd">
+<td>Acción de borrar</td>
+<td>Emite una vez <code>{id}</code></td>
+</tr>
+<tr class="even">
+<td>Botón principal</td>
+<td>Tiene nombre accesible</td>
+</tr>
+</tbody>
+</table>
+<p>El fallo inducido elimina <code>bubbles:true</code>; la prueba desde el contenedor deja de recibir el evento. La corrección restablece la propagación y todas las pruebas pasan.</p>
+</details>
+
+<h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
+<p>Entrega salida fechada de las pruebas y explica qué error detectaría cada una. «La IA dice que funciona» no cuenta como ejecución.</p>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_05_herramientas.html">← RA3-05</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_07_documentacion_empaquetado.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-07 · Documentación y empaquetado</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+
+    <footer class="site-footer">
+      <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
+    </footer>
+  </main>
+</body>
+</html>
