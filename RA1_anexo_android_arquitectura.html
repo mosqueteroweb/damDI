@@ -11,13 +11,16 @@
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="page-header" role="banner">
-    <h1 class="project-name">Ampliación opcional — Arquitectura con Android Studio, XML y Java</h1>
-    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+    <div class="page-header__inner">
+      <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
+      <h1 class="project-name">Ampliación opcional — Arquitectura con Android Studio, XML y Java</h1>
+    </div>
   </header>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><a href="RA1_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA1_integrador.html">Integrador</a></div></nav>
   <main id="contenido" class="main-content" role="main">
-<h1 id="ampliación-opcional--arquitectura-con-android-studio-xml-y-java">Ampliación opcional — Arquitectura con Android Studio, XML y Java</h1>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#1-orientaciones-para-el-profesor">1. Orientaciones para el profesor</a></li><li><a href="#2-contenidos-explicados">2. Contenidos explicados</a></li><li><a href="#3-ra1-amp-android-ej01--una-tarea-y-un-botón-para-completarla">3. RA1-AMP-ANDROID-EJ01 — Una tarea y un botón para completarla</a></li><li><a href="#4-ra1-amp-android-pb01--enunciado-de-evaluación-mapa-de-responsabilidades">4. RA1-AMP-ANDROID-PB01 — Enunciado de evaluación: mapa de responsabilidades</a></li><li><a href="#5-ra1-amp-android-pb01--solución-y-corrección-docente">5. RA1-AMP-ANDROID-PB01 — Solución y corrección docente</a></li><li><a href="#7-fuentes">7. Fuentes</a></li></ol></details>
+
 <p><strong>Fuera del itinerario obligatorio y de las 100 horas. No aporta requisitos adicionales de evaluación.</strong> Se conserva este material para alumnado interesado en la equivalencia Android. Las actividades que aparecen a continuación son variantes opcionales de EJ01/PB01; la versión evaluable es la web. No requiere realizar la variante Android para superar ningún CE.</p>
-<h1 id="ra1--01--patrones-de-arquitectura-de-las-aplicaciones-gráficas">RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas</h1>
 <p><strong>Guía del profesor · Desarrollo de Interfaces · DAM</strong><br />
 <strong>Versión:</strong> 1.0 · 8 de septiembre de 2026.<br />
 <strong>Contenido básico:</strong> Patrones de arquitectura de las aplicaciones gráficas.<br />
@@ -64,7 +67,7 @@
 <p>Para esta primera lectura utilizaremos una Activity pequeña como coordinadora. Una Activity es también un componente del ciclo de vida de Android: no debe identificarse automáticamente con «el controlador» de cualquier arquitectura. Aquí desempeña tareas de coordinación por una decisión didáctica local.</p>
 <p>El alumno debe poder contar la secuencia en lenguaje corriente: «Al pulsar, se marca la tarea; después se actualiza el mensaje y se deshabilita el botón».</p>
 <h3 id="25-mvc-y-mvvm-comparación-introductoria">2.5 MVC y MVVM: comparación introductoria</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Aspecto</th>
@@ -99,7 +102,7 @@
 <td>Suponer que crear una clase llamada ViewModel ya implementa el patrón.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Las implementaciones varían. El objetivo es reconocer responsabilidades, no clasificar todo proyecto con una etiqueta rígida. Android recomienda separación de responsabilidades y una organización por capas, con estado de interfaz y flujo de datos definidos; esta explicación introductoria no sustituye esas recomendaciones para proyectos completos. <a href="https://developer.android.com/topic/architecture">Guía de arquitectura de Android</a>.</p>
 <h3 id="26-material-design-3-y-arquitectura">2.6 Material Design 3 y arquitectura</h3>
 <p><strong>Referencia de diseño de todo el curso: <a href="https://m3.material.io/">Material Design 3 de Google</a>.</strong> Sus pautas guiarán todos los ejemplos y prácticas de interfaz. La documentación de una librería explica cómo implementarlas, pero no sustituye esta referencia. En cada actividad se identificarán las pautas aplicables y las comprobaciones correspondientes.</p>
@@ -110,7 +113,7 @@
 <h3 id="31-situación-y-resultado-esperado">3.1 Situación y resultado esperado</h3>
 <p>La aplicación muestra «Preparar exposición», el estado «Pendiente» y un botón «Completar». Al pulsarlo, el estado pasa a «Completada» y el botón queda deshabilitado.</p>
 <p>El ejemplo separa tres responsabilidades:</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Archivo de referencia</th>
@@ -131,7 +134,7 @@
 <td>Carga la vista, conecta el evento y representa el estado.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Los nombres son ilustrativos y consistentes dentro de este documento; no son enlaces a archivos adicionales entregados.</p>
 <h3 id="32-especificación-orientativa-para-gemini">3.2 Especificación orientativa para Gemini</h3>
 <pre class="text"><code>ROL: asistente de desarrollo y explicación para alumnado que conoce Java.
@@ -238,7 +241,7 @@ No afirmar que está probado si no se ha ejecutado.</code></pre>
 <span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>La Activity es código de lógica preparado o generado con IA; <strong>no se afirma que el editor visual genere este escuchador Java</strong>. El archivo descriptivo editado visualmente es el XML. Esta distinción es importante para documentar RA1.e y RA1.f.</p>
 <h3 id="36-recorrido-resuelto">3.6 Recorrido resuelto</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Momento</th>
@@ -278,7 +281,7 @@ No afirmar que está probado si no se ha ejecutado.</code></pre>
 <td>Cambian mensaje y estado del botón.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><code>v -&gt; { ... }</code> es una lambda de Java: aquí representa el bloque que se ejecuta cuando llega la pulsación. No se pide escribirla de memoria.</p>
 <h3 id="37-cambio-asistido-y-solución-esperada">3.7 Cambio asistido y solución esperada</h3>
 <p><strong>Petición:</strong> «Quiero que el botón muestre “Marcar como terminada” en lugar de “Completar”. Mantén los identificadores, los datos y la acción».</p>
@@ -351,7 +354,7 @@ por qué no hace falta cambiar el modelo.</code></pre>
 <h2 id="5-ra1-amp-android-pb01--solución-y-corrección-docente">5. RA1-AMP-ANDROID-PB01 — Solución y corrección docente</h2>
 <p>Esta sección contiene las respuestas de evaluación. Debe separarse del enunciado si se entrega al alumnado.</p>
 <h3 id="51-tabla-resuelta">5.1 Tabla resuelta</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Fragmento</th>
@@ -380,7 +383,7 @@ por qué no hace falta cambiar el modelo.</code></pre>
 <td>Relaciona la pulsación con la reserva y con la actualización visual.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Se acepta «lógica de pantalla» o «coordinación» para C. No se exige llamar MVC al conjunto ni se afirma que sea una implementación completa de arquitectura Android recomendada.</p>
 <h3 id="52-respuestas-esperadas">5.2 Respuestas esperadas</h3>
 <p><strong>Identificación de A:</strong> <code>textoSala</code> es el identificador del <code>MaterialTextView</code> que C utiliza con <code>setText</code>. A no contiene «Aula 2»; ese valor se proporciona al construir <code>Reserva</code> en C y se almacena en B. No basta con adivinar por el nombre: la llamada <code>textoSala.setText(reserva.getSala())</code> confirma la correspondencia.</p>
@@ -392,7 +395,7 @@ Conserva el identificador botonReservar y toda la lógica de ReservaActivity
 y Reserva. Devuelve la diferencia del recurso y explica qué permanece igual.</code></pre>
 <p><strong>Diagnóstico de la propuesta incorrecta:</strong> deshabilitar el botón no cambia <code>disponible</code>, que seguiría siendo <code>true</code>. Cuando <code>mostrarReserva()</code> consulte ese dato, habilitará otra vez el botón. La corrección debe mantener el cambio del modelo y representar después su estado.</p>
 <h3 id="53-indicadores-observables-sin-pesos">5.3 Indicadores observables, sin pesos</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Indicador</th>
@@ -427,7 +430,7 @@ y Reserva. Devuelve la diferencia del recurso y explica qué permanece igual.</c
 <td>Pide regenerar todo sin justificarlo.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Estos indicadores permiten corregir PB01; no implican que una única práctica de arquitectura cubra todo RA1.e. La matriz del RA lo desarrolla también mediante otras actividades.</p>
 <h3 id="54-dificultades-y-ayudas-graduadas">5.4 Dificultades y ayudas graduadas</h3>
 <ul>
@@ -446,8 +449,21 @@ y Reserva. Devuelve la diferencia del recurso y explica qué permanece igual.</c
 <li><p><a href="https://github.com/material-components/material-components-android/blob/master/docs/getting-started.html">Material Components para Android</a>: situación de Views e integración Material3.</p></li>
 </ul>
 <p>Consulta documental: 8 de septiembre de 2026. Los ejemplos son elaboración didáctica propia; las referencias no se presentan como fuente de código exportado ni como evidencia de ejecución local.</p>
+<hr />
+<nav class="unit-nav" aria-label="Navegación del anexo">
+  <div class="unit-nav__secondary">
+    <a href="RA1_01_patrones_arquitectura.html">← RA1-01</a>
+    <a href="RA1_matriz_contenidos_evaluacion.html">Matriz RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_00_guia_docente.html">
+    <span class="unit-next-card__eyebrow">Volver al itinerario principal</span>
+    <strong>Guía docente del RA1</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>
 
     <footer class="site-footer">
+      <a class="back-to-top" href="#contenido">↑ Volver arriba</a>
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>

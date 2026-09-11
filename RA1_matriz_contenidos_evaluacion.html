@@ -11,11 +11,15 @@
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="page-header" role="banner">
-    <h1 class="project-name">RA1 · Matriz de contenidos y evaluación</h1>
-    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+    <div class="page-header__inner">
+      <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
+      <h1 class="project-name">RA1 · Matriz de contenidos y evaluación</h1>
+    </div>
   </header>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><span aria-current="page">Matriz</span><a href="RA1_integrador.html">Integrador</a></div></nav>
   <main id="contenido" class="main-content" role="main">
-<h1 id="ra1--matriz-de-contenidos-prácticas-y-criterios">RA1 · Matriz de contenidos, prácticas y criterios</h1>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#1-reglas-de-elaboración">1. Reglas de elaboración</a></li><li><a href="#2-resultado-de-aprendizaje-y-criterios-de-referencia">2. Resultado de aprendizaje y criterios de referencia</a></li><li><a href="#3-índice-curricular-y-actividades">3. Índice curricular y actividades</a></li><li><a href="#4-fichas-de-las-prácticas-básicas">4. Fichas de las prácticas básicas</a></li><li><a href="#5-ra1-int01--gestor-sencillo-de-tareas-de-aula">5. RA1-INT01 — Gestor sencillo de tareas de aula</a></li><li><a href="#6-matriz-de-cobertura-de-evaluación">6. Matriz de cobertura de evaluación</a></li><li><a href="#7-distribución-de-las-18-horas">7. Distribución de las 18 horas</a></li><li><a href="#8-herramientas-y-condiciones-de-implementación">8. Herramientas y condiciones de implementación</a></li><li><a href="#9-criterios-aplicados-en-los-materiales">9. Criterios aplicados en los materiales</a></li><li><a href="#10-comprobación-de-esta-matriz">10. Comprobación de esta matriz</a></li></ol></details>
+
 <p><strong>Módulo:</strong> 0488 — Desarrollo de Interfaces (DAM).<br />
 <strong>Destinatario:</strong> profesorado.<br />
 <strong>Duración propuesta:</strong> 18 horas de las 100 del módulo.<br />
@@ -34,7 +38,7 @@
 </ul>
 <h2 id="2-resultado-de-aprendizaje-y-criterios-de-referencia">2. Resultado de aprendizaje y criterios de referencia</h2>
 <p><strong>RA1:</strong> Genera interfaces gráficos de usuario mediante editores visuales utilizando las funcionalidades del editor y adaptando el código generado.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>CE</th>
@@ -75,11 +79,11 @@
 <td>Se ha desarrollado una aplicación que incluye el interfaz gráfico obtenido.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="3-índice-curricular-y-actividades">3. Índice curricular y actividades</h2>
 <p>Los títulos de la segunda columna conservan los diez apartados de contenidos básicos de la fuente. Se delimitan trece conceptos didácticos: el apartado 9 se divide en clases, propiedades y métodos; el 10, en eventos y escuchadores. Los restantes se trabajan como conceptos conjuntos con una práctica cada uno. MVC y MVVM, por ejemplo, serán alternativas comparadas dentro del concepto de arquitectura, no unidades adicionales con proyectos completos.</p>
 <p><code>EJ</code> identifica un ejemplo resuelto dentro de los contenidos; <code>PB</code>, una práctica básica de evaluación. Todos los identificadores llevan el prefijo <code>RA1-</code>.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Nº</th>
@@ -182,7 +186,7 @@
 <td>e, f, g</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Las letras de la última columna se refieren a RA1. Son aportaciones de las prácticas al criterio; la matriz de la sección 6 concreta qué demuestra cada evidencia. RA1.h se evalúa en el integrador.</p>
 <h2 id="4-fichas-de-las-prácticas-básicas">4. Fichas de las prácticas básicas</h2>
 <p>Cada ficha resume el enunciado, la evidencia y el resultado esperado que se desarrollan en la unidad correspondiente. La publicación está destinada al profesorado.</p>
@@ -321,7 +325,7 @@
 <p>Una aplicación web de una pantalla con título de tarea, selector de prioridad, botón de añadir, lista de tareas y acción para limpiar el formulario. Datos en memoria: no se requieren autenticación, nube, persistencia ni distribución. El contexto es propio de este RA, no un proyecto transversal obligatorio.</p>
 <p><strong>Duración de evaluación:</strong> 150 minutos, más revisión y explicación individual dentro del tiempo docente reservado. El alumnado recibe el entorno y un proyecto base vacío ejecutable, sin la interfaz resuelta.</p>
 <h3 id="52-tareas-y-evidencias">5.2 Tareas y evidencias</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Tarea</th>
@@ -380,7 +384,7 @@
 <td>h</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3 id="53-comprobaciones-funcionales-mínimas">5.3 Comprobaciones funcionales mínimas</h3>
 <ol type="1">
 <li>Al añadir una tarea con título y prioridad, aparece en la lista con los valores introducidos.</li>
@@ -393,7 +397,7 @@
 <p>El alumno debe señalar dónde se describe la pantalla, qué representa el dato de una tarea, cómo llega a la lista, dónde se asocian los eventos y qué cambió en T6. No necesita explicar todas las dependencias del proyecto.</p>
 <p>La solución docente incluye proyecto completo, versión inicial y modificada, prompt orientativo, fragmentos explicados y comprobaciones. Se admiten nombres y estructuras diferentes cuando cumplan los requisitos y el alumno pueda justificarlos.</p>
 <h2 id="6-matriz-de-cobertura-de-evaluación">6. Matriz de cobertura de evaluación</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>CE</th>
@@ -452,10 +456,10 @@
 <td>Aplicación ejecutable que incorpora y utiliza la interfaz obtenida.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Resultado:</strong> los ocho CE tienen tareas y evidencias previstas. La presencia de una etiqueta CE no sustituye la ejecución y explicación requeridas.</p>
 <h2 id="7-distribución-de-las-18-horas">7. Distribución de las 18 horas</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Uso del tiempo</th>
@@ -495,7 +499,7 @@
 <td style="text-align: right;"><strong>18 h</strong></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Los minutos de cada PB suman 275. Los 450 minutos de explicación incluyen la exposición de conceptos y la demostración docente, no solo la ejecución de los ejemplos. La revisión puede distribuirse entre las actividades; no implica 145 minutos de entrevistas individuales por alumno.</p>
 <h3 id="secuencia-didáctica-propuesta">Secuencia didáctica propuesta</h3>
 <p>Se conserva el índice curricular en la documentación, pero se propone impartir los conceptos en este orden:</p>
@@ -547,9 +551,10 @@
 <li><label><input type="checkbox" checked="" />Se han redactado contenidos, enunciados y orientaciones de corrección.</label></li>
 <li><label><input type="checkbox" checked="" />La aplicación de referencia y la navegación forman parte de la publicación estática.</label></li>
 </ul>
-<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA1_00_guia_docente.html">← Guía RA1</a><a href="https://mosqueteroweb.github.io/damDI/">Inicio</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_01_patrones_arquitectura.html"><span class="unit-next-card__eyebrow">Comenzar contenidos</span><strong>RA1-01 · Patrones de arquitectura</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA1_00_guia_docente.html">← Guía RA1</a><a href="index.html">Inicio</a></div><a class="unit-next-card" href="RA1_01_patrones_arquitectura.html"><span class="unit-next-card__eyebrow">Comenzar contenidos</span><strong>RA1-01 · Patrones de arquitectura</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
     <footer class="site-footer">
+      <a class="back-to-top" href="#contenido">↑ Volver arriba</a>
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>

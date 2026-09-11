@@ -11,11 +11,15 @@
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="page-header" role="banner">
-    <h1 class="project-name">RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas</h1>
-    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+    <div class="page-header__inner">
+      <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
+      <h1 class="project-name">RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas</h1>
+    </div>
   </header>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><a href="RA1_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA1_integrador.html">Integrador</a></div></nav>
   <main id="contenido" class="main-content" role="main">
-<h1 id="ra1--01--patrones-de-arquitectura-de-las-aplicaciones-gráficas">RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas</h1>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#1-orientaciones-docentes">1. Orientaciones docentes</a></li><li><a href="#2-contenidos-básicos-explicados">2. Contenidos básicos explicados</a></li><li><a href="#3-ra1-ej01--completar-una-tarea">3. RA1-EJ01 — Completar una tarea</a></li><li><a href="#4-ra1-pb01--enunciado-mapa-de-responsabilidades">4. RA1-PB01 — Enunciado: mapa de responsabilidades</a></li><li><a href="#5-solucionario-docente-de-pb01">5. Solucionario docente de PB01</a></li><li><a href="#6-herramientas-y-alcance-técnico">6. Herramientas y alcance técnico</a></li><li><a href="#7-fuentes-y-ampliación">7. Fuentes y ampliación</a></li></ol></details>
+
 <p><strong>Guía docente · DAM · Desarrollo de Interfaces · Versión 2.0</strong><br />
 <strong>Itinerario principal:</strong> aplicaciones web generadas con IA.<br />
 <strong>Diseño:</strong> <a href="https://m3.material.io/">Material Design 3</a> durante todo el curso.<br />
@@ -57,7 +61,7 @@
 <p>Un evento representa algo que ocurre, como activar un botón. Un escuchador registra qué función debe responder. La coordinación solicita un cambio al modelo y actualiza la vista.</p>
 <p>En el ejemplo utilizaremos <code>addEventListener</code> para asociar una respuesta a <code>click</code>. No ejecuta la acción al registrar el escuchador: establece qué debe ocurrir cuando llegue el evento. <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Referencia de eventos en MDN</a>.</p>
 <h3 id="25-mvc-y-mvvm">2.5 MVC y MVVM</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Responsabilidad</th>
@@ -92,7 +96,7 @@
 <td>¿Dónde está el estado que necesita representar la vista?</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Son modelos de organización, no reglas que permitan etiquetar automáticamente una aplicación. Usar React no implica por sí solo MVVM; llamar <code>Controlador</code> a un archivo tampoco demuestra MVC.</p>
 <p>Nuestro ejemplo ilustra una separación sencilla inspirada en MVC. No desarrolla un framework ni un ViewModel: estos últimos se comparan conceptualmente, sin exigir una segunda implementación.</p>
 <h3 id="26-m3-y-arquitectura">2.6 M3 y arquitectura</h3>
@@ -159,7 +163,7 @@ No afirmes que se ha probado si no lo has ejecutado.</code></pre>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">mostrarTarea</span>()<span class="op">;</span></span></code></pre></div>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Fragmento</th>
@@ -192,10 +196,10 @@ No afirmes que se ha probado si no lo has ejecutado.</code></pre>
 <td>Representa el estado inicial antes de pulsar.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>El bloque de <code>mostrarTarea</code> se ocupa de presentación. El escuchador coordina operación y actualización. Que ambos estén en <code>app.js</code> no elimina esa distinción.</p>
 <h3 id="36-recorrido-y-resultado-resueltos">3.6 Recorrido y resultado resueltos</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Momento</th>
@@ -225,7 +229,7 @@ No afirmes que se ha probado si no lo has ejecutado.</code></pre>
 <td>Vuelve a «Pendiente»: no hay persistencia.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Pregunta:</strong> ¿basta con cambiar el texto a «Completada»?<br />
 <strong>Respuesta:</strong> no. Si el dato sigue siendo <code>false</code>, la siguiente representación volverá a mostrar «Pendiente».</p>
 <h3 id="37-cambio-solicitado-a-la-ia">3.7 Cambio solicitado a la IA</h3>
@@ -276,7 +280,7 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 <p><strong>Transferencia al proyecto del alumno:</strong> cuando esté disponible su salida del editor web, localizará un elemento de la vista y explicará su relación con el comportamiento. Esta evidencia puede recogerse en PB03/PB04 o en el integrador; no obliga a alargar los 15 minutos de PB01.</p>
 <h2 id="5-solucionario-docente-de-pb01">5. Solucionario docente de PB01</h2>
 <h3 id="51-respuestas">5.1 Respuestas</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Cuestión</th>
@@ -317,7 +321,7 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 <td>Solo cambia la vista. <code>disponible</code> continúa en <code>true</code>; <code>mostrarReserva()</code> vuelve a habilitar el botón y muestra «Disponible».</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Prompt válido:</p>
 <pre class="text"><code>Cambia únicamente el texto visible del botón con id reservar a
 “Confirmar reserva”. Conserva el id, el modelo y el escuchador.
@@ -325,7 +329,7 @@ Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code>
 <p>Salida esperada:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;reservar&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Confirmar reserva<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
 <h3 id="52-indicadores-de-corrección-sin-pesos">5.2 Indicadores de corrección, sin pesos</h3>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Indicador</th>
@@ -360,7 +364,7 @@ Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code>
 <td>Acepta que deshabilitar equivale a reservar.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Se aceptan otras palabras y estructuras si la explicación identifica las responsabilidades. Esta práctica aporta a RA1.e, sin sustituir el resto de sus evidencias. No se fijan nota ni recuperación.</p>
 <h3 id="53-ayudas-y-errores-frecuentes">5.3 Ayudas y errores frecuentes</h3>
 <ul>
@@ -388,9 +392,9 @@ Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code>
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
     <span></span>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_00_guia_docente.html">Índice del RA1</a>
   </div>
-  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_02_librerias_componentes.html">
+  <a class="unit-next-card" href="RA1_02_librerias_componentes.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>
     <strong>RA1-02 · Librerías de componentes</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">→</span>
@@ -398,6 +402,7 @@ Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code>
 </nav>
 
     <footer class="site-footer">
+      <a class="back-to-top" href="#contenido">↑ Volver arriba</a>
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>

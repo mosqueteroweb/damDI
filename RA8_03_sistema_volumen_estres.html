@@ -11,17 +11,21 @@
 <body class="ra-ra8">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="page-header" role="banner">
-    <h1 class="project-name">RA8-03 · Sistema, volumen y estrés</h1>
-    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+    <div class="page-header__inner">
+      <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
+      <h1 class="project-name">RA8-03 · Sistema, volumen y estrés</h1>
+    </div>
   </header>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA8_00_guia_docente.html">Guía RA8</a><a href="RA8_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA8_integrador.html">Integrador</a></div></nav>
   <main id="contenido" class="main-content" role="main">
-<h1 id="ra8-03--sistema-configuración-recuperación-volumen-y-estrés">RA8-03 · Sistema, configuración, recuperación, volumen y estrés</h1>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#objetivo-docente">Objetivo docente</a></li><li><a href="#contenido-para-explicar">Contenido para explicar</a></li><li><a href="#ejemplo-básico-resuelto">Ejemplo básico resuelto</a></li><li><a href="#ra8-pb03--escalón-fallo-y-recuperación">RA8-PB03 · Escalón, fallo y recuperación</a></li><li><a href="#cierre">Cierre</a></li></ol></details>
+
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Evaluar la aplicación completa bajo configuraciones, fallos, conjuntos grandes y carga creciente, siempre en un entorno autorizado.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Las pruebas de sistema observan comportamiento completo. <strong>Configuración</strong> cambia navegador, ancho o almacenamiento; <strong>recuperación</strong> introduce fallos y comprueba retorno seguro; <strong>volumen</strong> aumenta datos; <strong>estrés</strong> aumenta carga hasta superar el objetivo para conocer degradación y recuperación.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>Prueba</th>
@@ -46,7 +50,7 @@
 <td>sin errores y p95 bajo presupuesto</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Script k6 generado para una copia local:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> options <span class="op">=</span> { <span class="dt">stages</span><span class="op">:</span> [{ <span class="dt">duration</span><span class="op">:</span> <span class="st">&#39;20s&#39;</span><span class="op">,</span> <span class="dt">target</span><span class="op">:</span> <span class="dv">5</span> }<span class="op">,</span> { <span class="dt">duration</span><span class="op">:</span> <span class="st">&#39;10s&#39;</span><span class="op">,</span> <span class="dt">target</span><span class="op">:</span> <span class="dv">0</span> }] }<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> <span class="kw">function</span> () { http<span class="op">.</span><span class="fu">get</span>(<span class="st">&#39;http://localhost:8000/&#39;</span>)<span class="op">;</span> <span class="fu">sleep</span>(<span class="dv">1</span>)<span class="op">;</span> }</span></code></pre></div>
@@ -62,9 +66,10 @@
 <h2 id="cierre">Cierre</h2>
 <p>Indica el primer límite observado y demuestra que la aplicación se recupera cuando cesa la condición.</p>
 <p>Referencia: <a href="https://grafana.com/docs/k6/latest/">documentación oficial de k6</a>.</p>
-<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_02_integracion.html">← RA8-02</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA8_04_recursos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-04 · Uso de recursos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA8_02_integracion.html">← RA8-02</a><a href="RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA8_04_recursos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-04 · Uso de recursos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
     <footer class="site-footer">
+      <a class="back-to-top" href="#contenido">↑ Volver arriba</a>
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>

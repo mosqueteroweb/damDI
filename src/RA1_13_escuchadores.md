@@ -9,18 +9,6 @@ title: RA1-13 · Escuchadores de eventos
 
 ---
 
-<nav class="unit-nav" aria-label="Navegación entre unidades">
-  <div class="unit-nav__secondary">
-    <a href="https://mosqueteroweb.github.io/damDI/RA1_12_eventos.html">← RA1-12</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
-  </div>
-  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_integrador.html">
-    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
-    <strong>RA1-INT01 · Gestor de tareas del aula</strong>
-    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
-  </a>
-</nav>
-
 ## Qué aprenderá el alumnado
 
 Al terminar, podrá **localizar registro y callback, y corregir una asociación duplicada**. El código se estudia como salida de herramientas de IA: el alumnado no tiene que memorizarlo ni escribirlo desde cero, pero sí localizar lo relevante, explicar el cambio y verificar su efecto.
@@ -105,7 +93,7 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
     <a href="https://mosqueteroweb.github.io/damDI/RA1_12_eventos.html">← RA1-12</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_00_guia_docente.md">Índice del RA1</a>
   </div>
   <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_integrador.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>

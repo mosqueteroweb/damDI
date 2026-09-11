@@ -9,18 +9,6 @@ title: RA1-11 · Métodos de la interfaz
 
 ---
 
-<nav class="unit-nav" aria-label="Navegación entre unidades">
-  <div class="unit-nav__secondary">
-    <a href="https://mosqueteroweb.github.io/damDI/RA1_10_propiedades.html">← RA1-10</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
-  </div>
-  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_12_eventos.html">
-    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
-    <strong>RA1-12 · Eventos</strong>
-    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
-  </a>
-</nav>
-
 ## Qué aprenderá el alumnado
 
 Al terminar, podrá **distinguir la definición de un método o función de su llamada y explicar su efecto**. El código se estudia como salida de herramientas de IA: el alumnado no tiene que memorizarlo ni escribirlo desde cero, pero sí localizar lo relevante, explicar el cambio y verificar su efecto.
@@ -104,7 +92,7 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
     <a href="https://mosqueteroweb.github.io/damDI/RA1_10_propiedades.html">← RA1-10</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_00_guia_docente.md">Índice del RA1</a>
   </div>
   <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_12_eventos.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>

@@ -264,9 +264,9 @@ No se necesita Android Studio. No hay servicios externos ni persistencia. Los sc
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
     <a href="https://mosqueteroweb.github.io/damDI/RA1_13_escuchadores.html">← RA1-13</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_00_guia_docente.md">Índice del RA1</a>
   </div>
-  <a class="unit-next-card unit-next-card--index" href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">
+  <a class="unit-next-card unit-next-card--index" href="RA1_00_guia_docente.md">
     <span class="unit-next-card__eyebrow">Has completado el RA1</span>
     <strong>Volver al índice del resultado de aprendizaje</strong>
     <span class="unit-next-card__arrow" aria-hidden="true">↗</span>

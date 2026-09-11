@@ -2,8 +2,6 @@
 
 **Fuera del itinerario obligatorio y de las 100 horas. No aporta requisitos adicionales de evaluación.** Se conserva este material para alumnado interesado en la equivalencia Android. Las actividades que aparecen a continuación son variantes opcionales de EJ01/PB01; la versión evaluable es la web. No requiere realizar la variante Android para superar ningún CE.
 
-# RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas
-
 **Guía del profesor · Desarrollo de Interfaces · DAM**  
 **Versión:** 1.0 · 8 de septiembre de 2026.  
 **Contenido básico:** Patrones de arquitectura de las aplicaciones gráficas.  
@@ -412,3 +410,17 @@ Estos indicadores permiten corregir PB01; no implican que una única práctica d
 - [Material Components para Android](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md): situación de Views e integración Material3.
 
 Consulta documental: 8 de septiembre de 2026. Los ejemplos son elaboración didáctica propia; las referencias no se presentan como fuente de código exportado ni como evidencia de ejecución local.
+
+---
+
+<nav class="unit-nav" aria-label="Navegación del anexo">
+  <div class="unit-nav__secondary">
+    <a href="RA1_01_patrones_arquitectura.md">← RA1-01</a>
+    <a href="RA1_matriz_contenidos_evaluacion.md">Matriz RA1</a>
+  </div>
+  <a class="unit-next-card" href="RA1_00_guia_docente.md">
+    <span class="unit-next-card__eyebrow">Volver al itinerario principal</span>
+    <strong>Guía docente del RA1</strong>
+    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
+  </a>
+</nav>

@@ -9,18 +9,6 @@ title: RA1-07 · Asociación de acciones a eventos
 
 ---
 
-<nav class="unit-nav" aria-label="Navegación entre unidades">
-  <div class="unit-nav__secondary">
-    <a href="https://mosqueteroweb.github.io/damDI/RA1_06_enlace_datos.html">← RA1-06</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
-  </div>
-  <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_08_edicion_codigo_generado.html">
-    <span class="unit-next-card__eyebrow">Siguiente unidad</span>
-    <strong>RA1-08 · Edición del código generado</strong>
-    <span class="unit-next-card__arrow" aria-hidden="true">→</span>
-  </a>
-</nav>
-
 ## Qué aprenderá el alumnado
 
 Al terminar, podrá **conectar una interacción del usuario con una acción y explicar toda la cadena**. El código se estudia como salida de herramientas de IA: el alumnado no tiene que memorizarlo ni escribirlo desde cero, pero sí localizar lo relevante, explicar el cambio y verificar su efecto.
@@ -103,7 +91,7 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
     <a href="https://mosqueteroweb.github.io/damDI/RA1_06_enlace_datos.html">← RA1-06</a>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_00_guia_docente.md">Índice del RA1</a>
   </div>
   <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_08_edicion_codigo_generado.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>

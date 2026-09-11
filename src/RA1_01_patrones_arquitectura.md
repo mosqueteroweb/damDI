@@ -338,7 +338,7 @@ Se verifican los identificadores y las transiciones de estado de ambos ejemplos 
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
     <span></span>
-    <a href="https://mosqueteroweb.github.io/damDI/#itinerario-completo-del-ra1">Índice del RA1</a>
+    <a href="RA1_00_guia_docente.md">Índice del RA1</a>
   </div>
   <a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_02_librerias_componentes.html">
     <span class="unit-next-card__eyebrow">Siguiente unidad</span>

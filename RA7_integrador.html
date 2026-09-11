@@ -11,11 +11,15 @@
 <body class="ra-ra7">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="page-header" role="banner">
-    <h1 class="project-name">RA7-INT01 · Release candidata del gestor</h1>
-    <p class="project-tagline">Material docente del módulo 0488 con IA, web y Material Design 3.</p>
+    <div class="page-header__inner">
+      <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
+      <h1 class="project-name">RA7-INT01 · Release candidata del gestor</h1>
+    </div>
   </header>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA7_00_guia_docente.html">Guía RA7</a><a href="RA7_matriz_contenidos_evaluacion.html">Matriz</a><span aria-current="page">Integrador</span></div></nav>
   <main id="contenido" class="main-content" role="main">
-<h1 id="ra7-int01--release-candidata-del-gestor">RA7-INT01 · Release candidata del gestor</h1>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#situación">Situación</a></li><li><a href="#encargo">Encargo</a></li><li><a href="#requisitos-obligatorios">Requisitos obligatorios</a></li><li><a href="#entregables">Entregables</a></li><li><a href="#guía-de-corrección-por-criterios">Guía de corrección por criterios</a></li><li><a href="#solución-docente-orientativa">Solución docente orientativa</a></li></ol></details>
+
 <h2 id="situación">Situación</h2>
 <p>El gestor ya ha sido probado y documentado. El centro necesita una versión que pueda instalarse, verificarse, actualizarse y retirarse sin depender del equipo que la creó.</p>
 <h2 id="encargo">Encargo</h2>
@@ -43,7 +47,7 @@
 <li>Registro de correcciones a la salida de IA y defensa individual.</li>
 </ul>
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr class="header">
 <th>CE</th>
@@ -93,16 +97,17 @@
 <td>Enumera canales sin estrategia</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="solución-docente-orientativa">Solución docente orientativa</h2>
 <details><summary>Mostrar estructura de una solución válida</summary>
 
 <p>La versión <code>1.0.0-rc.1</code> se compila desde un bloqueo de dependencias y genera un ZIP sin secretos. La tarea del IDE y CI llaman al mismo script. El manifiesto permite instalar la PWA; Stitch muestra estados accesibles. El ZIP se firma y la copia modificada falla. CI ejecuta sin preguntas y detiene la publicación si fallan pruebas. El ciclo en perfil limpio registra instalación, actualización, desinstalación y estado de datos. Pages es canal principal, Releases conserva artefactos y ad-hoc limita el piloto; cada canal define retirada.</p>
 </details>
 
-<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_06_firma_canales.html">← RA7-06</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz RA7</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/"><span class="unit-next-card__eyebrow">Curso completo</span><strong>Volver al índice general</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
+<nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA7_06_firma_canales.html">← RA7-06</a><a href="RA7_matriz_contenidos_evaluacion.html">Matriz RA7</a></div><a class="unit-next-card" href="index.html"><span class="unit-next-card__eyebrow">Curso completo</span><strong>Volver al índice general</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
     <footer class="site-footer">
+      <a class="back-to-top" href="#contenido">↑ Volver arriba</a>
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
