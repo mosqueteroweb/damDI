@@ -34,7 +34,7 @@ Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estr
 - Conclusión: apto, apto con condiciones o no apto.
 - Defensa individual de cinco minutos.
 
-## Casos mínimos
+## Casos de prueba mínimos
 
 | Familia | Evidencia |
 |---|---|
@@ -64,5 +64,13 @@ Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estr
 La estrategia prioriza pérdida de datos, borrado y discrepancias del informe. Playwright prueba integración y cinco regresiones sobre estado reiniciado. El volumen crece hasta 1.000 tareas y la carga k6 permanece local; se documenta el primer límite y la recuperación. Lighthouse y DevTools comparan tres ejecuciones. ZAP se usa pasivamente y los avisos se verifican. Cada defecto tiene pasos, esperado/real, severidad, corrección y repetición. La conclusión «apto con condiciones» enumera riesgos residuales y fecha de revisión.
 
 </details>
+
+## Preguntas de defensa
+
+1. ¿Qué riesgo determinó la prioridad de tus pruebas?
+2. ¿Dónde termina una prueba de integración y comienza una de sistema?
+3. ¿Cómo demuestras que una prueba automática detecta realmente la regresión?
+4. ¿Qué límite apareció primero y cómo verificaste la recuperación?
+5. ¿Qué evidencia justifica tu decisión final de apto, condicionado o no apto?
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_06_manual_automatica_regresion.html">← RA8-06</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz RA8</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/"><span class="unit-next-card__eyebrow">Volver al curso</span><strong>Índice general del módulo</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

@@ -209,7 +209,7 @@ Diferencia esperada:
 
 El identificador conserva la conexión con JavaScript. El alumno debe comprobar el nuevo texto y que la acción continúa funcionando. No se acepta una regeneración completa como explicación del cambio.
 
-## 4. RA1-PB01 — Enunciado: mapa de responsabilidades
+## RA1-PB01 — Mapa de responsabilidades
 
 **Tiempo:** 15 minutos. **Entrega:** tabla y respuestas breves. No se solicita escribir código. El profesor entrega esta sección sin el solucionario.
 
@@ -264,7 +264,7 @@ mostrarReserva();
 
 **Transferencia al proyecto del alumno:** cuando esté disponible su salida del editor web, localizará un elemento de la vista y explicará su relación con el comportamiento. Esta evidencia puede recogerse en PB03/PB04 o en el integrador; no obliga a alargar los 15 minutos de PB01.
 
-## 5. Solucionario docente de PB01
+### Solución orientativa
 
 ### 5.1 Respuestas
 

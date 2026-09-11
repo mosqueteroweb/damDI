@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#8c5000">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA3 · Guía docente · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra3">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,11 +16,14 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA3 · Guía docente</h1>
+      <p class="page-position">RA3 · Guía docente</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><span aria-current="page">Guía RA3</span><a href="RA3_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA3_integrador.html">Integrador</a></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><span aria-current="page">Guía RA3</span><a href="RA3_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA3_integrador.html">Integrador</a><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#resultado-de-aprendizaje">Resultado de aprendizaje</a></li><li><a href="#producto-del-ra">Producto del RA</a></li><li><a href="#decisión-tecnológica">Decisión tecnológica</a></li><li><a href="#secuencia-docente">Secuencia docente</a></li><li><a href="#flujo-de-cada-clase">Flujo de cada clase</a></li><li><a href="#herramientas">Herramientas</a></li><li><a href="#evaluación">Evaluación</a></li><li><a href="#preparación-del-profesor">Preparación del profesor</a></li></ol></details>
+<section class="ra-route" aria-labelledby="itinerario-ra"><h2 id="itinerario-ra">Itinerario del RA</h2><p>Acceso directo a las unidades, sus prácticas y la evaluación integradora.</p><div class="ra-route__grid"><a class="ra-route__step" href="RA3_01_concepto_componentes.html"><small>Unidad 1</small><strong>RA3-01 · Concepto y características</strong><span>RA3-PB01</span></a><a class="ra-route__step" href="RA3_02_propiedades_metodos.html"><small>Unidad 2</small><strong>RA3-02 · Propiedades, atributos y métodos</strong><span>RA3-PB02</span></a><a class="ra-route__step" href="RA3_03_eventos_acciones.html"><small>Unidad 3</small><strong>RA3-03 · Eventos y acciones</strong><span>RA3-PB03</span></a><a class="ra-route__step" href="RA3_04_persistencia.html"><small>Unidad 4</small><strong>RA3-04 · Persistencia del componente</strong><span>RA3-PB04</span></a><a class="ra-route__step" href="RA3_05_herramientas.html"><small>Unidad 5</small><strong>RA3-05 · Herramientas de diseño y desarrollo</strong><span>RA3-PB05</span></a><a class="ra-route__step" href="RA3_06_pruebas.html"><small>Unidad 6</small><strong>RA3-06 · Pruebas de componentes</strong><span>RA3-PB06</span></a><a class="ra-route__step" href="RA3_07_documentacion_empaquetado.html"><small>Unidad 7</small><strong>RA3-07 · Documentación y empaquetado</strong><span>RA3-PB07</span></a><a class="ra-route__step ra-route__step--integrator" href="RA3_integrador.html"><small>Evaluación</small><strong>Integrador RA3</strong><span>INT01</span></a></div></section>
 
 <blockquote>
 <p><strong>Duración propuesta: 16 horas · Ruta web · Material Design 3 como referencia visual</strong></p>
@@ -124,5 +129,17 @@
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>

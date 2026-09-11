@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#006a6a">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA2 · Guía docente · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra2">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,11 +16,14 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA2 · Guía docente</h1>
+      <p class="page-position">RA2 · Guía docente</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><span aria-current="page">Guía RA2</span><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA2_integrador.html">Integrador</a></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><span aria-current="page">Guía RA2</span><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA2_integrador.html">Integrador</a><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#resultado-de-aprendizaje">Resultado de aprendizaje</a></li><li><a href="#producto-del-ra">Producto del RA</a></li><li><a href="#principio-didáctico">Principio didáctico</a></li><li><a href="#secuencia-docente">Secuencia docente</a></li><li><a href="#flujo-de-cada-clase">Flujo de cada clase</a></li><li><a href="#herramientas">Herramientas</a></li><li><a href="#evaluación">Evaluación</a></li><li><a href="#preparación-del-profesor">Preparación del profesor</a></li></ol></details>
+<section class="ra-route" aria-labelledby="itinerario-ra"><h2 id="itinerario-ra">Itinerario del RA</h2><p>Acceso directo a las unidades, sus prácticas y la evaluación integradora.</p><div class="ra-route__grid"><a class="ra-route__step" href="RA2_01_aprendizaje_automatico.html"><small>Unidad 1</small><strong>RA2-01 · Aprendizaje automático y entrenamiento</strong><span>RA2-PB01</span></a><a class="ra-route__step" href="RA2_02_interfaces_naturales.html"><small>Unidad 2</small><strong>RA2-02 · Interfaces naturales y tipos</strong><span>RA2-PB02</span></a><a class="ra-route__step" href="RA2_03_voz_habla.html"><small>Unidad 3</small><strong>RA2-03 · Voz, habla y reconocimiento</strong><span>RA2-PB03</span></a><a class="ra-route__step" href="RA2_04_cuerpo_movimiento.html"><small>Unidad 4</small><strong>RA2-04 · Partes y movimientos del cuerpo</strong><span>RA2-PB04</span></a><a class="ra-route__step" href="RA2_05_realidad_aumentada.html"><small>Unidad 5</small><strong>RA2-05 · Realidad aumentada</strong><span>RA2-PB05</span></a><a class="ra-route__step ra-route__step--integrator" href="RA2_integrador.html"><small>Evaluación</small><strong>Integrador RA2</strong><span>INT01</span></a></div></section>
 
 <blockquote>
 <p><strong>Duración propuesta: 12 horas · Ruta web · Material Design 3 como referencia visual</strong></p>
@@ -115,5 +120,17 @@
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>

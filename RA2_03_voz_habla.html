@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#006a6a">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA2-03 · Voz, habla y reconocimiento · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra2">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,9 +16,11 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA2-03 · Voz, habla y reconocimiento</h1>
+      <p class="page-position">RA2 · Unidad 3 de 5</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA2_00_guia_docente.html">Guía RA2</a><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA2_integrador.html">Integrador</a></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA2_00_guia_docente.html">Guía RA2</a><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA2_integrador.html">Integrador</a><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#objetivo-docente">Objetivo docente</a></li><li><a href="#contenido-para-explicar">Contenido para explicar</a></li><li><a href="#ejemplo-básico-resuelto">Ejemplo básico resuelto</a></li><li><a href="#ra2-pb03--dos-órdenes-con-confirmación">RA2-PB03 · Dos órdenes con confirmación</a></li><li><a href="#privacidad-y-cierre">Privacidad y cierre</a></li></ol></details>
 
@@ -36,15 +40,15 @@
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>La primera línea detecta compatibilidad; <code>lang</code> fija el idioma; <code>onresult</code> conserva la transcripción para revisarla. Todavía no ejecuta una acción destructiva.</p>
-<h2 id="ra2-pb03--dos-órdenes-con-confirmación">RA2-PB03 · Dos órdenes con confirmación</h2>
+<section class="practice-card" data-practice="RA2-PB03"><div class="practice-card__label">Práctica básica</div><h2 id="ra2-pb03--dos-órdenes-con-confirmación">RA2-PB03 · Dos órdenes con confirmación</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>35–45 min</dd></div><div><dt>Criterios</dt><dd>RA2.b, RA2.c</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Dos acciones, transcripción y entrada escrita</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra2-pb03">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra2-pb03"><h3>Enunciado para publicar</h3>
 <p>Genera un prototipo que entienda «mostrar pendientes» y «crear tarea [título]». Debe activarse por botón, mostrar escucha y transcripción, pedir confirmación antes de crear y permitir escribir exactamente las mismas órdenes.</p>
-<h3 id="solución-orientativa">Solución orientativa</h3>
+</div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
 <p><code>mostrar pendientes</code> aplica el filtro y anuncia cuántos resultados hay. <code>crear tarea revisar examen</code> rellena una previsualización; solo «Confirmar» guarda. Si no existe reconocimiento se muestra «La voz no está disponible en este navegador; escribe la orden» y el flujo continúa. Se prueban frase exacta, variante mayúscula, ruido, orden desconocida y cancelación.</p>
 </details>
 
-<h2 id="privacidad-y-cierre">Privacidad y cierre</h2>
+</div></section><h2 id="privacidad-y-cierre">Privacidad y cierre</h2>
 <p>No se inicia el micrófono al cargar ni se conserva audio. El indicador de escucha y el botón «Detener» permanecen visibles. El alumno explica dónde se recibe texto y dónde se decide la acción.</p>
 <p>Referencia: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">guía de Web Speech API de MDN</a>.</p>
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA2_02_interfaces_naturales.html">← RA2-02</a><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA2_04_cuerpo_movimiento.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA2-04 · Partes y movimientos del cuerpo</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
@@ -54,5 +58,17 @@
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>

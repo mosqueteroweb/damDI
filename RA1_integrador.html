@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#6750a4">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA1-INT01 — Gestor de tareas del aula · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,18 +16,21 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA1-INT01 — Gestor de tareas del aula</h1>
+      <p class="page-position">RA1 · Integrador</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><a href="RA1_matriz_contenidos_evaluacion.html">Matriz</a><span aria-current="page">Integrador</span></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><a href="RA1_matriz_contenidos_evaluacion.html">Matriz</a><span aria-current="page">Integrador</span><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
-<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#1-enunciado-para-entregar-al-alumnado">1. Enunciado para entregar al alumnado</a></li><li><a href="#2-solución-docente-proceso-y-decisiones">2. Solución docente: proceso y decisiones</a></li><li><a href="#3-archivo-de-referencia-completo">3. Archivo de referencia completo</a></li><li><a href="#4-lectura-guiada-resuelta">4. Lectura guiada resuelta</a></li><li><a href="#5-pruebas-y-resultados-de-referencia">5. Pruebas y resultados de referencia</a></li><li><a href="#6-instrumento-de-corrección-por-ce-sin-pesos">6. Instrumento de corrección por CE, sin pesos</a></li><li><a href="#7-diseño-y-límites">7. Diseño y límites</a></li></ol></details>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#situación">Situación</a></li><li><a href="#encargo">Encargo</a></li><li><a href="#requisitos-obligatorios">Requisitos obligatorios</a></li><li><a href="#entregables">Entregables</a></li><li><a href="#casos-de-prueba-mínimos">Casos de prueba mínimos</a></li><li><a href="#guía-de-corrección-por-criterios">Guía de corrección por criterios</a></li><li><a href="#solución-docente-orientativa">Solución docente orientativa</a></li><li><a href="#preguntas-de-defensa">Preguntas de defensa</a></li></ol></details>
 
 <p><strong>Evaluación integradora · 150 minutos · CE RA1.a–h.</strong><br />
 <strong>Itinerario web generado con IA. Diseño de referencia: <a href="https://m3.material.io/">M3</a>.</strong></p>
-<h2 id="1-enunciado-para-entregar-al-alumnado">1. Enunciado para entregar al alumnado</h2>
+<h2 id="situación">Situación</h2>
 <p>El centro necesita una pantalla para anotar tareas durante una sesión. Debe permitir introducir título, elegir prioridad Normal/Alta, añadir a una lista y limpiar el formulario. Los datos se conservan mientras la página permanezca abierta; no se exige persistencia, servidor ni autenticación.</p>
+<h2 id="encargo">Encargo</h2>
 <p>Utiliza las herramientas de Google para especificar, generar, explicar y refinar. Realiza operaciones de creación y ubicación en el editor visual web trabajado. No es necesario escribir código desde cero, pero debes identificar los fragmentos relevantes y explicar tus decisiones.</p>
-<h3 id="requisitos-mínimos">Requisitos mínimos</h3>
+<h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ul>
 <li>Una pantalla titulada «Tareas del aula».</li>
 <li>Título obligatorio: rechazar vacío y solo espacios; máximo 80 caracteres.</li>
@@ -36,7 +41,7 @@
 <li>Estructura y estilos revisados contra M3. No se acepta como justificación únicamente «la IA dice que es Material».</li>
 <li>Una modificación posterior del código exportado por el editor que cambie la ayuda y su posición sin romper acciones.</li>
 </ul>
-<h3 id="trabajo-y-entregables">Trabajo y entregables</h3>
+<h2 id="entregables">Entregables</h2>
 <div class="table-scroll"><table>
 <thead>
 <tr class="header">
@@ -89,7 +94,7 @@
 </tbody>
 </table></div>
 <p>No incluyas conversaciones completas: entrega los prompts y diferencias pertinentes. Si la herramienta produce nombres distintos, indica sus equivalencias.</p>
-<h3 id="organización-de-los-150-minutos">Organización de los 150 minutos</h3>
+<h3 id="temporalización-orientativa">Temporalización orientativa</h3>
 <div class="table-scroll"><table>
 <thead>
 <tr class="header">
@@ -125,7 +130,102 @@
 </tbody>
 </table></div>
 <p>Se parte de un entorno disponible y una estructura vacía; los accesos y preparación se realizan antes de la evaluación. Si una generación se bloquea, el docente puede facilitar una base parcial registrando la ayuda, sin dar por demostrados los criterios que resuelve esa base.</p>
-<h2 id="2-solución-docente-proceso-y-decisiones">2. Solución docente: proceso y decisiones</h2>
+<h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr class="header">
+<th>Caso</th>
+<th>Resultado esperado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Página recién abierta</td>
+<td>Prioridad Normal y lista vacía</td>
+</tr>
+<tr class="even">
+<td>Título vacío o solo espacios</td>
+<td>Rechazo, aviso claro y foco en el campo</td>
+</tr>
+<tr class="odd">
+<td>Dos altas consecutivas</td>
+<td>Conserva ambas tareas con su prioridad</td>
+</tr>
+<tr class="even">
+<td>Limpiar formulario</td>
+<td>Restaura campos sin borrar la lista</td>
+</tr>
+<tr class="odd">
+<td>Entrada con marcado HTML</td>
+<td>Presenta texto literal, sin inyectar elementos</td>
+</tr>
+<tr class="even">
+<td>Cambio del texto de ayuda</td>
+<td>Mantiene identificadores y acciones operativas</td>
+</tr>
+<tr class="odd">
+<td>Uso completo con teclado</td>
+<td>Campos, acciones y mensajes resultan accesibles</td>
+</tr>
+<tr class="even">
+<td>Recarga</td>
+<td>Pierde los datos conforme al alcance declarado</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr class="header">
+<th>CE</th>
+<th>Satisfactorio</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>Compara herramientas y librerías y justifica su encaje web</td>
+<td>Enumera marcas sin análisis</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>Crea el documento con funciones del editor y conserva evidencia</td>
+<td>Solo aporta una captura o copia la solución</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>Reubica componentes mediante el editor y demuestra la operación</td>
+<td>Solo pide un diseño a la IA</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>Configura propiedades vinculadas a requisitos comprobables</td>
+<td>No identifica los cambios realizados</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>Localiza y explica fragmentos de su propia exportación</td>
+<td>Repite una explicación de IA sin localizarla</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>Modifica la exportación, conserva versiones y verifica</td>
+<td>Cambia código sin procedencia ni prueba</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>Añadir y limpiar están asociados y probados</td>
+<td>Las acciones no funcionan o no se identifican</td>
+</tr>
+<tr class="even">
+<td>h</td>
+<td>La aplicación completa es ejecutable y supera los casos esenciales</td>
+<td>La interfaz no está integrada o no se ejecuta</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="solución-docente-orientativa">Solución docente orientativa</h2>
 <p>La solución siguiente es una referencia generada, no el resultado de una sesión grabada del editor. Sirve para corregir comportamiento, lectura y diseño; T2/T3 necesitan además las evidencias del alumno. Se admite otra implementación si satisface los requisitos.</p>
 <h3 id="t1-decisión-de-referencia">T1: decisión de referencia</h3>
 <p>Stitch ayuda a explorar el diseño y Gemini/AI Studio a generar y refinar. GrapesJS aporta edición visual web y exportación. La comparación distingue herramienta y librería usando el capítulo 02. Para esta referencia pequeña se emplean controles nativos HTML y CSS con roles inspirados en el sistema M3; no hay librería externa. La comparación puede considerar Material Web como alternativa, incluyendo su mantenimiento. HTML no se describe como una librería externa.</p>
@@ -141,7 +241,7 @@ Limpiar no borra la lista. Usa submit para añadir y click para limpiar.
 Explica datos, función de representación y asociaciones. Mantén el tema M3.
 Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.</code></pre>
 <p>Cambio T6 de referencia: en la versión inicial la ayuda dice «Completa los datos» después de las acciones. Pedir «mueve ayuda antes de las acciones y cambia su texto a “Título de 1 a 80 caracteres. Los datos se conservan durante esta sesión”. Conserva todos los ids». La solución final ya incorpora ese cambio. El antes/después real debe conservar la exportación del alumno, no reconstruirse a posteriori desde la solución.</p>
-<h2 id="3-archivo-de-referencia-completo">3. Archivo de referencia completo</h2>
+<h3 id="archivo-de-referencia-completo">Archivo de referencia completo</h3>
 <p>El profesor puede guardar el contenido de este bloque como <code>tareas.html</code> y abrirlo en un navegador. Es un recurso docente reproducible, no un ejercicio de transcripción para el alumno. No realiza peticiones externas. Al recargar pierde los datos, tal como exige el alcance.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!doctype </span>html<span class="dt">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;es&quot;</span><span class="dt">&gt;</span></span>
@@ -267,7 +367,7 @@ Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.</
 <span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
 <span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
-<h2 id="4-lectura-guiada-resuelta">4. Lectura guiada resuelta</h2>
+<h3 id="lectura-guiada-resuelta">Lectura guiada resuelta</h3>
 <div class="table-scroll"><table>
 <thead>
 <tr class="header">
@@ -315,7 +415,7 @@ Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.</
 </tbody>
 </table></div>
 <p>La estructura inicial del alumno puede variar. En lectura se pide localizar equivalencias, no recitar estos nombres.</p>
-<h2 id="5-pruebas-y-resultados-de-referencia">5. Pruebas y resultados de referencia</h2>
+<h3 id="pruebas-y-resultados-de-referencia">Pruebas y resultados de referencia</h3>
 <div class="table-scroll"><table>
 <thead>
 <tr class="header">
@@ -367,71 +467,17 @@ Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.</
 </tbody>
 </table></div>
 <p>El informe de verificación del paquete distingue comprobación de lógica y revisión visual. Un test de JavaScript no demuestra foco visible, lector de pantalla ni conformidad M3 integral.</p>
-<h2 id="6-instrumento-de-corrección-por-ce-sin-pesos">6. Instrumento de corrección por CE, sin pesos</h2>
-<div class="table-scroll"><table>
-<thead>
-<tr class="header">
-<th>CE</th>
-<th>Evidencia satisfactoria</th>
-<th>Parcial</th>
-<th>Insuficiente</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>a</td>
-<td>Compara herramientas y librerías y justifica encaje web</td>
-<td>Compara solo una categoría</td>
-<td>Enumera marcas sin análisis</td>
-</tr>
-<tr class="even">
-<td>b</td>
-<td>Crea documento con funciones de editor y lo entrega</td>
-<td>Documento incompleto</td>
-<td>Solo captura o solución copiada</td>
-</tr>
-<tr class="odd">
-<td>c</td>
-<td>Reubica componentes mediante editor y demuestra operación</td>
-<td>Explica sin evidencia suficiente</td>
-<td>Solo pide un diseño a IA</td>
-</tr>
-<tr class="even">
-<td>d</td>
-<td>Propiedades responden a los requisitos</td>
-<td>Algunas mal configuradas</td>
-<td>No identifica cambios</td>
-</tr>
-<tr class="odd">
-<td>e</td>
-<td>Explica fragmentos de su exportación y relación funcional</td>
-<td>Identifica sin explicar</td>
-<td>Repite texto IA sin localizarlo</td>
-</tr>
-<tr class="even">
-<td>f</td>
-<td>Modifica exportación, conserva versiones y verifica</td>
-<td>Cambio sin prueba o explicación</td>
-<td>Solo cambia mockup o código sin procedencia</td>
-</tr>
-<tr class="odd">
-<td>g</td>
-<td>Añadir y limpiar conectados y probados</td>
-<td>Solo una acción correcta</td>
-<td>Acciones sin asociación operativa</td>
-</tr>
-<tr class="even">
-<td>h</td>
-<td>Aplicación completa ejecutable con casos esenciales correctos</td>
-<td>Fallos delimitados</td>
-<td>Interfaz no integrada o no ejecutable</td>
-</tr>
-</tbody>
-</table></div>
-<p>No se asignan porcentajes ni reglas de recuperación. Se registran los logros y las ayudas recibidas. Una salida funcional de IA no sustituye la evidencia individual de comprensión.</p>
-<h2 id="7-diseño-y-límites">7. Diseño y límites</h2>
+<h3 id="diseño-y-límites">Diseño y límites</h3>
 <p>La solución usa roles de color, jerarquía y diferenciación de acciones siguiendo la referencia M3. Emplea controles HTML con una adaptación didáctica; el selector conserva su comportamiento nativo y no se presenta como reproducción exhaustiva de todos los componentes M3. Antes de usarla como ejemplo visual definitivo se revisarán foco, estados, contraste, tipografía, tamaños y distribución en navegador. No se ha declarado una auditoría completa de M3/WCAG.</p>
 <p>No se necesita Android Studio. No hay servicios externos ni persistencia. Los scripts son ejemplos completos de salida de IA para el docente; el alumno dirige, identifica y verifica.</p>
+<h2 id="preguntas-de-defensa">Preguntas de defensa</h2>
+<ol type="1">
+<li>¿Qué diferencia existe entre la herramienta de edición y la librería utilizada?</li>
+<li>¿Qué operación realizaste en el editor para cambiar la distribución?</li>
+<li>¿Qué fragmento conecta el evento con la acción y cómo lo comprobaste?</li>
+<li>¿Qué cambió en la exportación y qué evidencia demuestra que no se rompió la interfaz?</li>
+<li>¿Qué decisión de la IA rechazaste o corregiste y por qué?</li>
+</ol>
 <hr />
 <nav class="unit-nav" aria-label="Navegación entre unidades">
   <div class="unit-nav__secondary">
@@ -450,5 +496,17 @@ Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.</
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>

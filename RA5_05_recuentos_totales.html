@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#984061">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA5-05 · Numeración, recuentos y totales · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra5">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,9 +16,11 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA5-05 · Numeración, recuentos y totales</h1>
+      <p class="page-position">RA5 · Unidad 5 de 8</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA5_00_guia_docente.html">Guía RA5</a><a href="RA5_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA5_integrador.html">Integrador</a></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA5_00_guia_docente.html">Guía RA5</a><a href="RA5_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA5_integrador.html">Integrador</a><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#objetivo-docente">Objetivo docente</a></li><li><a href="#contenido-para-explicar">Contenido para explicar</a></li><li><a href="#ejemplo-básico-resuelto">Ejemplo básico resuelto</a></li><li><a href="#ra5-pb05--cuatro-indicadores-comprobados">RA5-PB05 · Cuatro indicadores comprobados</a></li><li><a href="#cierre">Cierre</a></li></ol></details>
 
@@ -30,15 +34,15 @@
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> completionRate <span class="op">=</span> total <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> completed <span class="op">/</span> total <span class="op">*</span> <span class="dv">100</span><span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> estimatedHours <span class="op">=</span> rows<span class="op">.</span><span class="fu">reduce</span>((sum<span class="op">,</span> row) <span class="kw">=&gt;</span> sum <span class="op">+</span> (row<span class="op">.</span><span class="at">hours</span> <span class="op">??</span> <span class="dv">0</span>)<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span></code></pre></div>
 <p><code>length</code> cuenta; <code>filter</code> obtiene completadas; el condicional evita división entre cero; <code>reduce</code> suma horas y trata un nulo como cero. La interfaz mostrará <code>63 %</code>, pero conservará el valor sin redondear para cálculos.</p>
-<h2 id="ra5-pb05--cuatro-indicadores-comprobados">RA5-PB05 · Cuatro indicadores comprobados</h2>
+<section class="practice-card" data-practice="RA5-PB05"><div class="practice-card__label">Práctica básica</div><h2 id="ra5-pb05--cuatro-indicadores-comprobados">RA5-PB05 · Cuatro indicadores comprobados</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA5.d</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Fórmulas y comprobación manual</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra5-pb05">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra5-pb05"><h3>Enunciado para publicar</h3>
 <p>Genera fila numerada y tarjetas para total, completadas, porcentaje y horas estimadas. Calcula manualmente el resultado de un conjunto de ocho filas y repite después de filtrar.</p>
-<h3 id="solución-orientativa">Solución orientativa</h3>
+</div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
 <p>Con 8 tareas, 5 completadas y horas <code>[2,1,3,2,0,1,2,1]</code>, el informe muestra total 8, completadas 5, 62,5 % y 12 h. Tras filtrar, todos se recalculan sobre las filas visibles. La numeración comienza en 1, pero cada fila mantiene un ID distinto. La metodología declara que una hora nula cuenta como 0 y advierte esa decisión.</p>
 </details>
 
-<h2 id="cierre">Cierre</h2>
+</div></section><h2 id="cierre">Cierre</h2>
 <p>Explica numerador, denominador, redondeo y tratamiento de nulos. Un número correcto sin fórmula no constituye evidencia suficiente.</p>
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA5_04_filtrado_datos.html">← RA5-04</a><a href="RA5_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA5_06_graficos.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA5-06 · Gráficos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
@@ -47,5 +51,17 @@
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>

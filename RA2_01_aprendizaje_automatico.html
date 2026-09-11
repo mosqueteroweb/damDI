@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#006a6a">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA2-01 · Aprendizaje automático y entrenamiento · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra2">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,9 +16,11 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA2-01 · Aprendizaje automático y entrenamiento</h1>
+      <p class="page-position">RA2 · Unidad 1 de 5</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA2_00_guia_docente.html">Guía RA2</a><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA2_integrador.html">Integrador</a></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA2_00_guia_docente.html">Guía RA2</a><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA2_integrador.html">Integrador</a><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#objetivo-docente">Objetivo docente</a></li><li><a href="#contenido-para-explicar">Contenido para explicar</a></li><li><a href="#ejemplo-básico-resuelto">Ejemplo básico resuelto</a></li><li><a href="#ra2-pb01--entrenar-y-cuestionar-un-clasificador">RA2-PB01 · Entrenar y cuestionar un clasificador</a></li><li><a href="#comprobación-y-cierre">Comprobación y cierre</a></li></ol></details>
 
@@ -31,15 +35,15 @@
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">&amp;&amp;</span> prediction<span class="op">.</span><span class="at">probability</span> <span class="op">&gt;=</span> <span class="fl">0.85</span><span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>status<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> accepted <span class="op">?</span> <span class="st">&#39;Mesa disponible&#39;</span> <span class="op">:</span> <span class="st">&#39;No se puede confirmar&#39;</span><span class="op">;</span></span></code></pre></div>
 <p>Partes relevantes: se comprueba clase y umbral; el caso dudoso no ejecuta una acción; el mensaje comunica incertidumbre. El alumnado no memoriza la sintaxis: explica la condición y prueba ejemplos nuevos.</p>
-<h2 id="ra2-pb01--entrenar-y-cuestionar-un-clasificador">RA2-PB01 · Entrenar y cuestionar un clasificador</h2>
+<section class="practice-card" data-practice="RA2-PB01"><div class="practice-card__label">Práctica básica</div><h2 id="ra2-pb01--entrenar-y-cuestionar-un-clasificador">RA2-PB01 · Entrenar y cuestionar un clasificador</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>35–45 min</dd></div><div><dt>Criterios</dt><dd>RA2.a</dd></div><div><dt>Recursos</dt><dd>Gemini, Teachable Machine, MediaPipe</dd></div><div><dt>Entrega solicitada</dt><dd>Modelo, ficha de datos, pruebas y regla de confianza</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra2-pb01">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra2-pb01"><h3>Enunciado para publicar</h3>
 <p>Con Teachable Machine, crea dos clases de gesto con al menos 20 muestras variadas por clase. Prueba diez entradas nuevas y registra aciertos, falsos positivos y falsos negativos. Pide a Gemini una regla que solo confirme cuando la confianza sea suficiente.</p>
-<h3 id="solución-orientativa">Solución orientativa</h3>
+</div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
 <p>La ficha indica clases, número de muestras, variaciones de luz/fondo, umbral y limitaciones. La prueba separa datos de entrenamiento y prueba. Una solución válida no afirma «100 % fiable»: ante confianza menor del 85 % solicita repetir o usar un botón. El alumno localiza en la salida de IA la etiqueta, la probabilidad y la decisión.</p>
 </details>
 
-<h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
+</div></section><h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
 <p>¿Qué grupo o situación aparece poco en los datos? ¿Qué daño causaría un falso positivo? ¿Cuándo es preferible no decidir?</p>
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA2_00_guia_docente.html">← Guía RA2</a><a href="RA2_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA2_02_interfaces_naturales.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA2-02 · Interfaces naturales y tipos</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
@@ -48,5 +52,17 @@
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>

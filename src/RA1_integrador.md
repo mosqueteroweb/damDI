@@ -3,13 +3,15 @@
 **Evaluación integradora · 150 minutos · CE RA1.a–h.**  
 **Itinerario web generado con IA. Diseño de referencia: [M3](https://m3.material.io/).**
 
-## 1. Enunciado para entregar al alumnado
+## Situación
 
 El centro necesita una pantalla para anotar tareas durante una sesión. Debe permitir introducir título, elegir prioridad Normal/Alta, añadir a una lista y limpiar el formulario. Los datos se conservan mientras la página permanezca abierta; no se exige persistencia, servidor ni autenticación.
 
+## Encargo
+
 Utiliza las herramientas de Google para especificar, generar, explicar y refinar. Realiza operaciones de creación y ubicación en el editor visual web trabajado. No es necesario escribir código desde cero, pero debes identificar los fragmentos relevantes y explicar tus decisiones.
 
-### Requisitos mínimos
+## Requisitos obligatorios
 
 - Una pantalla titulada «Tareas del aula».
 - Título obligatorio: rechazar vacío y solo espacios; máximo 80 caracteres.
@@ -20,7 +22,7 @@ Utiliza las herramientas de Google para especificar, generar, explicar y refinar
 - Estructura y estilos revisados contra M3. No se acepta como justificación únicamente «la IA dice que es Material».
 - Una modificación posterior del código exportado por el editor que cambie la ayuda y su posición sin romper acciones.
 
-### Trabajo y entregables
+## Entregables
 
 | Tarea | Entrega | CE |
 |---|---|---|
@@ -35,7 +37,7 @@ Utiliza las herramientas de Google para especificar, generar, explicar y refinar
 
 No incluyas conversaciones completas: entrega los prompts y diferencias pertinentes. Si la herramienta produce nombres distintos, indica sus equivalencias.
 
-### Organización de los 150 minutos
+### Temporalización orientativa
 
 | Trabajo | Minutos |
 |---|---:|
@@ -48,7 +50,33 @@ No incluyas conversaciones completas: entrega los prompts y diferencias pertinen
 
 Se parte de un entorno disponible y una estructura vacía; los accesos y preparación se realizan antes de la evaluación. Si una generación se bloquea, el docente puede facilitar una base parcial registrando la ayuda, sin dar por demostrados los criterios que resuelve esa base.
 
-## 2. Solución docente: proceso y decisiones
+## Casos de prueba mínimos
+
+| Caso | Resultado esperado |
+|---|---|
+| Página recién abierta | Prioridad Normal y lista vacía |
+| Título vacío o solo espacios | Rechazo, aviso claro y foco en el campo |
+| Dos altas consecutivas | Conserva ambas tareas con su prioridad |
+| Limpiar formulario | Restaura campos sin borrar la lista |
+| Entrada con marcado HTML | Presenta texto literal, sin inyectar elementos |
+| Cambio del texto de ayuda | Mantiene identificadores y acciones operativas |
+| Uso completo con teclado | Campos, acciones y mensajes resultan accesibles |
+| Recarga | Pierde los datos conforme al alcance declarado |
+
+## Guía de corrección por criterios
+
+| CE | Satisfactorio | Insuficiente |
+|---|---|---|
+| a | Compara herramientas y librerías y justifica su encaje web | Enumera marcas sin análisis |
+| b | Crea el documento con funciones del editor y conserva evidencia | Solo aporta una captura o copia la solución |
+| c | Reubica componentes mediante el editor y demuestra la operación | Solo pide un diseño a la IA |
+| d | Configura propiedades vinculadas a requisitos comprobables | No identifica los cambios realizados |
+| e | Localiza y explica fragmentos de su propia exportación | Repite una explicación de IA sin localizarla |
+| f | Modifica la exportación, conserva versiones y verifica | Cambia código sin procedencia ni prueba |
+| g | Añadir y limpiar están asociados y probados | Las acciones no funcionan o no se identifican |
+| h | La aplicación completa es ejecutable y supera los casos esenciales | La interfaz no está integrada o no se ejecuta |
+
+## Solución docente orientativa
 
 La solución siguiente es una referencia generada, no el resultado de una sesión grabada del editor. Sirve para corregir comportamiento, lectura y diseño; T2/T3 necesitan además las evidencias del alumno. Se admite otra implementación si satisface los requisitos.
 
@@ -76,7 +104,7 @@ Después muestra pruebas concretas; distingue pruebas propuestas y ejecutadas.
 
 Cambio T6 de referencia: en la versión inicial la ayuda dice «Completa los datos» después de las acciones. Pedir «mueve ayuda antes de las acciones y cambia su texto a “Título de 1 a 80 caracteres. Los datos se conservan durante esta sesión”. Conserva todos los ids». La solución final ya incorpora ese cambio. El antes/después real debe conservar la exportación del alumno, no reconstruirse a posteriori desde la solución.
 
-## 3. Archivo de referencia completo
+### Archivo de referencia completo
 
 El profesor puede guardar el contenido de este bloque como `tareas.html` y abrirlo en un navegador. Es un recurso docente reproducible, no un ejercicio de transcripción para el alumno. No realiza peticiones externas. Al recargar pierde los datos, tal como exige el alcance.
 
@@ -207,7 +235,7 @@ representarTareas();
 </html>
 ```
 
-## 4. Lectura guiada resuelta
+### Lectura guiada resuelta
 
 | Parte | Función | Qué debe explicar el alumno |
 |---|---|---|
@@ -221,7 +249,7 @@ representarTareas();
 
 La estructura inicial del alumno puede variar. En lectura se pide localizar equivalencias, no recitar estos nombres.
 
-## 5. Pruebas y resultados de referencia
+### Pruebas y resultados de referencia
 
 | Caso | Resultado esperado |
 |---|---|
@@ -238,26 +266,19 @@ La estructura inicial del alumno puede variar. En lectura se pide localizar equi
 
 El informe de verificación del paquete distingue comprobación de lógica y revisión visual. Un test de JavaScript no demuestra foco visible, lector de pantalla ni conformidad M3 integral.
 
-## 6. Instrumento de corrección por CE, sin pesos
-
-| CE | Evidencia satisfactoria | Parcial | Insuficiente |
-|---|---|---|---|
-| a | Compara herramientas y librerías y justifica encaje web | Compara solo una categoría | Enumera marcas sin análisis |
-| b | Crea documento con funciones de editor y lo entrega | Documento incompleto | Solo captura o solución copiada |
-| c | Reubica componentes mediante editor y demuestra operación | Explica sin evidencia suficiente | Solo pide un diseño a IA |
-| d | Propiedades responden a los requisitos | Algunas mal configuradas | No identifica cambios |
-| e | Explica fragmentos de su exportación y relación funcional | Identifica sin explicar | Repite texto IA sin localizarlo |
-| f | Modifica exportación, conserva versiones y verifica | Cambio sin prueba o explicación | Solo cambia mockup o código sin procedencia |
-| g | Añadir y limpiar conectados y probados | Solo una acción correcta | Acciones sin asociación operativa |
-| h | Aplicación completa ejecutable con casos esenciales correctos | Fallos delimitados | Interfaz no integrada o no ejecutable |
-
-No se asignan porcentajes ni reglas de recuperación. Se registran los logros y las ayudas recibidas. Una salida funcional de IA no sustituye la evidencia individual de comprensión.
-
-## 7. Diseño y límites
+### Diseño y límites
 
 La solución usa roles de color, jerarquía y diferenciación de acciones siguiendo la referencia M3. Emplea controles HTML con una adaptación didáctica; el selector conserva su comportamiento nativo y no se presenta como reproducción exhaustiva de todos los componentes M3. Antes de usarla como ejemplo visual definitivo se revisarán foco, estados, contraste, tipografía, tamaños y distribución en navegador. No se ha declarado una auditoría completa de M3/WCAG.
 
 No se necesita Android Studio. No hay servicios externos ni persistencia. Los scripts son ejemplos completos de salida de IA para el docente; el alumno dirige, identifica y verifica.
+
+## Preguntas de defensa
+
+1. ¿Qué diferencia existe entre la herramienta de edición y la librería utilizada?
+2. ¿Qué operación realizaste en el editor para cambiar la distribución?
+3. ¿Qué fragmento conecta el evento con la acción y cómo lo comprobaste?
+4. ¿Qué cambió en la exportación y qué evidencia demuestra que no se rompió la interfaz?
+5. ¿Qué decisión de la IA rechazaste o corregiste y por qué?
 
 ---
 

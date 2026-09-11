@@ -35,6 +35,19 @@ Prepara una release candidata web/PWA. Parte de configuraciones y scripts genera
 - Matriz canal–audiencia–versión–actualización–retirada.
 - Registro de correcciones a la salida de IA y defensa individual.
 
+## Casos de prueba mínimos
+
+| Caso | Resultado esperado |
+|---|---|
+| Compilación limpia | Produce el artefacto identificado sin archivos de trabajo ni secretos |
+| Instalación PWA | La aplicación queda instalada desde un perfil limpio |
+| Firma original | La verificación identifica el artefacto como íntegro |
+| Copia alterada | La verificación falla de forma visible |
+| Modo desatendido | Termina sin preguntas y conserva registro y código de salida |
+| Actualización | Mantiene la versión esperada y declara qué ocurre con los datos |
+| Desinstalación | Retira aplicación y caché según la política documentada |
+| Canal alternativo | Define audiencia, actualización y retirada, no solo una URL |
+
 ## Guía de corrección por criterios
 
 | CE | Satisfactorio | Insuficiente |
@@ -55,5 +68,13 @@ Prepara una release candidata web/PWA. Parte de configuraciones y scripts genera
 La versión `1.0.0-rc.1` se compila desde un bloqueo de dependencias y genera un ZIP sin secretos. La tarea del IDE y CI llaman al mismo script. El manifiesto permite instalar la PWA; Stitch muestra estados accesibles. El ZIP se firma y la copia modificada falla. CI ejecuta sin preguntas y detiene la publicación si fallan pruebas. El ciclo en perfil limpio registra instalación, actualización, desinstalación y estado de datos. Pages es canal principal, Releases conserva artefactos y ad-hoc limita el piloto; cada canal define retirada.
 
 </details>
+
+## Preguntas de defensa
+
+1. ¿Qué archivos excluiste del paquete y por qué?
+2. ¿Cómo demuestras que las dos rutas de generación producen el mismo artefacto?
+3. ¿Qué diferencia existe entre hash y firma digital?
+4. ¿Qué ocurre con los datos después de actualizar y desinstalar?
+5. ¿Por qué elegiste cada canal y cómo retirarías una versión defectuosa?
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_06_firma_canales.html">← RA7-06</a><a href="https://mosqueteroweb.github.io/damDI/RA7_matriz_contenidos_evaluacion.html">Matriz RA7</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/"><span class="unit-next-card__eyebrow">Curso completo</span><strong>Volver al índice general</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

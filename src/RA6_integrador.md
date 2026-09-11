@@ -34,7 +34,7 @@ Con Stitch, Gemini/AI Studio y el generador estático, crea y publica un sistema
 - Informe de enlaces, teclado, búsqueda y responsive.
 - Defensa individual de cinco minutos.
 
-## Casos mínimos
+## Casos de prueba mínimos
 
 | Caso | Resultado esperado |
 |---|---|
@@ -65,5 +65,13 @@ Con Stitch, Gemini/AI Studio y el generador estático, crea y publica un sistema
 El centro de ayuda se genera desde Markdown, ofrece contenidos, búsqueda e índice, y enlaza desde tres contextos. El manual de usuario se orienta a tareas; la referencia documenta controles y datos; los manuales técnicos incluyen precondiciones, verificación y recuperación. El diccionario coincide con el almacenamiento versionado. Un tutorial de informe se prueba con otra persona y registra una corrección. El informe automático de enlaces y una revisión manual de teclado confirman la publicación.
 
 </details>
+
+## Preguntas de defensa
+
+1. ¿Qué afirmación del borrador de IA tuviste que comprobar o corregir?
+2. ¿Cómo garantizas que HTML y PDF describen la misma versión?
+3. ¿Qué diferencia existe entre manual de usuario y guía de referencia?
+4. ¿Qué evidencia demuestra que la ayuda contextual conduce al tema exacto?
+5. ¿Qué cambió después de que otra persona probara el tutorial?
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA6_05_tutoriales.html">← RA6-05</a><a href="https://mosqueteroweb.github.io/damDI/RA6_matriz_contenidos_evaluacion.html">Matriz RA6</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/"><span class="unit-next-card__eyebrow">Volver al curso</span><strong>Índice general del módulo</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

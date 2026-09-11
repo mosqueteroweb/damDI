@@ -70,7 +70,7 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 - La explicación usa evidencias propias; una respuesta copiada de la IA no basta.
 - Se conserva el enfoque visual de Material Design 3 y el funcionamiento con teclado.
 
-## Corrección rápida
+### Solución orientativa
 
 | Nivel | Evidencia observable |
 |---|---|
@@ -78,7 +78,7 @@ Distingue lo que has razonado de lo que debe comprobarse en navegador.
 | En revisión | El resultado funciona, pero falta justificar la elección o demostrar el proceso. |
 | Insuficiente | Solo aporta una captura o texto de IA, no localiza el código o el comportamiento no corresponde al requisito. |
 
-## Preguntas de cierre
+## Comprobación y cierre
 
 1. ¿Qué elemento o fragmento fue decisivo?
 2. ¿Qué pidió exactamente a la IA?

@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#6750a4">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=701c851f02">
+  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
+  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
+  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
 </head>
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -14,11 +16,13 @@
     <div class="page-header__inner">
       <a class="site-brand" href="index.html">Desarrollo de Interfaces · DAM</a>
       <h1 class="project-name">RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas</h1>
+      <p class="page-position">RA1 · Unidad 1 de 13</p>
+      <p class="page-reviewed">Revisado: septiembre de 2026</p>
     </div>
   </header>
-  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><a href="RA1_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA1_integrador.html">Integrador</a></div></nav>
+  <nav class="context-nav" aria-label="Accesos del resultado de aprendizaje"><div class="context-nav__inner"><a href="index.html">Inicio</a><a href="RA1_00_guia_docente.html">Guía RA1</a><a href="RA1_matriz_contenidos_evaluacion.html">Matriz</a><a href="RA1_integrador.html">Integrador</a><button class="search-toggle" type="button" data-search-open>Buscar</button></div></nav>
   <main id="contenido" class="main-content" role="main">
-<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#1-orientaciones-docentes">1. Orientaciones docentes</a></li><li><a href="#2-contenidos-básicos-explicados">2. Contenidos básicos explicados</a></li><li><a href="#3-ra1-ej01--completar-una-tarea">3. RA1-EJ01 — Completar una tarea</a></li><li><a href="#4-ra1-pb01--enunciado-mapa-de-responsabilidades">4. RA1-PB01 — Enunciado: mapa de responsabilidades</a></li><li><a href="#5-solucionario-docente-de-pb01">5. Solucionario docente de PB01</a></li><li><a href="#6-herramientas-y-alcance-técnico">6. Herramientas y alcance técnico</a></li><li><a href="#7-fuentes-y-ampliación">7. Fuentes y ampliación</a></li></ol></details>
+<details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#1-orientaciones-docentes">1. Orientaciones docentes</a></li><li><a href="#2-contenidos-básicos-explicados">2. Contenidos básicos explicados</a></li><li><a href="#3-ra1-ej01--completar-una-tarea">3. RA1-EJ01 — Completar una tarea</a></li><li><a href="#ra1-pb01--mapa-de-responsabilidades">RA1-PB01 — Mapa de responsabilidades</a></li><li><a href="#6-herramientas-y-alcance-técnico">6. Herramientas y alcance técnico</a></li><li><a href="#7-fuentes-y-ampliación">7. Fuentes y ampliación</a></li></ol></details>
 
 <p><strong>Guía docente · DAM · Desarrollo de Interfaces · Versión 2.0</strong><br />
 <strong>Itinerario principal:</strong> aplicaciones web generadas con IA.<br />
@@ -240,7 +244,7 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 <div class="sourceCode" id="cb6"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="st">- &lt;button id=&quot;completar-tarea&quot; type=&quot;button&quot;&gt;Completar&lt;/button&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="va">+ &lt;button id=&quot;completar-tarea&quot; type=&quot;button&quot;&gt;Marcar como terminada&lt;/button&gt;</span></span></code></pre></div>
 <p>El identificador conserva la conexión con JavaScript. El alumno debe comprobar el nuevo texto y que la acción continúa funcionando. No se acepta una regeneración completa como explicación del cambio.</p>
-<h2 id="4-ra1-pb01--enunciado-mapa-de-responsabilidades">4. RA1-PB01 — Enunciado: mapa de responsabilidades</h2>
+<section class="practice-card" data-practice="RA1-PB01"><div class="practice-card__label">Práctica básica</div><h2 id="ra1-pb01--mapa-de-responsabilidades">RA1-PB01 — Mapa de responsabilidades</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>15 minutos</dd></div><div><dt>Criterios</dt><dd>RA1.e</dd></div><div><dt>Recursos</dt><dd>Stitch, Gemini, Google AI Studio, GitHub</dd></div><div><dt>Entrega solicitada</dt><dd>mapa archivo–responsabilidad–efecto y una explicación propia</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra1-pb01">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra1-pb01"><h3>Enunciado para publicar</h3>
 <p><strong>Tiempo:</strong> 15 minutos. <strong>Entrega:</strong> tabla y respuestas breves. No se solicita escribir código. El profesor entrega esta sección sin el solucionario.</p>
 <h3 id="escenario-y-salida-de-ia-para-analizar">Escenario y salida de IA para analizar</h3>
 <p>Una aplicación muestra una sala y permite reservarla. Los fragmentos siguientes son la salida ilustrativa preparada para esta actividad.</p>
@@ -278,7 +282,7 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 <li>La IA propone sustituir <code>reservarSala()</code> por <code>reservar.disabled = true</code>. ¿Por qué esa propuesta no realiza correctamente la reserva?</li>
 </ol>
 <p><strong>Transferencia al proyecto del alumno:</strong> cuando esté disponible su salida del editor web, localizará un elemento de la vista y explicará su relación con el comportamiento. Esta evidencia puede recogerse en PB03/PB04 o en el integrador; no obliga a alargar los 15 minutos de PB01.</p>
-<h2 id="5-solucionario-docente-de-pb01">5. Solucionario docente de PB01</h2>
+</div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3><details><summary>Mostrar guía de corrección</summary>
 <h3 id="51-respuestas">5.1 Respuestas</h3>
 <div class="table-scroll"><table>
 <thead>
@@ -375,7 +379,7 @@ Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code>
 <li>Si da por perdida una reserva al recargar, explicar que este ejemplo no almacena datos entre sesiones.</li>
 <li>Si memoriza extensiones, recordar que un componente generado puede reunir varias responsabilidades en un archivo.</li>
 </ul>
-<h2 id="6-herramientas-y-alcance-técnico">6. Herramientas y alcance técnico</h2>
+</details></div></section><h2 id="6-herramientas-y-alcance-técnico">6. Herramientas y alcance técnico</h2>
 <p>Stitch, Gemini y Google AI Studio son la base acordada. Se utilizará la herramienta apropiada para cada actividad; no se exige pasar por las tres en todos los ejemplos. HTML, CSS y JavaScript son la base de lectura inicial. Si la IA produce JSX o TypeScript, se explicarán las diferencias necesarias, sin convertir el módulo en otro curso de programación.</p>
 <p>Este capítulo no depende de Android ni de un SDK. La integración con un editor visual web para RA1.b/c/e/f se comprobará en el bloque correspondiente. Un prototipo generado por prompts no se etiquetará automáticamente como evidencia de operaciones visuales del editor.</p>
 <p>Los códigos son ejemplos de salida de IA y referencias docentes. Sus nombres pueden variar. La evaluación pide reconocer, explicar y comprobar, no reproducirlos de memoria.</p>
@@ -406,5 +410,17 @@ Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code>
       <span>Desarrollo de Interfaces · DAM · Módulo 0488</span>
     </footer>
   </main>
+  <dialog class="search-dialog" id="site-search" aria-labelledby="search-title">
+    <div class="search-dialog__header">
+      <div><small>Buscador docente</small><h2 id="search-title">Buscar en el curso</h2></div>
+      <button class="search-close" type="button" data-search-close aria-label="Cerrar buscador">×</button>
+    </div>
+    <label class="search-field">Concepto, criterio, herramienta o práctica
+      <input type="search" id="site-search-input" autocomplete="off" placeholder="Ej.: RA4.g, accesibilidad, PB03…">
+    </label>
+    <p class="search-status" id="site-search-status" aria-live="polite">Escribe al menos dos caracteres.</p>
+    <ol class="search-results" id="site-search-results"></ol>
+  </dialog>
+  <div class="copy-status" id="copy-status" aria-live="polite"></div>
 </body>
 </html>
