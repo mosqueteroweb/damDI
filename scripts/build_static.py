@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import html
+import hashlib
 import re
 import subprocess
 from pathlib import Path
@@ -174,7 +175,7 @@ def context_navigation(output_name: str) -> str:
     )
 
 
-def document(title: str, body: str, css_class: str, output_name: str) -> str:
+def document(title: str, body: str, css_class: str, output_name: str, style_version: str) -> str:
     safe_title = html.escape(title)
     safe_description = html.escape(SITE_DESCRIPTION)
     theme_color = THEME_COLORS.get(css_class, "#6750a4")
@@ -195,7 +196,7 @@ def document(title: str, body: str, css_class: str, output_name: str) -> str:
   <meta name="theme-color" content="{theme_color}">
   <meta name="description" content="{safe_description}">
   <title>{safe_title} · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v={style_version}">
 </head>
 <body class="{css_class}">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -220,12 +221,19 @@ def main() -> None:
     sources = sorted(SOURCE.glob("*.md"))
     if not sources:
         raise SystemExit("No se han encontrado fuentes Markdown en src/")
+    style_version = hashlib.sha256((ROOT / "assets/css/style.css").read_bytes()).hexdigest()[:10]
     for source in sources:
         metadata, markdown = split_front_matter(source.read_text(encoding="utf-8"))
         output_name = "index.html" if source.name == "index.md" else source.with_suffix(".html").name
         title = metadata.get("title") or plain_heading(markdown, source.stem)
         (ROOT / output_name).write_text(
-            document(title, prepare_body(markdown, output_name), ra_class(source.name), output_name),
+            document(
+                title,
+                prepare_body(markdown, output_name),
+                ra_class(source.name),
+                output_name,
+                style_version,
+            ),
             encoding="utf-8",
         )
     print(f"Generadas {len(sources)} páginas HTML estáticas.")
