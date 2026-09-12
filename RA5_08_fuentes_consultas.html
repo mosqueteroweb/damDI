@@ -28,6 +28,7 @@
 <p>Conectar un informe a JSON, CSV u hoja tabular, validar el esquema y ejecutar una consulta reproducible antes de representar resultados.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La fuente aporta registros; la consulta selecciona, filtra, agrupa u ordena; la transformación adapta tipos; la vista presenta. Separar estas fases permite cambiar el gráfico sin alterar la pregunta. Deben documentarse origen, campos, tipos, actualización y tratamiento de errores.</p>
+<figure class="concept-figure"><img src="assets/img/ra5/ra5-08-pipeline.webp" alt="Pipeline desde fuentes JSON o CSV hasta tabla y gráfico: validar el esquema, filtrar y agrupar, convertir tipos y controlar estados de carga, error y vacío." loading="lazy" width="1672" height="940"><figcaption>Normalizar la fuente antes de consultar permite conservar la misma pregunta y obtener vistas coherentes.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">loadTasks</span>() {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">&#39;./data/tareas.json&#39;</span>)<span class="op">;</span></span>

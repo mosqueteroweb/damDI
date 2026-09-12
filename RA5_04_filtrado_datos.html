@@ -28,6 +28,7 @@
 <p>Definir filtros comprensibles, aplicarlos sobre una fuente y demostrar qué filas entran o salen del informe.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Un filtro reduce el conjunto según condiciones. Debe mostrar valor activo, permitir limpiar, actualizar todos los componentes y diferenciar cero resultados de un error. Los filtros combinados han de documentar si usan <strong>Y</strong> —se cumplen todos— u <strong>O</strong> —basta uno—.</p>
+<figure class="concept-figure"><img src="assets/img/ra5/ra5-04-filtros.webp" alt="Doce registros pasan por filtros combinados de módulo, estado y fecha; una única colección de ocho registros alimenta el resumen, el gráfico y la tabla, con estados distintos para vacío y error." loading="lazy" width="1672" height="941"><figcaption>Aplicar todos los filtros sobre una sola colección mantiene sincronizados resumen, gráfico y tabla.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Salida de IA para filtrar por módulo y estado:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> visible <span class="op">=</span> tasks<span class="op">.</span><span class="fu">filter</span>(task <span class="kw">=&gt;</span></span>
