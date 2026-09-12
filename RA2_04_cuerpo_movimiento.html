@@ -28,6 +28,7 @@
 <p>Convertir puntos corporales detectados en gestos estables que activen acciones, con umbral, tiempo de permanencia y alternativa manual.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>MediaPipe Pose Landmarker devuelve puntos de referencia del cuerpo; Hand Landmarker devuelve puntos de la mano. Una aplicación no debe reaccionar a un fotograma aislado: necesita confianza mínima, varias observaciones coherentes o permanencia, zona segura y tiempo de espera para impedir repeticiones.</p>
+<figure class="concept-figure"><img src="assets/img/ra2/ra2-04-pose.webp" alt="La muñeca se considera levantada cuando está por encima del hombro durante 800 milisegundos; entonces ocurre una acción seguida de dos segundos de espera, mientras un caso dudoso no actúa." loading="lazy" width="1672" height="941"><figcaption>La permanencia evita reaccionar a un fotograma aislado y el tiempo de espera impide repeticiones involuntarias.</figcaption></figure>
 <p>La cámara se inicia mediante una acción clara y puede detenerse. Las imágenes de evaluación pueden sustituirse por vídeos autorizados o material sintético.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Regla generada para «mano derecha levantada»:</p>
