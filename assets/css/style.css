@@ -175,6 +175,9 @@ pre code { padding: 0; background: transparent; }
 .unit-next-card__arrow { position: absolute; right: 1.25rem; top: 50%; translate: 0 -50%; font-size: 1.6rem; }
 
 .site-footer { display: flex; margin-top: 2.5rem; padding-top: 1.25rem; gap: 1rem; justify-content: space-between; border-top: 1px solid var(--di-border); color: var(--di-muted); font-size: .9rem; }
+.concept-figure { margin: 1.5rem 0 2rem; }
+.concept-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--di-border); border-radius: var(--di-radius-large); background: var(--di-surface-raised); box-shadow: var(--di-shadow-small); }
+.concept-figure figcaption { margin-top: .65rem; color: var(--di-muted); font-size: .9rem; line-height: 1.45; }
 .back-to-top { font-weight: 650; text-decoration: none; }
 
 @media (max-width: 760px) {
