@@ -198,6 +198,13 @@ pre code { padding: 0; background: transparent; }
   .site-footer { align-items: flex-start; flex-direction: column; }
 }
 
+@media (max-width: 600px) {
+  .concept-figure { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+  .concept-figure::before { position: sticky; left: 0; display: block; width: calc(100vw - 2rem); padding: .35rem 0; color: var(--di-muted); content: "Desliza horizontalmente para leer toda la imagen"; font-size: .78rem; }
+  .concept-figure img { width: 44rem; max-width: none; }
+  .concept-figure figcaption { width: calc(100vw - 2rem); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .ra-card--available, .unit-next-card { transition: none; }
