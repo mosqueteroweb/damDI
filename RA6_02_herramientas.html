@@ -28,6 +28,7 @@
 <p>Identificar sistemas de ayuda y seleccionar un flujo reproducible de fuente, generación, validación y publicación.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Se comparan editor visual, generador estático y procesador documental. Stitch diseña; Gemini/AI Studio redacta y transforma; Markdown mantiene la fuente; Pandoc genera HTML. MkDocs se estudia como opción con navegación y búsqueda, pero el curso conserva su generador actual para no duplicar infraestructura.</p>
+<figure class="concept-figure"><img src="assets/img/ra6/ra6-02-cadena.webp" alt="Cadena reproducible desde requisitos, diseño y borrador revisado hasta una fuente Markdown, generación con Pandoc, validación y salidas HTML y PDF; las correcciones vuelven a la fuente." loading="lazy" width="1672" height="941"><figcaption>Un flujo reproducible corrige la fuente Markdown y regenera todas las salidas coherentemente.</figcaption></figure>
 <h2 id="ra6-ej02--ejemplo-resuelto">RA6-EJ02 · Ejemplo resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> scripts/build_static.py</span></code></pre></div>
 <p>El comando recorre <code>src/</code>, convierte Markdown y conserva nombres. El alumnado localiza entrada, salida y fallo; no memoriza el script.</p>
