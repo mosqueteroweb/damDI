@@ -28,6 +28,7 @@
 <p>Distinguir componente, instancia y aplicación; reconocer encapsulación, reutilización, composición y contrato público.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Un componente visual reúne estructura, aspecto y comportamiento con un propósito concreto. Puede instanciarse varias veces, recibe datos por una interfaz pública y comunica cambios sin conocer toda la aplicación. Un buen componente tiene responsabilidad acotada, estados previsibles, accesibilidad y dependencias explícitas.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-01-anatomia.webp" alt="El interior de task-card contiene estructura, estilo y comportamiento; atributos, propiedades, eventos y métodos forman su frontera con la aplicación anfitriona." loading="lazy" width="1672" height="941"><figcaption>El contrato público permite reutilizar el componente sin depender de sus detalles internos.</figcaption></figure>
 <p>En el gestor, <code>task-card</code> representa una tarea; la aplicación decide qué lista mostrar y qué hacer al recibir una acción. La tarjeta no debería guardar por sí sola toda la colección.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Prompt para Gemini o AI Studio: «Genera un Web Component <code>task-card</code> sin dependencias. Debe mostrar título y estado, usar HTML semántico, admitir varias instancias y explicar las cinco líneas que forman su interfaz pública».</p>

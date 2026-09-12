@@ -28,6 +28,7 @@
 <p>Separar estado visual y datos persistentes, restaurar una configuración y decidir quién es responsable de guardarla.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Persistir significa conservar información entre ejecuciones. Un componente puede serializar una preferencia propia, pero los datos de negocio suelen pertenecer a la aplicación. Para el prototipo se usa <code>localStorage</code>: es visible y no requiere servidor, aunque no sirve para datos sensibles, sincronización ni grandes volúmenes.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-04-persistencia.webp" alt="El componente conserva estado visual, la aplicación gestiona la colección y el almacenamiento local guarda JSON versionado, con control de errores y valores predeterminados al restaurar." loading="lazy" width="1672" height="941"><figcaption>Separar responsabilidades permite guardar y restaurar sin convertir el componente en dueño de todos los datos.</figcaption></figure>
 <p>El flujo seguro es: validar → convertir a JSON → guardar con clave versionada → leer → controlar errores → aplicar valores por defecto.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> KEY <span class="op">=</span> <span class="st">&#39;damdi.task-list.v1&#39;</span><span class="op">;</span></span>
