@@ -28,6 +28,7 @@
 <p>Elegir qué automatizar, construir una suite mínima de regresión y documentar resultados repetibles.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La prueba manual favorece exploración, percepción y casos nuevos; la automática repite comprobaciones estables con rapidez. La regresión protege comportamientos que funcionaban antes de un cambio. Una suite pequeña debe ser determinista, aislar datos y producir mensajes útiles.</p>
+<figure class="concept-figure"><img src="assets/img/ra8/ra8-06-regresion.webp" alt="Árbol para elegir prueba manual, automática o regresión automática y ciclo común de reproducir el fallo, corregir, pasar la prueba, conservarla y ejecutarla tras cada cambio." loading="lazy" width="1672" height="941"><figcaption>Los defectos corregidos se convierten en pruebas de regresión estables, aisladas y con resultados comprensibles.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>test<span class="op">.</span><span class="fu">beforeEach</span>(<span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">&#39;/tareas.html&#39;</span>)<span class="op">;</span></span>
