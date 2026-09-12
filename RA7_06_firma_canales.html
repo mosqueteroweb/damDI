@@ -28,6 +28,7 @@
 <p>Demostrar origen e integridad del artefacto y seleccionar canales según audiencia, actualización y riesgo.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Un hash detecta cambios, pero no identifica por sí solo al autor. La firma vincula artefacto e identidad mediante una clave o identidad verificable. La clave privada nunca se copia a prompts ni al repositorio. La verificación debe fallar al alterar el paquete. Pages sirve la web; Releases distribuye versiones; una store añade revisión y actualización; ad-hoc limita destinatarios; correo es frágil para binarios y versiones.</p>
+<figure class="concept-figure"><img src="assets/img/ra7/ra7-06-firma.webp" alt="El hash detecta cambios, la firma vincula artefacto e identidad y HTTPS protege el transporte; una copia alterada falla al verificarse. Se comparan Pages, Releases, store o ad-hoc y correo." loading="lazy" width="1672" height="941"><figcaption>Hash, firma y HTTPS cubren riesgos diferentes; el canal se elige según el artefacto, la audiencia y las actualizaciones.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <pre class="text"><code>artefacto → SHA-256 → firma separada → canal
 receptor → descarga → verifica firma → instala</code></pre>
