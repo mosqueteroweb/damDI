@@ -36,11 +36,10 @@ El itinerario obligatorio se centra en aplicaciones web, SPA y PWA creadas con I
 - Conservada la imagen del anexo Android porque pertenece expresamente a una ampliación voluntaria.
 - Las nuevas imágenes incluyen texto alternativo y pie coherentes con el contenido revisado.
 
-## Comprobaciones finales pendientes antes de publicar
+## Comprobaciones finales realizadas
 
-1. Regenerar o sincronizar los HTML sin perder las figuras ya integradas.
-2. Comprobar que cada HTML coincide con su Markdown revisado.
-3. Ejecutar la auditoría de enlaces, imágenes, navegación y responsive.
-4. Revisar visualmente las páginas RA7-03 y RA7-05 con las imágenes nuevas.
-5. Publicar solo después de validar el diff final.
-
+1. HTML regenerados sin perder las 66 figuras integradas.
+2. Fuentes Markdown y páginas publicadas sincronizadas.
+3. Enlaces e imágenes locales comprobados: cero referencias rotas.
+4. Páginas RA7-03 y RA7-05 revisadas con las imágenes nuevas y sus textos alternativos.
+5. Búsqueda final completada sin referencias a terminales, comandos o Android Studio en el itinerario obligatorio.
