@@ -1,0 +1,4440 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Versión comparativa en MkDocs del material docente del módulo 0488.">
+      
+      
+      
+        <link rel="canonical" href="https://mosqueteroweb.github.io/damDI/mkdocs-preview/RA1_01_patrones_arquitectura.html">
+      
+      
+        <link rel="prev" href="RA1_00_guia_docente.html">
+      
+      
+        <link rel="next" href="RA1_02_librerias_componentes.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas - Desarrollo de Interfaces · Vista MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/preview.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ra1-01-patrones-de-arquitectura-de-las-aplicaciones-graficas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Desarrollo de Interfaces · Vista MkDocs" class="md-header__button md-logo" aria-label="Desarrollo de Interfaces · Vista MkDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desarrollo de Interfaces · Vista MkDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Desarrollo de Interfaces · Vista MkDocs" class="md-nav__button md-logo" aria-label="Desarrollo de Interfaces · Vista MkDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Desarrollo de Interfaces · Vista MkDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="RA1_01_patrones_arquitectura.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-orientaciones-docentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Orientaciones docentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Orientaciones docentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-observables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos observables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-con-la-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con la evaluación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-contenidos-basicos-explicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Contenidos básicos explicados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Contenidos básicos explicados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arquitectura-organizar-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Arquitectura: organizar responsabilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-vista-estructura-y-presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Vista: estructura y presentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-modelo-datos-y-reglas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Modelo: datos y reglas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-coordinacion-e-interaccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Coordinación e interacción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mvc-y-mvvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 MVC y MVVM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-m3-y-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 M3 y arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ra1-ej01-completar-una-tarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. RA1-EJ01 — Completar una tarea
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. RA1-EJ01 — Completar una tarea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-situacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Situación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-prompt-orientativo-para-gemini-o-ai-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Prompt orientativo para Gemini o AI Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-salida-ilustrativa-estructura-de-la-vista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Salida ilustrativa: estructura de la vista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-salida-ilustrativa-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Salida ilustrativa: modelo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-salida-ilustrativa-representacion-y-coordinacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Salida ilustrativa: representación y coordinación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-recorrido-y-resultado-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Recorrido y resultado resueltos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-cambio-solicitado-a-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Cambio solicitado a la IA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ra1-pb01-mapa-de-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA1-PB01 — Mapa de responsabilidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RA1-PB01 — Mapa de responsabilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escenario-y-salida-de-ia-para-analizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escenario y salida de IA para analizar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución orientativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Respuestas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-indicadores-de-correccion-sin-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Indicadores de corrección, sin pesos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-ayudas-y-errores-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Ayudas y errores frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-herramientas-y-alcance-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Herramientas y alcance técnico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Herramientas y alcance técnico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-realizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación realizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-fuentes-y-ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Fuentes y ampliación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_02_librerias_componentes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-02 · Librerías de componentes nativas y multiplataforma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_03_herramientas_edicion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-03 · Herramientas propietarias y libres de edición de interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_04_lenguajes_descriptivos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-04 · Lenguajes descriptivos para definir interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_05_componentes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-05 · Componentes: características y campo de aplicación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_06_enlace_datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-06 · Enlace de componentes a orígenes de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_07_acciones_eventos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-07 · Asociación de acciones a eventos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_08_edicion_codigo_generado.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-08 · Edición del código generado por la herramienta de diseño
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_09_clases.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-09 · Clases e instancias en una interfaz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_10_propiedades.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-10 · Propiedades de los componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_11_metodos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-11 · Métodos de la interfaz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_12_eventos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-12 · Eventos de la interfaz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_13_escuchadores.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA1-13 · Escuchadores de eventos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_anexo_android_arquitectura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ampliación voluntaria · Android
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA1_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_01_aprendizaje_automatico.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2-01 · Aprendizaje automático y entrenamiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_02_interfaces_naturales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2-02 · Interfaces naturales y tipos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_03_voz_habla.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2-03 · Voz, habla y reconocimiento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_04_cuerpo_movimiento.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2-04 · Partes y movimientos del cuerpo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_05_realidad_aumentada.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA2-05 · Realidad aumentada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA2_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_01_concepto_componentes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-01 · Concepto y características
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_02_propiedades_metodos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-02 · Propiedades, atributos y métodos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_03_eventos_acciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-03 · Eventos y acciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_04_persistencia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-04 · Persistencia del componente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_05_herramientas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-05 · Herramientas de diseño y desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_06_pruebas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-06 · Pruebas de componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_07_documentacion_empaquetado.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA3-07 · Documentación y empaquetado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA3_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_01_usabilidad_accesibilidad.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-01 · Usabilidad, accesibilidad y estándares
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_02_medicion_herramientas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-02 · Medidas y herramientas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_03_wireframes_mockups.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-03 · Wireframes y mockups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_04_estructura_navegacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-04 · Estructura y navegación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_05_aspecto_visual.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-05 · Aspecto visual y legibilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_06_elementos_interactivos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-06 · Elementos interactivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_07_secuencia_control.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA4-07 · Secuencia de control y mensajes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA4_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_01_informes_incrustados.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-01 · Informes incrustados y no incrustados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_02_herramientas_graficas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-02 · Herramientas gráficas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_03_estructura_secciones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-03 · Estructura y secciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_04_filtrado_datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-04 · Filtrado de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_05_recuentos_totales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-05 · Numeración, recuentos y totales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_06_graficos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-06 · Gráficos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_07_librerias_codigo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-07 · Librerías y código generado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_08_fuentes_consultas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA5-08 · Fuentes de datos y consultas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA5_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA6
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA6
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_01_formatos_ayuda.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA6-01 · Ficheros de ayuda y formatos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_02_herramientas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA6-02 · Herramientas de generación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_03_navegacion_contexto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA6-03 · Navegación, búsqueda y ayuda contextual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_04_manuales_datos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA6-04 · Manuales y datos persistentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_05_tutoriales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA6-05 · Elaboración de tutoriales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA6_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA7
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_01_componentes_empaquetado.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7-01 · Componentes y empaquetado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_02_instaladores_autoinstalables.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7-02 · Instaladores y paquetes autoinstalables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_03_herramientas_paquetes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7-03 · Herramientas para crear paquetes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_04_personalizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7-04 · Personalización de la instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_05_ciclo_instalacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7-05 · Instalación y desinstalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_06_firma_canales.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA7-06 · Firma digital y canales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA7_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RA8
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_00_guia_docente.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía docente
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_01_estrategia.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8-01 · Objetivo, límites y estrategia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_02_integracion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8-02 · Pruebas de integración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_03_sistema_volumen_estres.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8-03 · Sistema, volumen y estrés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_04_recursos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8-04 · Uso de recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_05_seguridad.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8-05 · Pruebas de seguridad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_06_manual_automatica_regresion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RA8-06 · Pruebas manuales, automáticas y regresión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_integrador.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicio integrador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RA8_matriz_contenidos_evaluacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matriz de contenidos y evaluación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-orientaciones-docentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Orientaciones docentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Orientaciones docentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-observables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos observables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-con-la-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con la evaluación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-contenidos-basicos-explicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Contenidos básicos explicados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Contenidos básicos explicados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arquitectura-organizar-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Arquitectura: organizar responsabilidades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-vista-estructura-y-presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Vista: estructura y presentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-modelo-datos-y-reglas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Modelo: datos y reglas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-coordinacion-e-interaccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Coordinación e interacción
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mvc-y-mvvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 MVC y MVVM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-m3-y-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 M3 y arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ra1-ej01-completar-una-tarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. RA1-EJ01 — Completar una tarea
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. RA1-EJ01 — Completar una tarea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-situacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Situación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-prompt-orientativo-para-gemini-o-ai-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Prompt orientativo para Gemini o AI Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-salida-ilustrativa-estructura-de-la-vista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Salida ilustrativa: estructura de la vista
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-salida-ilustrativa-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Salida ilustrativa: modelo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-salida-ilustrativa-representacion-y-coordinacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Salida ilustrativa: representación y coordinación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-recorrido-y-resultado-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Recorrido y resultado resueltos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-cambio-solicitado-a-la-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Cambio solicitado a la IA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ra1-pb01-mapa-de-responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA1-PB01 — Mapa de responsabilidades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RA1-PB01 — Mapa de responsabilidades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escenario-y-salida-de-ia-para-analizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escenario y salida de IA para analizar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tareas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solucion-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solución orientativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Respuestas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-indicadores-de-correccion-sin-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Indicadores de corrección, sin pesos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-ayudas-y-errores-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Ayudas y errores frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-herramientas-y-alcance-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Herramientas y alcance técnico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Herramientas y alcance técnico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-realizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobación realizada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-fuentes-y-ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Fuentes y ampliación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ra1-01-patrones-de-arquitectura-de-las-aplicaciones-graficas">RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas<a class="headerlink" href="#ra1-01-patrones-de-arquitectura-de-las-aplicaciones-graficas" title="Permanent link">&para;</a></h1>
+<p><strong>Guía docente · DAM · Desarrollo de Interfaces · Versión 2.0</strong><br />
+<strong>Itinerario principal:</strong> aplicaciones web generadas con IA.<br />
+<strong>Diseño:</strong> <a href="https://m3.material.io/">Material Design 3</a> durante todo el curso.<br />
+<strong>Actividades:</strong> RA1-EJ01 y RA1-PB01.<br />
+<strong>Tiempo previsto:</strong> 35 minutos de explicación y ejemplo, 15 de práctica y 10 de corrección, incluidos en las 18 horas de RA1.<br />
+<strong>Ampliación voluntaria:</strong> <a href="RA1_anexo_android_arquitectura.html">Android, XML y Java</a>, fuera de las horas y requisitos obligatorios.</p>
+<h2 id="1-orientaciones-docentes">1. Orientaciones docentes<a class="headerlink" href="#1-orientaciones-docentes" title="Permanent link">&para;</a></h2>
+<p>El alumnado conoce Java y comienza desde cero en interfaces. Este bloque enseña a reconocer responsabilidades en una aplicación: presentación, datos y coordinación. No se pretende que escriba código ni implemente un patrón desde cero.</p>
+<p>Los fragmentos son ejemplos didácticos de salida de IA preparados para lectura. No reproducen una sesión real de Stitch ni se afirma que hayan sido exportados desde un editor visual. El alumnado aprenderá a localizar las mismas responsabilidades en su propia salida, aunque cambien los nombres o la distribución de archivos.</p>
+<h3 id="objetivos-observables">Objetivos observables<a class="headerlink" href="#objetivos-observables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Identificar estructura visual, estilos, datos y respuesta a una interacción.</li>
+<li>Distinguir el estado real de la aplicación de lo que muestra la pantalla.</li>
+<li>Explicar qué parte necesita cambiar ante un requisito.</li>
+<li>Pedir a la IA una modificación delimitada y revisar su efecto.</li>
+<li>Reconocer las ideas básicas de MVC y MVVM sin memorizar sus implementaciones.</li>
+</ul>
+<h3 id="relacion-con-la-evaluacion">Relación con la evaluación<a class="headerlink" href="#relacion-con-la-evaluacion" title="Permanent link">&para;</a></h3>
+<p>PB01 aporta evidencia de comprensión a RA1.e. Para demostrar específicamente el análisis del código <strong>generado por un editor visual</strong>, se incluirá una pequeña transferencia a la salida real del editor web que se utilice en RA1. La lectura de los fragmentos por sí sola no demuestra esa procedencia. Las prácticas de editor y el integrador completarán dicha evidencia. Android no es necesario para ello.</p>
+<figure class="concept-figure"><img src="../assets/img/ra1/ra1-01-arquitectura.webp" alt="Una pulsación en Completar pasa de la vista a la coordinación, modifica el dato y después actualiza la vista." loading="lazy" width="1672" height="941"><figcaption>La vista muestra el estado, pero la coordinación debe modificar primero el dato que la aplicación considera verdadero.</figcaption></figure>
+
+<h2 id="2-contenidos-basicos-explicados">2. Contenidos básicos explicados<a class="headerlink" href="#2-contenidos-basicos-explicados" title="Permanent link">&para;</a></h2>
+<h3 id="21-arquitectura-organizar-responsabilidades">2.1 Arquitectura: organizar responsabilidades<a class="headerlink" href="#21-arquitectura-organizar-responsabilidades" title="Permanent link">&para;</a></h3>
+<p>La arquitectura describe cómo se reparten las responsabilidades y cómo se relacionan. Una aplicación puede verse bien y tener sus responsabilidades mezcladas. Por ejemplo, el texto «Completada» podría aparecer en pantalla aunque el dato de la tarea siguiera indicando que está pendiente.</p>
+<p>Para examinar una salida de IA planteamos tres preguntas:</p>
+<ol>
+<li>¿Qué describe la pantalla?</li>
+<li>¿Dónde está la información que la aplicación considera verdadera?</li>
+<li>¿Qué conecta la acción del usuario con el cambio de esa información y su representación?</li>
+</ol>
+<p>No se reconoce una arquitectura contando archivos. Una solución en un solo archivo puede separar responsabilidades con funciones; una solución con muchos archivos puede mezclarlas.</p>
+<h3 id="22-vista-estructura-y-presentacion">2.2 Vista: estructura y presentación<a class="headerlink" href="#22-vista-estructura-y-presentacion" title="Permanent link">&para;</a></h3>
+<p>En la web, HTML describe elementos como títulos, campos y botones. CSS define aspectos de presentación como color, tamaño y distribución. JavaScript también puede crear o actualizar elementos de la vista.</p>
+<p>El navegador representa el documento mediante el DOM: una estructura de objetos que el código puede consultar y modificar. En este capítulo basta con entender que una instrucción puede localizar un botón por su identificador y cambiar una de sus propiedades.</p>
+<p>HTML y CSS pertenecen aquí a la vista, pero «vista» no significa necesariamente un único archivo HTML. Una herramienta puede generar componentes que reúnen estructura y lógica de presentación.</p>
+<h3 id="23-modelo-datos-y-reglas">2.3 Modelo: datos y reglas<a class="headerlink" href="#23-modelo-datos-y-reglas" title="Permanent link">&para;</a></h3>
+<p>El modelo representa información con significado para la aplicación: título de una tarea y si está completada. Puede incluir operaciones que modifican esa información.</p>
+<p>No hace falta una base de datos para tener un modelo. En nuestros ejemplos los datos viven en memoria y se pierden al recargar la página. Persistencia y modelo son conceptos distintos.</p>
+<p>En Java el alumnado ya conoce objetos y atributos. En JavaScript encontrará objetos con propiedades. Aunque ambos lenguajes comparten algunas formas de escritura, JavaScript no es una versión de Java: se explicará solamente la sintaxis necesaria para leer cada fragmento.</p>
+<h3 id="24-coordinacion-e-interaccion">2.4 Coordinación e interacción<a class="headerlink" href="#24-coordinacion-e-interaccion" title="Permanent link">&para;</a></h3>
+<p>Un evento representa algo que ocurre, como activar un botón. Un escuchador registra qué función debe responder. La coordinación solicita un cambio al modelo y actualiza la vista.</p>
+<p>En el ejemplo utilizaremos <code>addEventListener</code> para asociar una respuesta a <code>click</code>. No ejecuta la acción al registrar el escuchador: establece qué debe ocurrir cuando llegue el evento. <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Referencia de eventos en MDN</a>.</p>
+<h3 id="25-mvc-y-mvvm">2.5 MVC y MVVM<a class="headerlink" href="#25-mvc-y-mvvm" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Responsabilidad</th>
+<th>MVC</th>
+<th>MVVM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datos y reglas</td>
+<td>Modelo.</td>
+<td>Modelo y servicios o capas de datos relacionados.</td>
+</tr>
+<tr>
+<td>Representación</td>
+<td>Vista.</td>
+<td>Vista.</td>
+</tr>
+<tr>
+<td>Coordinación de interacciones</td>
+<td>Controlador.</td>
+<td>Operaciones y estado de presentación expuestos por el ViewModel.</td>
+</tr>
+<tr>
+<td>Relación con la pantalla</td>
+<td>El controlador coordina cambios en el modelo y la representación, según la implementación.</td>
+<td>La vista consume u observa el estado de presentación y envía acciones.</td>
+</tr>
+<tr>
+<td>Pregunta de lectura</td>
+<td>¿Quién recibe la interacción y coordina la respuesta?</td>
+<td>¿Dónde está el estado que necesita representar la vista?</td>
+</tr>
+</tbody>
+</table>
+<p>Son modelos de organización, no reglas que permitan etiquetar automáticamente una aplicación. Usar React no implica por sí solo MVVM; llamar <code>Controlador</code> a un archivo tampoco demuestra MVC.</p>
+<p>Nuestro ejemplo ilustra una separación sencilla inspirada en MVC. No desarrolla un framework ni un ViewModel: estos últimos se comparan conceptualmente, sin exigir una segunda implementación.</p>
+<h3 id="26-m3-y-arquitectura">2.6 M3 y arquitectura<a class="headerlink" href="#26-m3-y-arquitectura" title="Permanent link">&para;</a></h3>
+<p><a href="https://m3.material.io/">M3</a> es la referencia de diseño del curso. Las librerías implementan decisiones visuales; su documentación no sustituye las pautas de M3.</p>
+<p>En este bloque interesa reconocer que color, tipografía y estados visuales pertenecen a la presentación. Cambiar el color principal no debería alterar los datos de la tarea. Marcar una tarea como completada, en cambio, requiere modificar el estado y representarlo.</p>
+<p>Los fragmentos siguientes omiten estilos para concentrar la lectura en la arquitectura. No son una pantalla M3 completa ni permiten certificar su conformidad. En la aplicación generada se revisarán el botón, la jerarquía de texto, los roles de color y los estados de interacción usando M3.</p>
+<h2 id="3-ra1-ej01-completar-una-tarea">3. RA1-EJ01 — Completar una tarea<a class="headerlink" href="#3-ra1-ej01-completar-una-tarea" title="Permanent link">&para;</a></h2>
+<h3 id="31-situacion">3.1 Situación<a class="headerlink" href="#31-situacion" title="Permanent link">&para;</a></h3>
+<p>La aplicación muestra el título de una tarea, su estado y un botón «Completar». Al activarlo, cambia el estado a completada, se actualiza el texto y el botón queda deshabilitado.</p>
+<p>El profesor presenta la salida preparada, señala las responsabilidades y pide al alumnado que prediga el recorrido antes de explicarlo.</p>
+<h3 id="32-prompt-orientativo-para-gemini-o-ai-studio">3.2 Prompt orientativo para Gemini o AI Studio<a class="headerlink" href="#32-prompt-orientativo-para-gemini-o-ai-studio" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Prepara una aplicación web sencilla para mostrar y completar una tarea.
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>El alumnado sabe Java, pero está aprendiendo a interpretar interfaces web.
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Usa Material Design 3 (https://m3.material.io/) como referencia visual.
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Separa estructura, estilos, datos y coordinación con nombres descriptivos.
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>La tarea empieza pendiente; al completar cambia el dato, el mensaje y el botón.
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Sin servidor, autenticación ni persistencia. No añadas funcionalidades.
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Explica los fragmentos relevantes y la relación con lo que ve el usuario.
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Indica qué archivos has generado y cómo comprobar el comportamiento.
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>No afirmes que se ha probado si no lo has ejecutado.
+</code></pre></div>
+<p>Si la herramienta utiliza un framework, se pedirá que señale las responsabilidades equivalentes. Para la explicación inicial se utiliza JavaScript sencillo, evitando que la sintaxis del framework oculte el concepto.</p>
+<h3 id="33-salida-ilustrativa-estructura-de-la-vista">3.3 Salida ilustrativa: estructura de la vista<a class="headerlink" href="#33-salida-ilustrativa-estructura-de-la-vista" title="Permanent link">&para;</a></h3>
+<p>Extracto de <code>index.html</code>. El código de interacción se ejecutará después de que existan estos elementos, por ejemplo mediante un script con <code>defer</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">section</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"titulo-tarea"</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">"titulo-tarea"</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"estado-tarea"</span> <span class="na">role</span><span class="o">=</span><span class="s">"status"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"completar-tarea"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span><span class="p">&gt;</span>Completar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Qué identificar:</strong></p>
+<ul>
+<li><code>h1</code> y <code>p</code> reservan lugares para título y estado.</li>
+<li>Los valores de <code>id</code> permiten localizar los elementos.</li>
+<li>El botón es un control nativo activable por teclado. No se sustituye por un texto con apariencia de botón.</li>
+<li><code>role="status"</code> identifica un mensaje de estado; su comportamiento con tecnologías de apoyo deberá comprobarse en la aplicación.</li>
+<li>El título de la tarea no está escrito dentro del HTML: llega de los datos.</li>
+</ul>
+<h3 id="34-salida-ilustrativa-modelo">3.4 Salida ilustrativa: modelo<a class="headerlink" href="#34-salida-ilustrativa-modelo" title="Permanent link">&para;</a></h3>
+<p>Extracto de <code>app.js</code>, primera parte:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tarea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">"Preparar exposición"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nx">completada</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">};</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kd">function</span><span class="w"> </span><span class="nx">completarTarea</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</code></pre></div>
+<p><code>tarea</code> referencia un objeto. <code>const</code> impide reasignar esa referencia, pero no impide modificar sus propiedades. <code>completada</code> es el dato del estado; no es el texto mostrado al usuario.</p>
+<p>La función no necesita conocer el botón. Esta separación permite cambiar la presentación sin cambiar la operación del modelo.</p>
+<h3 id="35-salida-ilustrativa-representacion-y-coordinacion">3.5 Salida ilustrativa: representación y coordinación<a class="headerlink" href="#35-salida-ilustrativa-representacion-y-coordinacion" title="Permanent link">&para;</a></h3>
+<p>Extracto de <code>app.js</code>, a continuación del anterior:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">titulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#titulo-tarea"</span><span class="p">);</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#estado-tarea"</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">boton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#completar-tarea"</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarTarea</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nx">titulo</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tarea</span><span class="p">.</span><span class="nx">titulo</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nx">estado</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completada</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"Completada"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"Pendiente"</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nx">boton</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completada</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nx">boton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nx">completarTarea</span><span class="p">();</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="nx">mostrarTarea</span><span class="p">();</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">});</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nx">mostrarTarea</span><span class="p">();</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Fragmento</th>
+<th>Lectura en lenguaje corriente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>querySelector("#...")</code></td>
+<td>Localiza un elemento por su identificador.</td>
+</tr>
+<tr>
+<td><code>textContent = ...</code></td>
+<td>Asigna el texto que debe mostrar.</td>
+</tr>
+<tr>
+<td><code>condicion ? A : B</code></td>
+<td>Elige A si la condición es verdadera y B si es falsa.</td>
+</tr>
+<tr>
+<td><code>boton.disabled</code></td>
+<td>Controla si el botón está deshabilitado.</td>
+</tr>
+<tr>
+<td><code>() =&gt; { ... }</code></td>
+<td>Función que responderá al evento.</td>
+</tr>
+<tr>
+<td>Última llamada a <code>mostrarTarea()</code></td>
+<td>Representa el estado inicial antes de pulsar.</td>
+</tr>
+</tbody>
+</table>
+<p>El bloque de <code>mostrarTarea</code> se ocupa de presentación. El escuchador coordina operación y actualización. Que ambos estén en <code>app.js</code> no elimina esa distinción.</p>
+<h3 id="36-recorrido-y-resultado-resueltos">3.6 Recorrido y resultado resueltos<a class="headerlink" href="#36-recorrido-y-resultado-resueltos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Dato</th>
+<th>Pantalla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inicio</td>
+<td><code>completada</code> es <code>false</code>.</td>
+<td>Título, «Pendiente» y botón disponible.</td>
+</tr>
+<tr>
+<td>Activación</td>
+<td><code>completarTarea()</code> cambia el dato a <code>true</code>.</td>
+<td>Todavía necesita representarse el nuevo estado.</td>
+</tr>
+<tr>
+<td>Actualización</td>
+<td><code>mostrarTarea()</code> consulta el dato.</td>
+<td>«Completada» y botón deshabilitado.</td>
+</tr>
+<tr>
+<td>Recarga</td>
+<td>El script crea de nuevo el objeto inicial.</td>
+<td>Vuelve a «Pendiente»: no hay persistencia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pregunta:</strong> ¿basta con cambiar el texto a «Completada»?<br />
+<strong>Respuesta:</strong> no. Si el dato sigue siendo <code>false</code>, la siguiente representación volverá a mostrar «Pendiente».</p>
+<h3 id="37-cambio-solicitado-a-la-ia">3.7 Cambio solicitado a la IA<a class="headerlink" href="#37-cambio-solicitado-a-la-ia" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Cambia la etiqueta visible del botón a “Marcar como terminada”.
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Conserva el id completar-tarea, los datos y el evento. Muestra solo la
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>modificación y explica por qué el modelo no necesita cambiar.
+</code></pre></div>
+<p>Diferencia esperada:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gd">- &lt;button id="completar-tarea" type="button"&gt;Completar&lt;/button&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="gi">+ &lt;button id="completar-tarea" type="button"&gt;Marcar como terminada&lt;/button&gt;</span>
+</code></pre></div>
+<p>El identificador conserva la conexión con JavaScript. El alumno debe comprobar el nuevo texto y que la acción continúa funcionando. No se acepta una regeneración completa como explicación del cambio.</p>
+<h2 id="ra1-pb01-mapa-de-responsabilidades">RA1-PB01 — Mapa de responsabilidades<a class="headerlink" href="#ra1-pb01-mapa-de-responsabilidades" title="Permanent link">&para;</a></h2>
+<p><strong>Tiempo:</strong> 15 minutos. <strong>Entrega:</strong> tabla y respuestas breves. No se solicita escribir código. El profesor entrega esta sección sin el solucionario.</p>
+<h3 id="escenario-y-salida-de-ia-para-analizar">Escenario y salida de IA para analizar<a class="headerlink" href="#escenario-y-salida-de-ia-para-analizar" title="Permanent link">&para;</a></h3>
+<p>Una aplicación muestra una sala y permite reservarla. Los fragmentos siguientes son la salida ilustrativa preparada para esta actividad.</p>
+<p><strong>A. Vista — HTML:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">"nombre-sala"</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"estado-reserva"</span> <span class="na">role</span><span class="o">=</span><span class="s">"status"</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"reservar"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span><span class="p">&gt;</span>Reservar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>B. Modelo — JavaScript:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">reserva</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">sala</span><span class="o">:</span><span class="w"> </span><span class="s2">"Aula 2"</span><span class="p">,</span><span class="w"> </span><span class="nx">disponible</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">reservarSala</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nx">reserva</span><span class="p">.</span><span class="nx">disponible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>C. Representación y coordinación — JavaScript:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#nombre-sala"</span><span class="p">);</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#estado-reserva"</span><span class="p">);</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">reservar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#reservar"</span><span class="p">);</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarReserva</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="nx">nombre</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">reserva</span><span class="p">.</span><span class="nx">sala</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">reserva</span><span class="p">.</span><span class="nx">disponible</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"Disponible"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"Reservada"</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nx">reservar</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">reserva</span><span class="p">.</span><span class="nx">disponible</span><span class="p">;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="nx">reservar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="nx">reservarSala</span><span class="p">();</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="nx">mostrarReserva</span><span class="p">();</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">});</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="nx">mostrarReserva</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="tareas">Tareas<a class="headerlink" href="#tareas" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clasifica A, B y las dos responsabilidades de C. Cita una instrucción que justifique cada respuesta.</li>
+<li>¿Dónde está el valor «Aula 2»? Explica cómo llega a la pantalla.</li>
+<li>Describe qué cambia al activar el botón: dato, mensaje y estado del control.</li>
+<li>Pide a la IA cambiar «Reservar» por «Confirmar reserva» conservando la lógica. Señala qué elemento debe permanecer igual.</li>
+<li>La IA propone sustituir <code>reservarSala()</code> por <code>reservar.disabled = true</code>. ¿Por qué esa propuesta no realiza correctamente la reserva?</li>
+</ol>
+<p><strong>Transferencia al proyecto del alumno:</strong> cuando esté disponible su salida del editor web, localizará un elemento de la vista y explicará su relación con el comportamiento. Esta evidencia puede recogerse en PB03/PB04 o en el integrador; no obliga a alargar los 15 minutos de PB01.</p>
+<h3 id="solucion-orientativa">Solución orientativa<a class="headerlink" href="#solucion-orientativa" title="Permanent link">&para;</a></h3>
+<h3 id="51-respuestas">5.1 Respuestas<a class="headerlink" href="#51-respuestas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Cuestión</th>
+<th>Solución de referencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Responsabilidad A</td>
+<td>Vista: declara título, estado y botón con sus identificadores.</td>
+</tr>
+<tr>
+<td>Responsabilidad B</td>
+<td>Modelo: mantiene sala y disponibilidad; la función cambia esta última.</td>
+</tr>
+<tr>
+<td>Representación en C</td>
+<td><code>mostrarReserva()</code> lee el modelo y actualiza texto y propiedad <code>disabled</code>.</td>
+</tr>
+<tr>
+<td>Coordinación en C</td>
+<td>El escuchador llama a la operación y después solicita representar el resultado.</td>
+</tr>
+<tr>
+<td>Origen del nombre</td>
+<td>Está en <code>reserva.sala</code>; <code>nombre.textContent = reserva.sala</code> lo traslada al elemento localizado por <code>#nombre-sala</code>.</td>
+</tr>
+<tr>
+<td>Resultado de activar</td>
+<td><code>disponible</code> pasa a <code>false</code>, aparece «Reservada» y <code>!false</code> hace que <code>disabled</code> sea <code>true</code>.</td>
+</tr>
+<tr>
+<td>Cambio de etiqueta</td>
+<td>Cambia el contenido del botón en A, conservando <code>id="reservar"</code>, el objeto y el escuchador.</td>
+</tr>
+<tr>
+<td>Propuesta incorrecta</td>
+<td>Solo cambia la vista. <code>disponible</code> continúa en <code>true</code>; <code>mostrarReserva()</code> vuelve a habilitar el botón y muestra «Disponible».</td>
+</tr>
+</tbody>
+</table>
+<p>Prompt válido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Cambia únicamente el texto visible del botón con id reservar a
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>“Confirmar reserva”. Conserva el id, el modelo y el escuchador.
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Devuelve la diferencia y explica cómo verificar que se sigue reservando.
+</code></pre></div>
+<p>Salida esperada:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"reservar"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span><span class="p">&gt;</span>Confirmar reserva<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="52-indicadores-de-correccion-sin-pesos">5.2 Indicadores de corrección, sin pesos<a class="headerlink" href="#52-indicadores-de-correccion-sin-pesos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Evidencia suficiente</th>
+<th>Señal de dificultad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reconoce la vista</td>
+<td>Identifica etiquetas e identificadores y cita el fragmento.</td>
+<td>Llama modelo a todo el HTML.</td>
+</tr>
+<tr>
+<td>Identifica los datos</td>
+<td>Localiza <code>disponible</code> y su modificación.</td>
+<td>Confunde mensaje y estado real.</td>
+</tr>
+<tr>
+<td>Sigue la interacción</td>
+<td>Relaciona escuchador, operación y representación.</td>
+<td>Cree que registrar el evento ya ejecuta la reserva.</td>
+</tr>
+<tr>
+<td>Delimita un cambio</td>
+<td>Conserva identificadores y comportamiento.</td>
+<td>Cambia el id sin revisar su selector.</td>
+</tr>
+<tr>
+<td>Justifica el diagnóstico</td>
+<td>Explica la contradicción entre dato y control.</td>
+<td>Acepta que deshabilitar equivale a reservar.</td>
+</tr>
+</tbody>
+</table>
+<p>Se aceptan otras palabras y estructuras si la explicación identifica las responsabilidades. Esta práctica aporta a RA1.e, sin sustituir el resto de sus evidencias. No se fijan nota ni recuperación.</p>
+<h3 id="53-ayudas-y-errores-frecuentes">5.3 Ayudas y errores frecuentes<a class="headerlink" href="#53-ayudas-y-errores-frecuentes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Si confunde datos y pantalla, pedir que siga el valor a ambos lados de <code>textContent</code>.</li>
+<li>Si no entiende <code>!</code>, leerlo como «lo contrario de» y resolver los dos valores posibles.</li>
+<li>Si la IA cambia identificadores, comparar cada <code>id</code> con su selector.</li>
+<li>Si cree que <code>const</code> hace inmutable el objeto, distinguir referencia y propiedades.</li>
+<li>Si da por perdida una reserva al recargar, explicar que este ejemplo no almacena datos entre sesiones.</li>
+<li>Si memoriza extensiones, recordar que un componente generado puede reunir varias responsabilidades en un archivo.</li>
+</ul>
+<h2 id="6-herramientas-y-alcance-tecnico">6. Herramientas y alcance técnico<a class="headerlink" href="#6-herramientas-y-alcance-tecnico" title="Permanent link">&para;</a></h2>
+<p>Stitch, Gemini y Google AI Studio son la base acordada. Se utilizará la herramienta apropiada para cada actividad; no se exige pasar por las tres en todos los ejemplos. HTML, CSS y JavaScript son la base de lectura inicial. Si la IA produce JSX o TypeScript, se explicarán las diferencias necesarias, sin convertir el módulo en otro curso de programación.</p>
+<p>Este capítulo no depende de Android ni de un SDK. La integración con un editor visual web para RA1.b/c/e/f se comprobará en el bloque correspondiente. Un prototipo generado por prompts no se etiquetará automáticamente como evidencia de operaciones visuales del editor.</p>
+<p>Los códigos son ejemplos de salida de IA y referencias docentes. Sus nombres pueden variar. La evaluación pide reconocer, explicar y comprobar, no reproducirlos de memoria.</p>
+<h3 id="comprobacion-realizada">Comprobación realizada<a class="headerlink" href="#comprobacion-realizada" title="Permanent link">&para;</a></h3>
+<p>Se verifican los identificadores y las transiciones de estado de ambos ejemplos mediante ejecución de JavaScript con un DOM simulado: inicio, activación y actualización. Esta comprobación no sustituye pruebas visuales ni de accesibilidad en navegador. Los fragmentos omiten estilos y no constituyen una aplicación M3 completa para publicar.</p>
+<h2 id="7-fuentes-y-ampliacion">7. Fuentes y ampliación<a class="headerlink" href="#7-fuentes-y-ampliacion" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://m3.material.io/">Material Design 3</a>: referencia visual de todo el curso.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">MDN: addEventListener</a>: asociación entre evento y respuesta.</li>
+<li><a href="https://mosqueteroweb.github.io/ismie01/DAM/dam_di_relaciones.html">Currículo de referencia</a>: contenidos y CE.</li>
+<li><a href="RA1_anexo_android_arquitectura.html">Ampliación Android opcional</a>: equivalencias con XML y Java; no es evaluable ni necesaria para completar el itinerario web.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="RA1_00_guia_docente.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Guía docente">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Guía docente
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="RA1_02_librerias_componentes.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: RA1-02 · Librerías de componentes nativas y multiplataforma">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                RA1-02 · Librerías de componentes nativas y multiplataforma
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Vista comparativa · La web vigente permanece publicada en la raíz
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

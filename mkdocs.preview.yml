@@ -1,0 +1,43 @@
+site_name: Desarrollo de Interfaces · Vista MkDocs
+site_description: Versión comparativa en MkDocs del material docente del módulo 0488.
+site_url: https://mosqueteroweb.github.io/damDI/mkdocs-preview/
+docs_dir: .mkdocs-preview-src
+site_dir: mkdocs-preview
+use_directory_urls: false
+strict: true
+
+theme:
+  name: material
+  language: es
+  palette:
+    primary: deep purple
+    accent: amber
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/preview.css
+
+copyright: Vista comparativa · La web vigente permanece publicada en la raíz
