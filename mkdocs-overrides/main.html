@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{%- block extrahead %}
+  {{ super() }}
+  {%- if page and page.meta and page.meta.ra %}
+    <script>document.documentElement.classList.add("ra-{{ page.meta.ra }}")</script>
+  {%- endif %}
+{%- endblock %}

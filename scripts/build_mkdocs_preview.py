@@ -80,6 +80,18 @@ def normalize_front_matter(markdown: str) -> str:
     return f"---\n{normalized}\n---{markdown[front.end():]}"
 
 
+def add_ra_metadata(markdown: str, filename: str) -> str:
+    match = re.match(r"RA([1-8])_", filename)
+    ra = f"ra{match.group(1)}" if match else "home"
+    front = re.match(r"---\n(.*?)\n---", markdown, re.DOTALL)
+    if not front:
+        return f"---\nra: {ra}\n---\n\n{markdown}"
+    metadata = front.group(1)
+    if not re.search(r"^ra:\s*", metadata, re.MULTILINE):
+        metadata = f"{metadata}\nra: {ra}"
+    return f"---\n{metadata}\n---{markdown[front.end():]}"
+
+
 def navigation(sources: list[Path]) -> list[dict[str, object]]:
     nav: list[dict[str, object]] = [{"Inicio": "index.md"}]
     for number in range(1, 9):
@@ -109,6 +121,7 @@ def prepare_sources() -> list[Path]:
     for source in sources:
         markdown = source.read_text(encoding="utf-8")
         markdown = normalize_front_matter(markdown)
+        markdown = add_ra_metadata(markdown, source.name)
         markdown = remove_legacy_navigation(markdown)
         markdown = rewrite_internal_links(markdown)
         output_name = "index.html" if source.name == "index.md" else source.with_suffix(".html").name

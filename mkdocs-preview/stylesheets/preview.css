@@ -1,5 +1,77 @@
 :root {
   --md-text-font: "Inter", "Segoe UI", system-ui, sans-serif;
+  --ra-primary: #6750a4;
+  --ra-container: #eaddff;
+  --ra-on-container: #21005d;
+  --ra-outline: #7b6b8d;
+}
+
+.ra-ra1 { --ra-primary: #6750a4; --ra-container: #eaddff; --ra-on-container: #21005d; --ra-outline: #7b6b8d; }
+.ra-ra2 { --ra-primary: #006a6a; --ra-container: #9cf1ef; --ra-on-container: #002020; --ra-outline: #527f7e; }
+.ra-ra3 { --ra-primary: #8c5000; --ra-container: #ffddb8; --ra-on-container: #2d1600; --ra-outline: #906f4d; }
+.ra-ra4 { --ra-primary: #006b5f; --ra-container: #9ef2df; --ra-on-container: #00201c; --ra-outline: #4f8076; }
+.ra-ra5 { --ra-primary: #984061; --ra-container: #ffd9e2; --ra-on-container: #3e001d; --ra-outline: #936476; }
+.ra-ra6 { --ra-primary: #3f5f90; --ra-container: #d6e3ff; --ra-on-container: #001b3e; --ra-outline: #6d7890; }
+.ra-ra7 { --ra-primary: #5b5f00; --ra-container: #e5e96f; --ra-on-container: #1b1d00; --ra-outline: #77784b; }
+.ra-ra8 { --ra-primary: #745b00; --ra-container: #ffe16d; --ra-on-container: #241a00; --ra-outline: #85744c; }
+
+html[class*="ra-ra"] {
+  --md-primary-fg-color: var(--ra-primary);
+  --md-primary-fg-color--light: var(--ra-container);
+  --md-primary-fg-color--dark: var(--ra-on-container);
+  --md-accent-fg-color: var(--ra-primary);
+  --md-typeset-a-color: var(--ra-primary);
+}
+
+html[class*="ra-ra"] .md-header,
+html[class*="ra-ra"] .md-tabs {
+  background: var(--ra-primary);
+}
+
+html[class*="ra-ra"] .md-typeset h1,
+html[class*="ra-ra"] .md-typeset h2,
+html[class*="ra-ra"] .md-typeset h3 {
+  color: var(--ra-on-container);
+}
+
+html[class*="ra-ra"] .md-nav__link--active,
+html[class*="ra-ra"] .md-nav__link:focus,
+html[class*="ra-ra"] .md-nav__link:hover,
+html[class*="ra-ra"] .md-typeset a {
+  color: var(--ra-primary);
+}
+
+html[class*="ra-ra"] .md-typeset table:not([class]) th {
+  background: var(--ra-container);
+  color: var(--ra-on-container);
+  border-bottom-color: var(--ra-primary);
+}
+
+html[class*="ra-ra"] .md-typeset table:not([class]) tr:hover {
+  background: color-mix(in srgb, var(--ra-container) 30%, transparent);
+}
+
+html[class*="ra-ra"] .md-typeset details {
+  border-color: var(--ra-outline);
+}
+
+html[class*="ra-ra"] .md-typeset details > summary {
+  background: color-mix(in srgb, var(--ra-container) 55%, white);
+  color: var(--ra-on-container);
+}
+
+html[class*="ra-ra"] .md-footer__link:hover,
+html[class*="ra-ra"] .md-footer__link:focus {
+  color: var(--ra-container);
+}
+
+html[class*="ra-ra"] .md-top {
+  background: var(--ra-primary);
+}
+
+html[class*="ra-ra"] .concept-figure {
+  border-color: color-mix(in srgb, var(--ra-primary) 45%, transparent);
+  box-shadow: 0 .3rem 1.2rem color-mix(in srgb, var(--ra-primary) 15%, transparent);
 }
 
 .md-header::after {
