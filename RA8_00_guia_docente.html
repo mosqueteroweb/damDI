@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#745b00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA8 · Guía docente · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra8">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -31,11 +31,11 @@
 <h2 id="resultado-de-aprendizaje">Resultado de aprendizaje</h2>
 <p>Evalúa el funcionamiento de aplicaciones diseñando y ejecutando pruebas.</p>
 <h2 id="producto-del-ra">Producto del RA</h2>
-<p>El alumnado somete el gestor de tareas y sus informes a una estrategia de pruebas reproducible. La IA ayuda a proponer casos y generar scripts; el alumnado identifica preparación, acción y resultado esperado, ejecuta, conserva evidencias, diagnostica fallos y comprueba la corrección. No escribe suites desde cero.</p>
+<p>El alumnado somete el gestor de tareas y sus informes a una estrategia de pruebas reproducible. La IA ayuda a proponer casos y configurar pruebas; el alumnado identifica preparación, acción y resultado esperado, las ejecuta desde interfaces visuales, conserva evidencias, diagnostica fallos y comprueba la corrección.</p>
 <h2 id="secuencia-docente">Secuencia docente</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th style="text-align: right;">Sesión</th>
 <th>Unidades</th>
 <th style="text-align: right;">Horas</th>
@@ -43,37 +43,37 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: right;">1</td>
 <td>Estrategia de pruebas</td>
 <td style="text-align: right;">2</td>
 <td>Plan priorizado y trazable</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: right;">2</td>
 <td>Integración ascendente y descendente</td>
 <td style="text-align: right;">2</td>
 <td>Pruebas de conexión entre elementos</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: right;">3</td>
 <td>Sistema, configuración, recuperación, volumen y estrés</td>
 <td style="text-align: right;">2</td>
 <td>Límites y recuperación observados</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: right;">4</td>
 <td>Uso de recursos</td>
 <td style="text-align: right;">2</td>
 <td>Medición con presupuesto verificable</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: right;">5</td>
 <td>Seguridad, regresión y automatización</td>
 <td style="text-align: right;">2</td>
 <td>Hallazgos contrastados y suite mínima</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: right;">6</td>
 <td>Integrador y defensa</td>
 <td style="text-align: right;">2</td>
@@ -86,7 +86,7 @@
 <ol type="1">
 <li>Partir de riesgo y requisito, no de la herramienta.</li>
 <li>Definir precondición, datos, acción y oráculo antes de ejecutar.</li>
-<li>Pedir a Gemini/AI Studio un caso o script pequeño y explicado.</li>
+<li>Pedir a Gemini/AI Studio un caso o una configuración pequeña y explicada.</li>
 <li>Localizar selectores, datos, aserciones, métricas y umbrales.</li>
 <li>Ejecutar y conservar salida real.</li>
 <li>Provocar o aislar un fallo, corregir y repetir.</li>
@@ -95,11 +95,11 @@
 <h2 id="herramientas">Herramientas</h2>
 <ul>
 <li><strong>Stitch:</strong> estados que deben probarse y mapa visual de flujos.</li>
-<li><strong>Gemini / Google AI Studio:</strong> generación y explicación de casos, datos y scripts delimitados.</li>
-<li><strong>Playwright:</strong> integración y regresión de flujos web; complemento justificado por ejecución real en navegador.</li>
+<li><strong>Gemini / Google AI Studio:</strong> generación y explicación de casos, datos y configuraciones delimitadas.</li>
+<li><strong>Grabador y panel visual de pruebas web:</strong> integración y regresión de flujos ejecutados en navegador.</li>
 <li><strong>Chrome DevTools y Lighthouse:</strong> red, rendimiento, memoria, accesibilidad y uso de recursos.</li>
-<li><strong>k6:</strong> volumen y estrés sobre un entorno autorizado; scripts generados y cargas pequeñas en clase.</li>
-<li><strong>OWASP ZAP Baseline:</strong> revisión pasiva inicial de seguridad; nunca sustituye la comprobación manual.</li>
+<li><strong>Panel visual de carga:</strong> volumen y estrés sobre una copia autorizada, con escenarios pequeños configurados mediante formularios.</li>
+<li><strong>Auditoría de seguridad del navegador o servicio visual autorizado:</strong> revisión pasiva inicial; nunca sustituye la comprobación manual.</li>
 <li><strong>Material Design 3 y WCAG 2.2 AA:</strong> referencia de estados y calidad de interacción.</li>
 </ul>
 <h2 id="evaluación">Evaluación</h2>

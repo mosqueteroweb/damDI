@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#5b5f00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA7-03 · Herramientas para crear paquetes · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra7">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -25,25 +25,19 @@
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#objetivo-docente">Objetivo docente</a></li><li><a href="#contenido-para-explicar">Contenido para explicar</a></li><li><a href="#ejemplo-básico-resuelto">Ejemplo básico resuelto</a></li><li><a href="#ra7-pb03--dos-rutas-un-artefacto">RA7-PB03 · Dos rutas, un artefacto</a></li><li><a href="#cierre">Cierre</a></li></ol></details>
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
-<p>Generar el mismo producto mediante el entorno de desarrollo y una herramienta externa, comparando trazabilidad y repetibilidad.</p>
+<p>Generar la misma versión web mediante dos interfaces visuales, comparando trazabilidad y repetibilidad.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
-<p>El IDE puede exponer una tarea de compilación; la herramienta externa ejecuta la cadena sin interfaz. Ambas deben partir del mismo bloqueo de dependencias, producir una versión identificada y fallar de forma visible. GitHub Actions añade un entorno limpio y conserva el artefacto; no convierte automáticamente una compilación en una release válida.</p>
-<figure class="concept-figure"><img src="assets/img/ra7/ra7-03-rutas.webp" alt="Una tarea del IDE y una ejecución desde terminal o automatización parten del mismo commit y bloqueo de dependencias, recorren la misma cadena y producen artefactos comparables por nombre, tamaño y hash." loading="lazy" width="1672" height="941"><figcaption>Dos herramientas son equivalentes solo si reproducen la misma cadena y generan el mismo artefacto verificable.</figcaption></figure>
+<p>El editor con IA puede ofrecer una acción de publicación y GitHub puede crear una versión desde su interfaz web. Ambas rutas deben partir de la misma revisión, producir una versión identificada y mostrar los fallos de forma visible. El historial de la plataforma aporta trazabilidad, pero no convierte automáticamente cualquier resultado en una versión válida.</p>
+<figure class="concept-figure"><img src="assets/img/ra7/ra7-03-rutas-sin-comandos.png" alt="Dos rutas visuales, el editor web con IA y la interfaz web del repositorio, parten de la misma revisión y recorren revisar, validar, publicar y verificar." loading="lazy" width="1672" height="941"><figcaption>Dos interfaces son equivalentes solo si parten de la misma revisión y producen la misma versión publicada y verificable.</figcaption></figure>
+
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;scripts&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;clean&quot;</span><span class="fu">:</span> <span class="st">&quot;rimraf dist&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;build&quot;</span><span class="fu">:</span> <span class="st">&quot;vite build&quot;</span><span class="fu">,</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;package&quot;</span><span class="fu">:</span> <span class="st">&quot;npm run clean &amp;&amp; npm run build&quot;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
-<p>El código es salida de IA. El alumnado localiza orden, operador que detiene la cadena, carpeta de salida y dependencia externa; después contrasta el resultado con la tarea equivalente del IDE.</p>
+<p>La IA propone una tarjeta de publicación con cuatro estados visibles: <strong>Revisar</strong>, <strong>Validar</strong>, <strong>Publicar</strong> y <strong>Verificar</strong>. El alumnado identifica la revisión de entrada, el orden, el punto que bloquea la publicación y la URL resultante; después contrasta el resultado con la creación de una versión desde la interfaz web del repositorio.</p>
 <section class="practice-card" data-practice="RA7-PB03"><div class="practice-card__label">Práctica básica</div><h2 id="ra7-pb03--dos-rutas-un-artefacto">RA7-PB03 · Dos rutas, un artefacto</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA7.c, RA7.d</dd></div><div><dt>Recursos</dt><dd>GitHub</dd></div><div><dt>Entrega solicitada</dt><dd>Salida IDE y externa</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra7-pb03">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra7-pb03"><h3>Enunciado para publicar</h3>
-<p>Genera el paquete una vez desde una tarea del IDE y otra desde terminal o GitHub Actions. Compara listado, tamaño y hash. Explica cualquier diferencia.</p>
+<p>Publica una versión desde la acción visual del editor y crea otra desde la interfaz web del repositorio usando la misma revisión. Compara archivos, tamaño, identificador e integridad. Explica cualquier diferencia.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>Ambas rutas ejecutan <code>npm ci</code> y el mismo script <code>package</code>. El registro conserva versiones de Node/npm, commit y resultado. Si los hashes difieren por marcas de tiempo, se documenta y se compara el contenido; no se oculta la diferencia.</p>
+<p>Ambas rutas parten de la misma revisión y aplican las mismas validaciones. El registro conserva identificador, fecha, versión y resultado. Si los valores de integridad difieren por metadatos, se documenta y se compara el contenido; no se oculta la diferencia.</p>
 </details>
 
 </div></section><h2 id="cierre">Cierre</h2>

@@ -11,31 +11,27 @@ Identificar sistemas de ayuda y seleccionar un flujo reproducible de fuente, gen
 
 ## Contenido para explicar
 
-Se comparan editor visual, generador estático y procesador documental. Stitch diseña; Gemini/AI Studio redacta y transforma; Markdown mantiene la fuente; Pandoc genera HTML. MkDocs se estudia como opción con navegación y búsqueda, pero el curso conserva su generador actual para no duplicar infraestructura.
+Se comparan un editor visual, un espacio de documentación web y un procesador documental. Stitch diseña; Gemini/AI Studio redacta y transforma; Markdown mantiene la fuente; la plataforma elegida ofrece acciones visibles para previsualizar, validar y publicar HTML o una versión imprimible. Todo el recorrido del alumnado se realiza desde la interfaz.
 
 ## RA6-EJ02 · Ejemplo resuelto
 
-```bash
-python scripts/build_static.py
-```
-
-El comando recorre `src/`, convierte Markdown y conserva nombres. El alumnado localiza entrada, salida y fallo; no memoriza el script.
+El proyecto ofrece una acción **Generar ayuda**. Al activarla desde el panel del proyecto, la interfaz muestra tres etapas: «Leer fuentes», «Crear páginas» y «Comprobar enlaces». Cada etapa presenta estado, archivos afectados y un mensaje comprensible si falla.
 
 | Herramienta | Entrada | Salida | Decisión |
 |---|---|---|---|
 | Stitch | requisitos | diseño | arquitectura visual |
 | Gemini | versión y función | borrador | contenido a verificar |
-| Pandoc | Markdown | HTML | publicación estática |
+| Plataforma documental | Markdown | HTML/PDF | publicación y descarga desde interfaz |
 
 ## RA6-PB02 · Cadena reproducible
 
-Genera una página de ayuda desde Markdown, modifica una frase en la fuente, regenera y demuestra que el HTML cambia sin edición manual. Documenta un fallo y su diagnóstico.
+Genera una página de ayuda desde Markdown usando la acción visual del proyecto, modifica una frase en la fuente, vuelve a generar y demuestra en la previsualización que la salida cambia sin editarla manualmente. Documenta un fallo mostrado por la interfaz y su diagnóstico.
 
 ### Solución orientativa
 
 <details><summary>Mostrar ejemplo de solución</summary>
 
-La entrega conserva fuente y salida, comando y versión. Tras cambiar «Eliminar» por «Archivar», solo se edita Markdown y se regenera. Un enlace `.md` se transforma en `.html`; la comprobación evita publicar una ruta rota.
+La entrega conserva fuente, salida, versión y registro visual de generación. Tras cambiar «Eliminar» por «Archivar», solo se edita Markdown y se vuelve a pulsar **Generar ayuda**. Un enlace `.md` se transforma en `.html`; el panel de validación impide publicar una ruta rota.
 
 </details>
 
@@ -43,6 +39,6 @@ La entrega conserva fuente y salida, comando y versión. Tras cambiar «Eliminar
 
 Justifica por qué el HTML generado no debe convertirse en segunda fuente editable.
 
-Referencia: [manual oficial de Pandoc](https://pandoc.org/MANUAL.html).
+La herramienta concreta puede variar, pero debe permitir previsualizar, exportar y consultar errores desde una interfaz accesible.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA6_01_formatos_ayuda.html">← RA6-01</a><a href="https://mosqueteroweb.github.io/damDI/RA6_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA6_03_navegacion_contexto.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA6-03 · Navegación, búsqueda y contexto</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

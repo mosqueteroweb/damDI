@@ -44,6 +44,6 @@ title: RA7 · Matriz de contenidos y evaluación
 
 ## Regla de suficiencia
 
-Cada artefacto debe vincularse a versión y commit. La firma se verifica, la instalación se repite en limpio, el modo desatendido falla de forma visible y la desinstalación declara qué ocurre con los datos. Los textos o scripts de IA sin ejecución no constituyen evidencia.
+Cada artefacto debe vincularse a versión y revisión. La firma se verifica, la instalación se repite en limpio, la automatización muestra y bloquea los fallos y la desinstalación declara qué ocurre con los datos. Los textos de IA sin comprobación no constituyen evidencia.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA7_00_guia_docente.html">← Guía RA7</a><a href="https://mosqueteroweb.github.io/damDI/">Inicio</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA7_01_componentes_empaquetado.html"><span class="unit-next-card__eyebrow">Comenzar contenidos</span><strong>RA7-01 · Componentes y empaquetado</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

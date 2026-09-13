@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#8c5000">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA3-01 · Concepto y características · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra3">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,15 +26,16 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Distinguir componente, instancia y aplicación; reconocer encapsulación, reutilización, composición y contrato público.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-01-anatomia.webp" alt="El interior de task-card contiene estructura, estilo y comportamiento; atributos, propiedades, eventos y métodos forman su frontera con la aplicación anfitriona." loading="lazy" width="1672" height="941"><figcaption>El contrato público permite reutilizar el componente sin depender de sus detalles internos.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Un componente visual reúne estructura, aspecto y comportamiento con un propósito concreto. Puede instanciarse varias veces, recibe datos por una interfaz pública y comunica cambios sin conocer toda la aplicación. Un buen componente tiene responsabilidad acotada, estados previsibles, accesibilidad y dependencias explícitas.</p>
-<figure class="concept-figure"><img src="assets/img/ra3/ra3-01-anatomia.webp" alt="El interior de task-card contiene estructura, estilo y comportamiento; atributos, propiedades, eventos y métodos forman su frontera con la aplicación anfitriona." loading="lazy" width="1672" height="941"><figcaption>El contrato público permite reutilizar el componente sin depender de sus detalles internos.</figcaption></figure>
 <p>En el gestor, <code>task-card</code> representa una tarea; la aplicación decide qué lista mostrar y qué hacer al recibir una acción. La tarjeta no debería guardar por sí sola toda la colección.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Prompt para Gemini o AI Studio: «Genera un Web Component <code>task-card</code> sin dependencias. Debe mostrar título y estado, usar HTML semántico, admitir varias instancias y explicar las cinco líneas que forman su interfaz pública».</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Preparar exposición&quot;</span> <span class="er">completed</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Revisar contraste&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;./task-card.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span><span class="ot"> title</span><span class="op">=</span><span class="st">&quot;Preparar exposición&quot;</span><span class="ot"> completed</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span><span class="ot"> title</span><span class="op">=</span><span class="st">&quot;Revisar contraste&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;./task-card.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Partes relevantes: el nombre contiene guion porque lo exige la plataforma; cada etiqueta es una instancia; los atributos son entradas; el módulo registra la definición una sola vez.</p>
 <section class="practice-card" data-practice="RA3-PB01"><div class="practice-card__label">Práctica básica</div><h2 id="ra3-pb01--extraer-una-tarjeta-reutilizable">RA3-PB01 · Extraer una tarjeta reutilizable</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA3.b</dd></div><div><dt>Recursos</dt><dd>Gemini, Google AI Studio</dd></div><div><dt>Entrega solicitada</dt><dd>Definición, dos instancias y anatomía anotada</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra3-pb01">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra3-pb01"><h3>Enunciado para publicar</h3>
 <p>Pide a la IA que transforme dos tarjetas HTML duplicadas en un componente. Entrega: prompt, dos instancias con datos distintos, captura de ambos estados y anotación de estructura, estilo, comportamiento y contrato público.</p>

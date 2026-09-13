@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#006a6a">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA2-INT01 · Asistente natural del aula · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra2">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="situación">Situación</h2>
 <p>El gestor de tareas debe poder utilizarse durante una práctica cuando la persona está lejos del teclado o tiene las manos ocupadas. El centro también quiere una ayuda en RA para reconocer o montar un elemento del aula.</p>
+<figure class="concept-figure"><img src="assets/img/ra2/ra2-integrador.webp" alt="Voz, pose, gesto y realidad aumentada atraviesan controles de permisos, confianza, permanencia e interpretación antes de actuar sobre el gestor; cada acción mantiene alternativa mediante botón o texto." loading="lazy" width="1672" height="941"><figcaption>La arquitectura multimodal incorpora comprobaciones antes de actuar y conserva alternativas convencionales.</figcaption></figure>
+
 <h2 id="encargo">Encargo</h2>
 <p>Con Stitch, Gemini y Google AI Studio, añade una interfaz multimodal al gestor. Parte de ejemplos y código generado: no escribas la solución desde cero. Debes comprender y explicar entrada, interpretación, acción, respuesta, privacidad y alternativa.</p>
-<figure class="concept-figure"><img src="assets/img/ra2/ra2-integrador.webp" alt="Voz, pose, gesto y realidad aumentada atraviesan controles de permisos, confianza, permanencia e interpretación antes de actuar sobre el gestor; cada acción mantiene alternativa mediante botón o texto." loading="lazy" width="1672" height="941"><figcaption>La arquitectura multimodal incorpora comprobaciones antes de actuar y conserva alternativas convencionales.</figcaption></figure>
 <h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ol type="1">
 <li>Comparar herramientas de aprendizaje automático relacionadas con la interfaz y justificar las elegidas.</li>
@@ -54,41 +55,41 @@
 <h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Caso</th>
 <th>Resultado esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Navegador sin voz</td>
 <td>Ofrece orden escrita equivalente</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Orden reconocida</td>
 <td>Muestra transcripción antes de actuar</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Creación por voz</td>
 <td>Exige confirmación editable</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Gesto breve o dudoso</td>
 <td>No ejecuta acción</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Gesto mantenido</td>
 <td>Ejecuta una vez y entra en espera</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cámara detenida</td>
 <td>No continúa procesando imágenes</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Dispositivo con RA</td>
 <td>Permite colocar y abandonar el objeto</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Dispositivo sin RA</td>
 <td>Conserva modelo 3D e información textual</td>
 </tr>
@@ -97,39 +98,39 @@
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>CE</th>
 <th>Satisfactorio</th>
 <th>Insuficiente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>a</td>
 <td>Identifica y compara herramientas de ML por tarea, datos y límites</td>
 <td>Enumera herramientas sin criterio</td>
 </tr>
-<tr class="even">
+<tr>
 <td>b</td>
 <td>Interfaz natural completa, comprensible y recuperable</td>
 <td>Demo aislada sin estados ni respuesta</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c</td>
 <td>Dos acciones por voz verificadas y con alternativa</td>
 <td>Solo transcribe o depende obligatoriamente de voz</td>
 </tr>
-<tr class="even">
+<tr>
 <td>d</td>
 <td>Movimiento corporal estable activa una acción</td>
 <td>Reacciona a un fotograma o no controla repetición</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>e</td>
 <td>Detecta una parte corporal para otra acción y explica los puntos</td>
 <td>Usa un gesto opaco sin evidencia</td>
 </tr>
-<tr class="even">
+<tr>
 <td>f</td>
 <td>RA contextual funcional con alternativa 3D</td>
 <td>Objeto 3D decorativo o inaccesible sin RA</td>

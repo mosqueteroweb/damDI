@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#5b5f00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA7-06 · Firma digital y canales · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra7">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,15 +26,16 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Demostrar origen e integridad del artefacto y seleccionar canales según audiencia, actualización y riesgo.</p>
+<figure class="concept-figure"><img src="assets/img/ra7/ra7-06-firma.webp" alt="El hash detecta cambios, la firma vincula artefacto e identidad y HTTPS protege el transporte; una copia alterada falla al verificarse. Se comparan Pages, Releases, store o ad-hoc y correo." loading="lazy" width="1672" height="941"><figcaption>Hash, firma y HTTPS cubren riesgos diferentes; el canal se elige según el artefacto, la audiencia y las actualizaciones.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Un hash detecta cambios, pero no identifica por sí solo al autor. La firma vincula artefacto e identidad mediante una clave o identidad verificable. La clave privada nunca se copia a prompts ni al repositorio. La verificación debe fallar al alterar el paquete. Pages sirve la web; Releases distribuye versiones; una store añade revisión y actualización; ad-hoc limita destinatarios; correo es frágil para binarios y versiones.</p>
-<figure class="concept-figure"><img src="assets/img/ra7/ra7-06-firma.webp" alt="El hash detecta cambios, la firma vincula artefacto e identidad y HTTPS protege el transporte; una copia alterada falla al verificarse. Se comparan Pages, Releases, store o ad-hoc y correo." loading="lazy" width="1672" height="941"><figcaption>Hash, firma y HTTPS cubren riesgos diferentes; el canal se elige según el artefacto, la audiencia y las actualizaciones.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <pre class="text"><code>artefacto → SHA-256 → firma separada → canal
 receptor → descarga → verifica firma → instala</code></pre>
 <p>La explicación de IA se corrige: HTTPS protege el transporte, pero no sustituye la comprobación del artefacto descargado fuera del sitio.</p>
-<section class="practice-card" data-practice="RA7-PB06"><div class="practice-card__label">Práctica básica</div><h2 id="ra7-pb06--firmar-y-elegir-canal">RA7-PB06 · Firmar y elegir canal</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA7.e, RA7.h</dd></div><div><dt>Recursos</dt><dd>GPG, Cosign</dd></div><div><dt>Entrega solicitada</dt><dd>Firma y decisión de canal</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra7-pb06">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra7-pb06"><h3>Enunciado para publicar</h3>
-<p>Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Después elige entre Pages, Release, store/ad-hoc y correo, indicando destinatario, actualización y retirada.</p>
+<section class="practice-card" data-practice="RA7-PB06"><div class="practice-card__label">Práctica básica</div><h2 id="ra7-pb06--firmar-y-elegir-canal">RA7-PB06 · Firmar y elegir canal</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA7.e, RA7.h</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Firma y decisión de canal</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra7-pb06">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra7-pb06"><h3>Enunciado para publicar</h3>
+<p>Usa una herramienta visual de firma didáctica para obtener la huella y firma de una versión exportada. Verifica el original desde la misma interfaz, altera una copia y registra el fallo. Después elige entre Pages, Release, store/ad-hoc y correo, indicando destinatario, actualización y retirada.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 

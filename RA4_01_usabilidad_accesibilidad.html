@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#006b5f">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA4-01 · Usabilidad, accesibilidad y estándares · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra4">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,15 +26,16 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Distinguir usabilidad y accesibilidad, identificar estándares y convertir un problema observado en un requisito comprobable.</p>
+<figure class="concept-figure"><img src="assets/img/ra4/ra4-01-usabilidad.webp" alt="Usabilidad reúne eficacia, eficiencia y satisfacción; accesibilidad permite percibir, comprender, navegar e interactuar; ambas comparten claridad, teclado, mensajes y prevención de errores." loading="lazy" width="1672" height="941"><figcaption>Una interfaz puede resultar cómoda y aun así excluir a personas si no incorpora accesibilidad.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La <strong>usabilidad</strong> estudia si las personas alcanzan sus objetivos con eficacia, eficiencia y satisfacción. La <strong>accesibilidad</strong> busca que puedan percibir, comprender, navegar e interactuar personas con capacidades y contextos diversos. Se relacionan, pero una interfaz cómoda para la mayoría puede seguir excluyendo a alguien.</p>
-<figure class="concept-figure"><img src="assets/img/ra4/ra4-01-usabilidad.webp" alt="Usabilidad reúne eficacia, eficiencia y satisfacción; accesibilidad permite percibir, comprender, navegar e interactuar; ambas comparten claridad, teclado, mensajes y prevención de errores." loading="lazy" width="1672" height="941"><figcaption>Una interfaz puede resultar cómoda y aun así excluir a personas si no incorpora accesibilidad.</figcaption></figure>
 <p>Referencias de trabajo: WCAG 2.2 para accesibilidad web, WAI-ARIA cuando HTML nativo no basta, heurísticas de usabilidad como instrumento de inspección y Material Design 3 como sistema visual. ARIA no repara una estructura HTML incorrecta.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Problema: el botón de borrar solo muestra un icono de papelera gris claro.</p>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Observación</th>
 <th>Riesgo</th>
 <th>Decisión</th>
@@ -42,19 +43,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>No tiene nombre visible ni accesible</td>
 <td>No se comprende con lector de pantalla</td>
 <td>Añadir nombre accesible y ayuda textual cuando sea necesaria</td>
 <td>Revisar nombre accesible y activar con teclado</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Contraste débil</td>
 <td>Puede pasar inadvertido</td>
 <td>Usar color de rol y estado perceptible</td>
 <td>Medir contraste y revisar en contexto</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Acción destructiva inmediata</td>
 <td>Facilita errores</td>
 <td>Confirmación o posibilidad de deshacer</td>
@@ -63,8 +64,8 @@
 </tbody>
 </table></div>
 <p>Código que la IA puede producir y el alumno debe reconocer:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;button&quot;</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">&quot;Eliminar tarea Matemáticas&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span> <span class="er">aria-hidden</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;</span>delete<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="ot"> aria-label</span><span class="op">=</span><span class="st">&quot;Eliminar tarea Matemáticas&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> aria-hidden</span><span class="op">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;</span>delete<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Partes relevantes: <code>button</code> aporta interacción nativa; <code>aria-label</code> proporciona el nombre; el icono decorativo se oculta al árbol accesible.</p>
 <section class="practice-card" data-practice="RA4-PB01"><div class="practice-card__label">Práctica básica</div><h2 id="ra4-pb01--diagnóstico-razonado">RA4-PB01 · Diagnóstico razonado</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA4.a, RA4.b</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Hallazgos vinculados a principios y consecuencias</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra4-pb01">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra4-pb01"><h3>Enunciado para publicar</h3>

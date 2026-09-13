@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#984061">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA5-07 · Librerías y código generado · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra5">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,6 +26,8 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Reconocer en el código generado cómo se carga, configura y ejecuta una librería de informes, y modificar un requisito localizado.</p>
+<figure class="concept-figure"><img src="assets/img/ra5/ra5-07-codigo.webp" alt="Correspondencia numerada entre cargar la librería, definir el callback, preparar los datos, elegir el tipo de gráfico, configurar opciones y dibujar, y el gráfico que aparece en pantalla." loading="lazy" width="1672" height="941"><figcaption>Cada fragmento de la integración tiene un efecto concreto en la visualización final.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Una librería ofrece clases u objetos, métodos y opciones. En Google Charts, el alumnado localiza carga de paquetes, construcción de datos, clase de gráfico, método <code>draw</code> y objeto de opciones. No necesita reproducirlos de memoria: debe relacionar cada parte con el resultado visible y consultar la documentación.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
@@ -36,7 +38,6 @@
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  chart<span class="op">.</span><span class="fu">draw</span>(data<span class="op">,</span> { <span class="dt">title</span><span class="op">:</span> <span class="st">&#39;Tareas terminadas por semana&#39;</span> })<span class="op">;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p><code>load</code> solicita la biblioteca; el callback espera; <code>ColumnChart</code> elige la clase; <code>draw</code> ejecuta; el objeto final contiene atributos de configuración.</p>
-<figure class="concept-figure"><img src="assets/img/ra5/ra5-07-codigo.webp" alt="Correspondencia numerada entre cargar la librería, definir el callback, preparar los datos, elegir el tipo de gráfico, configurar opciones y dibujar, y el gráfico que aparece en pantalla." loading="lazy" width="1672" height="941"><figcaption>Cada fragmento de la integración tiene un efecto concreto en la visualización final.</figcaption></figure>
 <section class="practice-card" data-practice="RA5-PB07"><div class="practice-card__label">Práctica básica</div><h2 id="ra5-pb07--modificación-explicada">RA5-PB07 · Modificación explicada</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA5.f, RA5.g</dd></div><div><dt>Recursos</dt><dd>Gemini, Google Charts</dd></div><div><dt>Entrega solicitada</dt><dd>Fragmentos anotados, diff y prueba</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra5-pb07">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra5-pb07"><h3>Enunciado para publicar</h3>
 <p>Entrega a Gemini una salida que usa columnas y pide convertirla en barras horizontales, conservar datos y añadir título de eje. Presenta diff, prueba antes/después y explicación de cinco líneas relevantes.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>

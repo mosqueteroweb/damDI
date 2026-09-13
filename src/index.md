@@ -94,7 +94,7 @@ Este sitio organiza el curso alrededor de **aplicaciones web generadas y modific
 | HTML, CSS y JavaScript | Leer y verificar salidas de IA, no memorizar código |
 | Material Design 3 | Guiar jerarquía, componentes, estados y accesibilidad |
 
-> Android Studio, XML y Java quedan fuera de las actividades obligatorias y de las 100 horas del módulo.
+> El desarrollo móvil nativo queda fuera de las actividades obligatorias y de las 100 horas del módulo; solo aparece en una ampliación voluntaria.
 
 ## Accesos rápidos
 
@@ -198,7 +198,7 @@ El RA2 añade voz, movimiento corporal, detección de manos y realidad aumentada
 
 **Duración propuesta:** 12 horas · **7 criterios de evaluación** · **6 prácticas básicas** · **1 integrador**
 
-El RA8 aplica una estrategia reproducible al gestor y sus informes: integración, regresión, sistema, volumen, estrés, seguridad y recursos. La IA genera borradores de casos y scripts; el alumnado los comprende, ejecuta y documenta.
+El RA8 aplica una estrategia reproducible al gestor y sus informes: integración, regresión, sistema, volumen, estrés, seguridad y recursos. La IA genera borradores de casos y configuraciones; el alumnado los comprende, ejecuta desde interfaces visuales y documenta.
 
 - [Guía docente y temporalización](RA8_00_guia_docente.md)
 - [Matriz de contenidos, prácticas y criterios](RA8_matriz_contenidos_evaluacion.md)

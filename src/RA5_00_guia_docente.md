@@ -57,6 +57,6 @@ Cada concepto produce una práctica básica con solución orientativa. El integr
 - Incluir datos nulos, una fecha inválida y categorías con tamaños distintos.
 - Preparar una versión del informe con un total erróneo y un gráfico engañoso.
 - Usar datos ficticios: no publicar nombres ni calificaciones reales.
-- Mantener Android Studio, XML y Java como ampliación voluntaria.
+- Mantener el desarrollo móvil nativo como ampliación voluntaria.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA5_matriz_contenidos_evaluacion.html">Matriz RA5</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA5_01_informes_incrustados.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA5-01 · Informes incrustados y no incrustados</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

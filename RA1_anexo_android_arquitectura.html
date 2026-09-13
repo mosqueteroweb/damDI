@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#6750a4">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>Ampliación opcional — Arquitectura con Android Studio, XML y Java · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -33,6 +33,8 @@
 <strong>Tiempo:</strong> 35 minutos de explicación y ejemplo, 15 minutos de práctica y 10 minutos de corrección. Estos 60 minutos forman parte de las bolsas ya previstas para RA1, no se añaden a sus 18 horas.</p>
 <h2 id="1-orientaciones-para-el-profesor">1. Orientaciones para el profesor</h2>
 <p>El alumnado sabe Java, pero todavía necesita relacionar el código con lo que aparece y sucede en una pantalla. El objetivo de este bloque es que pueda abrir un proyecto generado y distinguir presentación, datos y coordinación. No tiene que programar una arquitectura ni memorizar sus siglas.</p>
+<figure class="concept-figure"><img src="assets/img/ra1/ra1-anexo-android.webp" alt="En Android, una pulsación en la vista XML llega al listener en Java, modifica los datos de Tarea y actualiza la vista." loading="lazy" width="1672" height="941"><figcaption>Correspondencia simplificada entre vista XML, coordinación Java y modelo de datos.</figcaption></figure>
+
 <p>Este capítulo mantiene el primer título del índice curricular. En clase puede impartirse después de una primera demostración de creación visual, tal como permite la secuencia de la matriz.</p>
 <h3 id="objetivos-observables">Objetivos observables</h3>
 <p>Al terminar, el alumno podrá:</p>
@@ -49,7 +51,6 @@
 <p>Para utilizar PB01 como evidencia definitiva de RA1.e, el profesor incorporará también el archivo XML producido o guardado por el editor visual en la ruta técnica descrita al final. Hasta entonces, la práctica permite comprobar la comprensión de estructura y responsabilidades, pero no acredita por sí sola la procedencia del código desde un editor.</p>
 <h2 id="2-contenidos-explicados">2. Contenidos explicados</h2>
 <h3 id="21-qué-significa-arquitectura">2.1 Qué significa arquitectura</h3>
-<figure class="concept-figure"><img src="assets/img/ra1/ra1-anexo-android.webp" alt="En Android, una pulsación en la vista XML llega al listener en Java, modifica los datos de Tarea y actualiza la vista." loading="lazy" width="1672" height="941"><figcaption>Correspondencia simplificada entre vista XML, coordinación Java y modelo de datos.</figcaption></figure>
 <p>La arquitectura organiza las responsabilidades y las relaciones entre las partes de una aplicación. En una aplicación gráfica conviene plantear tres preguntas:</p>
 <ol type="1">
 <li>¿Dónde se describe lo que ve y utiliza la persona?</li>
@@ -74,34 +75,34 @@
 <h3 id="25-mvc-y-mvvm-comparación-introductoria">2.5 MVC y MVVM: comparación introductoria</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Aspecto</th>
 <th>MVC</th>
 <th>MVVM</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Datos y reglas</td>
 <td>Modelo.</td>
 <td>Modelo y las capas de datos que utilice la aplicación.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Representación</td>
 <td>Vista.</td>
 <td>Vista.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Coordinación o estado de presentación</td>
 <td>Un controlador interpreta interacciones y coordina operaciones.</td>
 <td>Un ViewModel expone estado y operaciones de presentación; la vista representa ese estado.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Pregunta para reconocerlo</td>
 <td>¿Quién recibe la interacción y coordina el cambio?</td>
 <td>¿Dónde está el estado que observa o consume la vista?</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Error frecuente</td>
 <td>Llamar controlador a cualquier archivo que tenga eventos.</td>
 <td>Suponer que crear una clase llamada ViewModel ya implementa el patrón.</td>
@@ -120,21 +121,21 @@
 <p>El ejemplo separa tres responsabilidades:</p>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Archivo de referencia</th>
 <th>Responsabilidad</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>res/layout/activity_tarea.xml</code></td>
 <td>Describe los controles y su distribución.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Tarea.java</code></td>
 <td>Representa el título y el estado de una tarea.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>TareaActivity.java</code></td>
 <td>Carga la vista, conecta el evento y representa el estado.</td>
 </tr>
@@ -155,31 +156,31 @@ No afirmar que está probado si no se ha ejecutado.</code></pre>
 <p>El prompt orienta la producción; la solución de referencia siguiente permite explicar el concepto aunque la IA produzca otros nombres.</p>
 <h3 id="33-archivo-de-vista-estructura-xml">3.3 Archivo de vista: estructura XML</h3>
 <p>Fragmento completo de layout para lectura. Requiere los recursos y dependencias del proyecto docente antes de compilar.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">&quot;1.0&quot;</span><span class="ot"> encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">LinearLayout</span><span class="ot"> xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:orientation=</span><span class="st">&quot;vertical&quot;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:padding=</span><span class="st">&quot;24dp&quot;</span>&gt;</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">LinearLayout</span> <span class="ot">xmlns:android=</span><span class="st">&quot;http://schemas.android.com/apk/res/android&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:orientation=</span><span class="st">&quot;vertical&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:padding=</span><span class="st">&quot;24dp&quot;</span>&gt;</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">com.google.android.material.textview.MaterialTextView</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:id=</span><span class="st">&quot;@+id/textoTitulo&quot;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:textAppearance=</span><span class="st">&quot;?attr/textAppearanceTitleLarge&quot;</span> /&gt;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:id=</span><span class="st">&quot;@+id/textoTitulo&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:textAppearance=</span><span class="st">&quot;?attr/textAppearanceTitleLarge&quot;</span> /&gt;</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">com.google.android.material.textview.MaterialTextView</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:id=</span><span class="st">&quot;@+id/textoEstado&quot;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_marginTop=</span><span class="st">&quot;8dp&quot;</span> /&gt;</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:id=</span><span class="st">&quot;@+id/textoEstado&quot;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_marginTop=</span><span class="st">&quot;8dp&quot;</span> /&gt;</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">com.google.android.material.button.MaterialButton</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:id=</span><span class="st">&quot;@+id/botonCompletar&quot;</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:layout_marginTop=</span><span class="st">&quot;16dp&quot;</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ot">        android:text=</span><span class="st">&quot;@string/completar&quot;</span> /&gt;</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:id=</span><span class="st">&quot;@+id/botonCompletar&quot;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:layout_marginTop=</span><span class="st">&quot;16dp&quot;</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="ot">android:text=</span><span class="st">&quot;@string/completar&quot;</span> /&gt;</span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">LinearLayout</span>&gt;</span></code></pre></div>
 <p><strong>Lectura guiada:</strong></p>
 <ul>
@@ -248,39 +249,39 @@ No afirmar que está probado si no se ha ejecutado.</code></pre>
 <h3 id="36-recorrido-resuelto">3.6 Recorrido resuelto</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Momento</th>
 <th>Instrucción o dato</th>
 <th>Efecto esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Creación</td>
 <td><code>new Tarea(...)</code></td>
 <td>Existe una tarea inicialmente pendiente.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Carga visual</td>
 <td><code>setContentView(...)</code></td>
 <td>Se utiliza el layout descrito en XML.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Conexión</td>
 <td><code>findViewById(...)</code></td>
 <td>Se obtienen referencias a los controles identificados.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Primera representación</td>
 <td><code>mostrarTarea()</code></td>
 <td>Aparecen título, estado pendiente y botón habilitado.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Pulsación</td>
 <td><code>tarea.completar()</code></td>
 <td>Cambia el dato del modelo.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Actualización</td>
 <td>Segunda llamada a <code>mostrarTarea()</code></td>
 <td>Cambian mensaje y estado del botón.</td>
@@ -311,15 +312,15 @@ por qué no hace falta cambiar el modelo.</code></pre>
 <p>Lee estos fragmentos. Son distintos del ejemplo de tareas, pero mantienen la misma organización.</p>
 <p><strong>A. Extracto de <code>activity_reserva.xml</code></strong> — se muestra el contenido relevante de una vista, no el archivo XML completo:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">com.google.android.material.textview.MaterialTextView</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:id=</span><span class="st">&quot;@+id/textoSala&quot;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span> /&gt;</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:id=</span><span class="st">&quot;@+id/textoSala&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:layout_width=</span><span class="st">&quot;match_parent&quot;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span> /&gt;</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">com.google.android.material.button.MaterialButton</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:id=</span><span class="st">&quot;@+id/botonReservar&quot;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:text=</span><span class="st">&quot;@string/reservar&quot;</span> /&gt;</span></code></pre></div>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:id=</span><span class="st">&quot;@+id/botonReservar&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="ot">android:text=</span><span class="st">&quot;@string/reservar&quot;</span> /&gt;</span></code></pre></div>
 <p><strong>B. <code>Reserva.java</code></strong>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> Reserva <span class="op">{</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> <span class="bu">String</span> sala<span class="op">;</span></span>
@@ -361,7 +362,7 @@ por qué no hace falta cambiar el modelo.</code></pre>
 <h3 id="51-tabla-resuelta">5.1 Tabla resuelta</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Fragmento</th>
 <th>Responsabilidad</th>
 <th>Evidencia</th>
@@ -369,19 +370,19 @@ por qué no hace falta cambiar el modelo.</code></pre>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>A</td>
 <td>Vista o descripción visual.</td>
 <td>Declara controles, identificadores, dimensiones y un recurso de texto.</td>
 <td>Define dónde se podrá mostrar la sala y el botón de reserva.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>B</td>
 <td>Modelo.</td>
 <td>Almacena <code>sala</code> y <code>disponible</code>; <code>reservar()</code> cambia este último dato.</td>
 <td>Representa si la reserva puede realizarse.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>C</td>
 <td>Coordinación y representación del estado.</td>
 <td>Conecta el escuchador, invoca al modelo y actualiza controles.</td>
@@ -402,34 +403,34 @@ y Reserva. Devuelve la diferencia del recurso y explica qué permanece igual.</c
 <h3 id="53-indicadores-observables-sin-pesos">5.3 Indicadores observables, sin pesos</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Indicador</th>
 <th>Evidencia suficiente</th>
 <th>Error que requiere revisión</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Analiza la descripción de la vista</td>
 <td>Localiza controles, atributos y referencia de texto.</td>
 <td>Confunde XML con el objeto de reserva.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Sigue el origen del dato</td>
 <td>Relaciona constructor, campo, getter y <code>setText</code>.</td>
 <td>Afirma que el texto de la sala está fijado en el XML.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Distingue responsabilidades</td>
 <td>Explica modelo y representación con instrucciones concretas.</td>
 <td>Clasifica solo por el nombre del archivo.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Sigue la interacción</td>
 <td>Describe cambio del dato y actualización visual en orden.</td>
 <td>Afirma que deshabilitar el botón reserva la sala.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Formula un cambio acotado</td>
 <td>Identifica el recurso y conserva conexiones y modelo.</td>
 <td>Pide regenerar todo sin justificarlo.</td>
@@ -451,7 +452,7 @@ y Reserva. Devuelve la diferencia del recurso y explica qué permanece igual.</c
 <li><p><a href="https://mosqueteroweb.github.io/ismie01/DAM/dam_di_relaciones.html">Currículo: relación RA–CE–contenidos</a>: ubicación del contenido y del criterio.</p></li>
 <li><p><a href="https://developer.android.com/topic/architecture">Guía de arquitectura de Android</a>: separación de responsabilidades y capas.</p></li>
 <li><p><a href="https://developer.android.com/develop/ui/views/layout/constraint-layout">ConstraintLayout</a>: operaciones visuales y restricciones.</p></li>
-<li><p><a href="https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md">Material Components para Android</a>: situación de Views e integración Material3.</p></li>
+<li><p><a href="https://github.com/material-components/material-components-android/blob/master/docs/getting-started.html">Material Components para Android</a>: situación de Views e integración Material3.</p></li>
 </ul>
 <p>Consulta documental: 8 de septiembre de 2026. Los ejemplos son elaboración didáctica propia; las referencias no se presentan como fuente de código exportado ni como evidencia de ejecución local.</p>
 <hr />

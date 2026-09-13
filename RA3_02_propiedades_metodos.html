@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#8c5000">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA3-02 · Propiedades, atributos y métodos · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra3">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Definir un contrato público pequeño, con valores por defecto, tipos comprensibles y métodos que expresen acciones del componente.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-02-api.webp" alt="El atributo priority configura la prioridad, la propiedad completed refleja el estado y el método focusAction lleva el foco a la acción del componente." loading="lazy" width="1672" height="941"><figcaption>Atributos, propiedades y métodos cumplen papeles distintos dentro del contrato público.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Los <strong>atributos</strong> aparecen en HTML y resultan adecuados para configuración declarativa. Las <strong>propiedades</strong> se consultan o cambian desde JavaScript y pueden contener valores más ricos. Los <strong>métodos</strong> piden al componente que haga algo. El contrato debe indicar nombres, tipos, valores por defecto y efecto esperado.</p>
-<figure class="concept-figure"><img src="assets/img/ra3/ra3-02-api.webp" alt="El atributo priority configura la prioridad, la propiedad completed refleja el estado y el método focusAction lleva el foco a la acción del componente." loading="lazy" width="1672" height="941"><figcaption>Atributos, propiedades y métodos cumplen papeles distintos dentro del contrato público.</figcaption></figure>
 <p>Conviene reflejar atributo y propiedad cuando el estado sea visible y simple. La fuente de verdad debe ser única para evitar que HTML, JavaScript y pantalla discrepen.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> TaskCard <span class="kw">extends</span> <span class="bu">HTMLElement</span> {</span>
@@ -48,7 +49,7 @@
 
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Miembro</th>
 <th>Tipo</th>
 <th>Predeterminado</th>
@@ -56,31 +57,31 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>title</code></td>
 <td>texto</td>
 <td><code>Tarea sin título</code></td>
 <td>Encabezado visible</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>completed</code></td>
 <td>booleano</td>
 <td><code>false</code></td>
 <td>Estado y estilo</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>priority</code></td>
 <td><code>low</code>, <code>normal</code>, <code>high</code></td>
 <td><code>normal</code></td>
 <td>Indicador de prioridad</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>dueDate</code></td>
 <td>fecha ISO o vacío</td>
 <td>vacío</td>
 <td>Fecha opcional</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>focusAction()</code></td>
 <td>método</td>
 <td>—</td>
@@ -92,7 +93,7 @@
 </details>
 
 </div></section><h2 id="comprobación-y-cierre">Comprobación y cierre</h2>
-<p>Cambia cada propiedad desde la consola y explica si se refleja en el atributo y en la pantalla. Justifica por qué no se expone un método genérico <code>doEverything()</code>.</p>
+<p>Crea con IA un pequeño panel visual de pruebas que permita cambiar cada propiedad mediante campos, selectores y botones. Explica si el cambio se refleja en el atributo y en la pantalla. Justifica por qué no se expone un método genérico <code>doEverything()</code>.</p>
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA3_01_concepto_componentes.html">← RA3-01</a><a href="RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA3_03_eventos_acciones.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-03 · Eventos y acciones</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
     <footer class="site-footer">

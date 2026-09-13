@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#5b5f00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA7-01 · Componentes y empaquetado · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra7">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,41 +26,42 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Reconocer qué necesita la aplicación en ejecución y construir un paquete mínimo, versionado y sin residuos.</p>
-<h2 id="contenido-para-explicar">Contenido para explicar</h2>
-<p>Un paquete distribuye código compilado, recursos, manifiesto, licencia e instrucciones; excluye fuentes innecesarias, pruebas, cachés, secretos y datos personales. La versión del paquete, del código y de la documentación debe coincidir. <code>package-lock.json</code> fija el árbol de dependencias y <code>npm ci</code> instala desde él sin reescribirlo.</p>
 <figure class="concept-figure"><img src="assets/img/ra7/ra7-01-paquete.webp" alt="Contenido de gestor-1.0.0.zip: distribución compilada, manifiesto, licencia y README; se excluyen .env, node_modules, cachés, pruebas y datos personales, y coinciden las versiones." loading="lazy" width="1672" height="941"><figcaption>Una release contiene solo lo necesario para ejecutar y comprender, sin secretos, residuos ni datos personales.</figcaption></figure>
+
+<h2 id="contenido-para-explicar">Contenido para explicar</h2>
+<p>Una entrega web distribuye páginas, recursos, manifiesto, iconos, licencia e instrucciones; excluye borradores, cachés, secretos y datos personales. La versión publicada, la documentación y el manifiesto deben coincidir. La plataforma de creación conserva las dependencias y produce una salida identificable sin que el alumnado tenga que instalarlas mediante comandos.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Gemini propone este inventario, que el alumnado contrasta con la salida real:</p>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Elemento</th>
 <th style="text-align: center;">Se entrega</th>
 <th>Razón</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td><code>dist/</code></td>
+<tr>
+<td>Sitio publicado</td>
 <td style="text-align: center;">✓</td>
-<td>Aplicación compilada</td>
+<td>Aplicación web ejecutable</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>manifest.webmanifest</code></td>
 <td style="text-align: center;">✓</td>
 <td>Metadatos de instalación</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>.env</code></td>
 <td style="text-align: center;">No</td>
 <td>Puede contener secretos</td>
 </tr>
-<tr class="even">
-<td><code>node_modules/</code></td>
+<tr>
+<td>Dependencias internas del editor</td>
 <td style="text-align: center;">No</td>
-<td>Se reconstruye desde el bloqueo</td>
+<td>Las gestiona la plataforma</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>README-instalacion.md</code></td>
 <td style="text-align: center;">✓</td>
 <td>Requisitos y verificación</td>
@@ -68,11 +69,11 @@
 </tbody>
 </table></div>
 <section class="practice-card" data-practice="RA7-PB01"><div class="practice-card__label">Práctica básica</div><h2 id="ra7-pb01--paquete-mínimo-auditable">RA7-PB01 · Paquete mínimo auditable</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA7.a</dd></div><div><dt>Recursos</dt><dd>Gemini</dd></div><div><dt>Entrega solicitada</dt><dd>Inventario y paquete mínimo</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra7-pb01">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra7-pb01"><h3>Enunciado para publicar</h3>
-<p>Obtén con IA un script que limpie, compile y comprima <code>dist/</code>. Identifica sus entradas, salida y código de error. Crea <code>gestor-1.0.0.zip</code>, lista su contenido y justifica cada exclusión.</p>
+<p>Pide a la IA una lista de comprobación para preparar la versión <code>gestor-1.0.0</code>. Usa <strong>Exportar</strong> o <strong>Publicar</strong> desde el editor web, identifica la entrada, la salida y los estados de error, y justifica cada elemento incluido o excluido.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>La evidencia contiene commit, versión, <code>npm ci</code>, <code>npm run build</code>, listado del ZIP y ausencia de <code>.env</code>, fuentes y dependencias de desarrollo. El alumnado señala dónde se detiene el script ante un fallo y comprueba que <code>index.html</code>, recursos, manifiesto y licencia están presentes.</p>
+<p>La evidencia contiene versión, revisión publicada, inventario de la salida y ausencia de secretos, borradores y datos personales. El alumnado muestra cómo la interfaz detiene la publicación ante un fallo y comprueba que la página inicial, los recursos, el manifiesto, los iconos y la licencia están presentes.</p>
 </details>
 
 </div></section><h2 id="cierre">Cierre</h2>

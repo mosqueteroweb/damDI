@@ -22,7 +22,7 @@ Una medición necesita dispositivo, navegador, red, versión, datos y recorrido.
 | Memoria tras 20 aperturas/cierres | vuelve cerca de la línea base |
 | Respuesta al filtrar 1.000 filas | ≤ 200 ms en equipo de aula |
 
-La IA puede proponer un script, pero el alumno debe medir en el mismo escenario antes y después.
+La IA puede proponer la configuración de medición, pero el alumno debe comprobarla en el mismo escenario antes y después desde el panel visual.
 
 ## RA8-PB04 · Presupuesto y fuga aparente
 

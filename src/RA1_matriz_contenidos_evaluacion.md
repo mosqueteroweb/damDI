@@ -12,7 +12,7 @@ title: RA1 · Matriz de contenidos y evaluación
 
 ## 1. Reglas de elaboración
 
-**Itinerario acordado: aplicaciones web.** HTML, CSS y JavaScript se leen como ejemplos de salida de IA, sin exigir programación manual. [Material Design 3](https://m3.material.io/) rige el diseño de todo el curso. Android Studio, XML y Java se reservan a anexos voluntarios no evaluables y fuera de las 100 horas.
+**Itinerario acordado: aplicaciones web.** HTML, CSS y JavaScript se leen como ejemplos de salida de IA, sin exigir programación manual. [Material Design 3](https://m3.material.io/) rige el diseño de todo el curso. El desarrollo móvil nativo se reserva a anexos voluntarios no evaluables y fuera de las 100 horas.
 
 El índice de contenidos es el de la página de referencia. Se conserva su orden en el documento y solo se desglosan apartados que contienen varios conceptos diferenciados. La secuencia de clase puede recorrerlos en otro orden para facilitar el aprendizaje.
 
@@ -279,7 +279,7 @@ Los proyectos iniciales y fichas preparados son necesarios para que las activida
 - **Stitch:** propuesta visual inicial.
 - **Gemini:** explicación, generación de lógica y cambios localizados.
 - **Google AI Studio:** generación y experimentación funcional cuando encaje con el formato de proyecto.
-- **Editor visual complementario:** se seleccionará una ruta que permita crear, ubicar, configurar y exportar código de interfaz de manera comprobable. Se validará una herramienta de edición visual web para las operaciones que no queden cubiertas por las herramientas de Google. Android Studio no forma parte de esta ruta obligatoria.
+- **Editor visual complementario:** se seleccionará una ruta que permita crear, ubicar, configurar y exportar código de interfaz de manera comprobable. Se validará una herramienta de edición visual web para las operaciones que no queden cubiertas por las herramientas de Google. El desarrollo móvil nativo no forma parte de esta ruta obligatoria.
 
 No es obligatorio usar todas las herramientas en todas las prácticas. Se evitará que el alumno mantenga varias implementaciones equivalentes para un mismo ejercicio. El boceto de Stitch podrá servir de referencia visual: no se presupone una importación automática ni compatibilidad de exportación sin comprobarla.
 

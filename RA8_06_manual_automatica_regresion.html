@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#745b00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA8-06 · Pruebas manuales, automáticas y regresión · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra8">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,32 +26,23 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Elegir qué automatizar, construir una suite mínima de regresión y documentar resultados repetibles.</p>
+<figure class="concept-figure"><img src="assets/img/ra8/ra8-06-regresion.webp" alt="Árbol para elegir prueba manual, automática o regresión automática y ciclo común de reproducir el fallo, corregir, pasar la prueba, conservarla y ejecutarla tras cada cambio." loading="lazy" width="1672" height="941"><figcaption>Los defectos corregidos se convierten en pruebas de regresión estables, aisladas y con resultados comprensibles.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La prueba manual favorece exploración, percepción y casos nuevos; la automática repite comprobaciones estables con rapidez. La regresión protege comportamientos que funcionaban antes de un cambio. Una suite pequeña debe ser determinista, aislar datos y producir mensajes útiles.</p>
-<figure class="concept-figure"><img src="assets/img/ra8/ra8-06-regresion.webp" alt="Árbol para elegir prueba manual, automática o regresión automática y ciclo común de reproducir el fallo, corregir, pasar la prueba, conservarla y ejecutarla tras cada cambio." loading="lazy" width="1672" height="941"><figcaption>Los defectos corregidos se convierten en pruebas de regresión estables, aisladas y con resultados comprensibles.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>test<span class="op">.</span><span class="fu">beforeEach</span>(<span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">goto</span>(<span class="st">&#39;/tareas.html&#39;</span>)<span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">evaluate</span>(() <span class="kw">=&gt;</span> localStorage<span class="op">.</span><span class="fu">clear</span>())<span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">test</span>(<span class="st">&#39;conserva el título al fallar la validación&#39;</span><span class="op">,</span> <span class="kw">async</span> ({ page }) <span class="kw">=&gt;</span> {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">getByLabel</span>(<span class="st">&#39;Título&#39;</span>)<span class="op">.</span><span class="fu">fill</span>(<span class="st">&#39;Revisar informe&#39;</span>)<span class="op">;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> page<span class="op">.</span><span class="fu">getByRole</span>(<span class="st">&#39;button&#39;</span><span class="op">,</span> { <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Guardar tarea&#39;</span> })<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">expect</span>(page<span class="op">.</span><span class="fu">getByDisplayValue</span>(<span class="st">&#39;Revisar informe&#39;</span>))<span class="op">.</span><span class="fu">toBeVisible</span>()<span class="op">;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
-<p><code>beforeEach</code> aísla el estado; el nombre describe comportamiento; la aserción protege una regresión concreta.</p>
-<section class="practice-card" data-practice="RA8-PB06"><div class="practice-card__label">Práctica básica</div><h2 id="ra8-pb06--del-defecto-a-la-regresión">RA8-PB06 · Del defecto a la regresión</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–45 min</dd></div><div><dt>Criterios</dt><dd>RA8.c, RA8.g</dd></div><div><dt>Recursos</dt><dd>Gemini, Playwright</dd></div><div><dt>Entrega solicitada</dt><dd>Caso manual, Playwright y regresión</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra8-pb06">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra8-pb06"><h3>Enunciado para publicar</h3>
-<p>Elige un defecto corregido, escribe primero caso manual, pide a Gemini su versión Playwright, identifica selectores y aserción, ejecútala antes/después y añade la prueba a una suite de cinco flujos críticos.</p>
+<p>El grabador visual define una preparación «Restablecer datos», un caso llamado «Conserva el título al fallar la validación» y una comprobación final: el campo sigue mostrando «Revisar informe». La preparación aísla el estado; el nombre describe el comportamiento; la comprobación protege una regresión concreta.</p>
+<section class="practice-card" data-practice="RA8-PB06"><div class="practice-card__label">Práctica básica</div><h2 id="ra8-pb06--del-defecto-a-la-regresión">RA8-PB06 · Del defecto a la regresión</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–45 min</dd></div><div><dt>Criterios</dt><dd>RA8.c, RA8.g</dd></div><div><dt>Recursos</dt><dd>Gemini</dd></div><div><dt>Entrega solicitada</dt><dd>Caso manual, grabador visual y regresión</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra8-pb06">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra8-pb06"><h3>Enunciado para publicar</h3>
+<p>Elige un defecto corregido, escribe primero el caso manual, pide a Gemini que lo transforme en pasos para el grabador visual, identifica controles y comprobación, ejecútalo antes y después y añade la prueba a una colección de cinco flujos críticos.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>La suite cubre alta, validación, filtro, borrado recuperable e informe. Usa datos reiniciados y selectores accesibles. La prueba del defecto falla en la versión base y pasa tras la corrección. El informe registra comando, navegador, versión, 5/5 pruebas y duración; una revisión manual de foco y claridad complementa la suite.</p>
+<p>La colección cubre alta, validación, filtro, borrado recuperable e informe. Usa datos reiniciados y controles identificados por nombres accesibles. La prueba del defecto falla en la versión base y pasa tras la corrección. El informe registra navegador, versión, 5/5 pruebas y duración; una revisión manual de foco y claridad complementa la colección.</p>
 </details>
 
 </div></section><h2 id="cierre">Cierre</h2>
 <p>Justifica qué caso mantienes manual y qué señal te haría retirar o reparar una prueba automática inestable.</p>
-<p>Referencia: <a href="https://playwright.dev/docs/test-reporters">generación de informes de Playwright</a>.</p>
+<p>El informe se consulta y exporta desde el panel de resultados del grabador visual.</p>
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA8_05_seguridad.html">← RA8-05</a><a href="RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA8_integrador.html"><span class="unit-next-card__eyebrow">Ejercicio integrador</span><strong>RA8-INT01 · Certificación interna del gestor</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
     <footer class="site-footer">

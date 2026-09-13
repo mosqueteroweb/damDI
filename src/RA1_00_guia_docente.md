@@ -55,6 +55,6 @@ Las trece prácticas aportan evidencias breves sobre los conceptos del currícul
 - Preparar los fragmentos y proyectos iniciales indicados en cada unidad.
 - Mantener una versión inicial y otra resuelta del gestor.
 - Facilitar alternativas si una generación falla, sin dar por demostrado el criterio.
-- Reservar Android Studio, XML y Java para ampliación voluntaria.
+- Reservar el desarrollo móvil nativo para la ampliación voluntaria.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA1_matriz_contenidos_evaluacion.html">Matriz RA1</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA1_01_patrones_arquitectura.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA1-01 · Patrones de arquitectura</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

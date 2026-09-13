@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#8c5000">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA3-06 · Pruebas de componentes · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra3">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Diseñar y ejecutar pruebas unitarias sobre el contrato público, los estados, los eventos y la accesibilidad básica.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-06-pruebas.webp" alt="Una prueba prepara el componente, actúa cambiando un atributo o pulsando y comprueba el valor, el evento emitido y el nombre accesible." loading="lazy" width="1672" height="941"><figcaption>Preparar, actuar y comprobar organiza pruebas pequeñas y reproducibles del contrato.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Una prueba unitaria comprueba un comportamiento pequeño en condiciones controladas. Se estructura como preparar, actuar y comprobar. Para un componente interesa probar valores por defecto, cambios de atributos/propiedades, métodos, eventos y contenido accesible. Una prueba no debe depender de detalles visuales irrelevantes.</p>
-<figure class="concept-figure"><img src="assets/img/ra3/ra3-06-pruebas.webp" alt="Una prueba prepara el componente, actúa cambiando un atributo o pulsando y comprueba el valor, el evento emitido y el nombre accesible." loading="lazy" width="1672" height="941"><figcaption>Preparar, actuar y comprobar organiza pruebas pequeñas y reproducibles del contrato.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> card <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;task-card&#39;</span>)<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">append</span>(card)<span class="op">;</span></span>
@@ -47,33 +48,33 @@
 
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Caso</th>
 <th>Resultado esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Sin <code>title</code></td>
 <td>Usa «Tarea sin título»</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>priority="high"</code></td>
 <td>Expone prioridad alta</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Prioridad desconocida</td>
 <td>Normaliza a <code>normal</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>toggle()</code></td>
 <td>Cambia <code>completed</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Acción de borrar</td>
 <td>Emite una vez <code>{id}</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td>Botón principal</td>
 <td>Tiene nombre accesible</td>
 </tr>

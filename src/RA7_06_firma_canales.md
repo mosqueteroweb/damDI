@@ -24,7 +24,7 @@ La explicación de IA se corrige: HTTPS protege el transporte, pero no sustituye
 
 ## RA7-PB06 · Firmar y elegir canal
 
-Genera el hash y firma didáctica del ZIP con GPG o Cosign. Verifica el original, altera una copia y registra el fallo. Después elige entre Pages, Release, store/ad-hoc y correo, indicando destinatario, actualización y retirada.
+Usa una herramienta visual de firma didáctica para obtener la huella y firma de una versión exportada. Verifica el original desde la misma interfaz, altera una copia y registra el fallo. Después elige entre Pages, Release, store/ad-hoc y correo, indicando destinatario, actualización y retirada.
 
 ### Solución orientativa
 

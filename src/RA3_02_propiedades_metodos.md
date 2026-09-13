@@ -53,6 +53,6 @@ Si `priority` no pertenece al conjunto, el componente usa `normal` y no rompe el
 
 ## Comprobación y cierre
 
-Cambia cada propiedad desde la consola y explica si se refleja en el atributo y en la pantalla. Justifica por qué no se expone un método genérico `doEverything()`.
+Crea con IA un pequeño panel visual de pruebas que permita cambiar cada propiedad mediante campos, selectores y botones. Explica si el cambio se refleja en el atributo y en la pantalla. Justifica por qué no se expone un método genérico `doEverything()`.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_01_concepto_componentes.html">← RA3-01</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_03_eventos_acciones.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-03 · Eventos y acciones</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

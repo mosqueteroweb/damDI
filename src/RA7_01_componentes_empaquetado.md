@@ -11,7 +11,7 @@ Reconocer qué necesita la aplicación en ejecución y construir un paquete mín
 
 ## Contenido para explicar
 
-Un paquete distribuye código compilado, recursos, manifiesto, licencia e instrucciones; excluye fuentes innecesarias, pruebas, cachés, secretos y datos personales. La versión del paquete, del código y de la documentación debe coincidir. `package-lock.json` fija el árbol de dependencias y `npm ci` instala desde él sin reescribirlo.
+Una entrega web distribuye páginas, recursos, manifiesto, iconos, licencia e instrucciones; excluye borradores, cachés, secretos y datos personales. La versión publicada, la documentación y el manifiesto deben coincidir. La plataforma de creación conserva las dependencias y produce una salida identificable sin que el alumnado tenga que instalarlas mediante comandos.
 
 ## Ejemplo básico resuelto
 
@@ -19,21 +19,21 @@ Gemini propone este inventario, que el alumnado contrasta con la salida real:
 
 | Elemento | Se entrega | Razón |
 |---|:---:|---|
-| `dist/` | ✓ | Aplicación compilada |
+| Sitio publicado | ✓ | Aplicación web ejecutable |
 | `manifest.webmanifest` | ✓ | Metadatos de instalación |
 | `.env` | No | Puede contener secretos |
-| `node_modules/` | No | Se reconstruye desde el bloqueo |
+| Dependencias internas del editor | No | Las gestiona la plataforma |
 | `README-instalacion.md` | ✓ | Requisitos y verificación |
 
 ## RA7-PB01 · Paquete mínimo auditable
 
-Obtén con IA un script que limpie, compile y comprima `dist/`. Identifica sus entradas, salida y código de error. Crea `gestor-1.0.0.zip`, lista su contenido y justifica cada exclusión.
+Pide a la IA una lista de comprobación para preparar la versión `gestor-1.0.0`. Usa **Exportar** o **Publicar** desde el editor web, identifica la entrada, la salida y los estados de error, y justifica cada elemento incluido o excluido.
 
 ### Solución orientativa
 
 <details><summary>Mostrar ejemplo de solución</summary>
 
-La evidencia contiene commit, versión, `npm ci`, `npm run build`, listado del ZIP y ausencia de `.env`, fuentes y dependencias de desarrollo. El alumnado señala dónde se detiene el script ante un fallo y comprueba que `index.html`, recursos, manifiesto y licencia están presentes.
+La evidencia contiene versión, revisión publicada, inventario de la salida y ausencia de secretos, borradores y datos personales. El alumnado muestra cómo la interfaz detiene la publicación ante un fallo y comprueba que la página inicial, los recursos, el manifiesto, los iconos y la licencia están presentes.
 
 </details>
 

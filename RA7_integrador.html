@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#5b5f00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA7-INT01 · Release candidata del gestor · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra7">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,17 +26,18 @@
 
 <h2 id="situación">Situación</h2>
 <p>El gestor ya ha sido probado y documentado. El centro necesita una versión que pueda instalarse, verificarse, actualizarse y retirarse sin depender del equipo que la creó.</p>
-<h2 id="encargo">Encargo</h2>
-<p>Prepara una release candidata web/PWA. Parte de configuraciones y scripts generados con Stitch, Gemini y Google AI Studio; identifica cada fragmento, elimina supuestos falsos, ejecútalo y conserva evidencia real.</p>
 <figure class="concept-figure"><img src="assets/img/ra7/ra7-integrador.webp" alt="Pipeline correcto desde un commit identificado hasta una release candidata, con evidencia en cada etapa; cualquier fallo baja a una ruta separada para detener, corregir y repetir." loading="lazy" width="1672" height="941"><figcaption>Solo la cadena completa y verificada conduce a la release candidata; cualquier fallo detiene el proceso y obliga a repetir la etapa.</figcaption></figure>
+
+<h2 id="encargo">Encargo</h2>
+<p>Prepara una versión candidata web/PWA. Parte de diseños, manifiestos y listas de comprobación generados con Stitch, Gemini y Google AI Studio; elimina supuestos falsos, usa las interfaces de publicación y conserva evidencia real.</p>
 <h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ol type="1">
 <li>Inventario de componentes, versiones, licencias y exclusiones del paquete.</li>
-<li>ZIP versionado con compilación limpia y PWA instalable.</li>
-<li>Generación desde tarea del IDE y desde herramienta externa o CI.</li>
+<li>Versión web identificada, exportable y PWA instalable.</li>
+<li>Generación desde el editor con IA y desde la interfaz web del repositorio.</li>
 <li>Experiencia de instalación personalizada con M3, idioma, cancelación y error.</li>
 <li>Firma digital del artefacto y verificación positiva y negativa.</li>
-<li>Instalación desatendida con registro y fallo seguro.</li>
+<li>Actualización automatizada, con registro visual y bloqueo seguro ante fallos.</li>
 <li>Pruebas de instalación, actualización y desinstalación, incluidos datos locales.</li>
 <li>Plan de Pages, Release y un canal restringido, con retirada y actualización.</li>
 </ol>
@@ -45,50 +46,50 @@
 <li>Ficha de versión, commit y entorno.</li>
 <li>Manifiesto de componentes y licencias.</li>
 <li>Artefacto, hash, firma e instrucciones de verificación.</li>
-<li>Configuración del IDE y cadena externa anotadas.</li>
+<li>Configuración del editor y flujo externo visual anotados.</li>
 <li>Prototipo Stitch y textos definitivos del asistente.</li>
-<li>Registros del ciclo limpio y modo desatendido.</li>
+<li>Registros visuales del ciclo limpio y actualización automatizada.</li>
 <li>Matriz canal–audiencia–versión–actualización–retirada.</li>
 <li>Registro de correcciones a la salida de IA y defensa individual.</li>
 </ul>
 <h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Caso</th>
 <th>Resultado esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>Compilación limpia</td>
-<td>Produce el artefacto identificado sin archivos de trabajo ni secretos</td>
+<tr>
+<td>Publicación limpia</td>
+<td>Produce la versión identificada sin borradores ni secretos</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Instalación PWA</td>
 <td>La aplicación queda instalada desde un perfil limpio</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Firma original</td>
 <td>La verificación identifica el artefacto como íntegro</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Copia alterada</td>
 <td>La verificación falla de forma visible</td>
 </tr>
-<tr class="odd">
-<td>Modo desatendido</td>
-<td>Termina sin preguntas y conserva registro y código de salida</td>
+<tr>
+<td>Actualización automática</td>
+<td>Publica sin pasos ocultos, conserva registro y bloquea los fallos</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Actualización</td>
 <td>Mantiene la versión esperada y declara qué ocurre con los datos</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Desinstalación</td>
 <td>Retira aplicación y caché según la política documentada</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Canal alternativo</td>
 <td>Define audiencia, actualización y retirada, no solo una URL</td>
 </tr>
@@ -97,49 +98,49 @@
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>CE</th>
 <th>Satisfactorio</th>
 <th>Insuficiente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>a</td>
 <td>Paquete contiene solo componentes requeridos y trazados</td>
 <td>Copia la carpeta de trabajo</td>
 </tr>
-<tr class="even">
+<tr>
 <td>b</td>
 <td>Asistente personalizado, claro y accesible</td>
 <td>Cambia solo un logotipo</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c</td>
-<td>El IDE genera un paquete verificable</td>
-<td>Captura sin artefacto</td>
+<td>El editor genera una versión verificable</td>
+<td>Captura sin versión accesible</td>
 </tr>
-<tr class="even">
+<tr>
 <td>d</td>
-<td>Herramienta externa reproduce la salida</td>
-<td>Depende de pasos manuales ocultos</td>
+<td>La interfaz externa reproduce la salida</td>
+<td>Depende de pasos ocultos</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>e</td>
 <td>Firma original válida y copia alterada inválida</td>
 <td>Presenta solo un hash</td>
 </tr>
-<tr class="even">
+<tr>
 <td>f</td>
-<td>Cadena no interactiva y fallo no nulo</td>
-<td>Requiere respuestas manuales</td>
+<td>Automatización visible y bloqueo seguro</td>
+<td>Requiere pasos manuales ocultos</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>g</td>
 <td>Retirada comprobada y datos explicados</td>
 <td>Confunde cerrar con desinstalar</td>
 </tr>
-<tr class="even">
+<tr>
 <td>h</td>
 <td>Canales tienen audiencia y ciclo de versión</td>
 <td>Enumera canales sin estrategia</td>
@@ -149,7 +150,7 @@
 <h2 id="solución-docente-orientativa">Solución docente orientativa</h2>
 <details><summary>Mostrar estructura de una solución válida</summary>
 
-<p>La versión <code>1.0.0-rc.1</code> se compila desde un bloqueo de dependencias y genera un ZIP sin secretos. La tarea del IDE y CI llaman al mismo script. El manifiesto permite instalar la PWA; Stitch muestra estados accesibles. El ZIP se firma y la copia modificada falla. CI ejecuta sin preguntas y detiene la publicación si fallan pruebas. El ciclo en perfil limpio registra instalación, actualización, desinstalación y estado de datos. Pages es canal principal, Releases conserva artefactos y ad-hoc limita el piloto; cada canal define retirada.</p>
+<p>La versión <code>1.0.0-rc.1</code> parte de una revisión identificada y se publica sin secretos. El editor con IA y la interfaz web del repositorio usan la misma fuente. El manifiesto permite instalar la PWA; Stitch muestra estados accesibles. La versión exportada se firma mediante una interfaz didáctica y la copia modificada falla al verificarse. La automatización bloquea la publicación si falla una validación. El ciclo en perfil limpio registra instalación, actualización, desinstalación y estado de datos. Pages es el canal principal, Releases conserva versiones y ad-hoc limita el piloto; cada canal define retirada.</p>
 </details>
 
 <h2 id="preguntas-de-defensa">Preguntas de defensa</h2>

@@ -5,16 +5,11 @@ Web docente del módulo 0488, con itinerario principal de aplicaciones web gener
 - [Abrir la web docente](https://mosqueteroweb.github.io/damDI/)
 - [Repositorio](https://github.com/mosqueteroweb/damDI)
 
-Android Studio, XML y Java aparecen únicamente como ampliación voluntaria.
+El desarrollo móvil nativo aparece únicamente como ampliación voluntaria.
 
-## Generación de la web
+## Publicación de la web
 
 La web se publica como HTML estático. Los documentos editables están en `src/`
-y las páginas se generan localmente con:
-
-```bash
-python scripts/build_static.py
-```
-
-El archivo `.nojekyll` evita que GitHub vuelva a compilar el contenido. Tras
-generar las páginas, basta con subir los cambios de la rama `main`.
+y las páginas resultantes se mantienen en la raíz. El flujo docente se realiza
+desde interfaces visuales; la generación técnica interna queda reservada al
+mantenimiento del sitio y no forma parte de las actividades del alumnado.

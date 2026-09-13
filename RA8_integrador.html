@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#745b00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA8-INT01 · Certificación interna del gestor · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra8">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="situación">Situación</h2>
 <p>Antes de distribuir el gestor, el centro necesita una decisión razonada sobre su preparación. No busca «cero fallos», sino riesgos conocidos, resultados reproducibles y límites explícitos.</p>
-<h2 id="encargo">Encargo</h2>
-<p>Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estrategia completa sobre una versión identificada. Parte de plantillas y scripts generados; comprende, adapta y verifica cada prueba.</p>
 <figure class="concept-figure"><img src="assets/img/ra8/ra8-integrador.webp" alt="Estrategia, integración, regresión, volumen y estrés, seguridad y recursos alimentan un informe trazable y un registro de defectos, que conducen a apto, apto con condiciones o no apto según riesgos residuales." loading="lazy" width="1672" height="941"><figcaption>La certificación interna resume evidencias y riesgos residuales de una versión identificada para justificar la decisión.</figcaption></figure>
+
+<h2 id="encargo">Encargo</h2>
+<p>Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas visuales de prueba una estrategia completa sobre una versión identificada. Parte de plantillas y casos generados con IA; comprende, adapta y verifica cada prueba desde el navegador.</p>
 <h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ol type="1">
 <li>Estrategia con alcance, riesgos, entornos, datos, responsabilidades y criterios de salida.</li>
@@ -44,8 +45,8 @@
 <li>Plan y matriz de trazabilidad.</li>
 <li>Versión/commit y descripción del entorno.</li>
 <li>Datos de prueba ficticios y procedimiento de reinicio.</li>
-<li>Casos manuales y scripts generados anotados.</li>
-<li>Salidas de Playwright, Lighthouse, k6 y ZAP sobre entorno autorizado.</li>
+<li>Casos manuales y recorridos automáticos generados y anotados.</li>
+<li>Informes del grabador web, Lighthouse, panel de carga y auditoría pasiva sobre la copia autorizada.</li>
 <li>Registro de defectos antes/después.</li>
 <li>Conclusión: apto, apto con condiciones o no apto.</li>
 <li>Defensa individual de cinco minutos.</li>
@@ -53,33 +54,33 @@
 <h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Familia</th>
 <th>Evidencia</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Integración</td>
 <td>Contratos componente–lista y aplicación–fuente</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Regresión</td>
 <td>Cinco flujos, incluido un defecto corregido</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Volumen/estrés</td>
 <td>Escalones, presupuesto y recuperación</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Seguridad</td>
 <td>Entrada/salida, secretos, almacenamiento, dependencia, cabecera</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Recursos</td>
 <td>Transferencia, peticiones, respuesta y memoria</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Sistema</td>
 <td>Configuración, fuente caída y datos corruptos</td>
 </tr>
@@ -88,44 +89,44 @@
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>CE</th>
 <th>Satisfactorio</th>
 <th>Insuficiente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>a</td>
 <td>Estrategia priorizada, acotada y trazable</td>
 <td>Lista de herramientas sin estrategia</td>
 </tr>
-<tr class="even">
+<tr>
 <td>b</td>
 <td>Dos integraciones con frontera y sustitutos claros</td>
 <td>Solo prueba piezas aisladas</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c</td>
 <td>Suite reproduce un defecto antes/después</td>
 <td>Automatiza sin demostrar regresión</td>
 </tr>
-<tr class="even">
+<tr>
 <td>d</td>
 <td>Volumen y estrés miden degradación y recuperación</td>
 <td>Carga sin umbral o sobre terceros</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>e</td>
 <td>Hallazgos de seguridad reproducidos y contrastados</td>
 <td>Copia avisos automáticos</td>
 </tr>
-<tr class="even">
+<tr>
 <td>f</td>
 <td>Métricas repetidas contra presupuesto</td>
 <td>Solo presenta puntuación global</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>g</td>
 <td>Informe permite repetir y decidir</td>
 <td>Capturas sin entorno ni conclusión</td>
@@ -135,7 +136,7 @@
 <h2 id="solución-docente-orientativa">Solución docente orientativa</h2>
 <details><summary>Mostrar estructura de una solución válida</summary>
 
-<p>La estrategia prioriza pérdida de datos, borrado y discrepancias del informe. Playwright prueba integración y cinco regresiones sobre estado reiniciado. El volumen crece hasta 1.000 tareas y la carga k6 permanece local; se documenta el primer límite y la recuperación. Lighthouse y DevTools comparan tres ejecuciones. ZAP se usa pasivamente y los avisos se verifican. Cada defecto tiene pasos, esperado/real, severidad, corrección y repetición. La conclusión «apto con condiciones» enumera riesgos residuales y fecha de revisión.</p>
+<p>La estrategia prioriza pérdida de datos, borrado y discrepancias del informe. El grabador visual prueba integración y cinco regresiones sobre estado reiniciado. El volumen crece hasta 1.000 tareas y el panel de carga se limita a la copia autorizada; se documenta el primer límite y la recuperación. Lighthouse y DevTools comparan tres ejecuciones. La auditoría de seguridad es pasiva y sus avisos se verifican. Cada defecto tiene pasos, esperado/real, severidad, corrección y repetición. La conclusión «apto con condiciones» enumera riesgos residuales y fecha de revisión.</p>
 </details>
 
 <h2 id="preguntas-de-defensa">Preguntas de defensa</h2>

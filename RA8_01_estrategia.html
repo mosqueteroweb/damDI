@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#745b00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA8-01 · Objetivo, límites y estrategia · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra8">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,13 +26,14 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Establecer una estrategia de pruebas basada en riesgos, requisitos, niveles, datos, entorno y criterios de salida.</p>
+<figure class="concept-figure"><img src="assets/img/ra8/ra8-01-estrategia.webp" alt="Ciclo de pruebas basado en requisitos, riesgos, probabilidad por impacto, prioridad, casos y datos, ejecución, evidencia y criterio de salida, con realimentación hacia los riesgos." loading="lazy" width="1672" height="941"><figcaption>Las pruebas reducen incertidumbre y apoyan decisiones, pero no demuestran la ausencia de fallos.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Probar busca información sobre calidad; no demuestra que no existan errores. La estrategia indica qué se prueba, por qué, dónde, con qué datos, quién lo ejecuta y cuándo basta. Se prioriza probabilidad × impacto y se enlaza cada requisito con al menos una prueba.</p>
-<figure class="concept-figure"><img src="assets/img/ra8/ra8-01-estrategia.webp" alt="Ciclo de pruebas basado en requisitos, riesgos, probabilidad por impacto, prioridad, casos y datos, ejecución, evidencia y criterio de salida, con realimentación hacia los riesgos." loading="lazy" width="1672" height="941"><figcaption>Las pruebas reducen incertidumbre y apoyan decisiones, pero no demuestran la ausencia de fallos.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Riesgo</th>
 <th style="text-align: right;">Prob.</th>
 <th style="text-align: right;">Impacto</th>
@@ -41,21 +42,21 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Borrar la tarea equivocada</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">6</td>
 <td>Cancelar y deshacer borrado</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Filtro sin resultados</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">4</td>
 <td>Estado vacío y limpieza</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Título demasiado largo</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">1</td>

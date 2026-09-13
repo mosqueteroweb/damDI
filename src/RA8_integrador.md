@@ -11,7 +11,7 @@ Antes de distribuir el gestor, el centro necesita una decisión razonada sobre s
 
 ## Encargo
 
-Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estrategia completa sobre una versión identificada. Parte de plantillas y scripts generados; comprende, adapta y verifica cada prueba.
+Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas visuales de prueba una estrategia completa sobre una versión identificada. Parte de plantillas y casos generados con IA; comprende, adapta y verifica cada prueba desde el navegador.
 
 ## Requisitos obligatorios
 
@@ -28,8 +28,8 @@ Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estr
 - Plan y matriz de trazabilidad.
 - Versión/commit y descripción del entorno.
 - Datos de prueba ficticios y procedimiento de reinicio.
-- Casos manuales y scripts generados anotados.
-- Salidas de Playwright, Lighthouse, k6 y ZAP sobre entorno autorizado.
+- Casos manuales y recorridos automáticos generados y anotados.
+- Informes del grabador web, Lighthouse, panel de carga y auditoría pasiva sobre la copia autorizada.
 - Registro de defectos antes/después.
 - Conclusión: apto, apto con condiciones o no apto.
 - Defensa individual de cinco minutos.
@@ -61,7 +61,7 @@ Diseña y ejecuta con Stitch, Gemini/AI Studio y herramientas de prueba una estr
 
 <details><summary>Mostrar estructura de una solución válida</summary>
 
-La estrategia prioriza pérdida de datos, borrado y discrepancias del informe. Playwright prueba integración y cinco regresiones sobre estado reiniciado. El volumen crece hasta 1.000 tareas y la carga k6 permanece local; se documenta el primer límite y la recuperación. Lighthouse y DevTools comparan tres ejecuciones. ZAP se usa pasivamente y los avisos se verifican. Cada defecto tiene pasos, esperado/real, severidad, corrección y repetición. La conclusión «apto con condiciones» enumera riesgos residuales y fecha de revisión.
+La estrategia prioriza pérdida de datos, borrado y discrepancias del informe. El grabador visual prueba integración y cinco regresiones sobre estado reiniciado. El volumen crece hasta 1.000 tareas y el panel de carga se limita a la copia autorizada; se documenta el primer límite y la recuperación. Lighthouse y DevTools comparan tres ejecuciones. La auditoría de seguridad es pasiva y sus avisos se verifican. Cada defecto tiene pasos, esperado/real, severidad, corrección y repetición. La conclusión «apto con condiciones» enumera riesgos residuales y fecha de revisión.
 
 </details>
 

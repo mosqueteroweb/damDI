@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#984061">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA5-01 · Informes incrustados y no incrustados · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra5">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,25 +26,26 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Distinguir un informe integrado en la aplicación de un documento o panel externo y elegir según uso, actualización y distribución.</p>
+<figure class="concept-figure"><img src="assets/img/ra5/ra5-01-informes.webp" alt="Una fuente común alimenta un informe incrustado, que comparte navegación, filtros y estado con el gestor, y un informe independiente preparado para imprimir y distribuir." loading="lazy" width="1672" height="941"><figcaption>La misma fuente puede ofrecer análisis dentro del gestor y una salida autónoma para compartir.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Un informe <strong>incrustado</strong> forma parte del flujo de la aplicación: comparte navegación y puede reaccionar a su estado. Uno <strong>no incrustado</strong> se abre o distribuye como recurso independiente —por ejemplo, PDF, hoja o panel— y resulta útil para archivo, impresión o destinatarios sin acceso a la aplicación.</p>
-<figure class="concept-figure"><img src="assets/img/ra5/ra5-01-informes.webp" alt="Una fuente común alimenta un informe incrustado, que comparte navegación, filtros y estado con el gestor, y un informe independiente preparado para imprimir y distribuir." loading="lazy" width="1672" height="941"><figcaption>La misma fuente puede ofrecer análisis dentro del gestor y una salida autónoma para compartir.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Necesidad</th>
 <th>Modalidad</th>
 <th>Decisión</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Consultar pendientes mientras se gestionan tareas</td>
 <td>Incrustada</td>
 <td>Conserva contexto y filtros</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Acta mensual firmable</td>
 <td>No incrustada</td>
 <td>Versión cerrada, fechada e imprimible</td>
@@ -52,11 +53,11 @@
 </tbody>
 </table></div>
 <p>Salida de IA que el alumno debe reconocer:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;report-title&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h2</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;report-title&quot;</span><span class="dt">&gt;</span>Resumen de tareas<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;report-content&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> aria-labelledby</span><span class="op">=</span><span class="st">&quot;report-title&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h2</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;report-title&quot;</span><span class="dt">&gt;</span>Resumen de tareas<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;report-content&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;informe-mensual.pdf&quot;</span><span class="dt">&gt;</span>Descargar informe mensual<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;informe-mensual.pdf&quot;</span><span class="dt">&gt;</span>Descargar informe mensual<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div>
 <p><code>section</code> integra el resumen y el enlace ofrece la versión independiente. No son dos informes distintos si comparten pregunta, fuente y fecha de corte.</p>
 <section class="practice-card" data-practice="RA5-PB01"><div class="practice-card__label">Práctica básica</div><h2 id="ra5-pb01--dos-modos-una-decisión">RA5-PB01 · Dos modos, una decisión</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA5.a, RA5.h</dd></div><div><dt>Recursos</dt><dd>Stitch</dd></div><div><dt>Entrega solicitada</dt><dd>Panel integrado, versión externa y decisión</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra5-pb01">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra5-pb01"><h3>Enunciado para publicar</h3>
 <p>Diseña en Stitch el resumen incrustado y la portada del informe exportado. Entrega una tabla comparando actualización, interacción, acceso, impresión y mantenimiento, y genera ambos accesos en una página.</p>

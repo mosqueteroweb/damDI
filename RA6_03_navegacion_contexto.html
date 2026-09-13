@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#3f5f90">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA6-03 · Navegación, búsqueda y ayuda contextual · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra6">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,12 +26,13 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Construir un centro de ayuda localizable y enlazar cada pantalla con la respuesta pertinente.</p>
+<figure class="concept-figure"><img src="assets/img/ra6/ra6-03-accesos.webp" alt="Tabla de contenidos, índice alfabético, búsqueda con sinónimos y ayuda contextual conducen al tema exacto Borrar una tarea, que permite volver a la aplicación." loading="lazy" width="1672" height="941"><figcaption>Distintos caminos de acceso deben llevar a la respuesta concreta y facilitar el regreso a la tarea.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La tabla de contenidos refleja jerarquía; el índice ofrece términos del usuario; la búsqueda encuentra texto y sinónimos; la ayuda contextual abre el tema exacto sin perder la tarea. Los enlaces necesitan títulos claros, foco visible y retorno.</p>
-<figure class="concept-figure"><img src="assets/img/ra6/ra6-03-accesos.webp" alt="Tabla de contenidos, índice alfabético, búsqueda con sinónimos y ayuda contextual conducen al tema exacto Borrar una tarea, que permite volver a la aplicación." loading="lazy" width="1672" height="941"><figcaption>Distintos caminos de acceso deben llevar a la respuesta concreta y facilitar el regreso a la tarea.</figcaption></figure>
 <h2 id="ra6-ej03--ejemplo-resuelto">RA6-EJ03 · Ejemplo resuelto</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;ayuda.html#crear-tarea&quot;</span> <span class="er">aria-describedby</span><span class="ot">=</span><span class="st">&quot;help-context&quot;</span><span class="dt">&gt;</span>Ayuda<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;help-context&quot;</span> <span class="er">hidden</span><span class="dt">&gt;</span>sobre el formulario Crear tarea<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;ayuda.html#crear-tarea&quot;</span><span class="ot"> aria-describedby</span><span class="op">=</span><span class="st">&quot;help-context&quot;</span><span class="dt">&gt;</span>Ayuda<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;help-context&quot;</span><span class="ot"> hidden</span><span class="dt">&gt;</span>sobre el formulario Crear tarea<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>El fragmento enlaza al ancla específica y aporta contexto al nombre. La página de destino empieza por la respuesta, no por una portada genérica.</p>
 <section class="practice-card" data-practice="RA6-PB03"><div class="practice-card__label">Práctica básica</div><h2 id="ra6-pb03--encontrar-ayuda-en-dos-pasos">RA6-PB03 · Encontrar ayuda en dos pasos</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA6.c</dd></div><div><dt>Recursos</dt><dd>Stitch</dd></div><div><dt>Entrega solicitada</dt><dd>Navegación, consultas y enlaces contextuales</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra6-pb03">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra6-pb03"><h3>Enunciado para publicar</h3>
 <p>Diseña con Stitch una portada con contenidos, índice A–Z y búsqueda. Añade ayuda contextual a crear, filtrar y borrar. Prueba cinco consultas, incluidos sinónimos y cero resultados.</p>

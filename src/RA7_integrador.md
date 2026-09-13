@@ -11,16 +11,16 @@ El gestor ya ha sido probado y documentado. El centro necesita una versión que 
 
 ## Encargo
 
-Prepara una release candidata web/PWA. Parte de configuraciones y scripts generados con Stitch, Gemini y Google AI Studio; identifica cada fragmento, elimina supuestos falsos, ejecútalo y conserva evidencia real.
+Prepara una versión candidata web/PWA. Parte de diseños, manifiestos y listas de comprobación generados con Stitch, Gemini y Google AI Studio; elimina supuestos falsos, usa las interfaces de publicación y conserva evidencia real.
 
 ## Requisitos obligatorios
 
 1. Inventario de componentes, versiones, licencias y exclusiones del paquete.
-2. ZIP versionado con compilación limpia y PWA instalable.
-3. Generación desde tarea del IDE y desde herramienta externa o CI.
+2. Versión web identificada, exportable y PWA instalable.
+3. Generación desde el editor con IA y desde la interfaz web del repositorio.
 4. Experiencia de instalación personalizada con M3, idioma, cancelación y error.
 5. Firma digital del artefacto y verificación positiva y negativa.
-6. Instalación desatendida con registro y fallo seguro.
+6. Actualización automatizada, con registro visual y bloqueo seguro ante fallos.
 7. Pruebas de instalación, actualización y desinstalación, incluidos datos locales.
 8. Plan de Pages, Release y un canal restringido, con retirada y actualización.
 
@@ -29,9 +29,9 @@ Prepara una release candidata web/PWA. Parte de configuraciones y scripts genera
 - Ficha de versión, commit y entorno.
 - Manifiesto de componentes y licencias.
 - Artefacto, hash, firma e instrucciones de verificación.
-- Configuración del IDE y cadena externa anotadas.
+- Configuración del editor y flujo externo visual anotados.
 - Prototipo Stitch y textos definitivos del asistente.
-- Registros del ciclo limpio y modo desatendido.
+- Registros visuales del ciclo limpio y actualización automatizada.
 - Matriz canal–audiencia–versión–actualización–retirada.
 - Registro de correcciones a la salida de IA y defensa individual.
 
@@ -39,11 +39,11 @@ Prepara una release candidata web/PWA. Parte de configuraciones y scripts genera
 
 | Caso | Resultado esperado |
 |---|---|
-| Compilación limpia | Produce el artefacto identificado sin archivos de trabajo ni secretos |
+| Publicación limpia | Produce la versión identificada sin borradores ni secretos |
 | Instalación PWA | La aplicación queda instalada desde un perfil limpio |
 | Firma original | La verificación identifica el artefacto como íntegro |
 | Copia alterada | La verificación falla de forma visible |
-| Modo desatendido | Termina sin preguntas y conserva registro y código de salida |
+| Actualización automática | Publica sin pasos ocultos, conserva registro y bloquea los fallos |
 | Actualización | Mantiene la versión esperada y declara qué ocurre con los datos |
 | Desinstalación | Retira aplicación y caché según la política documentada |
 | Canal alternativo | Define audiencia, actualización y retirada, no solo una URL |
@@ -54,10 +54,10 @@ Prepara una release candidata web/PWA. Parte de configuraciones y scripts genera
 |---|---|---|
 | a | Paquete contiene solo componentes requeridos y trazados | Copia la carpeta de trabajo |
 | b | Asistente personalizado, claro y accesible | Cambia solo un logotipo |
-| c | El IDE genera un paquete verificable | Captura sin artefacto |
-| d | Herramienta externa reproduce la salida | Depende de pasos manuales ocultos |
+| c | El editor genera una versión verificable | Captura sin versión accesible |
+| d | La interfaz externa reproduce la salida | Depende de pasos ocultos |
 | e | Firma original válida y copia alterada inválida | Presenta solo un hash |
-| f | Cadena no interactiva y fallo no nulo | Requiere respuestas manuales |
+| f | Automatización visible y bloqueo seguro | Requiere pasos manuales ocultos |
 | g | Retirada comprobada y datos explicados | Confunde cerrar con desinstalar |
 | h | Canales tienen audiencia y ciclo de versión | Enumera canales sin estrategia |
 
@@ -65,7 +65,7 @@ Prepara una release candidata web/PWA. Parte de configuraciones y scripts genera
 
 <details><summary>Mostrar estructura de una solución válida</summary>
 
-La versión `1.0.0-rc.1` se compila desde un bloqueo de dependencias y genera un ZIP sin secretos. La tarea del IDE y CI llaman al mismo script. El manifiesto permite instalar la PWA; Stitch muestra estados accesibles. El ZIP se firma y la copia modificada falla. CI ejecuta sin preguntas y detiene la publicación si fallan pruebas. El ciclo en perfil limpio registra instalación, actualización, desinstalación y estado de datos. Pages es canal principal, Releases conserva artefactos y ad-hoc limita el piloto; cada canal define retirada.
+La versión `1.0.0-rc.1` parte de una revisión identificada y se publica sin secretos. El editor con IA y la interfaz web del repositorio usan la misma fuente. El manifiesto permite instalar la PWA; Stitch muestra estados accesibles. La versión exportada se firma mediante una interfaz didáctica y la copia modificada falla al verificarse. La automatización bloquea la publicación si falla una validación. El ciclo en perfil limpio registra instalación, actualización, desinstalación y estado de datos. Pages es el canal principal, Releases conserva versiones y ad-hoc limita el piloto; cada canal define retirada.
 
 </details>
 

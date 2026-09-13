@@ -25,13 +25,13 @@ El alumnado explica que `textContent` trata el valor como texto y vuelve a ejecu
 
 ## RA8-PB05 · Cinco controles seguros
 
-Prueba entrada maliciosa como texto, secreto simulado en archivos, almacenamiento de datos sensibles, dependencia desactualizada y cabeceras en servidor local. Ejecuta ZAP Baseline de forma pasiva y contrasta dos avisos.
+Prueba una entrada potencialmente peligrosa mostrada como texto, un secreto simulado en archivos, almacenamiento de datos sensibles, una dependencia desactualizada y cabeceras de la copia autorizada. Ejecuta una auditoría pasiva desde una interfaz visual y contrasta manualmente dos avisos.
 
 ### Solución orientativa
 
 <details><summary>Mostrar ejemplo de solución</summary>
 
-La aplicación muestra literalmente la cadena, no incluye claves, almacena solo datos ficticios y documenta dependencias. ZAP señala una cabecera ausente; el alumno confirma la respuesta HTTP y propone configuración. Un aviso no aplicable se marca con evidencia. Tras corregir la salida, la prueba de regresión de seguridad pasa.
+La aplicación muestra literalmente la cadena, no incluye claves, almacena solo datos ficticios y documenta dependencias. La auditoría señala una cabecera ausente; el alumno la confirma en el panel de red del navegador y propone una configuración. Un aviso no aplicable se marca con evidencia. Tras corregir la salida, la prueba de regresión de seguridad pasa.
 
 </details>
 
@@ -39,6 +39,6 @@ La aplicación muestra literalmente la cadena, no incluye claves, almacena solo 
 
 Entrega alcance autorizado, evidencia reproducible, severidad, corrección y repetición. No incluyas cargas contra GitHub Pages ni servicios externos.
 
-Referencia: [ZAP Baseline Scan](https://www.zaproxy.org/docs/docker/baseline-scan/).
+La auditoría debe ser pasiva, visual y limitarse a la aplicación propia o a una copia expresamente autorizada.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA8_04_recursos.html">← RA8-04</a><a href="https://mosqueteroweb.github.io/damDI/RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA8_06_manual_automatica_regresion.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-06 · Pruebas manuales, automáticas y regresión</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

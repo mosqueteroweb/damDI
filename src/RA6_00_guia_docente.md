@@ -20,7 +20,7 @@ El alumnado crea el centro de ayuda del gestor: ayuda contextual, navegación, b
 | Sesión | Unidad | Horas | Evidencia principal |
 |---:|---|---:|---|
 | 1 | Ficheros de ayuda y formatos | 1 | Misma ayuda en HTML y PDF |
-| 2 | Herramientas de generación | 1 | Comparativa y compilación reproducible |
+| 2 | Herramientas de generación | 1 | Comparativa y publicación reproducible desde interfaz |
 | 3 | Contenidos, índice, búsqueda y ayuda contextual | 1 | Centro de ayuda navegable |
 | 4 | Tipos de manuales y datos persistentes | 1 | Documentos por destinatario |
 | 5 | Tutoriales | 1 | Recorrido verificable |
@@ -32,14 +32,14 @@ El alumnado crea el centro de ayuda del gestor: ayuda contextual, navegación, b
 2. Ejecutar la función real antes de documentarla.
 3. Pedir a Gemini/AI Studio un borrador con límites y formato.
 4. Comprobar nombres, rutas, datos, permisos y resultados.
-5. Generar la salida desde Markdown y probar enlaces/búsqueda.
+5. Generar la salida mediante la acción visual de publicación y probar enlaces/búsqueda.
 6. Registrar correcciones a la IA y evidencia de verificación.
 
 ## Herramientas
 
 - **Stitch:** arquitectura visual y estados del centro de ayuda.
 - **Gemini / Google AI Studio:** borradores, adaptación por audiencia y revisión guiada.
-- **Markdown + Pandoc:** fuente única y generación HTML/PDF, aprovechando el sistema existente.
+- **Editor documental con IA:** fuente única y exportación visual a HTML/PDF.
 - **Navegador y DevTools:** verificación de enlaces, búsqueda, foco y responsive.
 - **Material Design 3:** navegación, jerarquía, llamadas de atención y componentes.
 

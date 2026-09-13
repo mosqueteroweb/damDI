@@ -60,6 +60,6 @@ Las cinco prácticas generan evidencias parciales y el integrador cubre los seis
 - Preparar vídeos o imágenes de prueba para quien no pueda usar cámara.
 - Evitar que se suban grabaciones o imágenes personales innecesarias.
 - Facilitar un prototipo inicial y fragmentos oficiales para modificar.
-- Recordar que Android Studio, XML y Java son solo ampliación voluntaria.
+- Recordar que el desarrollo móvil nativo es solo una ampliación voluntaria.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/">← Inicio</a><a href="https://mosqueteroweb.github.io/damDI/RA2_matriz_contenidos_evaluacion.html">Matriz RA2</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA2_01_aprendizaje_automatico.html"><span class="unit-next-card__eyebrow">Primera unidad</span><strong>RA2-01 · Aprendizaje automático y entrenamiento</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

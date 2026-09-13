@@ -13,7 +13,7 @@ Documentar el contrato y preparar un paquete que otra aplicación pueda importar
 
 La documentación útil contiene propósito, instalación o importación, ejemplo mínimo, atributos, propiedades, métodos, eventos, estados, accesibilidad y compatibilidad. Empaquetar significa separar fuentes públicas, estilos, pruebas y metadatos, evitando rutas absolutas y dependencias ocultas.
 
-Para esta iniciación basta un módulo ES descargable. `package.json` y npm se muestran como evolución opcional, no como requisito para empezar.
+Para esta iniciación basta un módulo ES descargable desde el editor web. La gestión técnica de dependencias queda como evolución posterior y no forma parte de la actividad.
 
 ## Ejemplo básico resuelto
 

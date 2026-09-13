@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#6750a4">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA1 · 01 — Patrones de arquitectura de las aplicaciones gráficas · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra1">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -32,6 +32,8 @@
 <strong>Ampliación voluntaria:</strong> <a href="RA1_anexo_android_arquitectura.html">Android, XML y Java</a>, fuera de las horas y requisitos obligatorios.</p>
 <h2 id="1-orientaciones-docentes">1. Orientaciones docentes</h2>
 <p>El alumnado conoce Java y comienza desde cero en interfaces. Este bloque enseña a reconocer responsabilidades en una aplicación: presentación, datos y coordinación. No se pretende que escriba código ni implemente un patrón desde cero.</p>
+<figure class="concept-figure"><img src="assets/img/ra1/ra1-01-arquitectura.webp" alt="Una pulsación en Completar pasa de la vista a la coordinación, modifica el dato y después actualiza la vista." loading="lazy" width="1672" height="941"><figcaption>La vista muestra el estado, pero la coordinación debe modificar primero el dato que la aplicación considera verdadero.</figcaption></figure>
+
 <p>Los fragmentos son ejemplos didácticos de salida de IA preparados para lectura. No reproducen una sesión real de Stitch ni se afirma que hayan sido exportados desde un editor visual. El alumnado aprenderá a localizar las mismas responsabilidades en su propia salida, aunque cambien los nombres o la distribución de archivos.</p>
 <h3 id="objetivos-observables">Objetivos observables</h3>
 <ul>
@@ -46,7 +48,6 @@
 <h2 id="2-contenidos-básicos-explicados">2. Contenidos básicos explicados</h2>
 <h3 id="21-arquitectura-organizar-responsabilidades">2.1 Arquitectura: organizar responsabilidades</h3>
 <p>La arquitectura describe cómo se reparten las responsabilidades y cómo se relacionan. Una aplicación puede verse bien y tener sus responsabilidades mezcladas. Por ejemplo, el texto «Completada» podría aparecer en pantalla aunque el dato de la tarea siguiera indicando que está pendiente.</p>
-<figure class="concept-figure"><img src="assets/img/ra1/ra1-01-arquitectura.webp" alt="Una pulsación en Completar pasa de la vista a la coordinación, modifica el dato y después actualiza la vista." loading="lazy" width="1672" height="941"><figcaption>La vista muestra el estado, pero la coordinación debe modificar primero el dato que la aplicación considera verdadero.</figcaption></figure>
 <p>Para examinar una salida de IA planteamos tres preguntas:</p>
 <ol type="1">
 <li>¿Qué describe la pantalla?</li>
@@ -68,34 +69,34 @@
 <h3 id="25-mvc-y-mvvm">2.5 MVC y MVVM</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Responsabilidad</th>
 <th>MVC</th>
 <th>MVVM</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Datos y reglas</td>
 <td>Modelo.</td>
 <td>Modelo y servicios o capas de datos relacionados.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Representación</td>
 <td>Vista.</td>
 <td>Vista.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Coordinación de interacciones</td>
 <td>Controlador.</td>
 <td>Operaciones y estado de presentación expuestos por el ViewModel.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Relación con la pantalla</td>
 <td>El controlador coordina cambios en el modelo y la representación, según la implementación.</td>
 <td>La vista consume u observa el estado de presentación y envía acciones.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Pregunta de lectura</td>
 <td>¿Quién recibe la interacción y coordina la respuesta?</td>
 <td>¿Dónde está el estado que necesita representar la vista?</td>
@@ -125,10 +126,10 @@ No afirmes que se ha probado si no lo has ejecutado.</code></pre>
 <p>Si la herramienta utiliza un framework, se pedirá que señale las responsabilidades equivalentes. Para la explicación inicial se utiliza JavaScript sencillo, evitando que la sintaxis del framework oculte el concepto.</p>
 <h3 id="33-salida-ilustrativa-estructura-de-la-vista">3.3 Salida ilustrativa: estructura de la vista</h3>
 <p>Extracto de <code>index.html</code>. El código de interacción se ejecutará después de que existan estos elementos, por ejemplo mediante un script con <code>defer</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span> <span class="er">aria-labelledby</span><span class="ot">=</span><span class="st">&quot;titulo-tarea&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h1</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;titulo-tarea&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;estado-tarea&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;status&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;completar-tarea&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Completar<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">section</span><span class="ot"> aria-labelledby</span><span class="op">=</span><span class="st">&quot;titulo-tarea&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;titulo-tarea&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;estado-tarea&quot;</span><span class="ot"> role</span><span class="op">=</span><span class="st">&quot;status&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;completar-tarea&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Completar<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">section</span><span class="dt">&gt;</span></span></code></pre></div>
 <p><strong>Qué identificar:</strong></p>
 <ul>
@@ -170,33 +171,33 @@ No afirmes que se ha probado si no lo has ejecutado.</code></pre>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">mostrarTarea</span>()<span class="op">;</span></span></code></pre></div>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Fragmento</th>
 <th>Lectura en lenguaje corriente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>querySelector("#...")</code></td>
 <td>Localiza un elemento por su identificador.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>textContent = ...</code></td>
 <td>Asigna el texto que debe mostrar.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>condicion ? A : B</code></td>
 <td>Elige A si la condición es verdadera y B si es falsa.</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>boton.disabled</code></td>
 <td>Controla si el botón está deshabilitado.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>() =&gt; { ... }</code></td>
 <td>Función que responderá al evento.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Última llamada a <code>mostrarTarea()</code></td>
 <td>Representa el estado inicial antes de pulsar.</td>
 </tr>
@@ -206,29 +207,29 @@ No afirmes que se ha probado si no lo has ejecutado.</code></pre>
 <h3 id="36-recorrido-y-resultado-resueltos">3.6 Recorrido y resultado resueltos</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Momento</th>
 <th>Dato</th>
 <th>Pantalla</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Inicio</td>
 <td><code>completada</code> es <code>false</code>.</td>
 <td>Título, «Pendiente» y botón disponible.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Activación</td>
 <td><code>completarTarea()</code> cambia el dato a <code>true</code>.</td>
 <td>Todavía necesita representarse el nuevo estado.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Actualización</td>
 <td><code>mostrarTarea()</code> consulta el dato.</td>
 <td>«Completada» y botón deshabilitado.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Recarga</td>
 <td>El script crea de nuevo el objeto inicial.</td>
 <td>Vuelve a «Pendiente»: no hay persistencia.</td>
@@ -250,9 +251,9 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 <h3 id="escenario-y-salida-de-ia-para-analizar">Escenario y salida de IA para analizar</h3>
 <p>Una aplicación muestra una sala y permite reservarla. Los fragmentos siguientes son la salida ilustrativa preparada para esta actividad.</p>
 <p><strong>A. Vista — HTML:</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;nombre-sala&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;estado-reserva&quot;</span> <span class="er">role</span><span class="ot">=</span><span class="st">&quot;status&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;reservar&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Reservar<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;nombre-sala&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;estado-reserva&quot;</span><span class="ot"> role</span><span class="op">=</span><span class="st">&quot;status&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;reservar&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Reservar<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
 <p><strong>B. Modelo — JavaScript:</strong></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> reserva <span class="op">=</span> { <span class="dt">sala</span><span class="op">:</span> <span class="st">&quot;Aula 2&quot;</span><span class="op">,</span> <span class="dt">disponible</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">reservarSala</span>() {</span>
@@ -287,41 +288,41 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 <h3 id="51-respuestas">5.1 Respuestas</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Cuestión</th>
 <th>Solución de referencia</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Responsabilidad A</td>
 <td>Vista: declara título, estado y botón con sus identificadores.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Responsabilidad B</td>
 <td>Modelo: mantiene sala y disponibilidad; la función cambia esta última.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Representación en C</td>
 <td><code>mostrarReserva()</code> lee el modelo y actualiza texto y propiedad <code>disabled</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Coordinación en C</td>
 <td>El escuchador llama a la operación y después solicita representar el resultado.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Origen del nombre</td>
 <td>Está en <code>reserva.sala</code>; <code>nombre.textContent = reserva.sala</code> lo traslada al elemento localizado por <code>#nombre-sala</code>.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Resultado de activar</td>
 <td><code>disponible</code> pasa a <code>false</code>, aparece «Reservada» y <code>!false</code> hace que <code>disabled</code> sea <code>true</code>.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Cambio de etiqueta</td>
 <td>Cambia el contenido del botón en A, conservando <code>id="reservar"</code>, el objeto y el escuchador.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Propuesta incorrecta</td>
 <td>Solo cambia la vista. <code>disponible</code> continúa en <code>true</code>; <code>mostrarReserva()</code> vuelve a habilitar el botón y muestra «Disponible».</td>
 </tr>
@@ -332,38 +333,38 @@ modificación y explica por qué el modelo no necesita cambiar.</code></pre>
 “Confirmar reserva”. Conserva el id, el modelo y el escuchador.
 Devuelve la diferencia y explica cómo verificar que se sigue reservando.</code></pre>
 <p>Salida esperada:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;reservar&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Confirmar reserva<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;reservar&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span>Confirmar reserva<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span></code></pre></div>
 <h3 id="52-indicadores-de-corrección-sin-pesos">5.2 Indicadores de corrección, sin pesos</h3>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Indicador</th>
 <th>Evidencia suficiente</th>
 <th>Señal de dificultad</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Reconoce la vista</td>
 <td>Identifica etiquetas e identificadores y cita el fragmento.</td>
 <td>Llama modelo a todo el HTML.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Identifica los datos</td>
 <td>Localiza <code>disponible</code> y su modificación.</td>
 <td>Confunde mensaje y estado real.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Sigue la interacción</td>
 <td>Relaciona escuchador, operación y representación.</td>
 <td>Cree que registrar el evento ya ejecuta la reserva.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Delimita un cambio</td>
 <td>Conserva identificadores y comportamiento.</td>
 <td>Cambia el id sin revisar su selector.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Justifica el diagnóstico</td>
 <td>Explica la contradicción entre dato y control.</td>
 <td>Acepta que deshabilitar equivale a reservar.</td>

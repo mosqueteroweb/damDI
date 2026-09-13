@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#8c5000">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA3-07 · Documentación y empaquetado · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra3">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,10 +26,11 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Documentar el contrato y preparar un paquete que otra aplicación pueda importar y utilizar sin conocer su implementación.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-07-paquete.webp" alt="Un paquete contiene módulo, README, demostración, pruebas y metadatos; una aplicación externa importa el módulo mediante rutas relativas y una versión identificada." loading="lazy" width="1672" height="941"><figcaption>El paquete permite consumir el componente sin copiar ni conocer su implementación.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La documentación útil contiene propósito, instalación o importación, ejemplo mínimo, atributos, propiedades, métodos, eventos, estados, accesibilidad y compatibilidad. Empaquetar significa separar fuentes públicas, estilos, pruebas y metadatos, evitando rutas absolutas y dependencias ocultas.</p>
-<figure class="concept-figure"><img src="assets/img/ra3/ra3-07-paquete.webp" alt="Un paquete contiene módulo, README, demostración, pruebas y metadatos; una aplicación externa importa el módulo mediante rutas relativas y una versión identificada." loading="lazy" width="1672" height="941"><figcaption>El paquete permite consumir el componente sin copiar ni conocer su implementación.</figcaption></figure>
-<p>Para esta iniciación basta un módulo ES descargable. <code>package.json</code> y npm se muestran como evolución opcional, no como requisito para empezar.</p>
+<p>Para esta iniciación basta un módulo ES descargable desde el editor web. La gestión técnica de dependencias queda como evolución posterior y no forma parte de la actividad.</p>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <pre class="text"><code>task-card/
 ├── task-card.js
@@ -37,8 +38,8 @@
 ├── README.md
 ├── demo.html
 └── tests/task-card.test.html</code></pre>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;./task-card/task-card.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span> <span class="er">title</span><span class="ot">=</span><span class="st">&quot;Probar paquete&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;./task-card/task-card.js&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">task-card</span><span class="ot"> title</span><span class="op">=</span><span class="st">&quot;Probar paquete&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">task-card</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>El ejemplo mínimo debe funcionar desde una carpeta distinta. El README es parte del producto, no un añadido final.</p>
 <section class="practice-card" data-practice="RA3-PB07"><div class="practice-card__label">Práctica básica</div><h2 id="ra3-pb07--paquete-intercambiable">RA3-PB07 · Paquete intercambiable</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA3.f, RA3.g</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>README, demo, pruebas y paquete consumible</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra3-pb07">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra3-pb07"><h3>Enunciado para publicar</h3>
 <p>Entrega <code>status-chip</code> como carpeta comprimida o módulo versionado. Otra pareja debe abrir <code>demo.html</code>, crear una instancia, escuchar un evento y responder una lista de comprobación sin ayuda oral del autor.</p>

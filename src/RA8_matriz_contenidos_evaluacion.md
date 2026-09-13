@@ -26,7 +26,7 @@ title: RA8 · Matriz de contenidos y evaluación
 | PB03 Escalón y recuperación | Pruebas de sistema: configuración, recuperación, entre otras | d, g | Volumen, estrés, configuración y recuperación |
 | PB04 Presupuesto | Pruebas de uso de recursos | f, g | Métricas, repeticiones y mejora |
 | PB05 Controles seguros | Pruebas de seguridad | e, g | Hallazgos reproducidos y repetidos |
-| PB06 Del defecto a la suite | Pruebas manuales y automáticas. Herramientas software para la realización de pruebas | c, g | Caso manual, Playwright y regresión |
+| PB06 Del defecto a la suite | Pruebas manuales y automáticas. Herramientas software para la realización de pruebas | c, g | Caso manual, grabador visual y regresión |
 | INT01 Certificación interna | Todos los contenidos | a–g | Estrategia, ejecución, informe y defensa |
 
 ## Cobertura de criterios
@@ -43,7 +43,7 @@ title: RA8 · Matriz de contenidos y evaluación
 
 ## Regla de suficiencia
 
-Cada CE requiere ejecución reproducible y resultado real. Un prompt, script sin ejecutar, captura aislada o puntuación automática no bastan. Las pruebas de seguridad y carga solo se realizan sobre el entorno expresamente autorizado.
+Cada CE requiere ejecución reproducible y resultado real. Un prompt, una configuración sin ejecutar, una captura aislada o una puntuación automática no bastan. Las pruebas de seguridad y carga solo se realizan sobre la copia expresamente autorizada.
 
 ## Cobertura del integrador
 

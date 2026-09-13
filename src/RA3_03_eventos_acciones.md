@@ -49,6 +49,6 @@ La evidencia demuestra que dos instancias funcionan con el mismo escuchador. Si 
 
 ## Comprobación y cierre
 
-Registra temporalmente los eventos en consola, activa por ratón y teclado y explica qué acción corresponde al componente y cuál a la aplicación.
+Muestra temporalmente los eventos en un panel de actividad dentro de la propia página, actívalos por ratón y teclado y explica qué acción corresponde al componente y cuál a la aplicación.
 
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="https://mosqueteroweb.github.io/damDI/RA3_02_propiedades_metodos.html">← RA3-02</a><a href="https://mosqueteroweb.github.io/damDI/RA3_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="https://mosqueteroweb.github.io/damDI/RA3_04_persistencia.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA3-04 · Persistencia del componente</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

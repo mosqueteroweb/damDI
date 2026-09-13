@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#745b00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA8-05 · Pruebas de seguridad · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra8">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,24 +26,25 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Comprobar riesgos básicos de entrada, salida, almacenamiento, dependencias y configuración sin atacar sistemas ajenos.</p>
+<figure class="concept-figure"><img src="assets/img/ra8/ra8-05-seguridad.webp" alt="Una entrada no confiable sigue una ruta segura al validarse según el campo y asignarse con textContent, que la muestra como texto; con innerHTML el navegador podría interpretarla como HTML. Se separan otros controles." loading="lazy" width="1672" height="941"><figcaption>Validar la entrada y codificar correctamente la salida son controles distintos; la prueba se limita a una copia local autorizada.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Las pruebas se realizan solo sobre la copia local autorizada. Se revisan validación, codificación de salida, secretos, permisos, almacenamiento, cabeceras y dependencias. Un escáner ofrece indicios; cada hallazgo se reproduce, clasifica y verifica manualmente antes de concluir.</p>
-<figure class="concept-figure"><img src="assets/img/ra8/ra8-05-seguridad.webp" alt="Una entrada no confiable sigue una ruta segura al validarse según el campo y asignarse con textContent, que la muestra como texto; con innerHTML el navegador podría interpretarla como HTML. Se separan otros controles." loading="lazy" width="1672" height="941"><figcaption>Validar la entrada y codificar correctamente la salida son controles distintos; la prueba se limita a una copia local autorizada.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Dato de prueba: <code>&lt;img src=x onerror=alert(1)&gt;</code>. Si se asigna con <code>textContent</code>, aparece como texto; con <code>innerHTML</code> puede interpretarse. La corrección generada debe cambiar el punto de salida, no «limpiar» caracteres al azar.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>titleNode<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> task<span class="op">.</span><span class="at">title</span><span class="op">;</span></span></code></pre></div>
 <p>El alumnado explica que <code>textContent</code> trata el valor como texto y vuelve a ejecutar el caso.</p>
-<section class="practice-card" data-practice="RA8-PB05"><div class="practice-card__label">Práctica básica</div><h2 id="ra8-pb05--cinco-controles-seguros">RA8-PB05 · Cinco controles seguros</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–45 min</dd></div><div><dt>Criterios</dt><dd>RA8.e, RA8.g</dd></div><div><dt>Recursos</dt><dd>OWASP ZAP, GitHub</dd></div><div><dt>Entrega solicitada</dt><dd>Hallazgos reproducidos y repetidos</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra8-pb05">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra8-pb05"><h3>Enunciado para publicar</h3>
-<p>Prueba entrada maliciosa como texto, secreto simulado en archivos, almacenamiento de datos sensibles, dependencia desactualizada y cabeceras en servidor local. Ejecuta ZAP Baseline de forma pasiva y contrasta dos avisos.</p>
+<section class="practice-card" data-practice="RA8-PB05"><div class="practice-card__label">Práctica básica</div><h2 id="ra8-pb05--cinco-controles-seguros">RA8-PB05 · Cinco controles seguros</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–45 min</dd></div><div><dt>Criterios</dt><dd>RA8.e, RA8.g</dd></div><div><dt>Recursos</dt><dd>GitHub</dd></div><div><dt>Entrega solicitada</dt><dd>Hallazgos reproducidos y repetidos</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra8-pb05">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra8-pb05"><h3>Enunciado para publicar</h3>
+<p>Prueba una entrada potencialmente peligrosa mostrada como texto, un secreto simulado en archivos, almacenamiento de datos sensibles, una dependencia desactualizada y cabeceras de la copia autorizada. Ejecuta una auditoría pasiva desde una interfaz visual y contrasta manualmente dos avisos.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>La aplicación muestra literalmente la cadena, no incluye claves, almacena solo datos ficticios y documenta dependencias. ZAP señala una cabecera ausente; el alumno confirma la respuesta HTTP y propone configuración. Un aviso no aplicable se marca con evidencia. Tras corregir la salida, la prueba de regresión de seguridad pasa.</p>
+<p>La aplicación muestra literalmente la cadena, no incluye claves, almacena solo datos ficticios y documenta dependencias. La auditoría señala una cabecera ausente; el alumno la confirma en el panel de red del navegador y propone una configuración. Un aviso no aplicable se marca con evidencia. Tras corregir la salida, la prueba de regresión de seguridad pasa.</p>
 </details>
 
 </div></section><h2 id="cierre">Cierre</h2>
 <p>Entrega alcance autorizado, evidencia reproducible, severidad, corrección y repetición. No incluyas cargas contra GitHub Pages ni servicios externos.</p>
-<p>Referencia: <a href="https://www.zaproxy.org/docs/docker/baseline-scan/">ZAP Baseline Scan</a>.</p>
+<p>La auditoría debe ser pasiva, visual y limitarse a la aplicación propia o a una copia expresamente autorizada.</p>
 <nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA8_04_recursos.html">← RA8-04</a><a href="RA8_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA8_06_manual_automatica_regresion.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA8-06 · Pruebas manuales, automáticas y regresión</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>
 
     <footer class="site-footer">

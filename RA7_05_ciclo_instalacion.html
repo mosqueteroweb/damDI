@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#5b5f00">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA7-05 · Instalación y desinstalación · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra7">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -25,21 +25,19 @@
 <details class="page-toc"><summary>Contenido de la página</summary><ol><li><a href="#objetivo-docente">Objetivo docente</a></li><li><a href="#contenido-para-explicar">Contenido para explicar</a></li><li><a href="#ejemplo-básico-resuelto">Ejemplo básico resuelto</a></li><li><a href="#ra7-pb05--ciclo-desatendido-y-retirada">RA7-PB05 · Ciclo desatendido y retirada</a></li></ol></details>
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
-<p>Probar el ciclo completo de alta, actualización, automatización y retirada sin dejar una instalación inconsistente.</p>
+<p>Probar desde el navegador el ciclo completo de instalación, actualización y retirada sin dejar una PWA inconsistente.</p>
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
-<p>Un asistente guía decisiones; el modo desatendido recibe configuración previa, no pregunta y devuelve un código fiable. En web, la cadena automatizada instala dependencias, prueba, compila y despliega. Desinstalar una PWA retira la aplicación, pero los datos del sitio pueden requerir una acción separada; la documentación debe explicarlo sin prometer borrados que no se han verificado.</p>
-<figure class="concept-figure"><img src="assets/img/ra7/ra7-05-ciclo.webp" alt="Ciclo de instalar, verificar, crear datos, actualizar, volver a verificar y desinstalar, mostrando por separado el estado de la aplicación, la caché y los datos; incluye una ruta desatendida." loading="lazy" width="1672" height="941"><figcaption>Probar el ciclo completo exige distinguir qué ocurre con la aplicación, la caché y los datos en cada fase.</figcaption></figure>
+<p>El navegador guía la instalación de una PWA y la plataforma de publicación puede actualizarla automáticamente a partir de una revisión aprobada. El proceso debe mostrar estado, resultado y recuperación mediante controles visuales. Desinstalar una PWA retira la aplicación, pero los datos del sitio pueden requerir una acción separada; la documentación debe explicarlo sin prometer borrados que no se han verificado.</p>
+<figure class="concept-figure"><img src="assets/img/ra7/ra7-05-ciclo-sin-comandos.png" alt="Ciclo visual de una PWA: instalar desde el navegador, verificar, crear datos, publicar una actualización, comprobar la versión y desinstalar; la validación puede publicar o bloquear el cambio." loading="lazy" width="1672" height="941"><figcaption>El ciclo completo se comprueba desde el navegador y distingue la aplicación instalada de los datos conservados por el sitio.</figcaption></figure>
+
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm ci</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm test</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">run</span><span class="kw">:</span><span class="at"> npm run build</span></span></code></pre></div>
-<p>La IA generó estos pasos. El alumnado identifica orden, condición de parada y salida, y detecta que aún faltan versión, artefacto y despliegue autorizado.</p>
-<section class="practice-card" data-practice="RA7-PB05"><div class="practice-card__label">Práctica básica</div><h2 id="ra7-pb05--ciclo-desatendido-y-retirada">RA7-PB05 · Ciclo desatendido y retirada</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA7.f, RA7.g</dd></div><div><dt>Recursos</dt><dd>DevTools</dd></div><div><dt>Entrega solicitada</dt><dd>Cadena no interactiva y retirada comprobada</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra7-pb05">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra7-pb05"><h3>Enunciado para publicar</h3>
-<p>Completa y ejecuta una cadena no interactiva sobre un entorno limpio. Después instala la PWA, crea dos datos, actualiza y desinstala. Registra el código de salida y comprueba iconos, caché y almacenamiento antes/después.</p>
+<p>La IA genera un diagrama del ciclo: <strong>versión aprobada → validación → publicación → aviso de actualización → comprobación</strong>. El alumnado identifica el orden, la condición que bloquea el avance y el resultado mostrado en cada pantalla, y detecta si faltan versión, autorización o evidencia de publicación.</p>
+<section class="practice-card" data-practice="RA7-PB05"><div class="practice-card__label">Práctica básica</div><h2 id="ra7-pb05--ciclo-desatendido-y-retirada">RA7-PB05 · Ciclo desatendido y retirada</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>20–30 min</dd></div><div><dt>Criterios</dt><dd>RA7.f, RA7.g</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Cadena no interactiva y retirada comprobada</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra7-pb05">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra7-pb05"><h3>Enunciado para publicar</h3>
+<p>Configura desde la interfaz una actualización automática para una versión aprobada. Después instala la PWA en un perfil limpio, crea dos datos, publica la actualización, acepta o comprueba el aviso correspondiente y desinstala. Registra los estados visibles y comprueba iconos, caché y almacenamiento antes y después.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>
 <details><summary>Mostrar ejemplo de solución</summary>
 
-<p>La cadena fija versión, usa <code>npm ci</code>, prueba antes de compilar y no contiene secretos. Una dependencia rota provoca fallo visible. Tras desinstalar, la aplicación desaparece del lanzador; DevTools confirma cachés e IndexedDB. Si quedan datos, el manual lo declara y explica su borrado voluntario.</p>
+<p>La publicación identifica la versión, valida antes de hacerla pública y no contiene secretos. Una validación fallida bloquea el cambio y muestra una explicación. Tras desinstalar, la aplicación desaparece del lanzador; el panel de almacenamiento del navegador permite comprobar cachés e IndexedDB. Si quedan datos, el manual lo declara y explica su borrado voluntario.</p>
 </details>
 
 </div></section><nav class="unit-nav" aria-label="Navegación entre unidades"><div class="unit-nav__secondary"><a href="RA7_04_personalizacion.html">← RA7-04</a><a href="RA7_matriz_contenidos_evaluacion.html">Matriz</a></div><a class="unit-next-card" href="RA7_06_firma_canales.html"><span class="unit-next-card__eyebrow">Siguiente unidad</span><strong>RA7-06 · Firma y canales</strong><span class="unit-next-card__arrow" aria-hidden="true">→</span></a></nav>

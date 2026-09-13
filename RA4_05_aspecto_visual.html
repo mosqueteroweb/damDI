@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#006b5f">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA4-05 · Aspecto visual y legibilidad · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra4">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,15 +26,16 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Aplicar un sistema visual consistente y justificar legibilidad con evidencias, no con preferencias personales.</p>
+<figure class="concept-figure"><img src="assets/img/ra4/ra4-05-tokens.webp" alt="Tokens de color, tipografía, espacio, borde e icono se reutilizan en una tarjeta y un formulario; el error combina color, icono y texto." loading="lazy" width="1672" height="941"><figcaption>Los tokens convierten decisiones visuales aisladas en un sistema coherente y reutilizable.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Material Design 3 organiza decisiones mediante roles y tokens. El color comunica jerarquía y estado, pero no debe ser el único canal. La tipografía necesita escala, contraste y espacio. Los iconos ambiguos requieren texto o nombre accesible. La distribución debe conservar agrupación y lectura al cambiar el ancho.</p>
-<figure class="concept-figure"><img src="assets/img/ra4/ra4-05-tokens.webp" alt="Tokens de color, tipografía, espacio, borde e icono se reutilizan en una tarjeta y un formulario; el error combina color, icono y texto." loading="lazy" width="1672" height="941"><figcaption>Los tokens convierten decisiones visuales aisladas en un sistema coherente y reutilizable.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-primary</span>: <span class="cn">#6750a4</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-primary</span>: <span class="cn">#ffffff</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-error</span>: <span class="cn">#b3261e</span><span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-error</span>: <span class="cn">#ffffff</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-primary</span><span class="ch">:</span> <span class="cn">#6750a4</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-primary</span><span class="ch">:</span> <span class="cn">#ffffff</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-error</span><span class="ch">:</span> <span class="cn">#b3261e</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--md-sys-color-on-error</span><span class="ch">:</span> <span class="cn">#ffffff</span><span class="op">;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>El alumno identifica parejas superficie/contenido. No elige blanco «porque queda bien»: verifica contraste, uso y estado. Un error añade texto e icono además del color.</p>
 <section class="practice-card" data-practice="RA4-PB05"><div class="practice-card__label">Práctica básica</div><h2 id="ra4-pb05--sistema-visual-legible">RA4-PB05 · Sistema visual legible</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA4.e, RA4.g</dd></div><div><dt>Recursos</dt><dd>Gemini</dd></div><div><dt>Entrega solicitada</dt><dd>Tokens y comprobaciones de legibilidad</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra4-pb05">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra4-pb05"><h3>Enunciado para publicar</h3>

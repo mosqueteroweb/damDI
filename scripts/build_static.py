@@ -293,6 +293,34 @@ def prepare_body(
     return f"{additions}\n{body}" if additions else body
 
 
+def existing_concept_figure(output_path: Path) -> str:
+    """Recupera la ilustración didáctica ya publicada antes de regenerar la página."""
+    if not output_path.exists():
+        return ""
+    current = output_path.read_text(encoding="utf-8")
+    match = re.search(
+        r'<figure class="concept-figure">.*?</figure>',
+        current,
+        flags=re.DOTALL,
+    )
+    return match.group(0) if match else ""
+
+
+def preserve_concept_figure(body: str, figure: str) -> str:
+    """Conserva una figura existente cuando la fuente aún no la incluye."""
+    if not figure or 'class="concept-figure"' in body:
+        return body
+    first_section_paragraph = re.search(r'(<h2\b.*?</h2>\s*<p>.*?</p>)', body, re.DOTALL)
+    if first_section_paragraph:
+        position = first_section_paragraph.end()
+        return f"{body[:position]}\n{figure}\n{body[position:]}"
+    first_paragraph = re.search(r'(</p>)', body)
+    if first_paragraph:
+        position = first_paragraph.end()
+        return f"{body[:position]}\n{figure}\n{body[position:]}"
+    return f"{figure}\n{body}"
+
+
 def ra_class(filename: str) -> str:
     match = re.match(r"RA([1-8])_", filename, re.IGNORECASE)
     return f"ra-ra{match.group(1)}" if match else "site-home"
@@ -505,8 +533,11 @@ def main() -> None:
         metadata, markdown = split_front_matter(source.read_text(encoding="utf-8"))
         output_name = "index.html" if source.name == "index.md" else source.with_suffix(".html").name
         title = metadata.get("title") or plain_heading(markdown, source.stem)
+        output_path = ROOT / output_name
+        figure = existing_concept_figure(output_path)
         body = prepare_body(markdown, output_name, practices, units)
-        (ROOT / output_name).write_text(
+        body = preserve_concept_figure(body, figure)
+        output_path.write_text(
             document(
                 title,
                 body,

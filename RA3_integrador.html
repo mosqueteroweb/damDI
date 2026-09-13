@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#8c5000">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA3-INT01 · Kit visual del gestor de tareas · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra3">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="situación">Situación</h2>
 <p>El centro quiere reutilizar la interfaz del gestor en otras aplicaciones. Las tarjetas, etiquetas de estado y avisos están duplicados y cada copia se comporta de forma distinta.</p>
+<figure class="concept-figure"><img src="assets/img/ra3/ra3-integrador.webp" alt="La aplicación gestora utiliza task-card, status-chip y app-notice mediante propiedades de entrada y eventos de salida; la persistencia queda en la aplicación y el paquete se reutiliza en otra página." loading="lazy" width="1672" height="941"><figcaption>El integrador separa los contratos de los componentes de las responsabilidades de la aplicación anfitriona.</figcaption></figure>
+
 <h2 id="encargo">Encargo</h2>
 <p>Con Stitch, Gemini y/o Google AI Studio, transforma esas piezas en una biblioteca mínima de <strong>tres Web Components</strong> y úsalos en una aplicación web funcional. No programes desde cero: conserva prompts y versiones, identifica el código relevante, prueba el contrato y justifica las decisiones.</p>
-<figure class="concept-figure"><img src="assets/img/ra3/ra3-integrador.webp" alt="La aplicación gestora utiliza task-card, status-chip y app-notice mediante propiedades de entrada y eventos de salida; la persistencia queda en la aplicación y el paquete se reutiliza en otra página." loading="lazy" width="1672" height="941"><figcaption>El integrador separa los contratos de los componentes de las responsabilidades de la aplicación anfitriona.</figcaption></figure>
 <h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ol type="1">
 <li>Comparar al menos tres herramientas de diseño o prueba y asignarles una función.</li>
@@ -54,41 +55,41 @@
 <h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Caso</th>
 <th>Resultado esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Instancia mínima</td>
 <td>Aplica valores por defecto documentados</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Cambio de atributo</td>
 <td>Actualiza solo el componente afectado</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Método público</td>
 <td>Produce el efecto documentado</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Acción interna</td>
 <td>Emite una vez el evento de dominio correcto</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Recarga</td>
 <td>Restaura tareas y preferencia</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Datos persistidos corruptos</td>
 <td>Recupera valores seguros sin bloquear la app</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Importación en <code>demo.html</code></td>
 <td>Funciona sin copiar implementación</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Teclado y nombre accesible</td>
 <td>Acciones alcanzables y comprensibles</td>
 </tr>
@@ -97,49 +98,49 @@
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>CE</th>
 <th>Satisfactorio</th>
 <th>Insuficiente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>a</td>
 <td>Compara herramientas y las usa con propósito</td>
 <td>Solo enumera marcas</td>
 </tr>
-<tr class="even">
+<tr>
 <td>b</td>
 <td>Entrega tres componentes visuales reutilizables</td>
 <td>Presenta bloques duplicados o no funcionales</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c</td>
 <td>Contrato tipado, pequeño y con valores por defecto</td>
 <td>Entradas ambiguas o sin predeterminados</td>
 </tr>
-<tr class="even">
+<tr>
 <td>d</td>
 <td>Eventos de dominio documentados y acciones asociadas</td>
 <td>Dependencia directa de funciones globales</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>e</td>
 <td>Pruebas unitarias ejecutadas, incluido un fallo corregido</td>
 <td>Código de prueba no ejecutado</td>
 </tr>
-<tr class="even">
+<tr>
 <td>f</td>
 <td>README, API, ejemplos y accesibilidad documentados</td>
 <td>Documentación incompleta o solo capturas</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>g</td>
 <td>Paquete importable, versionado y sin rutas rotas</td>
 <td>Requiere copiar código interno</td>
 </tr>
-<tr class="even">
+<tr>
 <td>h</td>
 <td>La aplicación usa los tres componentes creados</td>
 <td>Componentes aislados sin aplicación consumidora</td>

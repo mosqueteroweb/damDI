@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#3f5f90">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA6-04 · Manuales y datos persistentes · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra6">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,13 +26,14 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Adaptar manuales a usuario, consulta, instalación, configuración y administración, y documentar la estructura persistente.</p>
+<figure class="concept-figure"><img src="assets/img/ra6/ra6-04-manuales.webp" alt="Cinco lectores del gestor se relacionan con el manual de usuario, referencia, guía de instalación, guía de configuración y manual de administración; debajo aparece el diccionario de datos persistentes." loading="lazy" width="1672" height="941"><figcaption>Cada documento responde a un destinatario y el diccionario persistente completa la información técnica común.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>Cada manual responde a un destinatario: usuario realiza tareas; referencia consulta campos y acciones; instalación prepara; configuración adapta; administración mantiene y recupera. La documentación persistente describe claves, campos, tipos, obligatoriedad, valores, relaciones, versión, migración y conservación.</p>
-<figure class="concept-figure"><img src="assets/img/ra6/ra6-04-manuales.webp" alt="Cinco lectores del gestor se relacionan con el manual de usuario, referencia, guía de instalación, guía de configuración y manual de administración; debajo aparece el diccionario de datos persistentes." loading="lazy" width="1672" height="941"><figcaption>Cada documento responde a un destinatario y el diccionario persistente completa la información técnica común.</figcaption></figure>
 <h2 id="ra6-ej04--ejemplo-resuelto">RA6-EJ04 · Ejemplo resuelto</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Campo</th>
 <th>Tipo</th>
 <th style="text-align: right;">Obligatorio</th>
@@ -40,25 +41,25 @@
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>id</code></td>
 <td>texto</td>
 <td style="text-align: right;">sí</td>
 <td>único</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>title</code></td>
 <td>texto</td>
 <td style="text-align: right;">sí</td>
 <td>1–120 caracteres</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>status</code></td>
 <td>enumerado</td>
 <td style="text-align: right;">sí</td>
 <td><code>pending</code> o <code>done</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>dueDate</code></td>
 <td>fecha ISO</td>
 <td style="text-align: right;">no</td>

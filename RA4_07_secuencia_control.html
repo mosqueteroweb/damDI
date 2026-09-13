@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#006b5f">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA4-07 · Secuencia de control y mensajes · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra4">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,15 +26,16 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Diseñar recorridos comprensibles, prevenir errores y redactar mensajes claros, accionables y verificables.</p>
+<figure class="concept-figure"><img src="assets/img/ra4/ra4-07-validacion.webp" alt="La validación conduce a confirmación y resultado cuando los datos son válidos; si no, muestra el error junto al campo, conserva datos y permite corregir; el borrado ofrece deshacer." loading="lazy" width="1672" height="941"><figcaption>Los recorridos de error deben conservar el trabajo y explicar cómo recuperarse.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La secuencia de control describe estados y transiciones: inicio, entrada, validación, confirmación, resultado y recuperación. La interfaz debe mantener informado al usuario, impedir pérdidas evitables y ofrecer salida. Un mensaje útil dice qué ocurrió, dónde y qué puede hacerse.</p>
-<figure class="concept-figure"><img src="assets/img/ra4/ra4-07-validacion.webp" alt="La validación conduce a confirmación y resultado cuando los datos son válidos; si no, muestra el error junto al campo, conserva datos y permite corregir; el borrado ofrece deshacer." loading="lazy" width="1672" height="941"><figcaption>Los recorridos de error deben conservar el trabajo y explicar cómo recuperarse.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Mensaje inicial: «Error 17».</p>
 <p>Revisión: «No se guardó la tarea porque falta el título. Escríbelo y vuelve a pulsar Guardar».</p>
 <p>El segundo mensaje identifica resultado, causa y acción. Debe aparecer cerca del campo, asociarse programáticamente y conservar los datos ya escritos.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">input</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;titulo&quot;</span> <span class="er">aria-describedby</span><span class="ot">=</span><span class="st">&quot;error-titulo&quot;</span> <span class="er">aria-invalid</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;error-titulo&quot;</span><span class="dt">&gt;</span>Escribe un título para guardar la tarea.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;titulo&quot;</span><span class="ot"> aria-describedby</span><span class="op">=</span><span class="st">&quot;error-titulo&quot;</span><span class="ot"> aria-invalid</span><span class="op">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;error-titulo&quot;</span><span class="dt">&gt;</span>Escribe un título para guardar la tarea.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div>
 <section class="practice-card" data-practice="RA4-PB07"><div class="practice-card__label">Práctica básica</div><h2 id="ra4-pb07--flujo-recuperable">RA4-PB07 · Flujo recuperable</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA4.h, RA4.i</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Diagrama, mensajes revisados y pruebas</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra4-pb07">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra4-pb07"><h3>Enunciado para publicar</h3>
 <p>Dibuja el flujo de alta y borrado. Reescribe seis mensajes, añade recuperación ante borrado y ejecuta cinco casos: correcto, vacío, dato inválido, cancelación y recuperación.</p>
 </div><div class="practice-teacher-solution"><h3 id="solución-orientativa">Solución orientativa</h3>

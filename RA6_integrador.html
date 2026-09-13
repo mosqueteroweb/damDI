@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#3f5f90">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA6-INT01 · Centro de ayuda del gestor · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra6">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="situación">Situación</h2>
 <p>El gestor va a distribuirse y necesita documentación verificable para usuarios, soporte y administración. Los borradores automáticos contienen nombres y pasos que no siempre coinciden con la versión real.</p>
+<figure class="concept-figure"><img src="assets/img/ra6/ra6-integrador.webp" alt="Arquitectura de un centro de ayuda donde una fuente Markdown genera HTML navegable y PDF imprimible, ofrece cuatro accesos, varios documentos y un ciclo de prueba, corrección y regeneración." loading="lazy" width="1672" height="941"><figcaption>Una fuente única alimenta todos los formatos y se mantiene fiable mediante prueba, corrección y regeneración.</figcaption></figure>
+
 <h2 id="encargo">Encargo</h2>
 <p>Con Stitch, Gemini/AI Studio y el generador estático, crea y publica un sistema de ayuda completo. Parte de plantillas y borradores de IA; ejecuta cada procedimiento, corrige y conserva evidencias.</p>
-<figure class="concept-figure"><img src="assets/img/ra6/ra6-integrador.webp" alt="Arquitectura de un centro de ayuda donde una fuente Markdown genera HTML navegable y PDF imprimible, ofrece cuatro accesos, varios documentos y un ciclo de prueba, corrección y regeneración." loading="lazy" width="1672" height="941"><figcaption>Una fuente única alimenta todos los formatos y se mantiene fiable mediante prueba, corrección y regeneración.</figcaption></figure>
 <h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ol type="1">
 <li>Identificar y justificar el sistema de generación.</li>
@@ -53,37 +54,37 @@
 <h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Caso</th>
 <th>Resultado esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Buscar «alta»</td>
 <td>Encuentra Crear tarea</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Ayuda desde borrar</td>
 <td>Abre tema exacto y permite volver</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>HTML/PDF</td>
 <td>Mismo procedimiento y versión</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Datos</td>
 <td>Campos coinciden con una muestra real</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Instalación limpia</td>
 <td>Termina con verificación observable</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Restauración</td>
 <td>Incluye copia previa y criterio de éxito</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Tutorial externo</td>
 <td>Otra persona completa el objetivo</td>
 </tr>
@@ -92,44 +93,44 @@
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>CE</th>
 <th>Satisfactorio</th>
 <th>Insuficiente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>a</td>
 <td>Compara y justifica sistema de ayuda</td>
 <td>Solo nombra herramienta</td>
 </tr>
-<tr class="even">
+<tr>
 <td>b</td>
 <td>Genera formatos habituales accesibles</td>
 <td>Copias manuales incoherentes</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c</td>
 <td>Tres ayudas abren contenido pertinente</td>
 <td>Enlace a portada genérica</td>
 </tr>
-<tr class="even">
+<tr>
 <td>d</td>
 <td>Esquema, reglas, versión y recuperación</td>
 <td>Lista de campos incompleta</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>e</td>
 <td>Manual de usuario y referencia diferenciados</td>
 <td>Un único texto sin audiencia</td>
 </tr>
-<tr class="even">
+<tr>
 <td>f</td>
 <td>Instalación, configuración y administración verificadas</td>
 <td>Pasos no ejecutados</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>g</td>
 <td>Tutorial probado y mejorado</td>
 <td>Borrador sin prueba externa</td>

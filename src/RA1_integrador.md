@@ -270,7 +270,7 @@ El informe de verificación del paquete distingue comprobación de lógica y rev
 
 La solución usa roles de color, jerarquía y diferenciación de acciones siguiendo la referencia M3. Emplea controles HTML con una adaptación didáctica; el selector conserva su comportamiento nativo y no se presenta como reproducción exhaustiva de todos los componentes M3. Antes de usarla como ejemplo visual definitivo se revisarán foco, estados, contraste, tipografía, tamaños y distribución en navegador. No se ha declarado una auditoría completa de M3/WCAG.
 
-No se necesita Android Studio. No hay servicios externos ni persistencia. Los scripts son ejemplos completos de salida de IA para el docente; el alumno dirige, identifica y verifica.
+No se necesita ningún entorno de desarrollo móvil nativo. No hay servicios externos ni persistencia. El código es un ejemplo completo de salida de IA para el docente; el alumno dirige, identifica y verifica.
 
 ## Preguntas de defensa
 

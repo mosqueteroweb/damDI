@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#006b5f">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA4-04 · Estructura y navegación · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra4">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="objetivo-docente">Objetivo docente</h2>
 <p>Construir menús coherentes, ubicar acciones por frecuencia y riesgo, y asegurar recorrido por teclado.</p>
+<figure class="concept-figure"><img src="assets/img/ra4/ra4-04-navegacion.webp" alt="Gestor anotado con filtros, acción Nueva tarea, menú contextual, ajustes y diálogo de confirmación; el recorrido de foco vuelve al origen al cerrar." loading="lazy" width="1672" height="941"><figcaption>La frecuencia, el riesgo y la continuidad del foco determinan dónde ubicar cada acción.</figcaption></figure>
+
 <h2 id="contenido-para-explicar">Contenido para explicar</h2>
 <p>La estructura refleja el modelo mental de la tarea. Las acciones frecuentes y seguras deben ser fáciles de encontrar; las destructivas no deben competir visualmente con la principal. Un menú no es un almacén de botones. Diálogos y ventanas requieren propósito, título, salida y gestión de foco.</p>
-<figure class="concept-figure"><img src="assets/img/ra4/ra4-04-navegacion.webp" alt="Gestor anotado con filtros, acción Nueva tarea, menú contextual, ajustes y diálogo de confirmación; el recorrido de foco vuelve al origen al cerrar." loading="lazy" width="1672" height="941"><figcaption>La frecuencia, el riesgo y la continuidad del foco determinan dónde ubicar cada acción.</figcaption></figure>
 <h2 id="ejemplo-básico-resuelto">Ejemplo básico resuelto</h2>
 <p>Distribución para el gestor:</p>
 <ul>
@@ -39,9 +40,9 @@
 <li>Atajos: <code>/</code> para búsqueda y <code>Escape</code> para cerrar diálogo, documentados y sin interferir con escritura.</li>
 </ul>
 <p>HTML relevante generado por IA:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">nav</span> <span class="er">aria-label</span><span class="ot">=</span><span class="st">&quot;Estados de tareas&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;#todas&quot;</span> <span class="er">aria-current</span><span class="ot">=</span><span class="st">&quot;page&quot;</span><span class="dt">&gt;</span>Todas<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;#pendientes&quot;</span><span class="dt">&gt;</span>Pendientes<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">nav</span><span class="ot"> aria-label</span><span class="op">=</span><span class="st">&quot;Estados de tareas&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#todas&quot;</span><span class="ot"> aria-current</span><span class="op">=</span><span class="st">&quot;page&quot;</span><span class="dt">&gt;</span>Todas<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;#pendientes&quot;</span><span class="dt">&gt;</span>Pendientes<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span></code></pre></div>
 <p>Se reconoce <code>nav</code>, su nombre accesible y <code>aria-current</code>; no se pide memorizar el fragmento.</p>
 <section class="practice-card" data-practice="RA4-PB04"><div class="practice-card__label">Práctica básica</div><h2 id="ra4-pb04--arquitectura-de-acciones">RA4-PB04 · Arquitectura de acciones</h2><dl class="practice-meta"><div><dt>Duración</dt><dd>30–40 min</dd></div><div><dt>Criterios</dt><dd>RA4.c, RA4.d</dd></div><div><dt>Recursos</dt><dd>Navegador y proyecto base</dd></div><div><dt>Entrega solicitada</dt><dd>Dos menús, mapa de acciones y recorrido de teclado</dd></div></dl><button class="copy-practice" type="button" data-copy-target="copy-ra4-pb04">Copiar enunciado</button><div class="practice-student-copy" id="copy-ra4-pb04"><h3>Enunciado para publicar</h3>

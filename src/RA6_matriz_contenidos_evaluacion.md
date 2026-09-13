@@ -22,7 +22,7 @@ title: RA6 · Matriz de contenidos y evaluación
 | Unidad y práctica | Contenido básico | CE | Evidencia evaluable |
 |---|---|---|---|
 | PB01 Dos formatos | Ficheros de ayuda. Formatos | b | Markdown, HTML, PDF y comparación |
-| PB02 Cadena reproducible | Herramientas de generación de ayudas | a, b | Fuente, comando, salida y fallo |
+| PB02 Cadena reproducible | Herramientas de generación de ayudas | a, b | Fuente, acción visual, salida y fallo |
 | PB03 Encontrar ayuda | Tablas de contenidos, índices, sistemas de búsqueda, entre otros | c | Navegación, consultas y enlaces contextuales |
 | PB04 Paquete por destinatarios | Tipos de manuales: Manual de usuario, guía de referencia, guías rápidas, manuales de instalación, configuración y administración. Preguntas más frecuentes. Destinatarios y estructura | d, e, f | Manuales, FAQ y diccionario de datos |
 | PB05 Tutorial probado | Elaboración de tutoriales | g | Tutorial, prueba externa y revisión |

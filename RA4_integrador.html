@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#006b5f">
   <meta name="description" content="Material docente del módulo 0488 con IA, web y Material Design 3.">
   <title>RA4-INT01 · Rediseño accesible del gestor · Desarrollo de Interfaces</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=f9dc0fc5fe">
-  <script src="assets/js/search-index.js?v=f9dc0fc5fe" defer></script>
-  <script src="assets/js/site.js?v=f9dc0fc5fe" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=a25f013cb5">
+  <script src="assets/js/search-index.js?v=a25f013cb5" defer></script>
+  <script src="assets/js/site.js?v=a25f013cb5" defer></script>
 </head>
 <body class="ra-ra4">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,9 +26,10 @@
 
 <h2 id="situación">Situación</h2>
 <p>El centro quiere publicar el gestor creado en RA1. Antes necesita una versión que pueda utilizarse con claridad en ordenador y móvil, mediante ratón o teclado, y que documente sus decisiones de diseño.</p>
+<figure class="concept-figure"><img src="assets/img/ra4/ra4-integrador.webp" alt="Comparación del mismo gestor antes y después del rediseño: mejora etiquetas, mensajes junto al campo, control apropiado, foco visible y adaptación móvil." loading="lazy" width="1672" height="941"><figcaption>El rediseño accesible se justifica mediante cambios observables, no solo mediante una apariencia distinta.</figcaption></figure>
+
 <h2 id="encargo">Encargo</h2>
 <p>Rediseña con Stitch, Gemini y/o Google AI Studio la aplicación del RA1. No debes programarla desde cero. Debes dirigir la generación, seleccionar propuestas, localizar cambios relevantes y comprobar el resultado.</p>
-<figure class="concept-figure"><img src="assets/img/ra4/ra4-integrador.webp" alt="Comparación del mismo gestor antes y después del rediseño: mejora etiquetas, mensajes junto al campo, control apropiado, foco visible y adaptación móvil." loading="lazy" width="1672" height="941"><figcaption>El rediseño accesible se justifica mediante cambios observables, no solo mediante una apariencia distinta.</figcaption></figure>
 <h2 id="requisitos-obligatorios">Requisitos obligatorios</h2>
 <ol type="1">
 <li>Identificar al menos cuatro referencias o pautas aplicables y explicar su importancia.</li>
@@ -55,33 +56,33 @@
 <h2 id="casos-de-prueba-mínimos">Casos de prueba mínimos</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>Caso</th>
 <th>Resultado esperado</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Recorrido completo con teclado</td>
 <td>Foco visible, orden lógico y activación posible</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Zoom al 200 %</td>
 <td>No se pierde contenido ni funcionalidad</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Alta sin título</td>
 <td>Mensaje específico, asociado y recuperable</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Borrado accidental</td>
 <td>Existe confirmación o deshacer</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Cambio de ancho</td>
 <td>Controles mantienen agrupación y lectura</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Auditor automático</td>
 <td>Hallazgos interpretados y contrastados manualmente</td>
 </tr>
@@ -90,54 +91,54 @@
 <h2 id="guía-de-corrección-por-criterios">Guía de corrección por criterios</h2>
 <div class="table-scroll"><table>
 <thead>
-<tr class="header">
+<tr>
 <th>CE</th>
 <th>Satisfactorio</th>
 <th>Insuficiente</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>a</td>
 <td>Identifica estándares y los aplica a hallazgos</td>
 <td>Solo enumera siglas</td>
 </tr>
-<tr class="even">
+<tr>
 <td>b</td>
 <td>Explica consecuencias y prioridad</td>
 <td>Afirma que son importantes sin evidencia</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>c</td>
 <td>Presenta dos menús coherentes</td>
 <td>Agrupa acciones sin criterio</td>
 </tr>
-<tr class="even">
+<tr>
 <td>d</td>
 <td>Ubica acciones por uso, contexto y riesgo</td>
 <td>Todas compiten con igual peso</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>e</td>
 <td>Distribución comprensible y adaptable</td>
 <td>Hay solapamientos u orden confuso</td>
 </tr>
-<tr class="even">
+<tr>
 <td>f</td>
 <td>Controles apropiados y justificados</td>
 <td>Decide solo por apariencia</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>g</td>
 <td>Sistema visual legible y comprobado</td>
 <td>Colores y fuentes sin verificación</td>
 </tr>
-<tr class="even">
+<tr>
 <td>h</td>
 <td>Mensajes claros, concretos y accionables</td>
 <td>Mensajes genéricos o códigos de error</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>i</td>
 <td>Protocolo reproducible antes/después</td>
 <td>Solo aporta una puntuación automática</td>
