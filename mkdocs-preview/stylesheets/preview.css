@@ -60,8 +60,39 @@ html[class*="ra-ra"] .md-typeset details > summary {
   color: var(--ra-on-container);
 }
 
+html[class*="ra-ra"] .md-footer {
+  background: var(--ra-container);
+  color: var(--ra-on-container);
+}
+
+html[class*="ra-ra"] .md-footer__inner {
+  background: var(--ra-container);
+}
+
+html[class*="ra-ra"] .md-footer__link,
+html[class*="ra-ra"] .md-footer__title,
+html[class*="ra-ra"] .md-footer__direction {
+  color: var(--ra-on-container);
+}
+
 html[class*="ra-ra"] .md-footer__link:hover,
 html[class*="ra-ra"] .md-footer__link:focus {
+  background: color-mix(in srgb, var(--ra-primary) 12%, transparent);
+  color: var(--ra-primary);
+}
+
+html[class*="ra-ra"] .md-footer-meta {
+  background: var(--ra-primary);
+  color: white;
+}
+
+html[class*="ra-ra"] .md-footer-meta__inner,
+html[class*="ra-ra"] .md-footer-meta a {
+  color: white;
+}
+
+html[class*="ra-ra"] .md-footer-meta a:hover,
+html[class*="ra-ra"] .md-footer-meta a:focus {
   color: var(--ra-container);
 }
 
